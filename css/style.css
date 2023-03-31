@@ -1,0 +1,442 @@
+/* ------------------ INDEX ================ */
+/* font-family: 'Fira Code', monospace; */
+/* https://grid.layoutit.com/ */
+* {
+  color: aliceblue;
+  /* border: 0.5px solid red; */
+}
+/* ---------------------------------------------- */
+/* Estilo Scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #44475a;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb {
+  background: #555;
+}
+button {
+  border: none;
+  background: transparent;
+}
+/* ---------------------------------------------- */
+/* GRID MAIN */
+.containerGrid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 0.1fr 0.4fr 2.2fr;
+  grid-template-rows: 0.15fr 4.15fr 0.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navBarTop navBarTop navBarTop"
+    "navBarAside sideBar mainArea"
+    "navBarAside sideBar mainArea"
+    "navBarAside sideBar mainArea"
+    "navBarAside footer footer";
+}
+.iconoMenu{
+  display: flex;
+  padding-left: 10px;
+}
+.navBarTop {
+  grid-area: navBarTop;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  background-color: #191a21;
+}
+.menuNavBarTop{
+  cursor: default;
+  display: flex;
+  gap: 0.3rem;
+  padding-left: 5px;
+}
+.menuNavBarTop span{
+  cursor: default;
+  padding: 0 8px;
+  transition: 0.3s;
+}
+.menuNavBarTop span:hover{
+  background-color: #282a36;
+  border-radius: 5px;  
+}
+.titleVSC{
+  width: 100%;
+  text-align: center;
+  cursor: default;
+}
+/* .navBarTop span {
+  cursor: default;
+  transition: 0.5s;
+  padding: 0 7px;
+} */
+
+@media (max-width: 680px) {
+  .containerGrid {
+    grid-template-areas:
+      "navBarTop navBarTop navBarTop"
+      "navBarAside mainArea mainArea"
+      "navBarAside mainArea mainArea"
+      "navBarAside mainArea mainArea"
+      "navBarAside footer footer";
+  }
+  .navBarTop span {
+    padding-left: 1px;
+  }
+  .menuNavBarTop{
+    display: none;
+  }
+}
+/* ---------------------------------------------- */
+
+.iconoMenu img {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------- */
+.navBarAside {
+  grid-area: navBarAside;
+  background-color: #343746;
+}
+.iconNavBar {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.7rem;
+}
+.iconNavBarAside {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  color: #5c6a98;
+}
+.iconFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.iconFlex button.active {
+  border-left: 2px solid #ff79c6;
+  color: aliceblue;
+  background-color: rgba(190, 190, 190, 0.2);
+}
+/* .iconNavBarAside:focus{
+  border-left: 2px solid #ff79c6;
+  color: aliceblue;
+  background-color: rgba(190, 190, 190, 0.2);
+} */
+.iconUserFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.bi {
+  transition: 0.3s;
+}
+.bi:hover {
+  color: aliceblue;
+}
+/* ----------------------------------------------- */
+.sideBar {
+  display: grid;
+  background-color: #1d1e24;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 2.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "titleSideBar titleSideBar titleSideBar"
+    "fileOpen fileOpen fileOpen"
+    "viewSideBar viewSideBar viewSideBar";
+  grid-area: sideBar;
+  border-right: 0.5px solid #44475a;
+}
+@media (max-width: 680px) {
+  .sideBar {
+    display: none;
+  }
+}
+.titleSideBar {
+  grid-area: titleSideBar;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-bottom: 0.5px solid #44475a;
+  border-top: 0.5px solid #44475a;
+}
+.fileOpen {
+  grid-area: fileOpen;
+  background-color: #282a36;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-bottom: 0.5px solid #44475a;
+}
+.viewSideBar {
+  grid-area: viewSideBar;
+  display: flex;
+  flex-direction: column;
+}
+/* --------------------------------------------------------- */
+.mainArea {
+  display: grid;
+  background-color: #282a36;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 2.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "tabs tabs tabs"
+    "rootPath rootPath rootPath"
+    "mainView mainView mainView";
+  grid-area: mainArea;
+}
+.tabs {
+  grid-area: tabs;
+  background-color: #1d1e24;
+  border-top: 0.5px solid #44475a;
+  border-bottom: 0.5px solid #44475a;
+}
+.rootPath {
+  grid-area: rootPath;
+  font-size: 0.8rem;
+  color: #6272a4;
+  padding-left: 1rem;
+  border-bottom: 0.5px solid #44475a;
+}
+
+.mainView {
+  grid-area: mainView;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ........................................................ */
+.footer {
+  grid-area: footer;
+  background-color: #191a21;
+  border-top: 0.5px solid #44475a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #fff;
+}
+.iconsFooterL {
+  display: flex;
+  width: 125px;
+  justify-content: space-around;
+  cursor: default;
+  padding-left: 10px;
+}
+.iconsFooterR {
+  display: flex;
+  width: 100px;
+  justify-content: space-around;
+  cursor: default;
+}
+.margin {
+  margin-left: 5px;
+}
+
+/* --------------------------------------------------------- */
+
+/* CONPONENTE textMain */
+
+.containerHeroView {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.containerIntroAside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding-left: 5rem;
+}
+.titleMain {
+  text-align: left;
+  width: 100%;
+}
+.titleMain h1 {
+  font-size: 2rem;
+}
+.titleMain h2 {
+  font-size: 1.5rem;
+}
+.descriptionMain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.descriptionMain h6 {
+  margin-top: 1rem;
+}
+
+@media (max-width: 680px) {
+  .containerHeroView{
+    flex-direction: column;    
+  }
+  .containerIntroAside{
+    padding-left: 1rem;
+    margin: auto;
+  }  
+}
+/* ---------------------------------------------------- */
+/* COMPONETE stackview */
+.stackFlex {
+  display: flex;
+  height: 100px;
+  margin: 0.5rem 0 0.5rem 0.4rem;
+  cursor: pointer;
+}
+.stackFlex:hover {
+  background-color: #5e6479;
+}
+.stackDivImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.7rem;
+}
+.stackDescriptionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.stackTitle {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+.stackDescription {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+/* stack view tabs */
+.stackViewTabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stackTitleView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.stackLinkCoder {
+  text-decoration: none;
+  color: #888;
+  transition: 0.5s;
+}
+.stackLinkCoder:hover {
+  color: #fff;
+}
+
+.stackCertificado img {
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  block-size: auto;
+}
+
+/* ----------------------------------- */
+/* Tooltips icon navbar aside*/
+.iconNavBarAside .toolTipText {
+  visibility: hidden;
+  width: 70px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background-color: #282a36;
+  border: 0.5px solid #6272a4;
+  color: #fff;
+  text-align: center;
+  padding: 2px 0;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 110%;
+}
+
+.iconNavBarAside .toolTipText::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #6272a4 transparent transparent;
+}
+.iconNavBarAside:hover .toolTipText {
+  visibility: visible;
+}
+/* TEST FILE SIDEBAR */
+.accordion {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+}
+.activeFile,
+.accordion:hover {
+  background-color: rgba(190, 190, 190, 0.2);
+}
+/* .accordion:after {
+  content: '>';
+	font-size: 0.8rem;  
+  font-weight: bold;
+  float: left;  
+  margin-left: 5px;  
+}
+.activeFile:after {
+  content: "v";
+} */
+.panel {
+  display: flex;
+  padding-left: 1.2rem;
+  font-size: 0.8rem;
+  text-align: left;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+}
+.panel button {
+  text-align: left;
+}
