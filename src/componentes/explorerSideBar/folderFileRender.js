@@ -2,8 +2,8 @@ import { btnFocus } from "../../navBarAsideFocus/btnFocus.js";
 
 const viewSideBar = document.getElementById("viewSideBar");
 
-const folderClose = "../../assets/folder-close.svg"
-const folderOpen = "../../assets/folder-open.svg"
+const folderClose = "./assets/folder-close.svg"
+const folderOpen = "./assets/folder-open.svg"
 
 export const folderFileSideBar = (folder, files, funcion) => {
   const miNodo = document.createElement("div");  
