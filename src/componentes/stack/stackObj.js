@@ -1,7 +1,7 @@
 export const stacks = [
   {
     stackTitle: "HTML5",
-    stackImg: "../assets/html-5-svgrepo-com.svg",
+    stackImg: "./assets/html-5-svgrepo-com.svg",
     stackDescription: "Lenguaje de marcado para crear páginas web.",
     stackCertificado: "./assets/Certificado-Desarrollo-Web.png",
     stackLinkCertificado:"https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
@@ -10,7 +10,7 @@ export const stacks = [
   },
   {
     stackTitle: "CSS",
-    stackImg: "../assets/css-3-svgrepo-com.svg",
+    stackImg: "./assets/css-3-svgrepo-com.svg",
     stackDescription: "Hoja de estilos para dar diseño a páginas web.",
     stackCertificado: "./assets/Certificado-Desarrollo-Web.png",
     stackLinkCertificado:"https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
@@ -19,7 +19,7 @@ export const stacks = [
   },
   {
     stackTitle: "SASS",
-    stackImg: "../assets/sass-svgrepo-com.svg",
+    stackImg: "./assets/sass-svgrepo-com.svg",
     stackDescription:
       "Procesador CSS que permite generar hojas de estilo de forma automática.",
     stackCertificado: "./assets/Certificado-Desarrollo-Web.png",
