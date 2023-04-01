@@ -5,7 +5,7 @@ const viewSideBar = document.getElementById("viewSideBar");
 const folderClose = "../../assets/folder-close.svg"
 const folderOpen = "../../assets/folder-open.svg"
 
-export const folderFileSideBar = (folder, files) => {
+export const folderFileSideBar = (folder, files, funcion) => {
   const miNodo = document.createElement("div");  
   const miNodoButton = document.createElement("button");
   miNodoButton.classList.add("accordion");
@@ -24,6 +24,8 @@ export const folderFileSideBar = (folder, files) => {
   // Agrega un botón para cada archivo en el array de archivos
   files.forEach((file) => {
     const miNodoTxtSpan = document.createElement("button");
+    miNodoTxtSpan.classList.add("fileTxt")
+    miNodoTxtSpan.addEventListener("click",funcion)
     miNodoTxtSpan.textContent = file;
     miNodoSpan.appendChild(miNodoTxtSpan);
   });

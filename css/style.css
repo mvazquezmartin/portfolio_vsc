@@ -1,10 +1,10 @@
 /* ------------------ INDEX ================ */
 /* font-family: 'Fira Code', monospace; */
 /* https://grid.layoutit.com/ */
-* {
+/* * {
   color: aliceblue;
-  /* border: 0.5px solid red; */
-}
+  border: 0.5px solid red;
+} */
 /* ---------------------------------------------- */
 /* Estilo Scroll */
 /* width */
@@ -31,6 +31,7 @@ button {
 /* GRID MAIN */
 .containerGrid {
   display: grid;
+  color: aliceblue;
   height: 100vh;
   grid-template-columns: 0.1fr 0.4fr 2.2fr;
   grid-template-rows: 0.15fr 4.15fr 0.1fr;
@@ -43,7 +44,7 @@ button {
     "navBarAside sideBar mainArea"
     "navBarAside footer footer";
 }
-.iconoMenu{
+.iconoMenu {
   display: flex;
   padding-left: 10px;
 }
@@ -55,22 +56,21 @@ button {
   font-size: 0.9rem;
   background-color: #191a21;
 }
-.menuNavBarTop{
+.menuNavBarTop {
   cursor: default;
   display: flex;
-  gap: 0.3rem;
   padding-left: 5px;
 }
-.menuNavBarTop span{
+.menuNavBarTop span {
   cursor: default;
   padding: 0 8px;
   transition: 0.3s;
 }
-.menuNavBarTop span:hover{
+.menuNavBarTop span:hover {
   background-color: #282a36;
-  border-radius: 5px;  
+  border-radius: 5px;
 }
-.titleVSC{
+.titleVSC {
   width: 100%;
   text-align: center;
   cursor: default;
@@ -93,7 +93,7 @@ button {
   .navBarTop span {
     padding-left: 1px;
   }
-  .menuNavBarTop{
+  .menuNavBarTop {
     display: none;
   }
 }
@@ -106,7 +106,7 @@ button {
 
 /* ---------------------------------------------- */
 .navBarAside {
-  grid-area: navBarAside;
+  grid-area: navBarAside;  
   background-color: #343746;
 }
 .iconNavBar {
@@ -156,7 +156,7 @@ button {
 }
 /* ----------------------------------------------- */
 .sideBar {
-  display: grid;
+  display: grid;  
   background-color: #1d1e24;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.1fr 0.1fr 2.8fr;
@@ -195,7 +195,7 @@ button {
   border-bottom: 0.5px solid #44475a;
 }
 .viewSideBar {
-  grid-area: viewSideBar;
+  grid-area: viewSideBar;  
   display: flex;
   flex-direction: column;
 }
@@ -221,6 +221,8 @@ button {
 }
 .rootPath {
   grid-area: rootPath;
+  display: flex;
+  align-items: center;
   font-size: 0.8rem;
   color: #6272a4;
   padding-left: 1rem;
@@ -230,8 +232,9 @@ button {
 .mainView {
   grid-area: mainView;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 }
 /* ........................................................ */
 .footer {
@@ -300,13 +303,13 @@ button {
 }
 
 @media (max-width: 680px) {
-  .containerHeroView{
-    flex-direction: column;    
+  .containerHeroView {
+    flex-direction: column;
   }
-  .containerIntroAside{
+  .containerIntroAside {
     padding-left: 1rem;
     margin: auto;
-  }  
+  }
 }
 /* ---------------------------------------------------- */
 /* COMPONETE stackview */
@@ -403,8 +406,9 @@ button {
   visibility: visible;
 }
 /* TEST FILE SIDEBAR */
-.accordion {
-  cursor: pointer;
+.accordion {  
+  cursor: pointer;  
+  color: aliceblue;
   width: 100%;
   border: none;
   text-align: left;
@@ -430,6 +434,7 @@ button {
 } */
 .panel {
   display: flex;
+  color: aliceblue;
   padding-left: 1.2rem;
   font-size: 0.8rem;
   text-align: left;
@@ -439,4 +444,69 @@ button {
 }
 .panel button {
   text-align: left;
+}
+.fileTxt{
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+}
+
+/* --------------------------------- */
+/* PLAYRGOUND */
+.playGroundGrid {
+  display: grid;  
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 0px 0px;
+  max-height: 87vh;
+  height: 100%;
+  width: 100%;
+}
+.html {
+  grid-area: 1 / 1 / 3 / 2;    
+}
+.htmlTitle {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.htmlArea {
+  grid-area: 2 / 1 / 3 / 2;
+  color: aliceblue;
+  background-color: #282a36;
+  height: 100%;
+  width: 100%;
+}
+.css {
+  grid-area: 1 / 2 / 3 / 3;
+}
+.cssTitle {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.cssArea {
+  grid-area: 2 / 2 / 3 / 3;
+  color: aliceblue;
+  background-color: #282a36;
+  height: 100%;
+  width: 100%;  
+}
+.javaScript {
+  grid-area: 1 / 3 / 3 / 4;
+}
+.javaScriptTitle {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.javaScriptArea {
+  grid-area: 2 / 3 / 3 / 4;
+  color: aliceblue;
+  background-color: #282a36;
+  height: 100%;
+  width: 100%;
+}
+.outPutArea {
+  grid-area: 3 / 1 / 4 / 4;
+}
+iframe{
+  color: #000;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
 }

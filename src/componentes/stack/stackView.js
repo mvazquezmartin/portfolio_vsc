@@ -10,8 +10,6 @@ export const stackView = (stack) => {
 
   const rootPath = document.getElementById("rootPath");
   rootPath.innerHTML = "";
-  rootPath.style.display = "flex";
-  rootPath.style.alignItems="center"
 
   const stackArray = Array.isArray(stack) ? stack : [stack];
   stackArray.forEach((stack) => {

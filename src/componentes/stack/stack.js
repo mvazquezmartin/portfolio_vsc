@@ -8,6 +8,9 @@ export const renderStack = () => {
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
 
+  const rootPath = document.getElementById("rootPath");
+  rootPath.innerHTML = "";
+  
   const sideBar = document.getElementById("sideBar");
   sideBar.style.gridTemplateAreas = `
     "titleSideBar titleSideBar titleSideBar"

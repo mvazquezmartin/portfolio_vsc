@@ -1,4 +1,5 @@
 import { isRender } from "../../isRender.js";
+import { playGroundRender } from "../playground/playGround.js";
 import { folderFileSideBar } from "./folderFileRender.js";
 
 export const renderExplorer = () => {
@@ -28,5 +29,6 @@ export const renderExplorer = () => {
   folderFileSideBar("Assets", ["Archivo1", "Archivo2", "Archivo3"]);
   folderFileSideBar("Home", ["Archivo4", "Archivo5"]);
   folderFileSideBar("Proyecto", ["Archivo4", "Archivo5"]);
-  folderFileSideBar("PlayGround", ["Archivo4", "Archivo5"]);
+  folderFileSideBar("PlayGround", ["PlayGround.js"], playGroundRender); 
+   
 };
