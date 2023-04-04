@@ -1,14 +1,17 @@
+import { tabsRender } from "../tabs/tabsRender.js";
+
 export const stackView = (stack) => {
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
+  mainView.style.overflowY = "auto";
   mainArea.style.gridTemplateAreas = `
   "tabs tabs tabs"
   "rootPath rootPath rootPath"
   "mainView mainView mainView"
   `;
-  mainView.style.overflowY = "auto";
 
   const rootPath = document.getElementById("rootPath");
+  rootPath.style.display = "flex"
   rootPath.innerHTML = "";
 
   const stackArray = Array.isArray(stack) ? stack : [stack];
@@ -42,5 +45,7 @@ export const stackView = (stack) => {
     miNodo.appendChild(miNodoCertificadoDiv);
     miNodoCertificadoDiv.appendChild(miNodoCertificado);
     mainView.appendChild(miNodo);
+    
+    tabsRender(stack.stackTitle)
   });
 };

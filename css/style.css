@@ -106,7 +106,7 @@ button {
 
 /* ---------------------------------------------- */
 .navBarAside {
-  grid-area: navBarAside;  
+  grid-area: navBarAside;
   background-color: #343746;
 }
 .iconNavBar {
@@ -156,7 +156,7 @@ button {
 }
 /* ----------------------------------------------- */
 .sideBar {
-  display: grid;  
+  display: grid;
   background-color: #1d1e24;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.1fr 0.1fr 2.8fr;
@@ -195,7 +195,7 @@ button {
   border-bottom: 0.5px solid #44475a;
 }
 .viewSideBar {
-  grid-area: viewSideBar;  
+  grid-area: viewSideBar;
   display: flex;
   flex-direction: column;
 }
@@ -215,10 +215,15 @@ button {
 }
 .tabs {
   grid-area: tabs;
+  display: flex;
   background-color: #1d1e24;
   border-top: 0.5px solid #44475a;
   border-bottom: 0.5px solid #44475a;
 }
+.tabRender button {
+  color: aliceblue;
+}
+
 .rootPath {
   grid-area: rootPath;
   display: flex;
@@ -234,7 +239,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 /* ........................................................ */
 .footer {
@@ -406,8 +411,8 @@ button {
   visibility: visible;
 }
 /* TEST FILE SIDEBAR */
-.accordion {  
-  cursor: pointer;  
+.accordion {
+  cursor: pointer;
   color: aliceblue;
   width: 100%;
   border: none;
@@ -445,8 +450,8 @@ button {
 .panel button {
   text-align: left;
 }
-.fileTxt{
-  margin: 0;
+.fileTxt {
+  margin-left: 7px;
   padding: 0;
   color: aliceblue;
 }
@@ -454,7 +459,7 @@ button {
 /* --------------------------------- */
 /* PLAYRGOUND */
 .playGroundGrid {
-  display: grid;  
+  display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
   gap: 0px 0px;
@@ -463,7 +468,7 @@ button {
   width: 100%;
 }
 .html {
-  grid-area: 1 / 1 / 3 / 2;    
+  grid-area: 1 / 1 / 3 / 2;
 }
 .htmlTitle {
   grid-area: 1 / 1 / 2 / 2;
@@ -486,7 +491,7 @@ button {
   color: aliceblue;
   background-color: #282a36;
   height: 100%;
-  width: 100%;  
+  width: 100%;
 }
 .javaScript {
   grid-area: 1 / 3 / 3 / 4;
@@ -504,9 +509,42 @@ button {
 .outPutArea {
   grid-area: 3 / 1 / 4 / 4;
 }
-iframe{
+iframe {
   color: #000;
   background-color: #fff;
   width: 100%;
   height: 100%;
+}
+
+/* -------------------------------------------- */
+/* PLAYGROUND README */
+.readme {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.line-numbers {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 25px;
+  user-select: none;
+  border-right: 0.5px solid #44475a;  
+}
+
+.text-container {  
+  white-space: pre-wrap;
+  font-family: "Fira Code", monospace;
+  padding-left: 5px;
+  text-align: left;
+  margin-top: 1px;  
+}
+
+.line-numbers span {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #6272a4;  
 }

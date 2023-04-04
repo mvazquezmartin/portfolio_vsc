@@ -1,4 +1,3 @@
-import { btnFocus } from "../../navBarAsideFocus/btnFocus.js";
 import { stacks } from "./stackObj.js";
 import { stackView } from "./stackView.js";
 
@@ -9,7 +8,7 @@ export const stackRenderViewSideBar = (stacks) => {
     const miNodo = document.createElement("div");
     miNodo.classList.add("stackFlex");
     miNodo.setAttribute("id", stack.stackId);
-    miNodo.setAttribute("dataTab", stack.stackId);
+    miNodo.dataset.tab = stack.stackId;
     miNodo.addEventListener("click", newTab);
     //imagen div container
     const miNodoDivImg = document.createElement("div");
@@ -38,10 +37,8 @@ export const stackRenderViewSideBar = (stacks) => {
   });
 };
 
-
 const newTab = (evento) => {
-  const id = evento.target.closest(".stackFlex").getAttribute("dataTab");
-  const stack = stacks.find((e) => e.stackId === id);
-  stackView(stack);
+  const id = evento.target.closest(".stackFlex").dataset.tab;
+  const stack = stacks.find((e) => e.stackId === id);  
+  stackView(stack);  
 };
-

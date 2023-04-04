@@ -1,14 +1,14 @@
 export const playGroundRender = () => {
-  const mainView = document.getElementById("mainView")
-  mainView.innerHTML=""  
+  const mainView = document.getElementById("mainView");
+  mainView.innerHTML = "";
   mainArea.style.gridTemplateAreas = `
   "tabs tabs tabs"
   "rootPath rootPath rootPath"
   "mainView mainView mainView"
   `;
-  const path = document.getElementById("rootPath")
-  path.style.display = "flex"
-  path.textContent = "Portfolio > PlayGround > playGroud.js"
+  const path = document.getElementById("rootPath");
+  path.style.display = "flex";
+  path.textContent = "Portfolio > PlayGround > playGround.js";
 
   const miNodo = document.createElement("div");
   miNodo.classList.add("playGroundGrid");
@@ -39,11 +39,11 @@ export const playGroundRender = () => {
   miNodoJavaScriptTitle.textContent = "JavaScript";
   const miNodoJavaScriptArea = document.createElement("textarea");
   miNodoJavaScriptArea.classList.add("javaScriptArea");
-  miNodoJavaScript.setAttribute("id", "javaScriptCode");
+  miNodoJavaScriptArea.setAttribute("id", "javaScriptCode");
 
   const miNodoOutPutArea = document.createElement("div");
   miNodoOutPutArea.classList.add("outPutArea");
-  const miNodoIframe = document.createElement("iframe");
+  const miNodoIframe = document.createElement("iframe");  
   miNodoIframe.setAttribute("id", "outPut");
 
   miNodo.appendChild(miNodoHtml);
@@ -67,7 +67,7 @@ export const playGroundRender = () => {
   javaScript.addEventListener("keyup", run);
   const outPut = document.getElementById("outPut");
 
-  function run() {    
+  function run() {
     outPut.contentDocument.body.innerHTML =
       html.value + "<style>" + css.value + "</style>";
     outPut.contentWindow.eval(javaScript.value);

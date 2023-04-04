@@ -11,12 +11,12 @@ export const renderStack = () => {
   const rootPath = document.getElementById("rootPath");
   rootPath.innerHTML = "";
   
-  const sideBar = document.getElementById("sideBar");
-  sideBar.style.gridTemplateAreas = `
-    "titleSideBar titleSideBar titleSideBar"
-    "fileOpen fileOpen fileOpen"
-    "viewSideBar viewSideBar viewSideBar";  
-  `;
+  // const sideBar = document.getElementById("sideBar");
+  // sideBar.style.gridTemplateAreas = `
+  //   "titleSideBar titleSideBar titleSideBar"
+  //   "fileOpen fileOpen fileOpen"
+  //   "viewSideBar viewSideBar viewSideBar";  
+  // `;
 
   const viewSideBar = document.getElementById("viewSideBar");
   viewSideBar.style.overflowY = "auto";
