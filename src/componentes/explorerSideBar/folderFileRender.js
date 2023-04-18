@@ -1,7 +1,4 @@
 import { btnFocus } from "../../navBarAsideFocus/btnFocus.js";
-
-const viewSideBar = document.getElementById("viewSideBar");
-
 const folderClose = "./assets/folder-close.svg";
 const folderOpen = "./assets/folder-open.svg";
 
@@ -9,20 +6,22 @@ export const folderFileSideBar = (folder, funcion, icono) => {
   const miNodo = document.createElement("div");
   const miNodoButton = document.createElement("button");
   miNodoButton.classList.add("accordion");
+
   const iconFolder = document.createElement("img");
   iconFolder.setAttribute("src", folderClose);
   iconFolder.classList.add("iconFolder");
+
   miNodoButton.appendChild(iconFolder);
   miNodoButton.appendChild(document.createTextNode(" " + folder.folderName));
+
   const miNodoSpan = document.createElement("div");
   miNodoSpan.classList.add("panel");
 
   miNodo.appendChild(miNodoButton);
   miNodo.appendChild(miNodoSpan);
-  viewSideBar.appendChild(miNodo);
 
   folder.files.forEach((file) => {
-    const miNodoTxtSpan = document.createElement("button");
+    const miNodoTxtSpan = document.createElement("div");
     miNodoTxtSpan.classList.add("fileTxt");
     miNodoTxtSpan.addEventListener("click", file.function);
     const miNodoIcono = document.createElement("img");
@@ -41,18 +40,18 @@ export const folderFileSideBar = (folder, funcion, icono) => {
   const btnFile = miNodo.querySelectorAll(".fileTxt");
   btnFocus(btnFolder, "activeFile");
   btnFocus(btnFile, "activeFile");
-  
-  miNodoButton.addEventListener("click", () => {
+
+  miNodoButton.addEventListener("click", () => {    
     const panel = miNodoButton.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
       iconFolder.setAttribute("src", folderClose);
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+    } else {      
+      panel.style.maxHeight = "300px"
       iconFolder.setAttribute("src", folderOpen);
     }
   });
-  
+
   return miNodo;
 };
 
@@ -106,4 +105,3 @@ export const folderFileSideBar = (folder, funcion, icono) => {
     }
   });
 }; */
-

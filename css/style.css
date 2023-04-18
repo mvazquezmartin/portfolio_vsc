@@ -27,6 +27,13 @@ button {
   border: none;
   background: transparent;
 }
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+a:hover {
+  color: #555;
+}
 /* ---------------------------------------------- */
 /* GRID MAIN */
 .containerGrid {
@@ -34,7 +41,7 @@ button {
   color: aliceblue;
   height: 100vh;
   grid-template-columns: 0.1fr 0.4fr 2.2fr;
-  grid-template-rows: 0.15fr 4.15fr 0.1fr;
+  grid-template-rows: 0.15fr 4.15fr 0.15fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -454,6 +461,7 @@ button {
   margin-left: 7px;
   padding: 0;
   color: aliceblue;
+  cursor: pointer;
 }
 
 /* --------------------------------- */
@@ -532,19 +540,28 @@ iframe {
   align-items: flex-end;
   padding: 0 25px;
   user-select: none;
-  border-right: 0.5px solid #44475a;  
+  border-right: 0.5px solid #44475a;
 }
 
-.text-container {  
+.text-container {
   white-space: pre-wrap;
   font-family: "Fira Code", monospace;
   padding-left: 5px;
   text-align: left;
-  margin-top: 1px;  
+  margin-top: 1px;
 }
 
 .line-numbers span {
   font-family: monospace;
   font-size: 1rem;
-  color: #6272a4;  
+  color: #6272a4;
+}
+
+/* ----------------------------------------------------- */
+/* ASSETS FOLDER VIEW */
+.assets {
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  block-size: auto;
 }

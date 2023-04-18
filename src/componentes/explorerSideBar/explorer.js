@@ -1,6 +1,11 @@
 import { isRender } from "../../isRender.js";
-import { folder1, playGroundFolder } from "./folderFileObj.js";
-import { folderFileSideBar} from "./folderFileRender.js";
+import {
+  assetsFolder,
+  folder1,
+  playGroundFolder,
+  readmeFile,
+} from "./folderFileObj.js";
+import { folderFileSideBar } from "./folderFileRender.js";
 
 export const renderExplorer = () => {
   isRender.stack = false;
@@ -20,6 +25,7 @@ export const renderExplorer = () => {
   "rootPath rootPath rootPath"
   "mainView mainView mainView"
   `;
+  
   const viewSideBar = document.getElementById("viewSideBar");
   viewSideBar.style.overflowY = "auto";
   viewSideBar.innerHTML = "";
@@ -27,15 +33,18 @@ export const renderExplorer = () => {
   const titleSideBar = document.getElementById("titleSideBar");
   titleSideBar.textContent = "EXPLORER";
   
-  const playGround = folderFileSideBar(playGroundFolder)
-  viewSideBar.appendChild(playGround)  
-  const carpetaPrueba = folderFileSideBar(folder1)
-  viewSideBar.appendChild(carpetaPrueba)
-
+  const readme = folderFileSideBar(readmeFile);
+  viewSideBar.appendChild(readme)
+  const assets = folderFileSideBar(assetsFolder);
+  viewSideBar.appendChild(assets);
+  const playGround = folderFileSideBar(playGroundFolder);
+  viewSideBar.appendChild(playGround);
+  const carpetaPrueba = folderFileSideBar(folder1);
+  viewSideBar.appendChild(carpetaPrueba);
 
   //Explorardor de archivos
   // folderFileSideBar("Assets", ["Archivo1", "Archivo2", "Archivo3"]);
   // folderFileSideBar("Home", ["Archivo4", "Archivo5"]);
   // folderFileSideBar("Proyecto", ["Archivo4", "Archivo5"]);
-  // folderFileSideBar("PlayGround", ["PlayGround.js"], playGroundRender,iconoJs);  
+  // folderFileSideBar("PlayGround", ["PlayGround.js"], playGroundRender,iconoJs);
 };

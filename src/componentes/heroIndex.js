@@ -6,6 +6,9 @@ export const renderMainText = () => {
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
 
+  const tabs = document.getElementById("tabs")
+  tabs.innerHTML = ""
+
   const fileOpen = document.getElementById("fileOpen")
   fileOpen.textContent = "PORTFOLIO"  
 

@@ -20,8 +20,7 @@ export const playGroundRender = () => {
   miNodoHtmlTitle.textContent = "Html";
   const miNodoHtmlArea = document.createElement("textarea");
   miNodoHtmlArea.classList.add("htmlArea");
-  miNodoHtmlArea.setAttribute("id", "htmlCode");
-  
+  miNodoHtmlArea.setAttribute("id", "htmlCode");  
 
   const miNodoCss = document.createElement("div");
   miNodoCss.classList.add("css");

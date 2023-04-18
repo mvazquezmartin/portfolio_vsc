@@ -1,22 +1,20 @@
 import { isRender } from "../../isRender.js";
 import { btnFocus } from "../../navBarAsideFocus/btnFocus.js";
-//import { newTab } from "../renderTab.js";
 import { stacks } from "./stackObj.js";
 import { stackRenderViewSideBar } from "./stackViewSideBar.js";
 
 export const renderStack = () => {
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
+  mainView.style.overflowY = "auto";
+  mainArea.style.gridTemplateAreas = `
+  "tabs tabs tabs"
+  "rootPath rootPath rootPath"
+  "mainView mainView mainView"
+  `;  
 
   const rootPath = document.getElementById("rootPath");
   rootPath.innerHTML = "";
-  
-  // const sideBar = document.getElementById("sideBar");
-  // sideBar.style.gridTemplateAreas = `
-  //   "titleSideBar titleSideBar titleSideBar"
-  //   "fileOpen fileOpen fileOpen"
-  //   "viewSideBar viewSideBar viewSideBar";  
-  // `;
 
   const viewSideBar = document.getElementById("viewSideBar");
   viewSideBar.style.overflowY = "auto";

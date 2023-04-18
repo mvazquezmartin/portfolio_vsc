@@ -1,16 +1,12 @@
 import { tabsRender } from "../tabs/tabsRender.js";
 
 export const stackView = (stack) => {
-  const mainView = document.getElementById("mainView");
-  mainView.innerHTML = "";
-  mainView.style.overflowY = "auto";
   mainArea.style.gridTemplateAreas = `
   "tabs tabs tabs"
   "rootPath rootPath rootPath"
   "mainView mainView mainView"
-  `;
-
-  const rootPath = document.getElementById("rootPath");
+  `;  
+  mainView.innerHTML = "";  
   rootPath.style.display = "flex"
   rootPath.innerHTML = "";
 

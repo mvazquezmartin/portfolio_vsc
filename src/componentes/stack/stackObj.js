@@ -31,7 +31,7 @@ export const stacks = [
     stackTitle: "BOOTSTRAP",
     stackImg: "./assets/bootstrap-svgrepo-com.svg",
     stackDescription:
-      "Framework CSS de codigo abierto que favorece el desarrollo web responsives.",
+      "Libreria CSS de codigo abierto que favorece el desarrollo web responsives.",
     stackCertificado: "./assets/Certificado-Desarrollo-Web.png",
     stackLinkCertificado:"https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
     stackPath: "Inicio > DesarroloWeb > Html5 > CSS > Library",
