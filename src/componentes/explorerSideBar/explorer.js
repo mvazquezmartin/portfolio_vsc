@@ -41,12 +41,6 @@ const renderExplorer = () => {
   viewSideBar.appendChild(playGround);
   const carpetaPrueba = folderFileSideBar(folder1);
   viewSideBar.appendChild(carpetaPrueba);
-
-  //Explorardor de archivos
-  // folderFileSideBar("Assets", ["Archivo1", "Archivo2", "Archivo3"]);
-  // folderFileSideBar("Home", ["Archivo4", "Archivo5"]);
-  // folderFileSideBar("Proyecto", ["Archivo4", "Archivo5"]);
-  // folderFileSideBar("PlayGround", ["PlayGround.js"], playGroundRender,iconoJs);
 };
 
 export { renderExplorer };

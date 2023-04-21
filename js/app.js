@@ -1,5 +1,5 @@
 import { renderExplorer } from "../src/componentes/explorerSideBar/explorer.js";
-import { renderMainText } from "../src/componentes/heroIndex.js";
+import { renderMainText } from "../src/componentes/heroIndex/heroIndex.js";
 import { renderStack } from "../src/componentes/stack/stack.js";
 import { isRender } from "../src/isRender.js";
 import { btnFocus } from "../src/navBarAsideFocus/btnFocus.js";

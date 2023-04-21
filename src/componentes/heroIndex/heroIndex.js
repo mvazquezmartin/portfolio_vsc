@@ -1,4 +1,4 @@
-import { isRender } from "../isRender.js";
+import { isRender } from "../../isRender.js";
 
 const renderMainText = () => {
   isRender.stack = false;
