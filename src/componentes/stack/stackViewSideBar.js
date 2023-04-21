@@ -2,7 +2,7 @@ import { stacks } from "./stackObj.js";
 import { stackView } from "./stackView.js";
 
 // Render stack ViewSideBar
-export const stackRenderViewSideBar = (stacks) => {
+const stackRenderViewSideBar = (stacks) => {
   stacks.forEach((stack) => {
     //estructura MiNodo
     const miNodo = document.createElement("div");
@@ -39,6 +39,8 @@ export const stackRenderViewSideBar = (stacks) => {
 
 const newTab = (evento) => {
   const id = evento.target.closest(".stackFlex").dataset.tab;
-  const stack = stacks.find((e) => e.stackId === id);  
-  stackView(stack);  
+  const stack = stacks.find((e) => e.stackId === id);
+  stackView(stack);
 };
+
+export { stackRenderViewSideBar };

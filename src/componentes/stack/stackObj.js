@@ -4,18 +4,20 @@ export const stacks = [
     stackImg: "./assets/html-5-svgrepo-com.svg",
     stackDescription: "Lenguaje de marcado para crear páginas web.",
     stackCertificado: "./assets/Certificado-Desarrollo-Web.png",
-    stackLinkCertificado:"https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
+    stackLinkCertificado:
+      "https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
     stackPath: "Inicio > DesarroloWeb > Html5",
-    stackId: "html5"
+    stackId: "html5",
   },
   {
     stackTitle: "CSS",
     stackImg: "./assets/css-3-svgrepo-com.svg",
     stackDescription: "Hoja de estilos para dar diseño a páginas web.",
     stackCertificado: "./assets/Certificado-Desarrollo-Web.png",
-    stackLinkCertificado:"https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
+    stackLinkCertificado:
+      "https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
     stackPath: "Inicio > DesarroloWeb > Html5 > CSS",
-    stackId: "css"
+    stackId: "css",
   },
   {
     stackTitle: "SASS",
@@ -23,9 +25,10 @@ export const stacks = [
     stackDescription:
       "Procesador CSS que permite generar hojas de estilo de forma automática.",
     stackCertificado: "./assets/Certificado-Desarrollo-Web.png",
-    stackLinkCertificado:"https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
+    stackLinkCertificado:
+      "https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
     stackPath: "Inicio > DesarroloWeb > Html5 > CSS > Sass",
-    stackId: "sass"
+    stackId: "sass",
   },
   {
     stackTitle: "BOOTSTRAP",
@@ -33,9 +36,10 @@ export const stacks = [
     stackDescription:
       "Libreria CSS de codigo abierto que favorece el desarrollo web responsives.",
     stackCertificado: "./assets/Certificado-Desarrollo-Web.png",
-    stackLinkCertificado:"https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
+    stackLinkCertificado:
+      "https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
     stackPath: "Inicio > DesarroloWeb > Html5 > CSS > Library",
-    stackId: "bootstrap"
+    stackId: "bootstrap",
   },
   {
     stackTitle: "JAVASCRIPT",
@@ -43,9 +47,10 @@ export const stacks = [
     stackDescription:
       "Lenguaje de programacion para añadir interactividad a las paginas webs y crear aplicaciones.",
     stackCertificado: "../assets/Certificado-JavaScript.png",
-    stackLinkCertificado:"https://www.coderhouse.com/certificados/63b642cfa51867000e7eb7ce",
+    stackLinkCertificado:
+      "https://www.coderhouse.com/certificados/63b642cfa51867000e7eb7ce",
     stackPath: "Inicio > DesarroloWeb >JavaScript",
-    stackId: "javaScript"
+    stackId: "javaScript",
   },
   {
     stackTitle: "REACT JS",
@@ -53,9 +58,10 @@ export const stacks = [
     stackDescription:
       "Libreria JavaScript de código abierto para crear interfaces de usuario",
     stackCertificado: "../assets/Certificado-ReactJs.png",
-    stackLinkCertificado:"https://www.coderhouse.com/certificados/63f606fcff4216000e5d1ee0",
+    stackLinkCertificado:
+      "https://www.coderhouse.com/certificados/63f606fcff4216000e5d1ee0",
     stackPath: "Inicio > DesarroloWeb > ReactJs",
-    stackId: "reactJs"
+    stackId: "reactJs",
   },
   {
     stackTitle: "FIREBASE",
@@ -63,7 +69,8 @@ export const stacks = [
     stackDescription:
       "Plataforma de desarrollo de aplicaciones móviles y web en la nube.",
     stackCertificado: "../assets/Certificado-ReactJs.png",
-    stackLinkCertificado:"https://www.coderhouse.com/certificados/63f606fcff4216000e5d1ee0",
+    stackLinkCertificado:
+      "https://www.coderhouse.com/certificados/63f606fcff4216000e5d1ee0",
     stackPath: "Inicio > DesarroloWeb > FireBase",
     stackId: "firebase",
   },
@@ -73,7 +80,7 @@ export const stacks = [
     stackDescription:
       "Entorno en tiempo de ejecución multiplataforma, para la capa del servidor basado en JavaScript.",
     stackCertificado: "https://http.cat/404",
-    stackLinkCertificado:"https://httpstatusdogs.com/img/404.jpg",
+    stackLinkCertificado: "https://httpstatusdogs.com/img/404.jpg",
     stackPath: "Inicio > DesarroloWeb > BackEnd > NodeJs",
     stackId: "nodeJs",
   },
@@ -83,7 +90,7 @@ export const stacks = [
     stackDescription:
       "Sistema de base de datos NoSQL flexible y escalable para aplicaciones modernas en la nube.",
     stackCertificado: "https://http.cat/404",
-    stackLinkCertificado:"https://httpstatusdogs.com/img/404.jpg",
+    stackLinkCertificado: "https://httpstatusdogs.com/img/404.jpg",
     stackPath: "Inicio > DesarroloWeb > BackEnd > Db > MongoDb",
     stackId: "mongoDb",
   },

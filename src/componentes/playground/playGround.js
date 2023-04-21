@@ -1,4 +1,4 @@
-export const playGroundRender = () => {
+const playGroundRender = () => {
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
   mainArea.style.gridTemplateAreas = `
@@ -20,7 +20,7 @@ export const playGroundRender = () => {
   miNodoHtmlTitle.textContent = "Html";
   const miNodoHtmlArea = document.createElement("textarea");
   miNodoHtmlArea.classList.add("htmlArea");
-  miNodoHtmlArea.setAttribute("id", "htmlCode");  
+  miNodoHtmlArea.setAttribute("id", "htmlCode");
 
   const miNodoCss = document.createElement("div");
   miNodoCss.classList.add("css");
@@ -42,7 +42,7 @@ export const playGroundRender = () => {
 
   const miNodoOutPutArea = document.createElement("div");
   miNodoOutPutArea.classList.add("outPutArea");
-  const miNodoIframe = document.createElement("iframe");  
+  const miNodoIframe = document.createElement("iframe");
   miNodoIframe.setAttribute("id", "outPut");
 
   miNodo.appendChild(miNodoHtml);
@@ -72,3 +72,5 @@ export const playGroundRender = () => {
     outPut.contentWindow.eval(javaScript.value);
   }
 };
+
+export { playGroundRender };

@@ -1,13 +1,13 @@
 import { tabsRender } from "../tabs/tabsRender.js";
 
-export const stackView = (stack) => {
+const stackView = (stack) => {
   mainArea.style.gridTemplateAreas = `
   "tabs tabs tabs"
   "rootPath rootPath rootPath"
   "mainView mainView mainView"
-  `;  
-  mainView.innerHTML = "";  
-  rootPath.style.display = "flex"
+  `;
+  mainView.innerHTML = "";
+  rootPath.style.display = "flex";
   rootPath.innerHTML = "";
 
   const stackArray = Array.isArray(stack) ? stack : [stack];
@@ -41,7 +41,9 @@ export const stackView = (stack) => {
     miNodo.appendChild(miNodoCertificadoDiv);
     miNodoCertificadoDiv.appendChild(miNodoCertificado);
     mainView.appendChild(miNodo);
-    
-    tabsRender(stack.stackTitle)
+
+    tabsRender(stack.stackTitle);
   });
 };
+
+export { stackView };

@@ -1,16 +1,15 @@
+const tabsRender = (file) => {
+  const tabs = document.getElementById("tabs");
 
-export const tabsRender = (file) => {  
-    const tabs = document.getElementById("tabs");
+  const miNodo = document.createElement("div");
+  miNodo.classList.add("tabRender");
 
-    const miNodo = document.createElement("div");
-    miNodo.classList.add("tabRender");
+  const miNodoButtonClose = document.createElement("button");
+  miNodoButtonClose.textContent = `${file} x`;
+  miNodoButtonClose.addEventListener("click", closeTab);
 
-    const miNodoButtonClose = document.createElement("button");
-    miNodoButtonClose.textContent = `${file} x`;
-    miNodoButtonClose.addEventListener("click", closeTab);
-
-    miNodo.appendChild(miNodoButtonClose);
-    tabs.appendChild(miNodo);  
+  miNodo.appendChild(miNodoButtonClose);
+  tabs.appendChild(miNodo);
 };
 
 const openTab = (evento) => {
@@ -24,3 +23,5 @@ const closeTab = (e) => {
     return tabId !== id;
   });
 };
+
+export { tabsRender };

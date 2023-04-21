@@ -1,4 +1,4 @@
-export const ilyudo = (img, name) => {
+const ilyudo = (img, name) => {
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
   mainView.style.overflowY = "auto";
@@ -14,9 +14,11 @@ export const ilyudo = (img, name) => {
 
   const miNodo = document.createElement("div");
   const miNodoImg = document.createElement("img");
-  miNodoImg.classList.add("assets")
+  miNodoImg.classList.add("assets");
   miNodoImg.setAttribute("src", img);
   miNodo.appendChild(miNodoImg);
-  console.log(name)
+  console.log(name);
   mainView.appendChild(miNodo);
 };
+
+export { ilyudo };

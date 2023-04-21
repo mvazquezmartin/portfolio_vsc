@@ -5,7 +5,7 @@ import { readmeRender } from "../playground/readme.js";
 const judoJpg = "./assets/judo.jpg";
 const setUpJpg = "./assets/setup.jpg";
 
-export const assetsFolder = {
+const assetsFolder = {
   folderName: "Assets",
   files: [
     {
@@ -22,7 +22,7 @@ export const assetsFolder = {
   subfolders: [],
 };
 
-export const playGroundFolder = {
+const playGroundFolder = {
   folderName: "PlayGround",
   files: [
     {
@@ -39,29 +39,29 @@ export const playGroundFolder = {
   subfolders: [],
 };
 
-export const readmeFile = {
+const readmeFile = {
   files: [
     {
       name: "readme.txt",
       icon: "./assets/txt-svgrepo-com.svg",
-      function: ()=> console.log("readme.txt"),
+      function: () => console.log("readme.txt"),
     },
   ],
   subfolders: [],
 };
 
-export const folder1 = {
+const folder1 = {
   folderName: "Raíz1",
   files: [
     {
       name: "Archivo1.txt",
       icon: "./assets/code-file-svgrepo-com.svg",
-      function:()=> console.log("archivo1"),
+      function: () => console.log("archivo1"),
     },
     {
       name: "Archivo2.txt",
       icon: "./assets/code-file-svgrepo-com.svg",
-      function:()=> console.log("archivo1"),
+      function: () => console.log("archivo1"),
     },
   ],
   subfolders: [
@@ -71,7 +71,7 @@ export const folder1 = {
         {
           name: "archivo.nshe",
           icon: "./assets/code-file-svgrepo-com.svg",
-          function: ()=> console.log("archivonasheee"),
+          function: () => console.log("archivonasheee"),
         },
       ],
       subfolders: [],
@@ -82,7 +82,7 @@ export const folder1 = {
         {
           name: "Archivo3.txt",
           icon: "./assets/code-file-svgrepo-com.svg",
-          function: ()=> console.log("archivo3"),
+          function: () => console.log("archivo3"),
         },
       ],
       subfolders: [
@@ -92,7 +92,7 @@ export const folder1 = {
             {
               name: "Archivo4.txt",
               icon: "./assets/code-file-svgrepo-com.svg",
-              function: ()=> console.log("archivo1"),
+              function: () => console.log("archivo1"),
             },
           ],
           subfolders: [],
@@ -101,3 +101,5 @@ export const folder1 = {
     },
   ],
 };
+
+export { assetsFolder, playGroundFolder, readmeFile, folder1 };

@@ -2,7 +2,7 @@ import { btnFocus } from "../../navBarAsideFocus/btnFocus.js";
 const folderClose = "./assets/folder-close.svg";
 const folderOpen = "./assets/folder-open.svg";
 
-export const folderFileSideBar = (folder, funcion, icono) => {
+const folderFileSideBar = (folder, funcion, icono) => {
   const miNodo = document.createElement("div");
   const miNodoButton = document.createElement("button");
   miNodoButton.classList.add("accordion");
@@ -41,13 +41,13 @@ export const folderFileSideBar = (folder, funcion, icono) => {
   btnFocus(btnFolder, "activeFile");
   btnFocus(btnFile, "activeFile");
 
-  miNodoButton.addEventListener("click", () => {    
+  miNodoButton.addEventListener("click", () => {
     const panel = miNodoButton.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
       iconFolder.setAttribute("src", folderClose);
-    } else {      
-      panel.style.maxHeight = "300px"
+    } else {
+      panel.style.maxHeight = "300px";
       iconFolder.setAttribute("src", folderOpen);
     }
   });
@@ -55,6 +55,7 @@ export const folderFileSideBar = (folder, funcion, icono) => {
   return miNodo;
 };
 
+export { folderFileSideBar };
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_symbol //
 
 /* export const folderFileSideBar = (

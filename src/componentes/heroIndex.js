@@ -1,16 +1,16 @@
 import { isRender } from "../isRender.js";
 
-export const renderMainText = () => {
-  isRender.stack = false
+const renderMainText = () => {
+  isRender.stack = false;
 
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
 
-  const tabs = document.getElementById("tabs")
-  tabs.innerHTML = ""
+  const tabs = document.getElementById("tabs");
+  tabs.innerHTML = "";
 
-  const fileOpen = document.getElementById("fileOpen")
-  fileOpen.textContent = "PORTFOLIO"  
+  const fileOpen = document.getElementById("fileOpen");
+  fileOpen.textContent = "PORTFOLIO";
 
   const mainArea = document.getElementById("mainArea");
   mainArea.style.gridTemplateAreas = `
@@ -78,3 +78,5 @@ export const renderMainText = () => {
   miNodo.appendChild(miNodoHeroContainerAside);
   mainView.appendChild(miNodo);
 };
+
+export { renderMainText };

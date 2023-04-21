@@ -3,7 +3,7 @@ import { btnFocus } from "../../navBarAsideFocus/btnFocus.js";
 import { stacks } from "./stackObj.js";
 import { stackRenderViewSideBar } from "./stackViewSideBar.js";
 
-export const renderStack = () => {
+const renderStack = () => {
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
   mainView.style.overflowY = "auto";
@@ -11,7 +11,7 @@ export const renderStack = () => {
   "tabs tabs tabs"
   "rootPath rootPath rootPath"
   "mainView mainView mainView"
-  `;  
+  `;
 
   const rootPath = document.getElementById("rootPath");
   rootPath.innerHTML = "";
@@ -32,3 +32,5 @@ export const renderStack = () => {
 
   isRender.stack = true;
 };
+
+export { renderStack };

@@ -7,7 +7,7 @@ import {
 } from "./folderFileObj.js";
 import { folderFileSideBar } from "./folderFileRender.js";
 
-export const renderExplorer = () => {
+const renderExplorer = () => {
   isRender.stack = false;
 
   const mainView = document.getElementById("mainView");
@@ -25,16 +25,16 @@ export const renderExplorer = () => {
   "rootPath rootPath rootPath"
   "mainView mainView mainView"
   `;
-  
+
   const viewSideBar = document.getElementById("viewSideBar");
   viewSideBar.style.overflowY = "auto";
   viewSideBar.innerHTML = "";
 
   const titleSideBar = document.getElementById("titleSideBar");
   titleSideBar.textContent = "EXPLORER";
-  
+
   const readme = folderFileSideBar(readmeFile);
-  viewSideBar.appendChild(readme)
+  viewSideBar.appendChild(readme);
   const assets = folderFileSideBar(assetsFolder);
   viewSideBar.appendChild(assets);
   const playGround = folderFileSideBar(playGroundFolder);
@@ -48,3 +48,5 @@ export const renderExplorer = () => {
   // folderFileSideBar("Proyecto", ["Archivo4", "Archivo5"]);
   // folderFileSideBar("PlayGround", ["PlayGround.js"], playGroundRender,iconoJs);
 };
+
+export { renderExplorer };

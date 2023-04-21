@@ -1,4 +1,4 @@
-export const readmeRender = () => {
+const readmeRender = () => {
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
   mainView.style.overflowY = "auto";
@@ -36,3 +36,5 @@ export const readmeRender = () => {
   }
   mainView.append(miNodo);
 };
+
+export { readmeRender };
