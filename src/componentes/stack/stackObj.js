@@ -85,14 +85,14 @@ export const stacks = [
     stackId: "nodeJs",
   },
   {
-    stackTitle: "POSTMAN",
-    stackImg: "./assets/postman-icon-svgrepo-com.svg",
+    stackTitle: "EXPRES JS",
+    stackImg: "./assets/express-svgrepo-com.svg",
     stackDescription:
-      "Herramienta para desarrolladores que permite probar, documentar y colaborar en la creación de APIs.",
+      "Framework para Node.js. Se usa para crear aplicaciones web rápidas y eficientes, simplificando el manejo de rutas, solicitudes y respuestas HTTP.",
     stackCertificado: "https://http.cat/404",
     stackLinkCertificado: "https://httpstatusdogs.com/img/404.jpg",
-    stackPath: "Inicio > DesarroloWeb > BackEnd > Db > Postman",
-    stackId: "Postman",
+    stackPath: "Inicio > DesarroloWeb > BackEnd > Db > ExpressJs",
+    stackId: "Express Js",
   },
   {
     stackTitle: "MONGO DB",
@@ -103,5 +103,15 @@ export const stacks = [
     stackLinkCertificado: "https://httpstatusdogs.com/img/404.jpg",
     stackPath: "Inicio > DesarroloWeb > BackEnd > Db > MongoDb",
     stackId: "mongoDb",
+  },
+  {
+    stackTitle: "POSTMAN",
+    stackImg: "./assets/postman-icon-svgrepo-com.svg",
+    stackDescription:
+      "Herramienta para desarrolladores que permite probar, documentar y colaborar en la creación de APIs.",
+    stackCertificado: "https://http.cat/404",
+    stackLinkCertificado: "https://httpstatusdogs.com/img/404.jpg",
+    stackPath: "Inicio > DesarroloWeb > BackEnd > Db > Postman",
+    stackId: "Postman",
   },
 ];
