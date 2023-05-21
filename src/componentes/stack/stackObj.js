@@ -85,6 +85,16 @@ export const stacks = [
     stackId: "nodeJs",
   },
   {
+    stackTitle: "POSTMAN",
+    stackImg: "./assets/postman-icon-svgrepo-com.svg",
+    stackDescription:
+      "Herramienta para desarrolladores que permite probar, documentar y colaborar en la creación de APIs.",
+    stackCertificado: "https://http.cat/404",
+    stackLinkCertificado: "https://httpstatusdogs.com/img/404.jpg",
+    stackPath: "Inicio > DesarroloWeb > BackEnd > Db > Postman",
+    stackId: "Postman",
+  },
+  {
     stackTitle: "MONGO DB",
     stackImg: "./assets/mongodb-svgrepo-com.svg",
     stackDescription:
