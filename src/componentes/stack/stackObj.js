@@ -46,7 +46,7 @@ export const stacks = [
     stackImg: "./assets/javascript-svgrepo-com.svg",
     stackDescription:
       "Lenguaje de programacion para añadir interactividad a las paginas webs y crear aplicaciones.",
-    stackCertificado: "../assets/Certificado-JavaScript.png",
+    stackCertificado: "./assets/Certificado-JavaScript.png",
     stackLinkCertificado:
       "https://www.coderhouse.com/certificados/63b642cfa51867000e7eb7ce",
     stackPath: "Inicio > DesarroloWeb >JavaScript",
@@ -57,7 +57,7 @@ export const stacks = [
     stackImg: "./assets/reactjs-svgrepo-com.svg",
     stackDescription:
       "Libreria JavaScript de código abierto para crear interfaces de usuario",
-    stackCertificado: "../assets/Certificado-ReactJs.png",
+    stackCertificado: "./assets/Certificado-ReactJs.png",
     stackLinkCertificado:
       "https://www.coderhouse.com/certificados/63f606fcff4216000e5d1ee0",
     stackPath: "Inicio > DesarroloWeb > ReactJs",
@@ -68,7 +68,7 @@ export const stacks = [
     stackImg: "./assets/firebase-svgrepo-com.svg",
     stackDescription:
       "Plataforma de desarrollo de aplicaciones móviles y web en la nube.",
-    stackCertificado: "../assets/Certificado-ReactJs.png",
+    stackCertificado: "./assets/Certificado-ReactJs.png",
     stackLinkCertificado:
       "https://www.coderhouse.com/certificados/63f606fcff4216000e5d1ee0",
     stackPath: "Inicio > DesarroloWeb > FireBase",
