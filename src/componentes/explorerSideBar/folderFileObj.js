@@ -4,10 +4,22 @@ import { readmeRender } from "../playground/readme.js";
 
 const judoJpg = "./assets/judo.jpg";
 const setUpJpg = "./assets/setup.jpg";
+const chessMeme = "./assets/meme01.jpg"
+const dependeMeme = "./assets/meme02.jpg"
 
 const assetsFolder = {
   folderName: "Assets",
   files: [
+    {
+      name:"chess_meme.jpg",
+      icon: "./assets/jpg-svgrepo-com.svg",
+      function: () => ilyudo(chessMeme, "judo"),
+    },
+    {
+      name:"loroArquitecto.jpg",
+      icon: "./assets/jpg-svgrepo-com.svg",
+      function: () => ilyudo(dependeMeme, "judo"),
+    },
     {
       name: "judo.jpg",
       icon: "./assets/jpg-svgrepo-com.svg",
@@ -66,7 +78,7 @@ const folder1 = {
   ],
   subfolders: [
     {
-      folderName: "NASHEE",
+      folderName: "Carpeta0",
       files: [
         {
           name: "archivo.nshe",

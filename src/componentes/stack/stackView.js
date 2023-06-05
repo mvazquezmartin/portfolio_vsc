@@ -1,5 +1,3 @@
-import { tabsRender } from "../tabs/tabsRender.js";
-
 const stackView = (stack) => {
   mainArea.style.gridTemplateAreas = `
   "tabs tabs tabs"
@@ -41,8 +39,6 @@ const stackView = (stack) => {
     miNodo.appendChild(miNodoCertificadoDiv);
     miNodoCertificadoDiv.appendChild(miNodoCertificado);
     mainView.appendChild(miNodo);
-
-    tabsRender(stack.stackTitle);
   });
 };
 

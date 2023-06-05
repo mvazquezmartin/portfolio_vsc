@@ -1,3 +1,5 @@
+const tabsOpen = [];
+
 const tabsRender = (file) => {
   const tabs = document.getElementById("tabs");
 
@@ -12,11 +14,6 @@ const tabsRender = (file) => {
   tabs.appendChild(miNodo);
 };
 
-const openTab = (evento) => {
-  tabs.push(evento.target.getAttribute("tabOpen"));
-  tabsRender();
-};
-
 const closeTab = (e) => {
   const id = e.target.dataset.tab;
   tabsOpen = tabsOpen.filter((tabId) => {
@@ -24,4 +21,9 @@ const closeTab = (e) => {
   });
 };
 
-export { tabsRender };
+const openTab = (evento) => {
+  tabs.push(evento.target.getAttribute("tabOpen"));
+  tabsRender();
+};
+
+export { tabsRender, tabsOpen };

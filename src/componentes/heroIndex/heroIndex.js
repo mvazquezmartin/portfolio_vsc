@@ -1,8 +1,4 @@
-import { isRender } from "../../isRender.js";
-
 const renderMainText = () => {
-  isRender.stack = false;
-
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
 

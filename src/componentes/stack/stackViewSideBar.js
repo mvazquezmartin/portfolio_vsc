@@ -1,3 +1,4 @@
+import { tabsOpen } from "../tabs/tabsRender.js";
 import { stacks } from "./stackObj.js";
 import { stackView } from "./stackView.js";
 
@@ -9,7 +10,7 @@ const stackRenderViewSideBar = (stacks) => {
     miNodo.classList.add("stackFlex");
     miNodo.setAttribute("id", stack.stackId);
     miNodo.dataset.tab = stack.stackId;
-    miNodo.addEventListener("click", newTab);
+    miNodo.addEventListener("click", openStack);
     //imagen div container
     const miNodoDivImg = document.createElement("div");
     miNodoDivImg.classList.add("stackDivImg");
@@ -37,9 +38,11 @@ const stackRenderViewSideBar = (stacks) => {
   });
 };
 
-const newTab = (evento) => {
+const openStack = (evento) => {
   const id = evento.target.closest(".stackFlex").dataset.tab;
   const stack = stacks.find((e) => e.stackId === id);
+  tabsOpen.push(stack.stackTitle)
+  console.log(tabsOpen)  
   stackView(stack);
 };
 

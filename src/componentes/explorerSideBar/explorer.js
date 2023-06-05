@@ -8,8 +8,6 @@ import {
 import { folderFileSideBar } from "./folderFileRender.js";
 
 const renderExplorer = () => {
-  isRender.stack = false;
-
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
 

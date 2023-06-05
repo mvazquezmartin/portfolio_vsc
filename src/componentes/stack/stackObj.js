@@ -6,7 +6,7 @@ export const stacks = [
     stackCertificado: "./assets/Certificado-Desarrollo-Web.png",
     stackLinkCertificado:
       "https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
-    stackPath: "Inicio > DesarroloWeb > Html5",
+    stackPath: "Inicio > DesarrolloWeb > Html5",
     stackId: "html5",
   },
   {
@@ -16,7 +16,7 @@ export const stacks = [
     stackCertificado: "./assets/Certificado-Desarrollo-Web.png",
     stackLinkCertificado:
       "https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
-    stackPath: "Inicio > DesarroloWeb > Html5 > CSS",
+    stackPath: "Inicio > DesarrolloWeb > CSS",
     stackId: "css",
   },
   {
@@ -27,7 +27,7 @@ export const stacks = [
     stackCertificado: "./assets/Certificado-Desarrollo-Web.png",
     stackLinkCertificado:
       "https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
-    stackPath: "Inicio > DesarroloWeb > Html5 > CSS > Sass",
+    stackPath: "Inicio > DesarrolloWeb > CSS > Sass",
     stackId: "sass",
   },
   {
@@ -38,7 +38,7 @@ export const stacks = [
     stackCertificado: "./assets/Certificado-Desarrollo-Web.png",
     stackLinkCertificado:
       "https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
-    stackPath: "Inicio > DesarroloWeb > Html5 > CSS > Library",
+    stackPath: "Inicio > DesarrolloWeb > Library > Bootstrap",
     stackId: "bootstrap",
   },
   {
@@ -49,7 +49,7 @@ export const stacks = [
     stackCertificado: "./assets/Certificado-JavaScript.png",
     stackLinkCertificado:
       "https://www.coderhouse.com/certificados/63b642cfa51867000e7eb7ce",
-    stackPath: "Inicio > DesarroloWeb >JavaScript",
+    stackPath: "Inicio > DesarrolloWeb > JavaScript",
     stackId: "javaScript",
   },
   {
@@ -60,7 +60,7 @@ export const stacks = [
     stackCertificado: "./assets/Certificado-ReactJs.png",
     stackLinkCertificado:
       "https://www.coderhouse.com/certificados/63f606fcff4216000e5d1ee0",
-    stackPath: "Inicio > DesarroloWeb > ReactJs",
+    stackPath: "Inicio > DesarrolloWeb > ReactJs",
     stackId: "reactJs",
   },
   {
@@ -71,7 +71,7 @@ export const stacks = [
     stackCertificado: "./assets/Certificado-ReactJs.png",
     stackLinkCertificado:
       "https://www.coderhouse.com/certificados/63f606fcff4216000e5d1ee0",
-    stackPath: "Inicio > DesarroloWeb > FireBase",
+    stackPath: "Inicio > DesarrolloWeb > FireBase",
     stackId: "firebase",
   },
   {
@@ -81,7 +81,7 @@ export const stacks = [
       "Entorno en tiempo de ejecución multiplataforma, para la capa del servidor basado en JavaScript.",
     stackCertificado: "https://http.cat/404",
     stackLinkCertificado: "https://httpstatusdogs.com/img/404.jpg",
-    stackPath: "Inicio > DesarroloWeb > BackEnd > NodeJs",
+    stackPath: "Inicio > DesarrolloWeb > BackEnd > NodeJs",
     stackId: "nodeJs",
   },
   {
@@ -91,8 +91,8 @@ export const stacks = [
       "Framework para Node.js. Se usa para crear aplicaciones web rápidas y eficientes, simplificando el manejo de rutas, solicitudes y respuestas HTTP.",
     stackCertificado: "https://http.cat/404",
     stackLinkCertificado: "https://httpstatusdogs.com/img/404.jpg",
-    stackPath: "Inicio > DesarroloWeb > BackEnd > Db > ExpressJs",
-    stackId: "Express Js",
+    stackPath: "Inicio > DesarrolloWeb > BackEnd > Framework > ExpressJs",
+    stackId: "expressJs",
   },
   {
     stackTitle: "MONGO DB",
@@ -101,7 +101,7 @@ export const stacks = [
       "Sistema de base de datos NoSQL flexible y escalable para aplicaciones modernas en la nube.",
     stackCertificado: "https://http.cat/404",
     stackLinkCertificado: "https://httpstatusdogs.com/img/404.jpg",
-    stackPath: "Inicio > DesarroloWeb > BackEnd > Db > MongoDb",
+    stackPath: "Inicio > DesarrolloWeb > BackEnd > DataBase > MongoDb",
     stackId: "mongoDb",
   },
   {
@@ -111,7 +111,7 @@ export const stacks = [
       "Herramienta para desarrolladores que permite probar, documentar y colaborar en la creación de APIs.",
     stackCertificado: "https://http.cat/404",
     stackLinkCertificado: "https://httpstatusdogs.com/img/404.jpg",
-    stackPath: "Inicio > DesarroloWeb > BackEnd > Db > Postman",
-    stackId: "Postman",
+    stackPath: "Inicio > DesarrolloWeb > BackEnd > Postman",
+    stackId: "postman",
   },
 ];

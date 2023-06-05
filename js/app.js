@@ -1,7 +1,6 @@
 import { renderExplorer } from "../src/componentes/explorerSideBar/explorer.js";
 import { renderMainText } from "../src/componentes/heroIndex/heroIndex.js";
 import { renderStack } from "../src/componentes/stack/stack.js";
-import { isRender } from "../src/isRender.js";
 import { btnFocus } from "../src/navBarAsideFocus/btnFocus.js";
 
 // DECLARACIONES
@@ -16,11 +15,11 @@ const btnNavBarAside = document.querySelectorAll(".iconNavBarAside");
 
 // EVENTLISTENERS
 explorer.addEventListener("click", renderExplorer);
-stack.addEventListener("click", ()=>{if(!isRender.stack) renderStack()});
+stack.addEventListener("click", renderStack);
 inicio.addEventListener("click", renderMainText);
 //inicio.addEventListener("click", ()=>{btnFocusRemove(btnNavBarAside)})
 
 // EJECUCION DE FUNCIONES
-renderExplorer()
+renderExplorer();
 renderMainText();
 btnFocus(btnNavBarAside);
