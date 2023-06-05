@@ -1,4 +1,4 @@
-import { tabsOpen } from "../tabs/tabsRender.js";
+import { createTab } from "../tabs/tabsRender.js";
 import { stacks } from "./stackObj.js";
 import { stackView } from "./stackView.js";
 
@@ -41,9 +41,7 @@ const stackRenderViewSideBar = (stacks) => {
 const openStack = (evento) => {
   const id = evento.target.closest(".stackFlex").dataset.tab;
   const stack = stacks.find((e) => e.stackId === id);
-  tabsOpen.push(stack.stackTitle)
-  console.log(tabsOpen)  
-  stackView(stack);
+  createTab(stack.stackTitle, () => stackView(stack));
 };
 
 export { stackRenderViewSideBar };

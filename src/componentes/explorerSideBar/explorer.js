@@ -1,4 +1,3 @@
-import { isRender } from "../../isRender.js";
 import {
   assetsFolder,
   folder1,

@@ -1,34 +1,37 @@
 import { ilyudo } from "../assets/1Lyud0.js";
 import { playGroundRender } from "../playground/playGround.js";
 import { readmeRender } from "../playground/readme.js";
+import { createTab } from "../tabs/tabsRender.js";
 
 const judoJpg = "./assets/judo.jpg";
 const setUpJpg = "./assets/setup.jpg";
-const chessMeme = "./assets/meme01.jpg"
-const dependeMeme = "./assets/meme02.jpg"
+const chessMeme = "./assets/meme01.jpg";
+const dependeMeme = "./assets/meme02.jpg";
 
 const assetsFolder = {
   folderName: "Assets",
   files: [
     {
-      name:"chess_meme.jpg",
+      name: "chess_meme.jpg",
       icon: "./assets/jpg-svgrepo-com.svg",
-      function: () => ilyudo(chessMeme, "judo"),
+      function: () =>
+        createTab("chess_meme.jpg", () => ilyudo(chessMeme, "judo")),
     },
     {
-      name:"loroArquitecto.jpg",
+      name: "loroArquitecto.jpg",
       icon: "./assets/jpg-svgrepo-com.svg",
-      function: () => ilyudo(dependeMeme, "judo"),
+      function: () =>
+        createTab("loroArquitecto.jpg", () => ilyudo(dependeMeme, "judo")),
     },
     {
       name: "judo.jpg",
       icon: "./assets/jpg-svgrepo-com.svg",
-      function: () => ilyudo(judoJpg, "judo"),
+      function: () => createTab("judo.jpg", () => ilyudo(judoJpg, "judo")),
     },
     {
       name: "setUp.jpg",
       icon: "./assets/jpg-svgrepo-com.svg",
-      function: () => ilyudo(setUpJpg, "setUp"),
+      function: () => createTab("setUp.jpg", () => ilyudo(setUpJpg, "setUp")),
     },
   ],
   subfolders: [],
@@ -40,7 +43,7 @@ const playGroundFolder = {
     {
       name: "playGround.js",
       icon: "./assets/javascript-icono-svgrepo-com.svg",
-      function: playGroundRender,
+      function: ()=> createTab ("playGround.js", playGroundRender)
     },
     {
       name: "readme.txt",

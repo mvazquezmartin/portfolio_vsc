@@ -1,29 +1,93 @@
-const tabsOpen = [];
+// Estructura de datos para almacenar información de las pestañas
+const tabs = [];
 
-const tabsRender = (file) => {
-  const tabs = document.getElementById("tabs");
+// Función para crear una nueva pestaña
+function createTab(title, content) {
+  const tab = {
+    title: title,
+    content: content,
+    pinned: false,
+    open: true,
+  };
+  tabs.push(tab);
+  renderTabs();
+  renderMainView();
+}
 
-  const miNodo = document.createElement("div");
-  miNodo.classList.add("tabRender");
+// Función para renderizar las pestañas en la barra de pestañas
+function renderTabs() {
+  console.log(tabs);
+  const tabsContainer = document.getElementById("tabs");
+  tabsContainer.innerHTML = "";
 
-  const miNodoButtonClose = document.createElement("button");
-  miNodoButtonClose.textContent = `${file} x`;
-  miNodoButtonClose.addEventListener("click", closeTab);
+  tabs.forEach((tab, index) => {
+    const tabElement = document.createElement("div");
+    tabElement.classList.add("tab");
+    tabElement.textContent = tab.title;
 
-  miNodo.appendChild(miNodoButtonClose);
-  tabs.appendChild(miNodo);
-};
+    // Asignar evento de clic para cambiar la pestaña activa
+    tabElement.addEventListener("click", () => {
+      setActiveTab(index);
+    });
 
-const closeTab = (e) => {
-  const id = e.target.dataset.tab;
-  tabsOpen = tabsOpen.filter((tabId) => {
-    return tabId !== id;
+    // Asignar evento de doble clic para anclar o desanclar la pestaña
+    tabElement.addEventListener("dblclick", () => {
+      togglePinnedTab(index);
+    });
+
+    // Agregar botón de cierre en cada pestaña
+    const closeButton = document.createElement("span");
+    closeButton.classList.add("closeButton");
+    closeButton.textContent = " x ";
+
+    // Asignar evento de clic para cerrar la pestaña
+    closeButton.addEventListener("click", (event) => {
+      event.stopPropagation(); // Evitar que el clic se propague al contenedor de pestañas
+      closeTab(index);
+    });
+
+    tabElement.appendChild(closeButton);
+    tabsContainer.appendChild(tabElement);
   });
-};
+}
 
-const openTab = (evento) => {
-  tabs.push(evento.target.getAttribute("tabOpen"));
-  tabsRender();
-};
+// Función para cambiar la pestaña activa
+function setActiveTab(index) {
+  tabs.forEach((tab, i) => {
+    tab.open = i === index;
+  });
+  renderTabs();
+  renderMainView();
+}
 
-export { tabsRender, tabsOpen };
+// Función para anclar o desanclar una pestaña
+function togglePinnedTab(index) {
+  tabs[index].pinned = !tabs[index].pinned;
+  renderTabs();
+}
+
+// Función para cerrar una pestaña
+function closeTab(index) {
+  tabs.splice(index, 1);
+  renderTabs();
+  renderMainView();
+}
+
+// Función para renderizar el contenido en el mainView
+function renderMainView() {
+  const mainViewContainer = document.getElementById("mainView");
+  mainViewContainer.innerHTML = "";
+
+  const activeTab = tabs.find((tab) => tab.open);
+  if (activeTab) {
+    const tabContent = document.createElement("div");
+    const content =
+      typeof activeTab.content === "function"
+        ? activeTab.content()
+        : activeTab.content;
+    tabContent.innerHTML = content;
+    mainViewContainer.appendChild(tabContent);
+  }
+}
+
+export { createTab };
