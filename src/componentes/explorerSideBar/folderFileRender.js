@@ -1,4 +1,4 @@
-import { btnFocus } from "../../navBarAsideFocus/btnFocus.js";
+import { btnFocus } from "../../utils/btnFocus.js";
 const folderClose = "./assets/folder-close.svg";
 const folderOpen = "./assets/folder-open.svg";
 

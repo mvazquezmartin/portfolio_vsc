@@ -41,7 +41,7 @@ function renderTabs() {
     tabElement.textContent = tab.title;
 
     // Asignar evento de clic para cambiar la pestaña activa
-    tabElement.addEventListener("click", () => {
+    tabDiv.addEventListener("click", () => {
       setActiveTab(index);
     });
 

@@ -1,4 +1,4 @@
-import { btnFocus } from "../../navBarAsideFocus/btnFocus.js";
+import { btnFocus } from "../../utils/btnFocus.js";
 import { stacks } from "./stackObj.js";
 import { stackRenderViewSideBar } from "./stackViewSideBar.js";
 

@@ -284,9 +284,10 @@ a:hover {
   display: flex;
   align-items: center;
   border-right: 1px solid rgb(39, 39, 39);
+  cursor: pointer;
 }
 .iconTab {
-  width: 13px;
+  width: 15px;
 }
 .tabButton {
   color: #6272a4;
