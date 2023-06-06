@@ -15,23 +15,41 @@ const assetsFolder = {
       name: "chess_meme.jpg",
       icon: "./assets/jpg-svgrepo-com.svg",
       function: () =>
-        createTab("chess_meme.jpg", () => ilyudo(chessMeme, "chess_meme")),
+        createTab(
+          "chess_meme.jpg",
+          () => ilyudo(chessMeme, "chess_meme"),
+          "./assets/jpg-svgrepo-com.svg"
+        ),
     },
     {
       name: "loroArquitecto.jpg",
       icon: "./assets/jpg-svgrepo-com.svg",
       function: () =>
-        createTab("loroArquitecto.jpg", () => ilyudo(dependeMeme, "loroArquitecto")),
+        createTab(
+          "loroArquitecto.jpg",
+          () => ilyudo(dependeMeme, "loroArquitecto"),
+          "./assets/jpg-svgrepo-com.svg"
+        ),
     },
     {
       name: "judo.jpg",
       icon: "./assets/jpg-svgrepo-com.svg",
-      function: () => createTab("judo.jpg", () => ilyudo(judoJpg, "judo")),
+      function: () =>
+        createTab(
+          "judo.jpg",
+          () => ilyudo(judoJpg, "judo"),
+          "./assets/jpg-svgrepo-com.svg"
+        ),
     },
     {
       name: "setUp.jpg",
       icon: "./assets/jpg-svgrepo-com.svg",
-      function: () => createTab("setUp.jpg", () => ilyudo(setUpJpg, "setUp")),
+      function: () =>
+        createTab(
+          "setUp.jpg",
+          () => ilyudo(setUpJpg, "setUp"),
+          "./assets/jpg-svgrepo-com.svg"
+        ),
     },
   ],
   subfolders: [],
@@ -43,12 +61,18 @@ const playGroundFolder = {
     {
       name: "playGround.js",
       icon: "./assets/javascript-icono-svgrepo-com.svg",
-      function: ()=> createTab ("playGround.js", playGroundRender)
+      function: () =>
+        createTab(
+          "playGround.js",
+          playGroundRender,
+          "./assets/javascript-icono-svgrepo-com.svg"
+        ),
     },
     {
       name: "readme.txt",
       icon: "./assets/txt-svgrepo-com.svg",
-      function: ()=> createTab("readme.txt", readmeRender)
+      function: () =>
+        createTab("readme.txt", readmeRender, "./assets/txt-svgrepo-com.svg"),
     },
   ],
   subfolders: [],

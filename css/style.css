@@ -1,10 +1,9 @@
 /* ------------------ INDEX ================ */
 /* font-family: 'Fira Code', monospace; */
 /* https://grid.layoutit.com/ */
-/* * {
-  color: aliceblue;
-  border: 0.5px solid red;
-} */
+/* * {  
+  border: 0.1px solid red;
+}  */
 /* ---------------------------------------------- */
 /* Estilo Scroll */
 /* width */
@@ -223,7 +222,7 @@ a:hover {
 .tabs {
   grid-area: tabs;
   display: flex;
-  background-color: #1d1e24;
+  background-color: rgb(29, 30, 36);
   border-top: 0.5px solid #44475a;
   border-bottom: 0.5px solid #44475a;
 }
@@ -276,6 +275,42 @@ a:hover {
   margin-left: 5px;
 }
 
+/* --------------------------------------------------------- */
+/* TABS */
+
+.tab {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid rgb(39, 39, 39);
+}
+.tab img{
+  width: 13px;
+}
+.tabButton{
+  color: #6272a4;
+  font-size: 0.9rem;
+  
+}
+.closeButton {
+  color: #191a21;
+  transition: 0.2s;
+  margin-left: 16px;
+}
+
+.tab:hover .closeButton {
+  color: #fff;
+}
+.tab.activeTab .closeButton {
+  color: aliceblue;
+}
+.tab.activeTab{
+  border-top: 0.5px solid #ff79c6;  
+  background-color: rgba(190, 190, 190, 0.1);
+}
+.tab.activeTab .tabButton{
+  color: aliceblue;  
+}
 /* --------------------------------------------------------- */
 
 /* CONPONENTE textMain */

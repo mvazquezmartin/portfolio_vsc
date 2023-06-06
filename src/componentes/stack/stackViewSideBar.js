@@ -41,7 +41,7 @@ const stackRenderViewSideBar = (stacks) => {
 const openStack = (evento) => {
   const id = evento.target.closest(".stackFlex").dataset.tab;
   const stack = stacks.find((e) => e.stackId === id);
-  createTab(stack.stackTitle, () => stackView(stack));
+  createTab(stack.stackTitle, () => stackView(stack), stack.stackImg);
 };
 
 export { stackRenderViewSideBar };

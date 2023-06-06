@@ -2,7 +2,7 @@ const tabs = [];
 let activeTabIndex = -1; // Índice de la pestaña activa
 
 // Función para crear una nueva pestaña o activar una existente
-function createTab(title, content) {
+function createTab(title, content, icon) {
   const existingTabIndex = tabs.findIndex((tab) => tab.title === title);
   if (existingTabIndex !== -1) {
     setActiveTab(existingTabIndex); // Establecer la pestaña existente como activa
@@ -10,6 +10,7 @@ function createTab(title, content) {
     const tab = {
       title: title,
       content: content,
+      icon: icon,
       open: true,
     };
     tabs.push(tab);
@@ -17,6 +18,7 @@ function createTab(title, content) {
   }
   renderTabs();
   renderMainView();
+  activeTabFocus();
 }
 
 function renderTabs() {
@@ -24,8 +26,14 @@ function renderTabs() {
   tabsContainer.innerHTML = "";
 
   tabs.forEach((tab, index) => {
-    const tabElement = document.createElement("div");
-    tabElement.classList.add("tab");
+    const tabDiv = document.createElement("div");
+    tabDiv.classList.add("tab");
+
+    const tabIcon = document.createElement("img");
+    tabIcon.setAttribute("src", tab.icon);
+
+    const tabElement = document.createElement("button");
+    tabElement.classList.add("tabButton");
     tabElement.textContent = tab.title;
 
     // Asignar evento de clic para cambiar la pestaña activa
@@ -44,8 +52,10 @@ function renderTabs() {
       closeTab(index);
     });
 
+    tabDiv.appendChild(tabIcon);
+    tabDiv.appendChild(tabElement);
     tabElement.appendChild(closeButton);
-    tabsContainer.appendChild(tabElement);
+    tabsContainer.appendChild(tabDiv);
   });
 }
 
@@ -55,7 +65,19 @@ function setActiveTab(index) {
     activeTabIndex = index; // Actualizar el índice de la pestaña activa
     renderTabs();
     renderMainView();
+    activeTabFocus();
   }
+}
+
+function activeTabFocus() {
+  const tabButtons = document.querySelectorAll(".tab");
+  const activeTabButton = tabButtons[activeTabIndex];
+  // Elimina la clase 'activeTab' de todos los botones de pestaña
+  tabButtons.forEach((button) => {
+    button.classList.remove("activeTab");
+  });
+  // Agrega la clase 'activeTab' al botón de la pestaña activa
+  activeTabButton.classList.add("activeTab");
 }
 
 // Función para cerrar una pestaña

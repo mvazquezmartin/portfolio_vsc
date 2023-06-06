@@ -7,12 +7,6 @@ import {
 import { folderFileSideBar } from "./folderFileRender.js";
 
 const renderExplorer = () => {
-  const mainView = document.getElementById("mainView");
-  mainView.innerHTML = "";
-
-  const rootPath = document.getElementById("rootPath");
-  rootPath.innerHTML = "";
-
   const fileOpen = document.getElementById("fileOpen");
   fileOpen.textContent = "PORTFOLIO";
 
