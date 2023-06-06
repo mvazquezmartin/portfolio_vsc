@@ -384,6 +384,7 @@ a:hover {
   flex-direction: column;
   align-items: left;
   justify-content: center;
+  user-select: none;
 }
 .stackTitle {
   margin: 0;
