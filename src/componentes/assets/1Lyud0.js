@@ -17,7 +17,7 @@ const ilyudo = (img, name) => {
   miNodoImg.classList.add("assets");
   miNodoImg.setAttribute("src", img);
   miNodo.appendChild(miNodoImg);
-  mainView.appendChild(miNodo);
+  mainView.appendChild(miNodo);  
 };
 
 export { ilyudo };

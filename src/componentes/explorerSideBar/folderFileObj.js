@@ -15,13 +15,13 @@ const assetsFolder = {
       name: "chess_meme.jpg",
       icon: "./assets/jpg-svgrepo-com.svg",
       function: () =>
-        createTab("chess_meme.jpg", () => ilyudo(chessMeme, "judo")),
+        createTab("chess_meme.jpg", () => ilyudo(chessMeme, "chess_meme")),
     },
     {
       name: "loroArquitecto.jpg",
       icon: "./assets/jpg-svgrepo-com.svg",
       function: () =>
-        createTab("loroArquitecto.jpg", () => ilyudo(dependeMeme, "judo")),
+        createTab("loroArquitecto.jpg", () => ilyudo(dependeMeme, "loroArquitecto")),
     },
     {
       name: "judo.jpg",
@@ -48,7 +48,7 @@ const playGroundFolder = {
     {
       name: "readme.txt",
       icon: "./assets/txt-svgrepo-com.svg",
-      function: readmeRender,
+      function: ()=> createTab("readme.txt", readmeRender)
     },
   ],
   subfolders: [],
