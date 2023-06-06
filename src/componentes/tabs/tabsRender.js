@@ -1,3 +1,5 @@
+const closeX = './assets/close-sm-svgrepo-com.svg'
+
 const tabs = [];
 let activeTabIndex = -1; // Índice de la pestaña activa
 
@@ -12,6 +14,7 @@ function createTab(title, content, icon) {
       content: content,
       icon: icon,
       open: true,
+      close: closeX
     };
     tabs.push(tab);
     setActiveTab(tabs.length - 1); // Establecer la pestaña creada como activa
@@ -31,6 +34,7 @@ function renderTabs() {
 
     const tabIcon = document.createElement("img");
     tabIcon.setAttribute("src", tab.icon);
+    tabIcon.classList.add("iconTab")
 
     const tabElement = document.createElement("button");
     tabElement.classList.add("tabButton");
@@ -42,9 +46,10 @@ function renderTabs() {
     });
 
     // Agregar botón de cierre en cada pestaña
-    const closeButton = document.createElement("span");
+    const closeButton = document.createElement("img");
+    closeButton.setAttribute("src", tab.close)
     closeButton.classList.add("closeButton");
-    closeButton.textContent = " x ";
+    
 
     // Asignar evento de clic para cerrar la pestaña
     closeButton.addEventListener("click", (event) => {

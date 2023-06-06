@@ -222,6 +222,7 @@ a:hover {
 .tabs {
   grid-area: tabs;
   display: flex;
+  flex-wrap: wrap;
   background-color: rgb(29, 30, 36);
   border-top: 0.5px solid #44475a;
   border-bottom: 0.5px solid #44475a;
@@ -279,37 +280,39 @@ a:hover {
 /* TABS */
 
 .tab {
-  padding: 0 10px;
+  padding-left: 10px;
   display: flex;
   align-items: center;
   border-right: 1px solid rgb(39, 39, 39);
 }
-.tab img{
+.iconTab {
   width: 13px;
 }
-.tabButton{
+.tabButton {
   color: #6272a4;
   font-size: 0.9rem;
-  
 }
 .closeButton {
-  color: #191a21;
-  transition: 0.2s;
-  margin-left: 16px;
+  width: 22px;
+  filter: invert(5%) sepia(4%) saturate(5505%) hue-rotate(195deg)
+    brightness(93%) contrast(87%);
+  margin-left: 10px;
 }
 
 .tab:hover .closeButton {
-  color: #fff;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(3deg)
+    brightness(108%) contrast(102%);
 }
 .tab.activeTab .closeButton {
-  color: aliceblue;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(3deg)
+    brightness(108%) contrast(102%);
 }
-.tab.activeTab{
-  border-top: 0.5px solid #ff79c6;  
+.tab.activeTab {
+  border-top: 0.5px solid #ff79c6;
   background-color: rgba(190, 190, 190, 0.1);
 }
-.tab.activeTab .tabButton{
-  color: aliceblue;  
+.tab.activeTab .tabButton {
+  color: aliceblue;
 }
 /* --------------------------------------------------------- */
 
