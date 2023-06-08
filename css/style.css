@@ -222,11 +222,12 @@ a:hover {
 .tabs {
   grid-area: tabs;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   background-color: rgb(29, 30, 36);
   border-top: 0.5px solid #44475a;
-  border-bottom: 0.5px solid #44475a;
+  border-bottom: 0.5px solid #44475a;  
 }
+
 .tabRender button {
   color: aliceblue;
 }
@@ -281,10 +282,11 @@ a:hover {
 
 .tab {
   padding-left: 10px;
-  display: flex;
+  display: flex;  
   align-items: center;
   border-right: 1px solid rgb(39, 39, 39);
-  cursor: pointer;  
+  cursor: pointer;   
+  min-width: 0;
 }
 
 .iconTab {
@@ -292,9 +294,11 @@ a:hover {
   margin-right: 5px;
 }
 
-.tabButton {
+.tabTitle {
   color: #6272a4;
-  font-size: 0.8rem;
+  font-size: 0.8rem;  
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .closeButton {
@@ -317,10 +321,12 @@ a:hover {
 .tab.activeTab {
   border-top: 0.5px solid #ff79c6;
   background-color: rgba(190, 190, 190, 0.1);
+  flex-shrink: 0;
 }
 
-.tab.activeTab .tabButton {
+.tab.activeTab .tabTitle {
   color: aliceblue;
+  
 }
 /* --------------------------------------------------------- */
 

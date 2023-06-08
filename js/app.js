@@ -1,5 +1,4 @@
 import { renderExplorer } from "../src/componentes/explorerSideBar/explorer.js";
-import { fetchGithub } from "../src/componentes/github/github.js";
 import { gridGithubRender } from "../src/componentes/github/gridRender.js";
 import { renderMainText } from "../src/componentes/heroIndex/heroIndex.js";
 import { renderStack } from "../src/componentes/stack/stack.js";

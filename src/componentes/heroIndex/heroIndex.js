@@ -1,20 +1,7 @@
 const renderMainText = () => {
   const mainView = document.getElementById("mainView");
-  mainView.innerHTML = "";
-
-  // const tabs = document.getElementById("tabs");
-  // tabs.innerHTML = "";
-
-  const fileOpen = document.getElementById("fileOpen");
-  fileOpen.textContent = "PORTFOLIO";
-
-  // const mainArea = document.getElementById("mainArea");
-  // mainArea.style.gridTemplateAreas = `
-  // "tabs tabs tabs"
-  // "rootPath rootPath rootPath"
-  // "mainView mainView mainView"
-  // "mainView mainView mainView"
-  // `;
+  mainView.innerHTML = "";  
+ 
   const titleSideBar = document.getElementById("titleSideBar");
   titleSideBar.textContent = "INICIO";
 

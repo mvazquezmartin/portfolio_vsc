@@ -39,8 +39,8 @@ function renderTabs() {
     tabIcon.setAttribute("src", tab.icon);
     tabIcon.classList.add("iconTab")
 
-    const tabElement = document.createElement("button");
-    tabElement.classList.add("tabButton");
+    const tabElement = document.createElement("div");
+    tabElement.classList.add("tabTitle");
     tabElement.textContent = tab.title;
 
     // Asignar evento de clic para cambiar la pestaña activa
@@ -62,7 +62,7 @@ function renderTabs() {
 
     tabDiv.appendChild(tabIcon);
     tabDiv.appendChild(tabElement);
-    tabElement.appendChild(closeButton);
+    tabDiv.appendChild(closeButton);
     tabsContainer.appendChild(tabDiv);
   });
 }
