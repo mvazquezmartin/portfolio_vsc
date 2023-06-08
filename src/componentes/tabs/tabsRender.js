@@ -28,6 +28,9 @@ function renderTabs() {
   const tabsContainer = document.getElementById("tabs");
   tabsContainer.innerHTML = "";
 
+  const rootPath = document.getElementById("rootPath");
+  rootPath.style.visibility = "visible";
+
   tabs.forEach((tab, index) => {
     const tabDiv = document.createElement("div");
     tabDiv.classList.add("tab");

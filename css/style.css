@@ -284,15 +284,19 @@ a:hover {
   display: flex;
   align-items: center;
   border-right: 1px solid rgb(39, 39, 39);
-  cursor: pointer;
+  cursor: pointer;  
 }
+
 .iconTab {
   width: 15px;
+  margin-right: 5px;
 }
+
 .tabButton {
   color: #6272a4;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
+
 .closeButton {
   width: 22px;
   filter: invert(5%) sepia(4%) saturate(5505%) hue-rotate(195deg)
@@ -304,14 +308,17 @@ a:hover {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(3deg)
     brightness(108%) contrast(102%);
 }
+
 .tab.activeTab .closeButton {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(3deg)
     brightness(108%) contrast(102%);
 }
+
 .tab.activeTab {
   border-top: 0.5px solid #ff79c6;
   background-color: rgba(190, 190, 190, 0.1);
 }
+
 .tab.activeTab .tabButton {
   color: aliceblue;
 }
