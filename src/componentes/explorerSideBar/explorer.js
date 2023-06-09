@@ -10,13 +10,6 @@ const renderExplorer = () => {
   const fileOpen = document.getElementById("fileOpen");
   fileOpen.textContent = "PORTFOLIO";
 
-  const mainArea = document.getElementById("mainArea");
-  mainArea.style.gridTemplateAreas = `
-  "tabs tabs tabs"
-  "rootPath rootPath rootPath"
-  "mainView mainView mainView"
-  `;  
-
   const viewSideBar = document.getElementById("viewSideBar");
   viewSideBar.style.overflowY = "auto";
   viewSideBar.innerHTML = "";

@@ -1,13 +1,4 @@
 const stackView = (stack) => {
-  mainArea.style.gridTemplateAreas = `
-  "tabs tabs tabs"
-  "rootPath rootPath rootPath"
-  "mainView mainView mainView"
-  `;
-  mainView.innerHTML = "";
-  rootPath.style.display = "flex";
-  rootPath.innerHTML = "";
-
   const stackArray = Array.isArray(stack) ? stack : [stack];
   stackArray.forEach((stack) => {
     //path

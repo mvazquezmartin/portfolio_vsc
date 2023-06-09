@@ -1,15 +1,6 @@
 const readmeRender = () => {
-  const mainView = document.getElementById("mainView");
-  mainView.innerHTML = "";
-  mainView.style.overflowY = "auto";
-  mainArea.style.gridTemplateAreas = `
-  "tabs tabs tabs"
-  "rootPath rootPath rootPath"
-  "mainView mainView mainView"
-  `;
-
   const path = document.getElementById("rootPath");
-  path.style.display = "flex";
+  
   path.textContent = "Portfolio > PlayGround > readme.txt";
 
   const miNodo = document.createElement("div");

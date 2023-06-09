@@ -25,6 +25,6 @@ github.addEventListener("click", gridGithubRender);
 //inicio.addEventListener("click", ()=>{btnFocusRemove(btnNavBarAside)})
 
 // EJECUCION DE FUNCIONES
-renderExplorer();
-createTab("Inicio", renderMainText, iconVsc);
 btnFocus(btnNavBarAside);
+createTab("Inicio", renderMainText, iconVsc);
+renderExplorer();

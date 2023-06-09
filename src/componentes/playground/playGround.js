@@ -1,13 +1,5 @@
-const playGroundRender = () => {
-  const mainView = document.getElementById("mainView");
-  mainView.innerHTML = "";
-  mainArea.style.gridTemplateAreas = `
-  "tabs tabs tabs"
-  "rootPath rootPath rootPath"
-  "mainView mainView mainView"
-  `;
-  const path = document.getElementById("rootPath");
-  path.style.display = "flex";
+const playGroundRender = () => {  
+  const path = document.getElementById("rootPath");  
   path.textContent = "Portfolio > PlayGround > playGround.js";
 
   const miNodo = document.createElement("div");

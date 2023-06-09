@@ -1,4 +1,4 @@
-const closeX = './assets/close-sm-svgrepo-com.svg'
+const closeX = "./assets/close-sm-svgrepo-com.svg";
 
 const tabs = [];
 let activeTabIndex = -1; // Índice de la pestaña activa
@@ -6,6 +6,7 @@ let activeTabIndex = -1; // Índice de la pestaña activa
 // Función para crear una nueva pestaña o activar una existente
 function createTab(title, content, icon) {
   const existingTabIndex = tabs.findIndex((tab) => tab.title === title);
+  
   if (existingTabIndex !== -1) {
     setActiveTab(existingTabIndex); // Establecer la pestaña existente como activa
   } else {
@@ -14,11 +15,13 @@ function createTab(title, content, icon) {
       content: content,
       icon: icon,
       open: true,
-      close: closeX
+      close: closeX,
     };
+
     tabs.push(tab);
     setActiveTab(tabs.length - 1); // Establecer la pestaña creada como activa
   }
+
   renderTabs();
   renderMainView();
   activeTabFocus();
@@ -37,7 +40,7 @@ function renderTabs() {
 
     const tabIcon = document.createElement("img");
     tabIcon.setAttribute("src", tab.icon);
-    tabIcon.classList.add("iconTab")
+    tabIcon.classList.add("iconTab");
 
     const tabElement = document.createElement("div");
     tabElement.classList.add("tabTitle");
@@ -50,9 +53,8 @@ function renderTabs() {
 
     // Agregar botón de cierre en cada pestaña
     const closeButton = document.createElement("img");
-    closeButton.setAttribute("src", tab.close)
+    closeButton.setAttribute("src", tab.close);
     closeButton.classList.add("closeButton");
-    
 
     // Asignar evento de clic para cerrar la pestaña
     closeButton.addEventListener("click", (event) => {
@@ -69,6 +71,7 @@ function renderTabs() {
 
 // Función para cambiar la pestaña activa
 function setActiveTab(index) {
+  console.log("setActiveTab Index:", index);
   if (tabs[index] && tabs[index].open) {
     activeTabIndex = index; // Actualizar el índice de la pestaña activa
     renderTabs();
@@ -92,8 +95,12 @@ function activeTabFocus() {
 function closeTab(index) {
   const rootPath = document.getElementById("rootPath");
   rootPath.textContent = "";
+
   const mainViewContainer = document.getElementById("mainView");
   mainViewContainer.textContent = "";
+
+  console.log("closeTab:", index);
+
   if (tabs[index]) {
     const tabToClose = tabs[index];
     const wasActiveTab = tabToClose.open && index === activeTabIndex;
