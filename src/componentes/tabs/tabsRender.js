@@ -6,9 +6,10 @@ let activeTabIndex = -1; // Índice de la pestaña activa
 // Función para crear una nueva pestaña o activar una existente
 function createTab(title, content, icon) {
   const existingTabIndex = tabs.findIndex((tab) => tab.title === title);
-  
+
   if (existingTabIndex !== -1) {
-    setActiveTab(existingTabIndex); // Establecer la pestaña existente como activa
+    // Establecer la pestaña existente como activa
+    setActiveTab(existingTabIndex);
   } else {
     const tab = {
       title: title,
@@ -55,10 +56,9 @@ function renderTabs() {
     const closeButton = document.createElement("img");
     closeButton.setAttribute("src", tab.close);
     closeButton.classList.add("closeButton");
-
     // Asignar evento de clic para cerrar la pestaña
     closeButton.addEventListener("click", (event) => {
-      event.stopPropagation(); // Evitar que el clic se propague al contenedor de pestañas
+      //event.stopPropagation(); // Evitar que el clic se propague al contenedor de pestañas
       closeTab(index);
     });
 
@@ -71,7 +71,6 @@ function renderTabs() {
 
 // Función para cambiar la pestaña activa
 function setActiveTab(index) {
-  console.log("setActiveTab Index:", index);
   if (tabs[index] && tabs[index].open) {
     activeTabIndex = index; // Actualizar el índice de la pestaña activa
     renderTabs();
@@ -99,21 +98,23 @@ function closeTab(index) {
   const mainViewContainer = document.getElementById("mainView");
   mainViewContainer.textContent = "";
 
-  console.log("closeTab:", index);
-
   if (tabs[index]) {
-    const tabToClose = tabs[index];
-    const wasActiveTab = tabToClose.open && index === activeTabIndex;
-
+    // const tabToClose = tabs[index];
+    // const wasActiveTab = tabToClose.open && index === activeTabIndex;
     tabs.splice(index, 1);
     renderTabs();
+    setActiveTab(0);
+    renderMainView();
+    // console.log("wasActiveTab:", wasActiveTab);
+    // console.log(tabs)
 
-    if (wasActiveTab) {
-      const nextActiveTabIndex = tabs.findIndex((tab) => tab.open);
-      setActiveTab(nextActiveTabIndex !== -1 ? nextActiveTabIndex : 0);
-    } else {
-      renderMainView();
-    }
+    // if (wasActiveTab) {
+    //   const nextActiveTabIndex = tabs.findIndex((tab) => tab.open);
+    //   setActiveTab(nextActiveTabIndex !== -1 ? nextActiveTabIndex : 0);
+    // } else {
+    //   setActiveTab(0)
+    //   renderMainView();
+    // }
   }
 }
 
