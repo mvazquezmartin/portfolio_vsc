@@ -15,7 +15,6 @@ function createTab(title, content, icon) {
       title: title,
       content: content,
       icon: icon,
-      open: true,
       close: closeX,
     };
 
@@ -58,7 +57,7 @@ function renderTabs() {
     closeButton.classList.add("closeButton");
     // Asignar evento de clic para cerrar la pestaña
     closeButton.addEventListener("click", (event) => {
-      //event.stopPropagation(); // Evitar que el clic se propague al contenedor de pestañas
+      event.stopPropagation(); // Evitar que el clic se propague al contenedor de pestañas
       closeTab(index);
     });
 
@@ -71,7 +70,7 @@ function renderTabs() {
 
 // Función para cambiar la pestaña activa
 function setActiveTab(index) {
-  if (tabs[index] && tabs[index].open) {
+  if (tabs[index]) {
     activeTabIndex = index; // Actualizar el índice de la pestaña activa
     renderTabs();
     renderMainView();
@@ -98,23 +97,19 @@ function closeTab(index) {
   const mainViewContainer = document.getElementById("mainView");
   mainViewContainer.textContent = "";
 
-  if (tabs[index]) {
-    // const tabToClose = tabs[index];
-    // const wasActiveTab = tabToClose.open && index === activeTabIndex;
-    tabs.splice(index, 1);
-    renderTabs();
-    setActiveTab(0);
-    renderMainView();
-    // console.log("wasActiveTab:", wasActiveTab);
-    // console.log(tabs)
+  const wasActiveTab = index === activeTabIndex;
 
-    // if (wasActiveTab) {
-    //   const nextActiveTabIndex = tabs.findIndex((tab) => tab.open);
-    //   setActiveTab(nextActiveTabIndex !== -1 ? nextActiveTabIndex : 0);
-    // } else {
-    //   setActiveTab(0)
-    //   renderMainView();
-    // }
+  tabs.splice(index, 1);
+  renderTabs();
+
+  if (wasActiveTab) {
+    const nextActiveTabIndex = index === tabs.length ? index - 1 : index;
+    setActiveTab(nextActiveTabIndex);
+  } else {
+    const newActiveTabIndex =
+      activeTabIndex >= index ? activeTabIndex - 1 : activeTabIndex;
+    setActiveTab(newActiveTabIndex);
+    renderMainView();
   }
 }
 

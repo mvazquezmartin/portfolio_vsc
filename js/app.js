@@ -6,7 +6,7 @@ import { createTab } from "../src/componentes/tabs/tabsRender.js";
 import { btnFocus } from "../src/utils/btnFocus.js";
 
 // DECLARACIONES
-const iconVsc = './assets/visual-studio-code-svgrepo-com.svg'
+const iconVsc = "./assets/visual-studio-code-svgrepo-com.svg";
 
 // QUERY DE ELEMENTOS
 const explorer = document.getElementById("files");
@@ -20,11 +20,13 @@ const btnNavBarAside = document.querySelectorAll(".iconNavBarAside");
 // EVENTLISTENERS
 explorer.addEventListener("click", renderExplorer);
 stack.addEventListener("click", renderStack);
-inicio.addEventListener("click", ()=> createTab("Inicio",renderMainText, iconVsc));
+inicio.addEventListener("click", () =>
+  createTab("Get Started", renderMainText, iconVsc)
+);
 github.addEventListener("click", gridGithubRender);
 //inicio.addEventListener("click", ()=>{btnFocusRemove(btnNavBarAside)})
 
 // EJECUCION DE FUNCIONES
 btnFocus(btnNavBarAside);
-createTab("Inicio", renderMainText, iconVsc);
+createTab("Get Started", renderMainText, iconVsc);
 renderExplorer();
