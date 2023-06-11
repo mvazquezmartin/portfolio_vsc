@@ -225,7 +225,7 @@ a:hover {
   flex-wrap: nowrap;
   background-color: rgb(29, 30, 36);
   border-top: 0.5px solid #44475a;
-  border-bottom: 0.5px solid #44475a;  
+  border-bottom: 0.5px solid #44475a;
 }
 
 .tabRender button {
@@ -282,10 +282,10 @@ a:hover {
 
 .tab {
   padding-left: 10px;
-  display: flex;  
+  display: flex;
   align-items: center;
   border-right: 1px solid rgb(39, 39, 39);
-  cursor: pointer;   
+  cursor: pointer;
   min-width: 0;
 }
 
@@ -296,7 +296,7 @@ a:hover {
 
 .tabTitle {
   color: #6272a4;
-  font-size: 0.8rem;  
+  font-size: 0.8rem;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -326,7 +326,6 @@ a:hover {
 
 .tab.activeTab .tabTitle {
   color: aliceblue;
-  
 }
 /* --------------------------------------------------------- */
 
@@ -609,7 +608,73 @@ iframe {
   font-size: 1rem;
   color: #6272a4;
 }
+/* ----------------------------------------------------- */
+/* Magic 8 Ball */
+.containerM8B {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.titleM8B {
+  height: 50%;
+}
+.titleM8B h2 {
+  font-size: 3rem;
+}
+.respuestaContainer {  
+  height: 60px;
+}
+.respuesta {
+  width: 0;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  border-right: 0.15em solid #18bdec;
+}
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(11.5px * var(--rta-length));
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.btnRta {
+  margin-bottom: 1.5rem;
+  box-shadow: inset 0px -3px 7px 0px #29bbff;
+  background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+  background-color: #2dabf9;
+  border-radius: 3px;
+  border: 1px solid #0b0e07;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 9px 23px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
+}
+.btnRta:hover {
+  background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+  background-color: #0688fa;
+}
+.btnRta:active {
+  position: relative;
+  top: 1px;
+}
 /* ----------------------------------------------------- */
 /* ASSETS FOLDER VIEW */
 .assets {

@@ -1,4 +1,6 @@
 import { ilyudo } from "../assets/1Lyud0.js";
+import { magic8BallRender } from "../magic8ball/magic8ball.js";
+import { readmeRender8Ball } from "../magic8ball/readme.js";
 import { playGroundRender } from "../playground/playGround.js";
 import { readmeRender } from "../playground/readme.js";
 import { createTab } from "../tabs/tabsRender.js";
@@ -78,6 +80,33 @@ const playGroundFolder = {
   subfolders: [],
 };
 
+const magic8Ball = {
+  folderName: "Magic8Ball",
+  files: [
+    {
+      name: "magic8Ball.js",
+      icon: "./assets/javascript-icono-svgrepo-com.svg",
+      function: () =>
+        createTab(
+          "magic8Ball.js",
+          magic8BallRender,
+          "./assets/javascript-icono-svgrepo-com.svg"
+        ),
+    },
+    {
+      name: "magic8Ball.txt",
+      icon: "./assets/txt-svgrepo-com.svg",
+      function: () =>
+        createTab(
+          "magic8Ball.txt",
+          readmeRender8Ball,
+          "./assets/txt-svgrepo-com.svg"
+        ),
+    },
+  ],
+  subfolders: [],
+};
+
 const readmeFile = {
   files: [
     {
@@ -141,4 +170,4 @@ const folder1 = {
   ],
 };
 
-export { assetsFolder, playGroundFolder, readmeFile, folder1 };
+export { assetsFolder, playGroundFolder, readmeFile, folder1, magic8Ball };

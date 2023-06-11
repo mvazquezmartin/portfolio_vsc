@@ -1,6 +1,7 @@
 import {
   assetsFolder,
   folder1,
+  magic8Ball,
   playGroundFolder,
   readmeFile,
 } from "./folderFileObj.js";
@@ -23,6 +24,8 @@ const renderExplorer = () => {
   viewSideBar.appendChild(assets);
   const playGround = folderFileSideBar(playGroundFolder);
   viewSideBar.appendChild(playGround);
+  const magic8ball = folderFileSideBar(magic8Ball);
+  viewSideBar.appendChild(magic8ball);
   const carpetaPrueba = folderFileSideBar(folder1);
   viewSideBar.appendChild(carpetaPrueba);
 };
