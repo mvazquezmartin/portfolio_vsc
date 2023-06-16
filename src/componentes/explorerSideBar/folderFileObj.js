@@ -90,7 +90,7 @@ const magic8Ball = {
         createTab(
           "magic8Ball.js",
           magic8BallRender,
-          "./assets/javascript-icono-svgrepo-com.svg"
+          "./assets/pool-8-ball-svgrepo-com.svg"
         ),
     },
     {

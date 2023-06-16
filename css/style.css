@@ -244,10 +244,11 @@ a:hover {
 
 .mainView {
   grid-area: mainView;
-  display: flex;
+  display: flex;  
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 }
 /* ........................................................ */
 .footer {
@@ -412,6 +413,8 @@ a:hover {
 /* stack view tabs */
 .stackViewTabs {
   display: flex;
+  height: 100%;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -430,12 +433,12 @@ a:hover {
 .stackLinkCoder:hover {
   color: #fff;
 }
-
+.stackCertificado{  
+  max-width: 700px;  
+}
 .stackCertificado img {
-  width: 100%;
-  height: auto;
-  max-width: 700px;
-  block-size: auto;
+  max-width: 100%;
+  height: auto;    
 }
 
 /* ----------------------------------- */
@@ -619,7 +622,7 @@ iframe {
   flex-direction: column;
 }
 .titleM8B {
-  height: 50%;
+  margin-bottom: 1.5rem;
 }
 .titleM8B h2 {
   font-size: 3rem;
@@ -682,4 +685,21 @@ iframe {
   height: auto;
   max-width: 700px;
   block-size: auto;
+}
+/* ----------------------------------------------------- */
+/* Readme Magic 8 ball */
+.readmeContainerM8b{
+  display: flex;
+  flex-direction: column;  
+  width: 100%;
+  height: 100%;
+}
+.imgContainer{
+  display: flex;
+  max-width: 100%;
+  justify-content: center;  
+}
+.imgContainer img{
+  max-width: 620px;
+
 }

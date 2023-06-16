@@ -16,8 +16,8 @@ const magic8BallRender = () => {
     "( ˘︹˘ ) No se puede predecir ahora.",
     "(ㆆ_ㆆ) Concéntrate y vuelve a preguntar.",
     "(ಠ_ಠ) No cuentes con ello.",
-    "(⊙﹏⊙) Mi respuesta es no. ",
-    "( ಥ⌣ಥ ) Mis fuentes dicen que no.",
+    "( ಠ ʖ̯ ಠ) Mi respuesta es no.",
+    "(◡︵◡) Mis fuentes dicen que no.",
     "(ಥ﹏ಥ) Las perspectivas no son muy buenas. ",
     "(⊙︿⊙) Muy dudoso.   ",
   ];
@@ -39,8 +39,8 @@ const magic8BallRender = () => {
   buttonPregunta.textContent = "Click para obtener tu respuesta";
   buttonPregunta.addEventListener("click", getRta);
 
-  const respuestaContainer = document.createElement("div")
-  respuestaContainer.classList.add("respuestaContainer")
+  const respuestaContainer = document.createElement("div");
+  respuestaContainer.classList.add("respuestaContainer");
 
   const respuesta = document.createElement("p");
   respuesta.classList.add("respuesta");
@@ -50,7 +50,7 @@ const magic8BallRender = () => {
     const indice = Math.floor(Math.random() * rta.length);
     const DOMRta = document.getElementById("res");
     const respuestaText = rta[indice];
-    const typingDuration = 60 * respuestaText.length;
+    const typingDuration = 65 * respuestaText.length;
 
     DOMRta.textContent = respuestaText;
     DOMRta.style.setProperty("--rta-length", respuestaText.length);
@@ -64,7 +64,7 @@ const magic8BallRender = () => {
   containerM8B.appendChild(titleContainer);
   titleContainer.appendChild(title);
   containerM8B.appendChild(buttonPregunta);
-  respuestaContainer.appendChild(respuesta)
+  respuestaContainer.appendChild(respuesta);
   containerM8B.appendChild(respuestaContainer);
   mainView.appendChild(containerM8B);
 };
