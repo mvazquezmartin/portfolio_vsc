@@ -71,10 +71,10 @@ const playGroundFolder = {
         ),
     },
     {
-      name: "readme.txt",
+      name: "readme_pg.txt",
       icon: "./assets/txt-svgrepo-com.svg",
       function: () =>
-        createTab("readme.txt", readmeRender, "./assets/txt-svgrepo-com.svg"),
+        createTab("readme_pg.txt", readmeRender, "./assets/txt-svgrepo-com.svg"),
     },
   ],
   subfolders: [],
@@ -94,25 +94,14 @@ const magic8Ball = {
         ),
     },
     {
-      name: "magic8Ball.txt",
+      name: "readme_m8b.txt",
       icon: "./assets/txt-svgrepo-com.svg",
       function: () =>
         createTab(
-          "magic8Ball.txt",
+          "readme_m8b.txt",
           readmeRender8Ball,
           "./assets/txt-svgrepo-com.svg"
         ),
-    },
-  ],
-  subfolders: [],
-};
-
-const readmeFile = {
-  files: [
-    {
-      name: "readme.txt",
-      icon: "./assets/txt-svgrepo-com.svg",
-      function: () => console.log("readme.txt"),
     },
   ],
   subfolders: [],
@@ -170,4 +159,4 @@ const folder1 = {
   ],
 };
 
-export { assetsFolder, playGroundFolder, readmeFile, folder1, magic8Ball };
+export { assetsFolder, playGroundFolder, folder1, magic8Ball };

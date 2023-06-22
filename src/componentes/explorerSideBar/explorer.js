@@ -2,8 +2,7 @@ import {
   assetsFolder,
   folder1,
   magic8Ball,
-  playGroundFolder,
-  readmeFile,
+  playGroundFolder,  
 } from "./folderFileObj.js";
 import { folderFileSideBar } from "./folderFileRender.js";
 
@@ -18,14 +17,16 @@ const renderExplorer = () => {
   const titleSideBar = document.getElementById("titleSideBar");
   titleSideBar.textContent = "EXPLORER";
 
-  const readme = folderFileSideBar(readmeFile);
-  viewSideBar.appendChild(readme);
+  //Carpetas en Explorer
   const assets = folderFileSideBar(assetsFolder);
   viewSideBar.appendChild(assets);
-  const playGround = folderFileSideBar(playGroundFolder);
-  viewSideBar.appendChild(playGround);
+  
   const magic8ball = folderFileSideBar(magic8Ball);
   viewSideBar.appendChild(magic8ball);
+  
+  const playGround = folderFileSideBar(playGroundFolder);
+  viewSideBar.appendChild(playGround);
+  
   const carpetaPrueba = folderFileSideBar(folder1);
   viewSideBar.appendChild(carpetaPrueba);
 };

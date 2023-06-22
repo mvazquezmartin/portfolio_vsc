@@ -244,7 +244,7 @@ a:hover {
 
 .mainView {
   grid-area: mainView;
-  display: flex;  
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -433,12 +433,12 @@ a:hover {
 .stackLinkCoder:hover {
   color: #fff;
 }
-.stackCertificado{  
-  max-width: 700px;  
+.stackCertificado {
+  max-width: 700px;
 }
 .stackCertificado img {
   max-width: 100%;
-  height: auto;    
+  height: auto;
 }
 
 /* ----------------------------------- */
@@ -627,7 +627,7 @@ iframe {
 .titleM8B h2 {
   font-size: 3rem;
 }
-.respuestaContainer {  
+.respuestaContainer {
   height: 60px;
 }
 .respuesta {
@@ -688,18 +688,17 @@ iframe {
 }
 /* ----------------------------------------------------- */
 /* Readme Magic 8 ball */
-.readmeContainerM8b{
+.readmeContainerM8b {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   width: 100%;
   height: 100%;
 }
-.imgContainer{
+.imgContainer {
   display: flex;
   max-width: 100%;
-  justify-content: center;  
+  justify-content: center;
 }
-.imgContainer img{
+.imgContainer img {
   max-width: 620px;
-
 }
