@@ -1,0 +1,16 @@
+.readmeContainerM8b {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  .imgContainer {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+
+    img {
+      max-width: 620px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+  width: 10px;
+  /* Track */
+  &-track {
+    background: $color-border-grid;
+  }
+  /* Handle */
+  &-thumb {
+    background: #888;
+    /* Handle on hover */
+    &:hover {
+      background: #555;
+    }
+  }
+}

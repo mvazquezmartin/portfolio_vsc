@@ -1,0 +1,44 @@
+.tab {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #272727;
+  cursor: pointer;
+  min-width: 0;
+
+  .iconTab {
+    width: 15px;
+    margin-right: 5px;
+  }
+
+  .tabTitle {
+    color: $color-rootPath;
+    font-size: 0.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .closeButton {
+    width: 22px;
+    filter: invert(5%) sepia(4%) saturate(5505%) hue-rotate(195deg) brightness(93%) contrast(87%);
+    margin-left: 10px;
+  }
+
+  &:hover .closeButton {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(3deg) brightness(108%) contrast(102%);
+  }
+
+  &.activeTab .closeButton {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(3deg) brightness(108%) contrast(102%);
+  }
+
+  &.activeTab {
+    border-top: 0.5px solid $color-pink;
+    background-color: rgba(190, 190, 190, 0.1);
+    flex-shrink: 0;
+
+    .tabTitle {
+      color: $color-white;
+    }
+  }
+}

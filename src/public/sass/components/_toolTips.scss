@@ -1,0 +1,32 @@
+.iconNavBarAside {
+  .toolTipText {
+    visibility: hidden;
+    width: 70px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: $color-lightGrey;
+    border: 0.5px solid $color-rootPath;
+    color: $color-white;
+    text-align: center;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 110%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent $color-rootPath transparent transparent;
+    }
+  }
+
+  &:hover .toolTipText {
+    visibility: visible;
+  }
+}

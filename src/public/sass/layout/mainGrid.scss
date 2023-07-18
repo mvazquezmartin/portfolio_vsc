@@ -1,0 +1,230 @@
+@import "../abstracts/var";
+
+.containerGrid {
+  display: grid;
+  color: $color-white;
+  height: 100vh;
+  grid-template-columns: 0.1fr 0.4fr 2.2fr;
+  grid-template-rows: 0.15fr 4.15fr 0.15fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navBarTop navBarTop navBarTop"
+    "navBarAside sideBar mainArea"
+    "navBarAside sideBar mainArea"
+    "navBarAside sideBar mainArea"
+    "navBarAside footer footer";
+}
+
+.iconoMenu {
+  display: flex;
+  padding-left: 10px;
+
+  img {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+
+.navBarTop {
+  grid-area: navBarTop;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  background-color: $color-darkBlue;
+}
+
+.menuNavBarTop {
+  cursor: default;
+  display: flex;
+  padding-left: 5px;
+
+  span {
+    cursor: default;
+    padding: 0 8px;
+    transition: 0.3s;
+  }
+
+  span:hover {
+    background-color: $color-lightGrey;
+    border-radius: 5px;
+  }
+}
+
+.titleVSC {
+  width: 100%;
+  text-align: center;
+  cursor: default;
+}
+
+.navBarAside {
+  grid-area: navBarAside;
+  background-color: $color-littleLightGrey;
+}
+
+.iconNavBar {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.7rem;
+}
+
+.iconNavBarAside {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  color: #5c6a98;
+}
+
+.iconFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  button.active {
+    border-left: 2px solid $color-pink;
+    color: $color-white;
+    background-color: rgba(190, 190, 190, 0.2);
+  }
+}
+
+.iconUserFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bi {
+  transition: 0.3s;
+
+  &:hover {
+    color: $color-white;
+  }
+}
+
+.sideBar {
+  display: grid;
+  background-color: $color-darkGrey;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 2.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "titleSideBar titleSideBar titleSideBar"
+    "fileOpen fileOpen fileOpen"
+    "viewSideBar viewSideBar viewSideBar";
+  grid-area: sideBar;
+  border-right: $style-border-grid;
+
+  .titleSideBar {
+    grid-area: titleSideBar;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-bottom: $style-border-grid;
+    border-top: $style-border-grid;
+  }
+
+  .fileOpen {
+    grid-area: fileOpen;
+    background-color: $color-lightGrey;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-bottom: $style-border-grid;
+  }
+
+  .viewSideBar {
+    grid-area: viewSideBar;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.mainArea {
+  display: grid;
+  background-color: $color-lightGrey;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 2.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "tabs tabs tabs"
+    "rootPath rootPath rootPath"
+    "mainView mainView mainView";
+  grid-area: mainArea;
+
+  .tabs {
+    grid-area: tabs;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: $color-moreDarkGrey;
+    border-top: $style-border-grid;
+    border-bottom: $style-border-grid;
+  }
+
+  .tabRender button {
+    color: $color-white;
+  }
+
+  .rootPath {
+    grid-area: rootPath;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: $color-rootPath;
+    padding-left: 1rem;
+    border-bottom: $style-border-grid;
+  }
+
+  .mainView {
+    grid-area: mainView;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+  }
+}
+
+.footer {
+  grid-area: footer;
+  background-color: $color-darkBlue;
+  border-top: $style-border-grid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: $color-white;
+
+  .iconsFooterL {
+    display: flex;
+    width: 125px;
+    justify-content: space-around;
+    cursor: default;
+    padding-left: 10px;
+  }
+
+  .iconsFooterR {
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+    cursor: default;
+  }
+
+  .margin {
+    margin-left: 5px;
+  }
+}

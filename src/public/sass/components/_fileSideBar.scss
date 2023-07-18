@@ -1,0 +1,39 @@
+.accordion {
+  cursor: pointer;
+  color: $color-white;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+
+  &.activeFile,
+  &:hover {
+    background-color: #bebebe33;
+  }
+}
+
+.panel {
+  display: flex;
+  color: $color-white;
+  padding-left: 1.2rem;
+  font-size: 0.8rem;
+  text-align: left;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+
+  button {
+    text-align: left;
+  }
+}
+
+.fileTxt {
+  margin-left: 7px;
+  padding: 0;
+  color: $color-white;
+  cursor: pointer;
+}

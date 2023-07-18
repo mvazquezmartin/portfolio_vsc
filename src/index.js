@@ -7,6 +7,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("src/public"));
 
-app.listen(PORT, () => {
+const httpServer = app.listen(PORT, () => {
   console.log(`Servidor iniciado en el puerto ${PORT}`);
 });
+
+module.exports = httpServer
+

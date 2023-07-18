@@ -1,0 +1,202 @@
+.containerGrid {
+  display: grid;
+  color: #f0f8ff;
+  height: 100vh;
+  grid-template-columns: 0.1fr 0.4fr 2.2fr;
+  grid-template-rows: 0.15fr 4.15fr 0.15fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside footer footer";
+}
+
+.iconoMenu {
+  display: flex;
+  padding-left: 10px;
+}
+.iconoMenu img {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.navBarTop {
+  grid-area: navBarTop;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  background-color: #191a21;
+}
+
+.menuNavBarTop {
+  cursor: default;
+  display: flex;
+  padding-left: 5px;
+}
+.menuNavBarTop span {
+  cursor: default;
+  padding: 0 8px;
+  transition: 0.3s;
+}
+.menuNavBarTop span:hover {
+  background-color: #282a36;
+  border-radius: 5px;
+}
+
+.titleVSC {
+  width: 100%;
+  text-align: center;
+  cursor: default;
+}
+
+.navBarAside {
+  grid-area: navBarAside;
+  background-color: #343746;
+}
+
+.iconNavBar {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.7rem;
+}
+
+.iconNavBarAside {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  color: #5c6a98;
+}
+
+.iconFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.iconFlex button.active {
+  border-left: 2px solid #ff79c6;
+  color: #f0f8ff;
+  background-color: rgba(190, 190, 190, 0.2);
+}
+
+.iconUserFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bi {
+  transition: 0.3s;
+}
+.bi:hover {
+  color: #f0f8ff;
+}
+
+.sideBar {
+  display: grid;
+  background-color: #1d1e24;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 2.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "titleSideBar titleSideBar titleSideBar" "fileOpen fileOpen fileOpen" "viewSideBar viewSideBar viewSideBar";
+  grid-area: sideBar;
+  border-right: 0.5px solid #44475a;
+}
+.sideBar .titleSideBar {
+  grid-area: titleSideBar;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-bottom: 0.5px solid #44475a;
+  border-top: 0.5px solid #44475a;
+}
+.sideBar .fileOpen {
+  grid-area: fileOpen;
+  background-color: #282a36;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-bottom: 0.5px solid #44475a;
+}
+.sideBar .viewSideBar {
+  grid-area: viewSideBar;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainArea {
+  display: grid;
+  background-color: #282a36;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 2.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "tabs tabs tabs" "rootPath rootPath rootPath" "mainView mainView mainView";
+  grid-area: mainArea;
+}
+.mainArea .tabs {
+  grid-area: tabs;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #1d1e24;
+  border-top: 0.5px solid #44475a;
+  border-bottom: 0.5px solid #44475a;
+}
+.mainArea .tabRender button {
+  color: #f0f8ff;
+}
+.mainArea .rootPath {
+  grid-area: rootPath;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #6272a4;
+  padding-left: 1rem;
+  border-bottom: 0.5px solid #44475a;
+}
+.mainArea .mainView {
+  grid-area: mainView;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #191a21;
+  border-top: 0.5px solid #44475a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #f0f8ff;
+}
+.footer .iconsFooterL {
+  display: flex;
+  width: 125px;
+  justify-content: space-around;
+  cursor: default;
+  padding-left: 10px;
+}
+.footer .iconsFooterR {
+  display: flex;
+  width: 100px;
+  justify-content: space-around;
+  cursor: default;
+}
+.footer .margin {
+  margin-left: 5px;
+}
