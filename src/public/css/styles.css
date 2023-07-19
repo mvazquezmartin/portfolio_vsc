@@ -323,7 +323,6 @@ a:hover {
 }
 
 .containerM8B {
-  height: 25%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -335,6 +334,30 @@ a:hover {
 }
 .containerM8B .titleM8B h2 {
   font-size: 3rem;
+}
+.containerM8B .btnRta {
+  margin-bottom: 1.5rem;
+  box-shadow: inset 0px -3px 7px 0px #29bbff;
+  background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+  background-color: #2dabf9;
+  border-radius: 3px;
+  border: 1px solid #0b0e07;
+  display: inline-block;
+  cursor: pointer;
+  color: #f0f8ff;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 9px 23px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
+}
+.containerM8B .btnRta:hover {
+  background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+  background-color: #0688fa;
+}
+.containerM8B .btnRta:active {
+  position: relative;
+  top: 1px;
 }
 .containerM8B .respuestaContainer {
   height: 60px;
@@ -361,31 +384,6 @@ a:hover {
     border-color: transparent;
   }
 }
-.btnRta {
-  margin-bottom: 1.5rem;
-  box-shadow: inset 0px -3px 7px 0px #29bbff;
-  background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-  background-color: #2dabf9;
-  border-radius: 3px;
-  border: 1px solid #0b0e07;
-  display: inline-block;
-  cursor: pointer;
-  color: #f0f8ff;
-  font-family: Arial;
-  font-size: 15px;
-  padding: 9px 23px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #263666;
-}
-.btnRta:hover {
-  background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
-  background-color: #0688fa;
-}
-.btnRta:active {
-  position: relative;
-  top: 1px;
-}
-
 /* PLAYGROUND */
 .playGroundGrid {
   display: grid;
@@ -396,64 +394,53 @@ a:hover {
   height: 100%;
   width: 100%;
 }
-
-.html {
+.playGroundGrid .html {
   grid-area: 1/1/3/2;
 }
-
-.htmlTitle {
+.playGroundGrid .html .htmlTitle {
   grid-area: 1/1/2/2;
 }
-
-.htmlArea {
+.playGroundGrid .html .htmlArea {
   grid-area: 2/1/3/2;
   color: #f0f8ff;
   background-color: #282a36;
   height: 100%;
   width: 100%;
 }
-
-.css {
+.playGroundGrid .css {
   grid-area: 1/2/3/3;
 }
-
-.cssTitle {
+.playGroundGrid .css .cssTitle {
   grid-area: 1/2/2/3;
 }
-
-.cssArea {
+.playGroundGrid .css .cssArea {
   grid-area: 2/2/3/3;
   color: #f0f8ff;
   background-color: #282a36;
   height: 100%;
   width: 100%;
 }
-
-.javaScript {
+.playGroundGrid .javaScript {
   grid-area: 1/3/3/4;
 }
-
-.javaScriptTitle {
+.playGroundGrid .javaScript .javaScriptTitle {
   grid-area: 1/3/2/4;
 }
-
-.javaScriptArea {
+.playGroundGrid .javaScript .javaScriptArea {
   grid-area: 2/3/3/4;
   color: #f0f8ff;
   background-color: #282a36;
   height: 100%;
   width: 100%;
 }
-
-.outPutArea {
+.playGroundGrid .outPutArea {
   grid-area: 3/1/4/4;
 }
-
-iframe {
+.playGroundGrid .outPutArea iframe {
   color: #000;
   background-color: #f0f8ff;
   width: 100%;
-  height: 100%;
+  height: 98%;
 }
 
 .readmeContainerM8b {
@@ -477,8 +464,7 @@ iframe {
   height: 100%;
   width: 100%;
 }
-
-.line-numbers {
+.readme .line-numbers {
   display: flex;
   width: auto;
   flex-direction: column;
@@ -487,55 +473,53 @@ iframe {
   user-select: none;
   border-right: 0.5px solid #44475a;
 }
-.line-numbers span {
+.readme .line-numbers span {
   font-family: "Fira Code", monospace;
   font-size: 1rem;
   color: #6272a4;
 }
-
-.text-container {
+.readme .text-container {
   white-space: pre-wrap;
   padding-left: 5px;
   text-align: left;
   margin-top: 1px;
 }
-.text-container p {
+.readme .text-container p {
   font-family: "Fira Code", monospace;
 }
 
 .stackFlex {
   display: flex;
-  height: 65px;
-  margin: 0.5rem 0 0.5rem 0.4rem;
+  height: 80px;
+  padding: 0.5rem 0 0.5rem 0;
   cursor: pointer;
   font-family: "Open Sans", sans-serif;
 }
 .stackFlex:hover {
   background-color: #5e6479;
 }
-
-.stackDivImg {
+.stackFlex .stackDivImg {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 0.7rem;
 }
-
-.stackDescriptionTitle {
+.stackFlex .stackDescriptionTitle {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   justify-content: center;
   user-select: none;
+  padding-left: 5px;
 }
-.stackDescriptionTitle .stackTitle {
+.stackFlex .stackDescriptionTitle .stackTitle {
   margin: 0;
   font-size: 0.9rem;
   font-weight: 600;
   color: #f0f8ff;
 }
-.stackDescriptionTitle .stackDescription {
+.stackFlex .stackDescriptionTitle .stackDescription {
   margin: 0;
+  padding-right: 8px;
   font-size: 0.7rem;
   color: #aaaaaa;
   white-space: nowrap;

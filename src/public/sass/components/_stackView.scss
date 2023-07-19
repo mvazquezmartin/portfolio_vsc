@@ -1,44 +1,45 @@
 // COMPONETE stackview
 .stackFlex {
   display: flex;
-  height: 65px;
-  margin: 0.5rem 0 0.5rem 0.4rem;
+  height: 80px;
+  padding: 0.5rem 0 0.5rem 0;
   cursor: pointer;
   font-family: $font-OpenSans;
 
   &:hover {
     background-color: #5e6479;
   }
-}
 
-.stackDivImg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0.7rem;
-}
-
-.stackDescriptionTitle {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  justify-content: center;
-  user-select: none;
-
-  .stackTitle {
-    margin: 0;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: $color-white;
+  .stackDivImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .stackDescription {
-    margin: 0;
-    font-size: 0.7rem;
-    color: #aaaaaa;
-    white-space: nowrap;
+  .stackDescriptionTitle {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
-    text-overflow: ellipsis;
+    justify-content: center;
+    user-select: none;
+    padding-left: 5px;
+
+    .stackTitle {
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $color-white;
+    }
+
+    .stackDescription {
+      margin: 0;
+      padding-right: 8px;
+      font-size: 0.7rem;
+      color: #aaaaaa;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
 

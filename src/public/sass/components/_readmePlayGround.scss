@@ -3,30 +3,30 @@
   flex-direction: row;
   height: 100%;
   width: 100%;
-}
 
-.line-numbers {
-  display: flex;
-  width: auto;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 0 25px;
-  user-select: none;
-  border-right: $style-border-grid;
+  .line-numbers {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 25px;
+    user-select: none;
+    border-right: $style-border-grid;
 
-  span {
-    font-family: $font-FireCode;
-    font-size: 1rem;
-    color: $color-rootPath;
+    span {
+      font-family: $font-FireCode;
+      font-size: 1rem;
+      color: $color-rootPath;
+    }
   }
-}
 
-.text-container {
-  white-space: pre-wrap;
-  padding-left: 5px;
-  text-align: left;
-  margin-top: 1px;
-  p {
-    font-family: $font-FireCode;
+  .text-container {
+    white-space: pre-wrap;
+    padding-left: 5px;
+    text-align: left;
+    margin-top: 1px;
+    p {
+      font-family: $font-FireCode;
+    }
   }
 }

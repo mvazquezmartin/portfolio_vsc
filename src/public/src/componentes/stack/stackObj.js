@@ -36,7 +36,7 @@ export const stacks = [
     title: "BOOTSTRAP",
     image: "./assets/bootstrap-svgrepo-com.svg",
     shortDescription:
-      "Framework web de código abierto que simplifica la creación de sitios responsivos y modernos. Con estilos predefinidos, componentes y herramientas, permite desarrollar interfaces atractivas y adaptativas de manera eficiente. Basado en HTML, CSS y JavaScript, es flexible, compatible con diferentes dispositivos y acelera el proceso de desarrollo, mejorando la experiencia del usuario.",
+      "Librería web de código abierto que simplifica la creación de sitios responsivos y modernos. Con estilos predefinidos, componentes y herramientas, permite desarrollar interfaces atractivas y adaptativas de manera eficiente. Basado en HTML, CSS y JavaScript, es flexible, compatible con diferentes dispositivos y acelera el proceso de desarrollo, mejorando la experiencia del usuario.",
     certificado: "./assets/Certificado-Desarrollo-Web.png",
     linkCertificado:
       "https://www.coderhouse.com/certificados/63442fddcaba5a000e2e4449",
@@ -58,7 +58,7 @@ export const stacks = [
     title: "REACT JS",
     image: "./assets/reactjs-svgrepo-com.svg",
     shortDescription:
-      "Biblioteca de JavaScript de código abierto que permite construir interfaces de usuario interactivas y reactivas. Utiliza componentes reutilizables para representar diferentes partes de la interfaz y utiliza un enfoque basado en el estado para actualizar eficientemente los elementos afectados, brindando así una experiencia de desarrollo rápida y eficiente.",
+      "Librería de JavaScript de código abierto que permite construir interfaces de usuario interactivas y reactivas. Utiliza componentes reutilizables para representar diferentes partes de la interfaz y utiliza un enfoque basado en el estado para actualizar eficientemente los elementos afectados, brindando así una experiencia de desarrollo rápida y eficiente.",
     certificado: "./assets/Certificado-ReactJs.png",
     linkCertificado:
       "https://www.coderhouse.com/certificados/63f606fcff4216000e5d1ee0",
