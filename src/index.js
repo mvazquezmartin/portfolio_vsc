@@ -1,5 +1,6 @@
 const express = require("express");
 const { PORT } = require("./config/app.config");
+const setSocket = require("./config/socket.config");
 
 const app = express();
 
@@ -11,5 +12,4 @@ const httpServer = app.listen(PORT, () => {
   console.log(`Servidor iniciado en el puerto ${PORT}`);
 });
 
-module.exports = httpServer
-
+setSocket(httpServer);
