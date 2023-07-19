@@ -6,7 +6,7 @@ import { playGroundRender } from "../playground/playGround.js";
 import { readmeRender } from "../playground/readme.js";
 import { createTab } from "../tabs/tabsRender.js";
 
-const jsIcon = "./assets/javascript-icono-svgrepo-com.svg";
+const jsIcon = "./assets/javascript-svgrepo-com.svg";
 const jpgIcon = "./assets/jpg-svgrepo-com.svg";
 const txtIcon = "./assets/txt-svgrepo-com.svg";
 const m8bIcon = "./assets/pool-8-ball-svgrepo-com.svg";

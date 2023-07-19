@@ -280,7 +280,7 @@ a:hover {
 .assets {
   width: 100%;
   height: auto;
-  max-width: 700px;
+  max-width: 900px;
   block-size: auto;
 }
 
@@ -320,6 +320,12 @@ a:hover {
   padding: 0;
   color: #f0f8ff;
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fileTxt img {
+  width: 15px;
 }
 
 .containerM8B {
@@ -485,7 +491,7 @@ a:hover {
   margin-top: 1px;
 }
 .readme .text-container p {
-  font-family: "Fira Code", monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .stackFlex {
