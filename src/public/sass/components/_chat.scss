@@ -1,0 +1,92 @@
+@import "../abstracts/var";
+
+.chatContainerGrid {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 0.3fr 2.4fr 0.7fr;
+  gap: 0px 0px;
+  grid-template-areas: "chatTitle chatTitle" "userConnectedBox messageLogBox" "sendMessage sendMessage";
+
+  .chatTitle {
+    grid-area: chatTitle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: $style-border-grid;
+  }
+
+  .sendMessage {
+    grid-area: sendMessage;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: $style-border-grid;
+    .sendMsg {
+      height: 50%;
+      width: 80%;
+    }
+  }
+}
+
+.userConnectedBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.6fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "userTitle userTitle userTitle" "userConnected userConnected userConnected" "userConnected userConnected userConnected";
+  grid-area: userConnectedBox;
+  border-right: $style-border-grid;
+
+  .userTitle {
+    grid-area: userTitle;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    border-bottom: $style-border-grid;
+    border-right: $style-border-grid;
+  }
+
+  .userConnected {
+    grid-area: userConnected;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  .userDiv {
+    display: flex;
+    height: 30px;
+  }
+  p {
+    padding-left: 30px;
+    font-size: 1.1rem;
+  }
+}
+
+.messageLogBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.6fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "logTittle logTittle logTittle" "messageLog messageLog messageLog" "messageLog messageLog messageLog";
+  grid-area: messageLogBox;
+
+  .logTittle {
+    grid-area: logTittle;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    border-bottom: $style-border-grid;
+  }
+
+  .messageLog {
+    grid-area: messageLog;
+    padding-left: 15px;
+    padding-top: 10px;
+    .log {
+      height: 100%;
+      width: 95%;
+    }
+  }
+}

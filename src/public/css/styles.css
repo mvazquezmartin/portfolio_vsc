@@ -624,3 +624,88 @@ iframe {
 .iconNavBarAside:hover .toolTipText {
   visibility: visible;
 }
+
+.chatContainerGrid {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 0.3fr 2.4fr 0.7fr;
+  gap: 0px 0px;
+  grid-template-areas: "chatTitle chatTitle" "userConnectedBox messageLogBox" "sendMessage sendMessage";
+}
+.chatContainerGrid .chatTitle {
+  grid-area: chatTitle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.5px solid #44475a;
+}
+.chatContainerGrid .sendMessage {
+  grid-area: sendMessage;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.5px solid #44475a;
+}
+.chatContainerGrid .sendMessage .sendMsg {
+  height: 50%;
+  width: 80%;
+}
+
+.userConnectedBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.6fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "userTitle userTitle userTitle" "userConnected userConnected userConnected" "userConnected userConnected userConnected";
+  grid-area: userConnectedBox;
+  border-right: 0.5px solid #44475a;
+}
+.userConnectedBox .userTitle {
+  grid-area: userTitle;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  border-bottom: 0.5px solid #44475a;
+  border-right: 0.5px solid #44475a;
+}
+.userConnectedBox .userConnected {
+  grid-area: userConnected;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.userConnectedBox .userDiv {
+  display: flex;
+  height: 30px;
+}
+.userConnectedBox p {
+  padding-left: 30px;
+  font-size: 1.1rem;
+}
+
+.messageLogBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.6fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "logTittle logTittle logTittle" "messageLog messageLog messageLog" "messageLog messageLog messageLog";
+  grid-area: messageLogBox;
+}
+.messageLogBox .logTittle {
+  grid-area: logTittle;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  border-bottom: 0.5px solid #44475a;
+}
+.messageLogBox .messageLog {
+  grid-area: messageLog;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.messageLogBox .messageLog .log {
+  height: 100%;
+  width: 95%;
+}

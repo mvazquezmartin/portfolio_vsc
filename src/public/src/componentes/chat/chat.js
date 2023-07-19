@@ -19,16 +19,32 @@ const chatFunction = () => {
 
       socket.emit("newUser", user);
 
-      socket.on("userConnected", (user) => {
+      socket.on("userConnected", (user, users) => {
         Swal.fire({
           text: `Se acaba de conectar ${user} al chat`,
           toast: true,
           position: "top-right",
           showConfirmButton: false,
-          timer: 3500,
+          timer: 3000,
           timerProgressBar: true,
           icon: "success",
         });
+        updateUsers(users);
+      });
+
+      socket.on("userDisconnected", (disconnectedUser, users) => {
+        Swal.fire({
+          text: `${disconnectedUser} se ha desconectado del chat`,
+          toast: true,
+          position: "top-right",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          icon: "info",
+        });
+
+        // Actualizar la lista de usuarios en el HTML
+        updateUsers(users);
       });
 
       chatBox.addEventListener("keyup", (e) => {
@@ -49,13 +65,29 @@ const chatFunction = () => {
     let messages = "";
 
     data.forEach((message) => {
-      messages = messages + `${message.user}: ${message.message}</br>`;
+      messages = messages + `<b>${message.user}</b>: ${message.message}</br>`;
     });
 
     log.innerHTML = messages;
   });
 
+  const updateUsers = (users) => {
+    const usersList = document.getElementById("userConnectedLog");
+    usersList.innerHTML = "";
+
+    const usersArray = Array.isArray(users) ? users : [users];
+
+    usersArray.forEach((user) => {
+      const userDiv = document.createElement("div");
+      userDiv.classList.add("userDiv");
+      const userP = document.createElement("p");
+      userP.textContent = user;
+      usersList.appendChild(userDiv);
+      userDiv.appendChild(userP);
+    });
+  };
+
   swal();
 };
 
-export {chatFunction}
+export { chatFunction };
