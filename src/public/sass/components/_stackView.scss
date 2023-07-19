@@ -1,9 +1,10 @@
 // COMPONETE stackview
 .stackFlex {
   display: flex;
-  height: 100px;
+  height: 65px;
   margin: 0.5rem 0 0.5rem 0.4rem;
   cursor: pointer;
+  font-family: $font-OpenSans;
 
   &:hover {
     background-color: #5e6479;
@@ -20,7 +21,7 @@
 .stackDescriptionTitle {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  overflow: hidden;
   justify-content: center;
   user-select: none;
 
@@ -34,6 +35,10 @@
   .stackDescription {
     margin: 0;
     font-size: 0.7rem;
+    color: #aaaaaa;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -45,30 +50,36 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.stackTitleView {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.stackLinkCoder {
-  text-decoration: none;
-  color: #888;
-  transition: 0.5s;
-
-  &:hover {
-    color: $color-white;
+  .stackTitleView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-}
 
-.stackCertificado {
-  max-width: 700px;
+  .stackDescriptionView {
+    color: #888;
+    max-width: 700px;
+    text-align: center;
+  }
 
-  img {
-    max-width: 100%;
-    height: auto;
+  .stackLinkCoder {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #888;
+    transition: 0.5s;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  .stackCertificado {
+    max-width: 700px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }

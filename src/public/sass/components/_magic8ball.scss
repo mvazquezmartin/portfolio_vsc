@@ -17,7 +17,7 @@
   .respuestaContainer {
     height: 60px;
 
-    .respuesta {
+    .respuesta {      
       width: 0;
       text-align: center;
       overflow: hidden;
@@ -53,7 +53,7 @@
   display: inline-block;
   cursor: pointer;
   color: $color-white;
-  font-family: Arial;
+  font-family: $font-Arial;
   font-size: 15px;
   padding: 9px 23px;
   text-decoration: none;

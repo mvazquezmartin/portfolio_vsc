@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 button {
   border: none;
   background: transparent;
@@ -9,6 +15,10 @@ a {
 }
 a:hover {
   color: #555;
+}
+
+.activeFile {
+  background-color: rgba(190, 190, 190, 0.2);
 }
 
 ::-webkit-scrollbar {
@@ -281,7 +291,8 @@ a:hover {
   border: none;
   text-align: left;
   outline: none;
-  font-size: 0.9rem;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
   padding-left: 1rem;
@@ -477,24 +488,27 @@ iframe {
   border-right: 0.5px solid #44475a;
 }
 .line-numbers span {
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
   font-size: 1rem;
   color: #6272a4;
 }
 
 .text-container {
   white-space: pre-wrap;
-  font-family: "Fira Code", monospace;
   padding-left: 5px;
   text-align: left;
   margin-top: 1px;
 }
+.text-container p {
+  font-family: "Fira Code", monospace;
+}
 
 .stackFlex {
   display: flex;
-  height: 100px;
+  height: 65px;
   margin: 0.5rem 0 0.5rem 0.4rem;
   cursor: pointer;
+  font-family: "Open Sans", sans-serif;
 }
 .stackFlex:hover {
   background-color: #5e6479;
@@ -510,7 +524,7 @@ iframe {
 .stackDescriptionTitle {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  overflow: hidden;
   justify-content: center;
   user-select: none;
 }
@@ -523,6 +537,10 @@ iframe {
 .stackDescriptionTitle .stackDescription {
   margin: 0;
   font-size: 0.7rem;
+  color: #aaaaaa;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .stackViewTabs {
@@ -533,27 +551,29 @@ iframe {
   justify-content: center;
   align-items: center;
 }
-
-.stackTitleView {
+.stackViewTabs .stackTitleView {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1rem;
 }
-
-.stackLinkCoder {
+.stackViewTabs .stackDescriptionView {
+  color: #888;
+  max-width: 700px;
+  text-align: center;
+}
+.stackViewTabs .stackLinkCoder {
+  margin-top: 1rem;
   text-decoration: none;
   color: #888;
   transition: 0.5s;
 }
-.stackLinkCoder:hover {
+.stackViewTabs .stackLinkCoder:hover {
   color: #f0f8ff;
 }
-
-.stackCertificado {
+.stackViewTabs .stackCertificado {
   max-width: 700px;
 }
-.stackCertificado img {
+.stackViewTabs .stackCertificado img {
   max-width: 100%;
   height: auto;
 }
@@ -651,6 +671,8 @@ iframe {
 .chatContainerGrid .sendMessage .sendMsg {
   height: 50%;
   width: 80%;
+  background-color: #191a21;
+  color: #f0f8ff;
 }
 
 .userConnectedBox {
@@ -671,6 +693,8 @@ iframe {
   border-right: 0.5px solid #44475a;
 }
 .userConnectedBox .userConnected {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
   grid-area: userConnected;
   display: flex;
   flex-direction: column;
@@ -708,4 +732,5 @@ iframe {
 .messageLogBox .messageLog .log {
   height: 100%;
   width: 95%;
+  font-family: "Courier New", Courier, monospace;
 }

@@ -1,8 +1,9 @@
 
-@import "abstracts/var";
-@import "pages/main.scss";
+@import "abstracts/colors";
+@import "abstracts/fonts";
+@import "pages/main";
 @import "components/scrollbar";
-@import "layout/mainGrid.scss";
+@import "layout/mainGrid";
 @import "sections/mainHero";
 @import "components/assets";
 @import "components/fileSideBar";

@@ -15,7 +15,7 @@
   border-right: $style-border-grid;
 
   span {
-    font-family: monospace;
+    font-family: $font-FireCode;
     font-size: 1rem;
     color: $color-rootPath;
   }
@@ -23,8 +23,10 @@
 
 .text-container {
   white-space: pre-wrap;
-  font-family: "Fira Code", monospace;
   padding-left: 5px;
   text-align: left;
   margin-top: 1px;
+  p {
+    font-family: $font-FireCode;
+  }
 }

@@ -11,6 +11,7 @@ const jpgIcon = "./assets/jpg-svgrepo-com.svg";
 const txtIcon = "./assets/txt-svgrepo-com.svg";
 const m8bIcon = "./assets/pool-8-ball-svgrepo-com.svg";
 const chatIcon = "./assets/chat-svgrepo-com.svg";
+const pgIcon = "./assets/pencil-svgrepo-com.svg"
 
 const judoJpg = "./assets/judo.jpg";
 const setUpJpg = "./assets/setup.jpg";
@@ -62,7 +63,7 @@ const playGroundFolder = {
     {
       name: "playGround.js",
       icon: jsIcon,
-      function: () => createTab("playGround.js", playGroundRender, jsIcon),
+      function: () => createTab("playGround.js", playGroundRender, pgIcon),
     },
     {
       name: "readme_pg.txt",

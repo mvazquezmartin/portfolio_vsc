@@ -1,0 +1,23 @@
+@import "../abstracts/colors";
+@import "../abstracts/fonts";
+
+*{
+  font-family: $font-Roboto;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+  &:hover {
+    color: #555;
+  }
+}
+
+.activeFile {
+  background-color: rgba(190, 190, 190, 0.2);
+}

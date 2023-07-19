@@ -1,5 +1,3 @@
-@import "../abstracts/var";
-
 .chatContainerGrid {
   height: 100%;
   width: 100%;
@@ -26,6 +24,8 @@
     .sendMsg {
       height: 50%;
       width: 80%;
+      background-color: $color-darkBlue;
+      color: $color-white;
     }
   }
 }
@@ -49,6 +49,8 @@
   }
 
   .userConnected {
+    font-family: $font-CourierNew;
+    font-weight: 600;
     grid-area: userConnected;
     display: flex;
     flex-direction: column;
@@ -87,6 +89,7 @@
     .log {
       height: 100%;
       width: 95%;
+      font-family: $font-CourierNew;
     }
   }
 }
