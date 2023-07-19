@@ -10,7 +10,7 @@ const jsIcon = "./assets/javascript-icono-svgrepo-com.svg";
 const jpgIcon = "./assets/jpg-svgrepo-com.svg";
 const txtIcon = "./assets/txt-svgrepo-com.svg";
 const m8bIcon = "./assets/pool-8-ball-svgrepo-com.svg";
-const chatIcon = "./assets/chat-svgrepo-com.svg"
+const chatIcon = "./assets/chat-svgrepo-com.svg";
 
 const judoJpg = "./assets/judo.jpg";
 const setUpJpg = "./assets/setup.jpg";
@@ -115,18 +115,18 @@ const chat = {
 };
 
 const folder1 = {
-  folderName: "Raíz1",
+  folderName: "Inventario",
   files: [
-    {
-      name: "Archivo1.txt",
-      icon: "./assets/code-file-svgrepo-com.svg",
-      function: () => console.log("archivo1"),
-    },
-    {
-      name: "Archivo2.txt",
-      icon: "./assets/code-file-svgrepo-com.svg",
-      function: () => console.log("archivo1"),
-    },
+    // {
+    //   name: "Archivo1.txt",
+    //   icon: "./assets/code-file-svgrepo-com.svg",
+    //   function: () => console.log("archivo1"),
+    // },
+    // {
+    //   name: "Archivo2.txt",
+    //   icon: "./assets/code-file-svgrepo-com.svg",
+    //   function: () => console.log("archivo1"),
+    // },
   ],
   subfolders: [
     {
@@ -136,6 +136,16 @@ const folder1 = {
           name: "archivo.nshe",
           icon: "./assets/code-file-svgrepo-com.svg",
           function: () => console.log("archivonasheee"),
+        },
+        {
+          name: "Archivo1.txt",
+          icon: "./assets/code-file-svgrepo-com.svg",
+          function: () => console.log("archivo1"),
+        },
+        {
+          name: "Archivo2.txt",
+          icon: "./assets/code-file-svgrepo-com.svg",
+          function: () => console.log("archivo2"),
         },
       ],
       subfolders: [],
@@ -156,7 +166,7 @@ const folder1 = {
             {
               name: "Archivo4.txt",
               icon: "./assets/code-file-svgrepo-com.svg",
-              function: () => console.log("archivo1"),
+              function: () => console.log("archivo4"),
             },
           ],
           subfolders: [],

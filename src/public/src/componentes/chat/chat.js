@@ -42,8 +42,6 @@ const chatFunction = () => {
           timerProgressBar: true,
           icon: "info",
         });
-
-        // Actualizar la lista de usuarios en el HTML
         updateUsers(users);
       });
 

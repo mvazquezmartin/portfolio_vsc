@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("src/public"));
 
 const httpServer = app.listen(PORT, () => {
-  console.log(`Servidor iniciado en el puerto ${PORT}`);
+  console.log(`Server started on PORT: ${PORT}`);
 });
 
 setSocket(httpServer);
