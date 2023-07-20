@@ -1,9 +1,9 @@
-import { renderExplorer } from "../src/componentes/explorerSideBar/explorer.js";
-import { gridGithubRender } from "../src/componentes/github/gridRender.js";
-import { renderMainText } from "../src/componentes/heroIndex/heroIndex.js";
-import { renderStack } from "../src/componentes/stack/stack.js";
-import { createTab } from "../src/componentes/tabs/tabsRender.js";
-import { btnFocus } from "../src/utils/btnFocus.js";
+import { renderExplorer } from "./js/components/explorerSideBar/explorer.js";
+import { gridGithubRender } from "./js/components/github/gridRender.js";
+import { renderMainText } from "./js/components/heroIndex/heroIndex.js";
+import { renderStack } from "./js/components/stack/stack.js";
+import { createTab } from "./js/components/tabs/tabsRender.js";
+import { btnFocus } from "./js/utils/btnFocus.js";
 
 // DECLARACIONES
 const iconVsc = "./assets/visual-studio-code-svgrepo-com.svg";
