@@ -4,6 +4,7 @@ const ilyudo = (img, name) => {
   rootPath.innerHTML = `Assets > ${name}.jpg`;
 
   const miNodo = document.createElement("div");
+  miNodo.classList.add("assetsContainer")
   const miNodoImg = document.createElement("img");
   miNodoImg.classList.add("assets");
   miNodoImg.setAttribute("src", img);

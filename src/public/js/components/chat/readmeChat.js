@@ -1,7 +1,7 @@
 const readmeRenderChat = () => {
   const path = document.getElementById("rootPath");
 
-  path.textContent = "Portfolio > PlayGround > readme.txt";
+  path.textContent = "Portfolio > SocketChat > readme_chat.txt";
 
   const miNodo = document.createElement("div");
   miNodo.classList.add("readme");

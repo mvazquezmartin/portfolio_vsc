@@ -1,6 +1,6 @@
-const chatFunction = () => {
-  const socket = io();
+const socket = io();
 
+const chatFunction = () => {
   const swal = async () => {
     const chatBox = document.getElementById("chatBox");
 

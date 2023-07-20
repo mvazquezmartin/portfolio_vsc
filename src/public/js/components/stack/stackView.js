@@ -16,9 +16,11 @@ const stackView = (stack) => {
     miNodoDescription.classList.add("stackDescriptionView");
     const miNodoTextDescription = document.createElement("p");
     miNodoTextDescription.textContent = stack.shortDescription;
+    //stack link container
+    const miNodoLinkContainer = document.createElement("div")
+    miNodoLinkContainer.classList.add("stackLinkCoder")
     //stack link certificado
-    const miNodoLinkCertificado = document.createElement("a");
-    miNodoLinkCertificado.classList.add("stackLinkCoder");
+    const miNodoLinkCertificado = document.createElement("a");    
     miNodoLinkCertificado.setAttribute("href", stack.linkCertificado);
     miNodoLinkCertificado.setAttribute("target", "_blank");
     miNodoLinkCertificado.textContent = "Link CoderHouse";
@@ -35,7 +37,8 @@ const stackView = (stack) => {
     miNodoDescription.appendChild(miNodoTextDescription);
     miNodo.appendChild(miNodoCertificadoDiv);
     miNodoCertificadoDiv.appendChild(miNodoCertificado);
-    miNodo.appendChild(miNodoLinkCertificado)
+    miNodoLinkContainer.appendChild(miNodoLinkCertificado)
+    miNodo.appendChild(miNodoLinkContainer)
     mainView.appendChild(miNodo);
   });
 };

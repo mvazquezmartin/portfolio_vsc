@@ -1,4 +1,4 @@
-@import "../abstracts/colors"; 
+@import "../abstracts/colors";
 
 .containerGrid {
   display: grid;
@@ -191,10 +191,6 @@
 
   .mainView {
     grid-area: mainView;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     overflow-y: auto;
   }
 }
