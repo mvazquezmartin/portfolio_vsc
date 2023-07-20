@@ -449,11 +449,38 @@ a:hover {
   height: 98%;
 }
 
-.readmeContainerM8b {
+.readme, .readmeContainerM8b {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: row;
   height: 100%;
+  width: 100%;
+}
+.readme .line-numbers, .readmeContainerM8b .line-numbers {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 15px;
+  user-select: none;
+  border-right: 0.5px solid #44475a;
+}
+.readme .line-numbers span, .readmeContainerM8b .line-numbers span {
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
+  color: #6272a4;
+}
+.readme .text-container, .readmeContainerM8b .text-container {
+  white-space: pre-wrap;
+  padding-left: 5px;
+  text-align: left;
+  margin-top: 1px;
+}
+.readme .text-container p, .readmeContainerM8b .text-container p {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.readmeContainerM8b {
+  flex-direction: column;
 }
 .readmeContainerM8b .imgContainer {
   display: flex;
@@ -462,36 +489,6 @@ a:hover {
 }
 .readmeContainerM8b .imgContainer img {
   max-width: 620px;
-}
-
-.readme {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  width: 100%;
-}
-.readme .line-numbers {
-  display: flex;
-  width: auto;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 0 25px;
-  user-select: none;
-  border-right: 0.5px solid #44475a;
-}
-.readme .line-numbers span {
-  font-family: "Fira Code", monospace;
-  font-size: 1rem;
-  color: #6272a4;
-}
-.readme .text-container {
-  white-space: pre-wrap;
-  padding-left: 5px;
-  text-align: left;
-  margin-top: 1px;
-}
-.readme .text-container p {
-  font-family: "Courier New", Courier, monospace;
 }
 
 .stackFlex {

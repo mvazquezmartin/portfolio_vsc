@@ -1,6 +1,6 @@
 const readmeRender = () => {
   const path = document.getElementById("rootPath");
-  
+
   path.textContent = "Portfolio > PlayGround > readme.txt";
 
   const miNodo = document.createElement("div");

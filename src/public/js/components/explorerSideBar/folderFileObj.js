@@ -1,5 +1,6 @@
 import { ilyudo } from "../assets/1Lyud0.js";
 import { chatRender } from "../chat/chatRender.js";
+import { readmeRenderChat } from "../chat/readmeChat.js";
 import { magic8BallRender } from "../magic8ball/magic8ball.js";
 import { readmeRender8Ball } from "../magic8ball/readme.js";
 import { playGroundRender } from "../playground/playGround.js";
@@ -106,9 +107,9 @@ const chat = {
       icon: "./assets/txt-svgrepo-com.svg",
       function: () =>
         createTab(
-          "readme_m8b.txt",
-          readmeRender8Ball,
-          "./assets/txt-svgrepo-com.svg"
+          "readme_chattxt",
+          readmeRenderChat,
+          txtIcon
         ),
     },
   ],
