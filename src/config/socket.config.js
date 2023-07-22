@@ -23,7 +23,10 @@ const setSocket = (app) => {
 
     socket.on("disconnect", () => {
       const userIndex = users.indexOf(socket.user);
-      console.log(colors.yellow("Cliente desconectado con id:"),colors.red(socket.id));
+      console.log(
+        colors.yellow("Cliente desconectado con id:"),
+        colors.red(socket.id)
+      );
       if (userIndex !== -1) {
         const disconnectUser = users.splice(userIndex, 1)[0];
         io.emit("userDisconnected", disconnectUser, users);
@@ -34,6 +37,8 @@ const setSocket = (app) => {
       messages.push(data);
       io.emit("messageLogs", messages);
     });
+
+    socket.emit("hello", "world");
   });
 };
 
