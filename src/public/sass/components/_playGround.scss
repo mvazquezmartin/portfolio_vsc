@@ -24,13 +24,8 @@
     }
 
     .htmlArea {
+      @include areaPlayGround;
       grid-area: 2 / 1 / 3 / 2;
-      color: $color-white;
-      background-color: $color-lightGrey;
-      height: 100%;
-      width: 100%;
-      font-family: $font-FireCode;
-      font-size: 13px;
     }
   }
 
@@ -50,13 +45,8 @@
     }
 
     .cssArea {
+      @include areaPlayGround;
       grid-area: 2 / 2 / 3 / 3;
-      color: $color-white;
-      background-color: $color-lightGrey;
-      height: 100%;
-      width: 100%;
-      font-family: $font-FireCode;
-      font-size: 13px;
     }
   }
 
@@ -76,13 +66,8 @@
     }
 
     .javaScriptArea {
+      @include areaPlayGround;
       grid-area: 2 / 3 / 3 / 4;
-      color: $color-white;
-      background-color: $color-lightGrey;
-      height: 100%;
-      width: 100%;
-      font-family: $font-FireCode;
-      font-size: 13px;
     }
   }
 

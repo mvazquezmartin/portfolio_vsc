@@ -19,6 +19,10 @@ const chatFunction = () => {
         console.log(error.message);
       }
     }
+    
+    socket.on("hello", (arg) => {
+      console.log(arg);
+    });
 
     socket.on("userConnected", (user, users) => {
       alertConnect(user, "success");
@@ -42,10 +46,6 @@ const chatFunction = () => {
       }
     });
   };
-
-  socket.on("hello", (arg) => {
-    console.log(arg);
-  });
 
   socket.on("messageLogs", (data) => {
     keysLog(data);
