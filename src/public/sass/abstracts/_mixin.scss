@@ -1,9 +1,10 @@
 @mixin areaPlayGround {
   color: $color-white;
-      background-color: $color-lightGrey;
-      height: 100%;
-      width: 100%;
-      font-family: $font-FireCode;
-      font-size: 13px;
-      padding: 7px 0 0 7px;
+  background-color: $color-lightGrey;
+  height: 94%;
+  width: 100%;
+  font-family: $font-FireCode;
+  font-size: 13px;
+  padding: 7px 0 0 7px;
+  resize: none;
 }
