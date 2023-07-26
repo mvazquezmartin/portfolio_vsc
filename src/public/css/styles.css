@@ -507,7 +507,7 @@ a:hover {
 }
 .readme .text-container, .readmeContainerM8b .text-container {
   white-space: pre-wrap;
-  padding-left: 5px;
+  padding-left: 15px;
   text-align: left;
   margin-top: 1px;
 }
@@ -623,7 +623,7 @@ a:hover {
   margin-right: 5px;
 }
 .tab .tabTitle {
-  color: #6272a4;
+  color: #888;
   font-size: 0.8rem;
   overflow: hidden;
   white-space: nowrap;
@@ -638,6 +638,10 @@ a:hover {
 }
 .tab.activeTab .closeButton {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(3deg) brightness(108%) contrast(102%);
+}
+.tab.activeTab .closeButton:hover {
+  background-color: #888;
+  border-radius: 3px;
 }
 .tab.activeTab {
   border-top: 0.5px solid #ff79c6;

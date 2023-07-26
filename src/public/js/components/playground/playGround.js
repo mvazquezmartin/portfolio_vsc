@@ -33,7 +33,7 @@ const playGroundRender = () => {
   const miNodoCssArea = document.createElement("textarea");
   miNodoCssArea.classList.add("cssArea");
   miNodoCssArea.setAttribute("id", "cssCode");
-  miNodoCssArea.textContent = `*{\nbackground:#343746\n}\n\nbutton{\npadding:20px;\nfont-size:20px;\nbackground:#FF0000;\ncolor:#fff\n}`;
+  miNodoCssArea.textContent = `*{\nbackground:#343746;\n}\n\nbutton{\npadding:20px;\nfont-size:20px;\nbackground:#FF0000;\ncolor:#fff;\n}`;
 
   const miNodoJavaScript = document.createElement("div");
   miNodoJavaScript.classList.add("javaScript");
