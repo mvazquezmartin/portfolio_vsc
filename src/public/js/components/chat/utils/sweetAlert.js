@@ -10,7 +10,7 @@ const alertNewUser = async () => {
   });
 };
 
-const alertConnect = (user, icon) => {
+const alertConnection = (user, icon) => {
   Swal.fire({
     text: `Se acaba de conectar ${user} al chat`,
     toast: true,
@@ -22,4 +22,4 @@ const alertConnect = (user, icon) => {
   });
 };
 
-export { alertConnect, alertNewUser };
+export { alertConnection, alertNewUser };

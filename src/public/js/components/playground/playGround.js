@@ -20,7 +20,7 @@ const playGroundRender = () => {
   const miNodoHtmlArea = document.createElement("textarea");
   miNodoHtmlArea.classList.add("htmlArea");
   miNodoHtmlArea.setAttribute("id", "htmlCode");
-  miNodoHtmlArea.textContent = `<div class="button-container">\n<button onclick="changeColor(this)">Click Me</button>\n</div>`;
+  miNodoHtmlArea.textContent = `<div class="button-container">\n<button onclick="changeColor(this)">Click Me!</button>\n</div>`;
 
   const miNodoCss = document.createElement("div");
   miNodoCss.classList.add("css");

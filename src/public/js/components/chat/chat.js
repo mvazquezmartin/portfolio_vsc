@@ -1,5 +1,5 @@
 import { keysLog } from "./utils/keysLog.js";
-import { alertConnect, alertNewUser } from "./utils/sweetAlert.js";
+import { alertConnection, alertNewUser } from "./utils/sweetAlert.js";
 import { updateUsers } from "./utils/userConnectLog.js";
 
 const socket = io();
@@ -18,19 +18,15 @@ const chatFunction = () => {
       } catch (error) {
         console.log(error.message);
       }
-    }
-    
-    socket.on("hello", (arg) => {
-      console.log(arg);
-    });
+    }    
 
     socket.on("userConnected", (user, users) => {
-      alertConnect(user, "success");
+      alertConnection(user, "success");
       updateUsers(users);
     });
 
     socket.on("userDisconnected", (disconnectedUser, users) => {
-      alertConnect(disconnectedUser, "info");
+      alertConnection(disconnectedUser, "info");
       updateUsers(users);
     });
 
@@ -51,7 +47,23 @@ const chatFunction = () => {
     keysLog(data);
   });
 
+  
+
+  if (currentUser != null) {
+    fetch("/chatlog")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        updateUsers(data.users)
+        keysLog(data.messages)
+      })
+      .catch((error) => {
+        console.log("Error request", error);
+      });
+  }
+
   swal();
 };
+
 
 export { chatFunction };

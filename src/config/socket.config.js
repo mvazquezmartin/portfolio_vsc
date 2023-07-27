@@ -42,4 +42,4 @@ const setSocket = (app) => {
   });
 };
 
-module.exports = setSocket;
+module.exports = {setSocket, users, messages};
