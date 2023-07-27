@@ -31,6 +31,9 @@ const setSocket = (app) => {
         const disconnectUser = users.splice(userIndex, 1)[0];
         io.emit("userDisconnected", disconnectUser, users);
       }
+      if (users.length === 0) {
+        messages.splice(0, messages.length);        
+      }
     });
 
     socket.on("message", (data) => {
@@ -42,4 +45,4 @@ const setSocket = (app) => {
   });
 };
 
-module.exports = {setSocket, users, messages};
+module.exports = { setSocket, users, messages };

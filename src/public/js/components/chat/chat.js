@@ -18,7 +18,7 @@ const chatFunction = () => {
       } catch (error) {
         console.log(error.message);
       }
-    }    
+    }
 
     socket.on("userConnected", (user, users) => {
       alertConnection(user, "success");
@@ -47,15 +47,13 @@ const chatFunction = () => {
     keysLog(data);
   });
 
-  
-
   if (currentUser != null) {
     fetch("/chatlog")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
-        updateUsers(data.users)
-        keysLog(data.messages)
+        console.log(data);
+        updateUsers(data.users);
+        keysLog(data.messages);
       })
       .catch((error) => {
         console.log("Error request", error);
@@ -64,6 +62,5 @@ const chatFunction = () => {
 
   swal();
 };
-
 
 export { chatFunction };
