@@ -14,13 +14,14 @@
     align-items: center;
     border-bottom: $style-border-grid;
 
-    h2 {
-      width: 90%;
-      text-align: center;
+    .h2Container {
+      width: 85%;
+      h2 {
+        text-align: center;
+      }
     }
 
     .btnContainer {
-      width: 10%;
       display: flex;
       justify-content: center;
 
@@ -79,6 +80,70 @@
     }
   }
 
+  .userConnectedBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "userTitle userTitle userTitle" "userConnected userConnected userConnected" "userConnected userConnected userConnected";
+    grid-area: userConnectedBox;
+    border-right: $style-border-grid;
+
+    .userTitle {
+      grid-area: userTitle;
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      border-bottom: $style-border-grid;
+      border-right: $style-border-grid;
+    }
+
+    .userConnected {
+      font-family: $font-CourierNew;
+      font-weight: 600;
+      grid-area: userConnected;
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+    }
+    .userDiv {
+      display: flex;
+      height: 30px;
+    }
+    p {
+      padding-left: 30px;
+      font-size: 1.1rem;
+    }
+  }
+
+  .messageLogBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "logTittle logTittle logTittle" "messageLog messageLog messageLog" "messageLog messageLog messageLog";
+    grid-area: messageLogBox;
+
+    .logTittle {
+      grid-area: logTittle;
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      border-bottom: $style-border-grid;
+    }
+
+    .messageLog {
+      grid-area: messageLog;
+      padding-left: 15px;
+      padding-top: 10px;
+      .log {
+        height: 100%;
+        width: 95%;
+        font-family: $font-CourierNew;
+      }
+    }
+  }
+
   .sendMessage {
     grid-area: sendMessage;
     display: flex;
@@ -91,70 +156,6 @@
       width: 80%;
       background-color: $color-darkBlue;
       color: $color-white;
-    }
-  }
-}
-
-.userConnectedBox {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 1.6fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "userTitle userTitle userTitle" "userConnected userConnected userConnected" "userConnected userConnected userConnected";
-  grid-area: userConnectedBox;
-  border-right: $style-border-grid;
-
-  .userTitle {
-    grid-area: userTitle;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-    border-bottom: $style-border-grid;
-    border-right: $style-border-grid;
-  }
-
-  .userConnected {
-    font-family: $font-CourierNew;
-    font-weight: 600;
-    grid-area: userConnected;
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-  }
-  .userDiv {
-    display: flex;
-    height: 30px;
-  }
-  p {
-    padding-left: 30px;
-    font-size: 1.1rem;
-  }
-}
-
-.messageLogBox {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 1.6fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "logTittle logTittle logTittle" "messageLog messageLog messageLog" "messageLog messageLog messageLog";
-  grid-area: messageLogBox;
-
-  .logTittle {
-    grid-area: logTittle;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-    border-bottom: $style-border-grid;
-  }
-
-  .messageLog {
-    grid-area: messageLog;
-    padding-left: 15px;
-    padding-top: 10px;
-    .log {
-      height: 100%;
-      width: 95%;
-      font-family: $font-CourierNew;
     }
   }
 }

@@ -491,7 +491,6 @@ a:hover {
 .readme, .readmeContainerM8b {
   display: flex;
   flex-direction: row;
-  height: 100%;
   width: 100%;
 }
 .readme .line-numbers, .readmeContainerM8b .line-numbers {
@@ -571,7 +570,7 @@ a:hover {
 
 .stackViewTabs {
   display: flex;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   flex-direction: column;
   justify-content: center;
@@ -700,12 +699,13 @@ a:hover {
   align-items: center;
   border-bottom: 0.5px solid #44475a;
 }
-.chatContainerGrid .chatTitle h2 {
-  width: 90%;
+.chatContainerGrid .chatTitle .h2Container {
+  width: 85%;
+}
+.chatContainerGrid .chatTitle .h2Container h2 {
   text-align: center;
 }
 .chatContainerGrid .chatTitle .btnContainer {
-  width: 10%;
   display: flex;
   justify-content: center;
 }
@@ -757,6 +757,64 @@ a:hover {
   position: relative;
   top: 1px;
 }
+.chatContainerGrid .userConnectedBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.6fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "userTitle userTitle userTitle" "userConnected userConnected userConnected" "userConnected userConnected userConnected";
+  grid-area: userConnectedBox;
+  border-right: 0.5px solid #44475a;
+}
+.chatContainerGrid .userConnectedBox .userTitle {
+  grid-area: userTitle;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  border-bottom: 0.5px solid #44475a;
+  border-right: 0.5px solid #44475a;
+}
+.chatContainerGrid .userConnectedBox .userConnected {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  grid-area: userConnected;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.chatContainerGrid .userConnectedBox .userDiv {
+  display: flex;
+  height: 30px;
+}
+.chatContainerGrid .userConnectedBox p {
+  padding-left: 30px;
+  font-size: 1.1rem;
+}
+.chatContainerGrid .messageLogBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.6fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "logTittle logTittle logTittle" "messageLog messageLog messageLog" "messageLog messageLog messageLog";
+  grid-area: messageLogBox;
+}
+.chatContainerGrid .messageLogBox .logTittle {
+  grid-area: logTittle;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  border-bottom: 0.5px solid #44475a;
+}
+.chatContainerGrid .messageLogBox .messageLog {
+  grid-area: messageLog;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.chatContainerGrid .messageLogBox .messageLog .log {
+  height: 100%;
+  width: 95%;
+  font-family: "Courier New", Courier, monospace;
+}
 .chatContainerGrid .sendMessage {
   grid-area: sendMessage;
   display: flex;
@@ -769,64 +827,4 @@ a:hover {
   width: 80%;
   background-color: #191a21;
   color: #f0f8ff;
-}
-
-.userConnectedBox {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 1.6fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "userTitle userTitle userTitle" "userConnected userConnected userConnected" "userConnected userConnected userConnected";
-  grid-area: userConnectedBox;
-  border-right: 0.5px solid #44475a;
-}
-.userConnectedBox .userTitle {
-  grid-area: userTitle;
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-  border-bottom: 0.5px solid #44475a;
-  border-right: 0.5px solid #44475a;
-}
-.userConnectedBox .userConnected {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 600;
-  grid-area: userConnected;
-  display: flex;
-  flex-direction: column;
-  padding-top: 10px;
-}
-.userConnectedBox .userDiv {
-  display: flex;
-  height: 30px;
-}
-.userConnectedBox p {
-  padding-left: 30px;
-  font-size: 1.1rem;
-}
-
-.messageLogBox {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 1.6fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "logTittle logTittle logTittle" "messageLog messageLog messageLog" "messageLog messageLog messageLog";
-  grid-area: messageLogBox;
-}
-.messageLogBox .logTittle {
-  grid-area: logTittle;
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-  border-bottom: 0.5px solid #44475a;
-}
-.messageLogBox .messageLog {
-  grid-area: messageLog;
-  padding-left: 15px;
-  padding-top: 10px;
-}
-.messageLogBox .messageLog .log {
-  height: 100%;
-  width: 95%;
-  font-family: "Courier New", Courier, monospace;
 }

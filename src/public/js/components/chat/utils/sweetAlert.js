@@ -1,18 +1,21 @@
 const alertNewUser = async () => {
   return await Swal.fire({
-    title: "Identificate",
+    title: "Log In",
     input: "text",
     text: "Ingresa un usuario para chatear",
+    color: "#fff",
     inputValidator: (value) => {
       return !value && "Necesitas ingresar un usuario para continuar";
     },
     allowOutsideClick: false,
+    allowEscapeKey: false,
   });
 };
 
 const alertConnection = (user, status, icon) => {
-  Swal.fire({
+  Swal.fire({    
     text: `Se acaba de ${status} ${user}`,
+    color: "#fff",
     toast: true,
     position: "top-right",
     showConfirmButton: false,
