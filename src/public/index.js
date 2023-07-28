@@ -24,7 +24,6 @@ inicio.addEventListener("click", () =>
   createTab("Get Started", renderMainText, iconVsc)
 );
 github.addEventListener("click", gridGithubRender);
-//inicio.addEventListener("click", ()=>{btnFocusRemove(btnNavBarAside)})
 
 // EJECUCION DE FUNCIONES
 btnFocus(btnNavBarAside);

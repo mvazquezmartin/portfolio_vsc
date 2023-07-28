@@ -12,6 +12,13 @@ const chatRender = () => {
   const titleH2 = document.createElement("h2");
   titleH2.textContent = "📡 - Socket.io Chat 1.0v - 📫";
 
+  const btnContainer = document.createElement("div");
+  btnContainer.classList.add("btnContainer");
+  const btnConnection = document.createElement("button");
+  btnConnection.setAttribute("id", "btnConnection");
+  btnConnection.classList.add("btnConnection");
+  btnConnection.textContent = "Connect";
+
   const userConnectedBox = document.createElement("div");
   userConnectedBox.classList.add("userConnectedBox");
   const userTitle = document.createElement("div");
@@ -32,7 +39,7 @@ const chatRender = () => {
   messageLog.classList.add("messageLog");
 
   const sendMessage = document.createElement("div");
-  sendMessage.classList.add("sendMessage");
+  sendMessage.classList.add("sendMessage");  
 
   const sendMsg = document.createElement("input");
   sendMsg.classList.add("sendMsg");
@@ -49,6 +56,8 @@ const chatRender = () => {
 
   miNodoContainer.appendChild(titleDiv);
   titleDiv.appendChild(titleH2);
+  titleDiv.appendChild(btnContainer);
+  btnContainer.appendChild(btnConnection);
 
   miNodoContainer.appendChild(userConnectedBox);
   userConnectedBox.appendChild(userTitle);

@@ -2,34 +2,78 @@ import { keysLog } from "./utils/keysLog.js";
 import { alertConnection, alertNewUser } from "./utils/sweetAlert.js";
 import { updateUsers } from "./utils/userConnectLog.js";
 
-const socket = io();
 let currentUser = null;
+const socket = io();
 
 const chatFunction = () => {
-  const swal = async () => {
-    const chatBox = document.getElementById("chatBox");
+  const chatBox = document.getElementById("chatBox");
+  const btnConnection = document.getElementById("btnConnection");
 
-    if (!currentUser) {
-      try {
-        const result = await alertNewUser();
-        const user = result.value;
-        socket.emit("newUser", user);
-        currentUser = user;
-      } catch (error) {
-        console.log(error.message);
+  const connecteUser = async () => {
+    try {
+      const result = await alertNewUser();
+      const user = result.value;
+      if (socket.connected === false) {
+        socket.connect();
       }
+      socket.emit("newUser", user);
+      currentUser = user;
+      chatBoxEvent();
+      btnConnection.textContent = "Disconnect";
+      btnConnection.classList.remove("btnConnection");
+      btnConnection.classList.add("btnDisconnectect");
+      btnConnection.removeEventListener("click", connecteUser);
+      btnConnection.addEventListener("click", disconnectUser);
+    } catch (error) {
+      console.log(error.message);
     }
+  };
 
-    socket.on("userConnected", (user, users) => {
-      alertConnection(user, "success");
-      updateUsers(users);
-    });
+  const disconnectUser = () => {
+    socket.disconnect();
+    alertConnection(currentUser, "desconectar", "error");
+    currentUser = null;
+    btnConnection.textContent = "Connect";
+    btnConnection.classList.remove("btnDisconnectect");
+    btnConnection.classList.add("btnConnection");
+    btnConnection.removeEventListener("click", disconnectUser);
+    btnConnection.addEventListener("click", connecteUser);
+    chatBoxEvent();
+  };
 
-    socket.on("userDisconnected", (disconnectedUser, users) => {
-      alertConnection(disconnectedUser, "info");
-      updateUsers(users);
-    });
+  socket.on("userConnected", (user, users) => {
+    alertConnection(user, "conectar", "success");
+    updateUsers(users);
+  });
 
+  socket.on("userDisconnected", (disconnectedUser, users) => {
+    alertConnection(disconnectedUser, "desconectar", "info");
+    updateUsers(users);
+  });
+
+  socket.on("messageLogs", (data) => {
+    keysLog(data);
+  });
+
+  const isConeccted = () => {
+    if (currentUser != null) {
+      btnConnection.removeEventListener("click", connecteUser);
+      btnConnection.textContent = "Disconnect";
+      btnConnection.addEventListener("click", disconnectUser);
+      fetch("/chatlog")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          updateUsers(data.users);
+          keysLog(data.messages);
+        })
+        .catch((error) => {
+          console.log("Error request", error);
+        });
+    }
+  };
+  const chatBoxEvent = () => {
+    chatBox.disabled = currentUser === null ? true : false;
     chatBox.addEventListener("keyup", (e) => {
       if (e.key === "Enter") {
         if (chatBox.value.trim().length > 0) {
@@ -43,24 +87,10 @@ const chatFunction = () => {
     });
   };
 
-  socket.on("messageLogs", (data) => {
-    keysLog(data);
-  });
+  btnConnection.addEventListener("click", connecteUser);
 
-  if (currentUser != null) {
-    fetch("/chatlog")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        updateUsers(data.users);
-        keysLog(data.messages);
-      })
-      .catch((error) => {
-        console.log("Error request", error);
-      });
-  }
-
-  swal();
+  chatBoxEvent();
+  isConeccted();
 };
 
 export { chatFunction };

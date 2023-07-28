@@ -1,13 +1,13 @@
 const magic8BallRender = () => {
   const rta = [
     "😀 Es cierto.",
-    "😄 Es decididamente así.",
+    "😄 Es decididamente así. ",
     "😁 Sin lugar a dudas.",
     "😊 Si, definitivamente.",
     "😉 Puedes confiar de ello.",
     "😋 Como yo lo veo, si.",
-    "🙂 Lo mas probable.",
-    "🤭 Perspectiva buena.",
+    "🙂 Lo mas probable. ",
+    "🤭 Perspectiva buena. ",
     "🙃 Si.",
     "🤗 Las señales apuntan a que sí.",
     "😖 Respuesta confusa, vuelve a intentarlo.",
@@ -19,7 +19,7 @@ const magic8BallRender = () => {
     "😕 Mi respuesta es no.",
     "🤐 Mis fuentes dicen que no.",
     "😞 Las perspectivas no son muy buenas. ",
-    "😧 Muy dudoso.",
+    "😧 Muy dudoso.  ",
   ];
 
   const path = document.getElementById("rootPath");
@@ -50,7 +50,7 @@ const magic8BallRender = () => {
     const indice = Math.floor(Math.random() * rta.length);
     const DOMRta = document.getElementById("res");
     const respuestaText = rta[indice];
-    const typingDuration = 70 * respuestaText.length;
+    const typingDuration = 75 * respuestaText.length;
 
     DOMRta.textContent = respuestaText;
     DOMRta.style.setProperty("--rta-length", respuestaText.length);
