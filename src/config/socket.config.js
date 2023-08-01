@@ -32,7 +32,7 @@ const setSocket = (app) => {
         io.emit("userDisconnected", disconnectUser, users);
       }
       if (users.length === 0) {
-        messages.splice(0, messages.length);        
+        messages.splice(0, messages.length);
       }
     });
 

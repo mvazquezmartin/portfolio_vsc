@@ -3,7 +3,7 @@ import { alertConnection, alertNewUser } from "./utils/sweetAlert.js";
 import { updateUsers } from "./utils/userConnectLog.js";
 
 let currentUser = null;
-const socket = io("http://localhost:3030");
+const socket = io();
 
 const chatFunction = () => {
   const chatBox = document.getElementById("chatBox");
