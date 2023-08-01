@@ -1,8 +1,8 @@
 {
   "name": "mvazquezmartindev",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Portoflio con tematica VSCode, theme Dracula. Desarrolado en html, css y JavaScript.",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/mvazquezmartin/portfolio_vsc.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "MVazquezMartin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mvazquezmartin/portfolio_vsc/issues"
