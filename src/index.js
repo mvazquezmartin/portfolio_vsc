@@ -7,9 +7,9 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-router(app);
-app.use(express.static("src/public"));
+//app.use(express.static("src/public"));
 
+router(app);
 
 const httpServer = app.listen(PORT, () => {
   console.log(`Server started on PORT: ${PORT}`);
