@@ -1,4 +1,3 @@
-import { io } from "socket.io-client";
 import { keysLog } from "./utils/keysLog.js";
 import { alertConnection, alertNewUser } from "./utils/sweetAlert.js";
 import { updateUsers } from "./utils/userConnectLog.js";
