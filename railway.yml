@@ -2,7 +2,7 @@ version: 1
 env: node
 build:
   env:
-    PORT: 3000 # Especifica el puerto que utilizará Railway para tu aplicación
+    PORT: 3030 # Especifica el puerto que utilizará Railway para tu aplicación
   scripts:
     - npm install # Instala las dependencias del proyecto
   release:
