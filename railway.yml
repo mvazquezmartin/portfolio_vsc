@@ -1,0 +1,9 @@
+version: 1
+env: node
+build:
+  env:
+    PORT: 3000 # Especifica el puerto que utilizará Railway para tu aplicación
+  scripts:
+    - npm install # Instala las dependencias del proyecto
+  release:
+    - npm run start # Comando para iniciar tu aplicación (usando el script "start" definido en package.json)
