@@ -2,7 +2,14 @@
 @import "../abstracts/fonts";
 
 *{
-  font-family: $font-Roboto;  
+  font-family: $font-Roboto;
+  box-sizing: border-box;  
+}
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
 }
 
 button {

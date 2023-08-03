@@ -20,7 +20,7 @@ const playGroundRender = () => {
   const miNodoHtmlArea = document.createElement("textarea");
   miNodoHtmlArea.classList.add("htmlArea");
   miNodoHtmlArea.setAttribute("id", "htmlCode");
-  miNodoHtmlArea.textContent = `<div class="button-container">\n<button onclick="changeColor(this)">Click Me!</button>\n</div>`;
+  miNodoHtmlArea.textContent = `<div class="button-container">\n<button onclick="changeColorCounter(this)">Click Me!</button>\n<p id="counter"></p>\n</div>`;
 
   const miNodoCss = document.createElement("div");
   miNodoCss.classList.add("css");
@@ -33,7 +33,7 @@ const playGroundRender = () => {
   const miNodoCssArea = document.createElement("textarea");
   miNodoCssArea.classList.add("cssArea");
   miNodoCssArea.setAttribute("id", "cssCode");
-  miNodoCssArea.textContent = `.button-container{\ndisplay:flex;\njustify-content: center;\nalign-items: center;\nheight: 100%;\nwidth: 100%;\nbackground:#343746;\n}\n\nbutton{\npadding:20px;\nfont-size:20px;\nbackground:#FF0000;\ncolor:#fff;\nborder-radius: 10%;\n}`;
+  miNodoCssArea.textContent = `.button-container{\ndisplay:flex;\nflex-direction: column;\njustify-content: center;\nalign-items: center;\nheight: 100%;\nwidth: 100%;\nbackground:#343746;\n}\n\nbutton{\npadding:20px;\nfont-size:20px;\nbackground:#FF0000;\ncolor:#fff;\nborder-radius: 10%;\n}\n\np{\ncolor:#fff;\nfont-size:20px;\nheight:20px;\nmargin-block-start: 1rem;\nmargin-block-end: 1rem;\n}`;
 
   const miNodoJavaScript = document.createElement("div");
   miNodoJavaScript.classList.add("javaScript");
@@ -46,7 +46,7 @@ const playGroundRender = () => {
   const miNodoJavaScriptArea = document.createElement("textarea");
   miNodoJavaScriptArea.classList.add("javaScriptArea");
   miNodoJavaScriptArea.setAttribute("id", "javaScriptCode");
-  miNodoJavaScriptArea.textContent = `function changeColor(x){\nlet currentColor = x.style.background;\nx.style.background = currentColor === 'rgb(255, 0, 0)' ? '#0000FF' : '#FF0000';\n}`;
+  miNodoJavaScriptArea.textContent = `let clickCounter = 0\n\nfunction changeColorCounter(x){\nlet currentColor = x.style.background;\n\nx.style.background = currentColor === 'rgb(0, 0, 255)' ? '#FF0000' : '#0000FF';\n\nclickCounter++;\n\nconst counter = document.getElementById("counter");\ncounter.innerText =\`Counter: \${clickCounter}\`;\n}`;
 
   const miNodoOutPutArea = document.createElement("div");
   miNodoOutPutArea.classList.add("outPutArea");

@@ -1,0 +1,23 @@
+$breakpoint-mobile: 600px;
+$breakpoint-desktop: 992px;
+
+// Mixin para media query de celular
+@mixin mobile {
+  @media screen and (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+// Mixin para media query de tablet
+@mixin tablet {
+  @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+// Mixin para media query de desktop
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}

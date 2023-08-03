@@ -1,7 +1,7 @@
 {
   "name": "mvazquezmartindev",
   "version": "1.0.0",
-  "description": "Portoflio con tematica VSCode, theme Dracula. Desarrolado en html, css y JavaScript.",
+  "description": "Portoflio con tematica VSCode, theme Dracula. Desarrolado en Html, Sass y JavaScript.",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -59,11 +59,12 @@ const chatFunction = () => {
     if (currentUser != null) {
       btnConnection.removeEventListener("click", connecteUser);
       btnConnection.textContent = "Disconnect";
+      btnConnection.classList.remove("btnConnection");
+      btnConnection.classList.add("btnDisconnectect");
       btnConnection.addEventListener("click", disconnectUser);
       fetch("/chatlog")
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           updateUsers(data.users);
           keysLog(data.messages);
         })

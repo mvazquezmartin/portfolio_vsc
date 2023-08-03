@@ -1,7 +1,7 @@
 const express = require("express");
 const { PORT } = require("./config/app.config");
 const { setSocket } = require("./config/socket.config");
-const router = require("./routes");
+const router = require("./router");
 
 const app = express();
 
