@@ -1,16 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-* {
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-html {
-  height: 100%;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
 body {
+  line-height: 1;
   min-height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 button {
@@ -26,8 +64,8 @@ a:hover {
   color: #555;
 }
 
-.activeFile {
-  background-color: rgba(190, 190, 190, 0.2);
+* {
+  box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
@@ -46,33 +84,16 @@ a:hover {
   background: #555;
 }
 
+.activeFile {
+  background-color: rgba(190, 190, 190, 0.2);
+}
+
 .containerGrid {
   display: grid;
   color: #f0f8ff;
   height: 100vh;
   gap: 0px 0px;
   grid-auto-flow: row;
-}
-@media screen and (max-width: 600px) {
-  .containerGrid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.15fr 1fr 0.15fr;
-    grid-template-areas: "navBartop" "mainArea" "footer";
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 992px) {
-  .containerGrid {
-    grid-template-columns: 0.1fr 1fr;
-    grid-template-rows: 0.15fr 4.15fr 0.15fr;
-    grid-template-areas: "navBarTop navBarTop" "sideBar mainArea" "footer footer";
-  }
-}
-@media screen and (min-width: 992px) {
-  .containerGrid {
-    grid-template-columns: 0.1fr 0.4fr 2.2fr;
-    grid-template-rows: 0.15fr 4.15fr 0.15fr;
-    grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside footer footer";
-  }
 }
 .containerGrid .navBarTop {
   grid-area: navBarTop;
@@ -91,14 +112,14 @@ a:hover {
   cursor: pointer;
 }
 .containerGrid .navBarTop .iconoMenu .menuNavBarTop {
-  cursor: default;
   display: flex;
   padding-left: 5px;
+  cursor: default;
 }
 .containerGrid .navBarTop .iconoMenu .menuNavBarTop span {
-  cursor: default;
   padding: 0 8px;
   transition: 0.3s;
+  cursor: default;
 }
 .containerGrid .navBarTop .iconoMenu .menuNavBarTop span:hover {
   background-color: #282a36;
@@ -139,6 +160,7 @@ a:hover {
   height: 50px;
   width: 100%;
   color: #5c6a98;
+  font-size: 1.7rem;
 }
 .containerGrid .navBarAside .iconNavBar .iconFlex .iconUserFlex {
   display: flex;
@@ -186,13 +208,6 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 992px) {
-  .containerGrid .sideBar {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 2.8fr;
-    grid-template-areas: "titleSideBar titleSideBar titleSideBar" "fileOpen fileOpen fileOpen" "viewSideBar viewSideBar viewSideBar";
-  }
-}
 .containerGrid .mainArea {
   display: grid;
   grid-area: mainArea;
@@ -221,13 +236,6 @@ a:hover {
   grid-area: mainView;
   overflow-y: auto;
 }
-@media screen and (min-width: 992px) {
-  .containerGrid .mainArea {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 2.8fr;
-    grid-template-areas: "tabs tabs tabs" "rootPath rootPath rootPath" "mainView mainView mainView";
-  }
-}
 .containerGrid .footer {
   grid-area: footer;
   background-color: #191a21;
@@ -244,15 +252,81 @@ a:hover {
   justify-content: space-around;
   cursor: default;
   padding-left: 10px;
+  font-size: 12px;
+}
+.containerGrid .footer .iconsFooterL .bi {
+  align-self: center;
 }
 .containerGrid .footer .iconsFooterR {
   display: flex;
   width: 100px;
   justify-content: space-around;
   cursor: default;
+  font-size: 12px;
+}
+.containerGrid .footer .iconsFooterR .bi {
+  align-self: center;
 }
 .containerGrid .footer .margin {
   margin-left: 5px;
+}
+@media screen and (max-width: 600px) {
+  .containerGrid {
+    grid-template-columns: 0.1fr 0.4fr 2.2fr;
+    grid-template-rows: 0.15fr 4.15fr 0.15fr;
+    grid-template-areas: "navBarTop navBarTop navBarTop" "mainArea mainArea mainArea" "mainArea mainArea mainArea" "mainArea mainArea mainArea" "footer footer footer";
+  }
+  .containerGrid .navBarTop span {
+    padding-left: 1px;
+  }
+  .containerGrid .navBarTop .iconoMenu .menuNavBarTop {
+    display: none;
+  }
+  .containerGrid .sideBar {
+    display: none;
+  }
+  .containerGrid .navBarAside {
+    display: none;
+  }
+  .containerGrid .mainArea {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 2.8fr;
+    grid-template-areas: "tabs tabs tabs" "rootPath rootPath rootPath" "mainView mainView mainView";
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  .containerGrid {
+    grid-template-columns: 0.1fr 0.4fr 2.2fr;
+    grid-template-rows: 0.15fr 4.15fr 0.15fr;
+    grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside footer footer";
+  }
+  .containerGrid .sideBar {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 2.8fr;
+    grid-template-areas: "titleSideBar titleSideBar titleSideBar" "fileOpen fileOpen fileOpen" "viewSideBar viewSideBar viewSideBar";
+  }
+  .containerGrid .mainArea {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 2.8fr;
+    grid-template-areas: "tabs tabs tabs" "rootPath rootPath rootPath" "mainView mainView mainView";
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerGrid {
+    grid-template-columns: 0.1fr 0.4fr 2.2fr;
+    grid-template-rows: 0.15fr 4.15fr 0.15fr;
+    grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside footer footer";
+  }
+  .containerGrid .sideBar {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 2.8fr;
+    grid-template-areas: "titleSideBar titleSideBar titleSideBar" "fileOpen fileOpen fileOpen" "viewSideBar viewSideBar viewSideBar";
+  }
+  .containerGrid .mainArea {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 2.8fr;
+    grid-template-areas: "tabs tabs tabs" "rootPath rootPath rootPath" "mainView mainView mainView";
+  }
 }
 
 .containerHeroView {
@@ -262,8 +336,7 @@ a:hover {
   width: 100%;
   height: 100%;
 }
-
-.containerIntroAside {
+.containerHeroView .containerIntroAside {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -271,27 +344,36 @@ a:hover {
   width: auto;
   padding-left: 5rem;
 }
-
-.titleMain {
+.containerHeroView .containerIntroAside .titleMain {
   text-align: left;
   width: 100%;
 }
-.titleMain h1 {
+.containerHeroView .containerIntroAside .titleMain h1 {
   font-size: 2rem;
 }
-.titleMain h2 {
+.containerHeroView .containerIntroAside .titleMain h2 {
   font-size: 1.5rem;
 }
-
-.descriptionMain {
+.containerHeroView .containerIntroAside .descriptionMain {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.descriptionMain h6 {
+.containerHeroView .containerIntroAside .descriptionMain h6 {
   margin-top: 1rem;
 }
-
+@media screen and (max-width: 600px) {
+  .containerHeroView {
+    flex-direction: column;
+  }
+  .containerHeroView .containerIntroAside {
+    padding-left: 0;
+    margin: auto;
+  }
+  .containerHeroView .containerIntroAside .titleMain {
+    text-align: center;
+  }
+}
 .assetsContainer {
   display: flex;
   justify-content: center;
@@ -607,28 +689,33 @@ a:hover {
 }
 .stackViewTabs .stackTitleView {
   display: flex;
-  width: 100%;
-  height: 15%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 70px;
 }
 .stackViewTabs .stackDescriptionView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #888;
-  height: 20%;
+  height: 125px;
   max-width: 700px;
   text-align: center;
 }
 .stackViewTabs .stackCertificado {
-  max-width: 600px;
+  max-width: 700px;
 }
 .stackViewTabs .stackCertificado img {
   max-width: 100%;
   height: auto;
 }
 .stackViewTabs .stackLinkCoder {
-  margin-top: 1rem;
-  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
   width: 100%;
   text-align: center;
 }

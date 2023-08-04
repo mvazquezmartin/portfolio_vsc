@@ -27,7 +27,7 @@ function createTab(title, content, icon) {
   activeTabFocus();
 }
 
-function renderTabs() {
+const renderTabs = () => {
   const tabsContainer = document.getElementById("tabs");
   tabsContainer.innerHTML = "";
 
@@ -66,19 +66,19 @@ function renderTabs() {
     tabDiv.appendChild(closeButton);
     tabsContainer.appendChild(tabDiv);
   });
-}
+};
 
 // Función para cambiar la pestaña activa
-function setActiveTab(index) {
+const setActiveTab = (index) => {
   if (tabs[index]) {
     activeTabIndex = index; // Actualizar el índice de la pestaña activa
     renderTabs();
     renderMainView();
     activeTabFocus();
   }
-}
+};
 
-function activeTabFocus() {
+const activeTabFocus = () => {
   const tabButtons = document.querySelectorAll(".tab");
   const activeTabButton = tabButtons[activeTabIndex];
   // Elimina la clase 'activeTab' de todos los botones de pestaña
@@ -87,10 +87,10 @@ function activeTabFocus() {
   });
   // Agrega la clase 'activeTab' al botón de la pestaña activa
   activeTabButton.classList.add("activeTab");
-}
+};
 
 // Función para cerrar una pestaña
-function closeTab(index) {
+const closeTab = (index) => {
   const rootPath = document.getElementById("rootPath");
   rootPath.textContent = "";
 
@@ -111,10 +111,10 @@ function closeTab(index) {
     setActiveTab(newActiveTabIndex);
     renderMainView();
   }
-}
+};
 
 // Función para renderizar el contenido en el mainView
-function renderMainView() {
+const renderMainView = () => {
   const mainViewContainer = document.getElementById("mainView");
   mainViewContainer.innerHTML = "";
 
@@ -122,6 +122,6 @@ function renderMainView() {
     const activeTab = tabs[activeTabIndex];
     activeTab.content();
   }
-}
+};
 
 export { createTab };
