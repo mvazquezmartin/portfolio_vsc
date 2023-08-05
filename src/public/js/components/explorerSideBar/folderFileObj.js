@@ -1,3 +1,4 @@
+import { iconPath, imgPath } from "../../assetsPath/assetsPath.js";
 import { ilyudo } from "../assets/1Lyud0.js";
 import { chatRender } from "../chat/chatRender.js";
 import { readmeRenderChat } from "../chat/readmeChat.js";
@@ -7,52 +8,44 @@ import { playGroundRender } from "../playground/playGround.js";
 import { readmeRender } from "../playground/readme.js";
 import { createTab } from "../tabs/tabsRender.js";
 
-const jsIcon = "./assets/javascript-svgrepo-com.svg";
-const jpgIcon = "./assets/jpg-svgrepo-com.svg";
-const txtIcon = "./assets/txt-svgrepo-com.svg";
-const m8bIcon = "./assets/pool-8-ball-svgrepo-com.svg";
-const chatIcon = "./assets/chat-svgrepo-com.svg";
-const pgIcon = "./assets/pencil-svgrepo-com.svg"
-
-const judoJpg = "./assets/judo.jpg";
-const setUpJpg = "./assets/setup.jpg";
-const chessMeme = "./assets/meme01.jpg";
-const dependeMeme = "./assets/meme02.jpg";
-
 const assetsFolder = {
   folderName: "Assets",
   files: [
     {
       name: "chess_meme.jpg",
-      icon: jpgIcon,
+      icon: iconPath.JPG,
       function: () =>
         createTab(
           "chess_meme.jpg",
-          () => ilyudo(chessMeme, "chess_meme"),
-          jpgIcon
+          () => ilyudo(imgPath.CHESS_MEME, "chess_meme"),
+          iconPath.JPG
         ),
     },
     {
       name: "loroArquitecto.jpg",
-      icon: jpgIcon,
+      icon: iconPath.JPG,
       function: () =>
         createTab(
           "loroArquitecto.jpg",
-          () => ilyudo(dependeMeme, "loroArquitecto"),
-          jpgIcon
+          () => ilyudo(imgPath.DEPENDE_MEME, "loroArquitecto"),
+          iconPath.JPG
         ),
     },
     {
       name: "judo.jpg",
-      icon: jpgIcon,
+      icon: iconPath.JPG,
       function: () =>
-        createTab("judo.jpg", () => ilyudo(judoJpg, "judo"), jpgIcon),
+        createTab("judo.jpg", () => ilyudo(imgPath.JUDO, "judo"), iconPath.JPG),
     },
     {
       name: "setUp.jpg",
-      icon: jpgIcon,
+      icon: iconPath.JPG,
       function: () =>
-        createTab("setUp.jpg", () => ilyudo(setUpJpg, "setUp"), jpgIcon),
+        createTab(
+          "setUp.jpg",
+          () => ilyudo(imgPath.SETUP, "setUp"),
+          iconPath.JPG
+        ),
     },
   ],
   subfolders: [],
@@ -63,13 +56,14 @@ const playGroundFolder = {
   files: [
     {
       name: "playGround.js",
-      icon: jsIcon,
-      function: () => createTab("playGround.js", playGroundRender, pgIcon),
+      icon: iconPath.JAVASCRIPT,
+      function: () =>
+        createTab("playGround.js", playGroundRender, iconPath.PLAYGROUND),
     },
     {
       name: "readme_pg.txt",
-      icon: txtIcon,
-      function: () => createTab("readme_pg.txt", readmeRender, txtIcon),
+      icon: iconPath.TXT,
+      function: () => createTab("readme_pg.txt", readmeRender, iconPath.TXT),
     },
   ],
   subfolders: [],
@@ -80,13 +74,15 @@ const magic8Ball = {
   files: [
     {
       name: "magic8Ball.js",
-      icon: jsIcon,
-      function: () => createTab("magic8Ball.js", magic8BallRender, m8bIcon),
+      icon: iconPath.JAVASCRIPT,
+      function: () =>
+        createTab("magic8Ball.js", magic8BallRender, iconPath.M8B),
     },
     {
       name: "readme_m8b.txt",
-      icon: txtIcon,
-      function: () => createTab("readme_m8b.txt", readmeRender8Ball, txtIcon),
+      icon: iconPath.TXT,
+      function: () =>
+        createTab("readme_m8b.txt", readmeRender8Ball, iconPath.TXT),
     },
   ],
   subfolders: [],
@@ -97,20 +93,16 @@ const chat = {
   files: [
     {
       name: "socketChat-1.0v.js",
-      icon: jsIcon,
+      icon: iconPath.JAVASCRIPT,
       function: () => {
-        createTab("SocketChat", chatRender, chatIcon);
+        createTab("SocketChat", chatRender, iconPath.CHAT);
       },
     },
     {
       name: "readme_chat.txt",
-      icon: "./assets/txt-svgrepo-com.svg",
+      icon: iconPath.TXT,
       function: () =>
-        createTab(
-          "readme_chattxt",
-          readmeRenderChat,
-          txtIcon
-        ),
+        createTab("readme_chattxt", readmeRenderChat, iconPath.TXT),
     },
   ],
   subfolders: [],

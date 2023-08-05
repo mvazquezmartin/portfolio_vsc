@@ -1,12 +1,10 @@
+import { iconPath } from "./js/assetsPath/assetsPath.js";
 import { renderExplorer } from "./js/components/explorerSideBar/explorer.js";
 import { gridGithubRender } from "./js/components/github/gridRender.js";
 import { renderMainText } from "./js/components/heroIndex/heroIndex.js";
 import { renderStack } from "./js/components/stack/stack.js";
 import { createTab } from "./js/components/tabs/tabsRender.js";
 import { btnFocus } from "./js/utils/btnFocus.js";
-
-// DECLARACIONES
-const iconVsc = "./assets/visual-studio-code-svgrepo-com.svg";
 
 // QUERY DE ELEMENTOS
 const explorer = document.getElementById("files");
@@ -21,11 +19,12 @@ const btnNavBarAside = document.querySelectorAll(".iconNavBarAside");
 explorer.addEventListener("click", renderExplorer);
 stack.addEventListener("click", renderStack);
 inicio.addEventListener("click", () =>
-  createTab("Get Started", renderMainText, iconVsc)
+  createTab("Get Started", renderMainText, iconPath.VSC)
 );
 github.addEventListener("click", gridGithubRender);
 
 // EJECUCION DE FUNCIONES
+
 btnFocus(btnNavBarAside);
-createTab("Get Started", renderMainText, iconVsc);
+createTab("Get Started", renderMainText, iconPath.VSC);
 renderExplorer();

@@ -32,6 +32,7 @@
       .menuNavBarTop {
         display: flex;
         padding-left: 5px;
+        font-size: 0.8rem;
         cursor: default;
 
         span {
@@ -62,7 +63,7 @@
       height: 100%;
       flex-direction: column;
       justify-content: space-between;
-      font-size: 1.7rem;
+      font-size: 2rem;
 
       .iconFlex {
         display: flex;
@@ -85,6 +86,7 @@
           width: 100%;
           color: #5c6a98;
           font-size: 1.7rem;
+          cursor: pointer;
         }
 
         .iconUserFlex {
@@ -215,8 +217,9 @@
     }
   }
   // MOBILE - TABLET - DESKTOP RESPONSIVE
+
   @include mobile {
-    grid-template-columns: 0.1fr 0.4fr 2.2fr;
+    grid-template-columns: 0.15fr 0.55fr 3fr;
     grid-template-rows: 0.15fr 4.15fr 0.15fr;
     grid-template-areas:
       "navBarTop navBarTop navBarTop"
@@ -255,7 +258,7 @@
   }
 
   @include tablet {
-    grid-template-columns: 0.1fr 0.4fr 2.2fr;
+    grid-template-columns: 0.1fr 1fr 3.2fr;
     grid-template-rows: 0.15fr 4.15fr 0.15fr;
     grid-template-areas:
       "navBarTop navBarTop navBarTop"
@@ -284,7 +287,7 @@
   }
 
   @include desktop {
-    grid-template-columns: 0.1fr 0.4fr 2.2fr;
+    grid-template-columns: 0.1fr 0.5fr 3fr;
     grid-template-rows: 0.15fr 4.15fr 0.15fr;
     grid-template-areas:
       "navBarTop navBarTop navBarTop"

@@ -27,7 +27,6 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  line-height: 1;
   min-height: 100%;
   font-family: "Roboto", sans-serif;
 }
@@ -114,6 +113,7 @@ a:hover {
 .containerGrid .navBarTop .iconoMenu .menuNavBarTop {
   display: flex;
   padding-left: 5px;
+  font-size: 0.8rem;
   cursor: default;
 }
 .containerGrid .navBarTop .iconoMenu .menuNavBarTop span {
@@ -139,7 +139,7 @@ a:hover {
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 .containerGrid .navBarAside .iconNavBar .iconFlex {
   display: flex;
@@ -161,6 +161,7 @@ a:hover {
   width: 100%;
   color: #5c6a98;
   font-size: 1.7rem;
+  cursor: pointer;
 }
 .containerGrid .navBarAside .iconNavBar .iconFlex .iconUserFlex {
   display: flex;
@@ -272,7 +273,7 @@ a:hover {
 }
 @media screen and (max-width: 600px) {
   .containerGrid {
-    grid-template-columns: 0.1fr 0.4fr 2.2fr;
+    grid-template-columns: 0.15fr 0.55fr 3fr;
     grid-template-rows: 0.15fr 4.15fr 0.15fr;
     grid-template-areas: "navBarTop navBarTop navBarTop" "mainArea mainArea mainArea" "mainArea mainArea mainArea" "mainArea mainArea mainArea" "footer footer footer";
   }
@@ -294,9 +295,9 @@ a:hover {
     grid-template-areas: "tabs tabs tabs" "rootPath rootPath rootPath" "mainView mainView mainView";
   }
 }
-@media screen and (min-width: 600px) and (max-width: 992px) {
+@media screen and (min-width: 601px) and (max-width: 1023px) {
   .containerGrid {
-    grid-template-columns: 0.1fr 0.4fr 2.2fr;
+    grid-template-columns: 0.1fr 1fr 3.2fr;
     grid-template-rows: 0.15fr 4.15fr 0.15fr;
     grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside footer footer";
   }
@@ -311,9 +312,9 @@ a:hover {
     grid-template-areas: "tabs tabs tabs" "rootPath rootPath rootPath" "mainView mainView mainView";
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   .containerGrid {
-    grid-template-columns: 0.1fr 0.4fr 2.2fr;
+    grid-template-columns: 0.1fr 0.5fr 3fr;
     grid-template-rows: 0.15fr 4.15fr 0.15fr;
     grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside footer footer";
   }
@@ -387,7 +388,7 @@ a:hover {
 }
 
 .accordion {
-  cursor: pointer;
+  display: flex;
   color: #f0f8ff;
   width: 100%;
   border: none;
@@ -395,9 +396,12 @@ a:hover {
   outline: none;
   font-size: 13px;
   font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 1px 0;
   padding-left: 1rem;
+  cursor: pointer;
+}
+.accordion .iconFolder {
+  margin-right: 3px;
 }
 .accordion.activeFile, .accordion:hover {
   background-color: rgba(190, 190, 190, 0.2);
@@ -405,6 +409,7 @@ a:hover {
 
 .panel {
   display: flex;
+  gap: 3px;
   color: #f0f8ff;
   padding-left: 1.2rem;
   font-size: 0.8rem;
@@ -426,8 +431,9 @@ a:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.fileTxt img {
+.fileTxt .iconoFile {
   width: 15px;
+  margin-right: 1px;
 }
 
 .containerM8B {
@@ -441,22 +447,23 @@ a:hover {
 .containerM8B .titleM8B {
   margin-bottom: 1.5rem;
 }
-.containerM8B .titleM8B h2 {
+.containerM8B .titleM8B h1 {
   font-size: 3rem;
+  font-weight: 600;
 }
 .containerM8B .btnRta {
   margin-bottom: 1.5rem;
   box-shadow: inset 0px -3px 7px 0px #29bbff;
   background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
   background-color: #2dabf9;
-  border-radius: 3px;
+  border-radius: 5px;
   border: 1px solid #0b0e07;
   display: inline-block;
   cursor: pointer;
   color: #f0f8ff;
   font-family: Arial;
-  font-size: 15px;
-  padding: 9px 23px;
+  font-size: 1rem;
+  padding: 12px 24px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #263666;
 }
@@ -671,6 +678,7 @@ a:hover {
 }
 .stackFlex .stackDescriptionTitle .stackDescription {
   margin: 0;
+  margin-top: 7px;
   padding-right: 8px;
   font-size: 0.7rem;
   color: #aaaaaa;
@@ -694,6 +702,10 @@ a:hover {
   justify-content: center;
   width: 100%;
   height: 70px;
+}
+.stackViewTabs .stackTitleView h1 {
+  font-size: 2rem;
+  font-weight: 600;
 }
 .stackViewTabs .stackDescriptionView {
   display: flex;
@@ -803,10 +815,7 @@ a:hover {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 0.5fr 1.5fr;
-  grid-template-rows: 0.3fr 2.4fr 0.7fr;
   gap: 0px 0px;
-  grid-template-areas: "chatTitle chatTitle" "userConnectedBox messageLogBox" "sendMessage sendMessage";
 }
 .chatContainerGrid .chatTitle {
   grid-area: chatTitle;
@@ -815,18 +824,18 @@ a:hover {
   align-items: center;
   border-bottom: 0.5px solid #44475a;
 }
-.chatContainerGrid .chatTitle .h2Container {
-  width: 85%;
+.chatContainerGrid .chatTitle .h1Container {
+  width: 80%;
 }
-.chatContainerGrid .chatTitle .h2Container h2 {
+.chatContainerGrid .chatTitle .h1Container h1 {
   text-align: center;
+  font-size: 2rem;
 }
 .chatContainerGrid .chatTitle .btnContainer {
   display: flex;
   justify-content: center;
 }
 .chatContainerGrid .chatTitle .btnContainer .btnConnection {
-  width: 120px;
   box-shadow: inset 0px -3px 7px 0px #29bbff;
   background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
   background-color: #2dabf9;
@@ -874,21 +883,21 @@ a:hover {
   top: 1px;
 }
 .chatContainerGrid .userConnectedBox {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 1.6fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "userTitle userTitle userTitle" "userConnected userConnected userConnected" "userConnected userConnected userConnected";
   grid-area: userConnectedBox;
+  display: grid;
+  gap: 0px 0px;
   border-right: 0.5px solid #44475a;
 }
 .chatContainerGrid .userConnectedBox .userTitle {
   grid-area: userTitle;
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  padding-left: 1rem;
   border-bottom: 0.5px solid #44475a;
   border-right: 0.5px solid #44475a;
+}
+.chatContainerGrid .userConnectedBox .userTitle p {
+  font-size: 1.5rem;
 }
 .chatContainerGrid .userConnectedBox .userConnected {
   font-family: "Courier New", Courier, monospace;
@@ -898,28 +907,25 @@ a:hover {
   flex-direction: column;
   padding-top: 10px;
 }
-.chatContainerGrid .userConnectedBox .userDiv {
+.chatContainerGrid .userConnectedBox .userConnected .userDiv {
   display: flex;
   height: 30px;
-}
-.chatContainerGrid .userConnectedBox p {
-  padding-left: 30px;
-  font-size: 1.1rem;
+  padding-left: 10px;
 }
 .chatContainerGrid .messageLogBox {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 1.6fr 1fr;
   gap: 0px 0px;
-  grid-template-areas: "logTittle logTittle logTittle" "messageLog messageLog messageLog" "messageLog messageLog messageLog";
   grid-area: messageLogBox;
 }
 .chatContainerGrid .messageLogBox .logTittle {
   grid-area: logTittle;
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  padding-left: 1rem;
   border-bottom: 0.5px solid #44475a;
+}
+.chatContainerGrid .messageLogBox .logTittle p {
+  font-size: 1.5rem;
 }
 .chatContainerGrid .messageLogBox .messageLog {
   grid-area: messageLog;
@@ -941,6 +947,78 @@ a:hover {
 .chatContainerGrid .sendMessage .sendMsg {
   height: 50%;
   width: 80%;
+  padding-left: 1rem;
   background-color: #191a21;
   color: #f0f8ff;
+  font-size: 1rem;
+}
+.chatContainerGrid .sendMessage .sendMsg::placeholder {
+  font-size: 1rem;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .chatContainerGrid {
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 0.3fr 2.4fr 0.7fr;
+    grid-template-areas: "chatTitle chatTitle" "userConnectedBox messageLogBox" "sendMessage sendMessage";
+  }
+  .chatContainerGrid .userConnectedBox {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr 1fr;
+    grid-template-areas: "userTitle userTitle userTitle" "userConnected userConnected userConnected" "userConnected userConnected userConnected";
+  }
+  .chatContainerGrid .messageLogBox {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr 1fr;
+    grid-template-areas: "logTittle logTittle logTittle" "messageLog messageLog messageLog" "messageLog messageLog messageLog";
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+  .chatContainerGrid {
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 0.3fr 2.4fr 0.7fr;
+    grid-template-areas: "chatTitle chatTitle" "userConnectedBox messageLogBox" "sendMessage sendMessage";
+  }
+  .chatContainerGrid .chatTitle .h1Container {
+    width: auto;
+  }
+  .chatContainerGrid .chatTitle .h1Container h1 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .chatContainerGrid .userConnectedBox {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr 1fr;
+    grid-template-areas: "userTitle userTitle userTitle" "userConnected userConnected userConnected" "userConnected userConnected userConnected";
+  }
+  .chatContainerGrid .userConnectedBox .userTitle {
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+  }
+  .chatContainerGrid .userConnectedBox .userTitle p {
+    font-size: 1rem;
+  }
+  .chatContainerGrid .messageLogBox {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr 1fr;
+    grid-template-areas: "logTittle logTittle logTittle" "messageLog messageLog messageLog" "messageLog messageLog messageLog";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .chatContainerGrid {
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 0.3fr 2.4fr 0.7fr;
+    grid-template-areas: "chatTitle chatTitle" "userConnectedBox messageLogBox" "sendMessage sendMessage";
+  }
+  .chatContainerGrid .userConnectedBox {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr 1fr;
+    grid-template-areas: "userTitle userTitle userTitle" "userConnected userConnected userConnected" "userConnected userConnected userConnected";
+  }
+  .chatContainerGrid .messageLogBox {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr 1fr;
+    grid-template-areas: "logTittle logTittle logTittle" "messageLog messageLog messageLog" "messageLog messageLog messageLog";
+  }
 }

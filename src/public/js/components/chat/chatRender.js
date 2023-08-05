@@ -8,11 +8,11 @@ const chatRender = () => {
   miNodoContainer.classList.add("chatContainerGrid");
 
   const titleDiv = document.createElement("div");
-  titleDiv.classList.add("chatTitle");
-  const h2Container = document.createElement("div");
-  h2Container.classList.add("h2Container");
-  const titleH2 = document.createElement("h2");
-  titleH2.textContent = "📡 - Socket.io Chat 1.0v - 📫";
+  titleDiv.classList.add("chatTitle");  
+  const h1Container = document.createElement("div");
+  h1Container.classList.add("h1Container");
+  const titleH1 = document.createElement("h1");
+  titleH1.textContent = "📡 - Socket.io Chat 1.0v - 📫";
 
   const btnContainer = document.createElement("div");
   btnContainer.classList.add("btnContainer");
@@ -25,8 +25,8 @@ const chatRender = () => {
   userConnectedBox.classList.add("userConnectedBox");
   const userTitle = document.createElement("div");
   userTitle.classList.add("userTitle");
-  const userH4 = document.createElement("h4");
-  userH4.textContent = "Usuarios Conectados";
+  const userP = document.createElement("p");
+  userP.textContent = "Usuarios Conectados";
   const userConnected = document.createElement("div");
   userConnected.setAttribute("id", "userConnectedLog");
   userConnected.classList.add("userConnected");
@@ -35,8 +35,8 @@ const chatRender = () => {
   messageLogBox.classList.add("messageLogBox");
   const logTitle = document.createElement("div");
   logTitle.classList.add("logTittle");
-  const logH4 = document.createElement("h4");
-  logH4.textContent = "Mensajes";
+  const logP = document.createElement("p");
+  logP.textContent = "Mensajes";
   const messageLog = document.createElement("div");
   messageLog.classList.add("messageLog");
 
@@ -50,27 +50,27 @@ const chatRender = () => {
   sendMsg.setAttribute("autocomplete", "off");
   sendMsg.setAttribute(
     "placeholder",
-    "Escribe tu mensaje, y presiona Enter para enviar"
+    "Escribe tu mensaje, y presiona Enter para enviar."
   );
 
   const log = document.createElement("p");
   log.classList.add("log");
   log.setAttribute("id", "messageLogs");
 
-  miNodoContainer.appendChild(titleDiv);
-  titleDiv.appendChild(h2Container);
-  h2Container.appendChild(titleH2);
+  miNodoContainer.appendChild(titleDiv);  
+  titleDiv.appendChild(h1Container);
+  h1Container.appendChild(titleH1);
   titleDiv.appendChild(btnContainer);
   btnContainer.appendChild(btnConnection);
 
   miNodoContainer.appendChild(userConnectedBox);
   userConnectedBox.appendChild(userTitle);
-  userTitle.appendChild(userH4);
+  userTitle.appendChild(userP);
   userConnectedBox.appendChild(userConnected);
 
   miNodoContainer.appendChild(messageLogBox);
   messageLogBox.appendChild(logTitle);
-  logTitle.appendChild(logH4);
+  logTitle.appendChild(logP);
   messageLogBox.appendChild(messageLog);
   messageLog.appendChild(log);
 

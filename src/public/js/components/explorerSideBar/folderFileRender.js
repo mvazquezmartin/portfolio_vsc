@@ -1,6 +1,5 @@
+import { iconPath } from "../../assetsPath/assetsPath.js";
 import { btnFocus } from "../../utils/btnFocus.js";
-const folderClose = "./assets/folder-close.svg";
-const folderOpen = "./assets/folder-open.svg";
 
 const folderFileSideBar = (folder, funcion, icono) => {
   const miNodo = document.createElement("div");
@@ -8,7 +7,7 @@ const folderFileSideBar = (folder, funcion, icono) => {
   miNodoButton.classList.add("accordion");
 
   const iconFolder = document.createElement("img");
-  iconFolder.setAttribute("src", folderClose);
+  iconFolder.setAttribute("src", iconPath.CLOSE_FOLDER);
   iconFolder.classList.add("iconFolder");
 
   miNodoButton.appendChild(iconFolder);
@@ -25,6 +24,7 @@ const folderFileSideBar = (folder, funcion, icono) => {
     miNodoTxtSpan.classList.add("fileTxt");
     miNodoTxtSpan.addEventListener("click", file.function);
     const miNodoIcono = document.createElement("img");
+    miNodoIcono.classList.add("iconoFile");
     miNodoIcono.setAttribute("src", file.icon);
     miNodoTxtSpan.appendChild(miNodoIcono);
     miNodoTxtSpan.appendChild(document.createTextNode(" " + file.name));
@@ -45,10 +45,10 @@ const folderFileSideBar = (folder, funcion, icono) => {
     const panel = miNodoButton.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
-      iconFolder.setAttribute("src", folderClose);
+      iconFolder.setAttribute("src", iconPath.CLOSE_FOLDER);
     } else {
       panel.style.maxHeight = "300px";
-      iconFolder.setAttribute("src", folderOpen);
+      iconFolder.setAttribute("src", iconPath.OPEN_FOLDER);
     }
   });
 

@@ -9,7 +9,7 @@ const stackView = (stack) => {
     //stack title conteiner
     const miNodoStackTitle = document.createElement("div");
     miNodoStackTitle.classList.add("stackTitleView");
-    const miNodoStackH2 = document.createElement("h2");
+    const miNodoStackH2 = document.createElement("h1");
     miNodoStackH2.textContent = stack.title;
     //stack description
     const miNodoDescription = document.createElement("div");

@@ -1,4 +1,4 @@
-const codeImg = "./assets/codeMagic8Ball.png";
+import { imgPath } from "../../assetsPath/assetsPath.js";
 
 const readmeRender8Ball = () => {
   const path = document.getElementById("rootPath");
@@ -17,23 +17,23 @@ const readmeRender8Ball = () => {
   textContainer.classList.add("text-container");
 
   const text = document.createElement("p");
-  
+
   text.textContent = `La Magic 8 Ball es un juguete de predicción que utiliza un mecanismo\nde respuesta aleatoria para ofrecer respuestas a preguntas sí o no.\nCon una forma esférica y un cristal líquido en su interior, los usuarios\nagitan la bola y le hacen una pregunta. Luego, la bola revela una respuesta en una\nventana que va desde "sí", "no" hasta respuestas ambiguas como "pregúntame de nuevo".\nEs popular en juegos y se utiliza para tomar decisiones o buscar\norientación en situaciones divertidas.\n\nEste pequeño proyecto fueron mis primeros pasos en JavaScript.\nA continuación, está el código original que funcionaba con alert y prompt,\nfunción con while, utilizando switch. Siempre intenté aplicar todo lo aprendido\nen mis proyectos, pero a veces menos es más.\nPor el aprecio que me genera ver mis comienzos, optimice el código empleando un array\npara las respuestas y una función Math.ramdom con parámetro length del array\npara obtener una respuesta al azar. De esta forma simplificando el código,\ny de un aspecto más legible.`;
 
-  const imgContainer = document.createElement("div");  
+  const imgContainer = document.createElement("div");
   imgContainer.classList.add("imgContainer");
 
-  const linkGitHub = document.createElement("a")
-  linkGitHub.href = "https://github.com/mvazquezmartin/practica_js.git"
-  linkGitHub.target = "_blank"
-  
+  const linkGitHub = document.createElement("a");
+  linkGitHub.href = "https://github.com/mvazquezmartin/practica_js.git";
+  linkGitHub.target = "_blank";
+
   const imgCode = document.createElement("img");
-  imgCode.setAttribute("src", codeImg);
+  imgCode.setAttribute("src", imgPath.M8B_CODE);
 
   miNodo.appendChild(lineNumbers);
   miNodo.appendChild(textContainer);
   textContainer.appendChild(text);
-  linkGitHub.appendChild(imgCode)
+  linkGitHub.appendChild(imgCode);
   imgContainer.appendChild(linkGitHub);
   readmeContainerM8b.appendChild(miNodo);
   readmeContainerM8b.appendChild(imgContainer);

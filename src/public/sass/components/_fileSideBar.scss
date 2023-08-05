@@ -1,5 +1,5 @@
 .accordion {
-  cursor: pointer;
+  display: flex;
   color: $color-white;
   width: 100%;
   border: none;
@@ -7,9 +7,13 @@
   outline: none;
   font-size: 13px;
   font-family: $font-OpenSans;
-  margin: 0;
-  padding: 0;
+  margin: 1px 0;  
   padding-left: 1rem;
+  cursor: pointer;
+
+  .iconFolder {
+    margin-right: 3px;
+  }
 
   &.activeFile,
   &:hover {
@@ -19,6 +23,7 @@
 
 .panel {
   display: flex;
+  gap: 3px;
   color: $color-white;
   padding-left: 1.2rem;
   font-size: 0.8rem;
@@ -40,7 +45,9 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  img {
+  
+  .iconoFile {
     width: 15px;
+    margin-right: 1px;
   }
 }

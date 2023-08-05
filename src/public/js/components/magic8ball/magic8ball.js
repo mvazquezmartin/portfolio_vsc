@@ -31,7 +31,7 @@ const magic8BallRender = () => {
   const titleContainer = document.createElement("div");
   titleContainer.classList.add("titleM8B");
 
-  const title = document.createElement("h2");
+  const title = document.createElement("h1");
   title.textContent = "Magic 8 Ball";
 
   const buttonPregunta = document.createElement("div");
