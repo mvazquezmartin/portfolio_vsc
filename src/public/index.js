@@ -4,6 +4,7 @@ import { gridGithubRender } from "./js/components/github/gridRender.js";
 import { renderMainText } from "./js/components/heroIndex/heroIndex.js";
 import { renderStack } from "./js/components/stack/stack.js";
 import { createTab } from "./js/components/tabs/tabsRender.js";
+import { mobileResponsive } from "./js/responsive/mobile/mobile.js";
 import { btnFocus } from "./js/utils/btnFocus.js";
 
 // QUERY DE ELEMENTOS
@@ -22,6 +23,8 @@ inicio.addEventListener("click", () =>
   createTab("Get Started", renderMainText, iconPath.VSC)
 );
 github.addEventListener("click", gridGithubRender);
+window.addEventListener("load", mobileResponsive);
+window.addEventListener("resize", mobileResponsive);
 
 // EJECUCION DE FUNCIONES
 

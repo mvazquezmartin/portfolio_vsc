@@ -7,4 +7,12 @@
   font-size: 13px;
   padding: 7px;
   resize: none;
+  border: none;
+
+  &:focus {
+    outline: none;
+    border-top: 1px solid $color-white;
+    box-shadow: 10px -5px 10px -3px #719ece;
+    
+  }
 }

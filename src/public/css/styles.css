@@ -94,6 +94,9 @@ a:hover {
   gap: 0px 0px;
   grid-auto-flow: row;
 }
+.containerGrid .menuIconContainer .menuBurgerIcon {
+  display: none;
+}
 .containerGrid .navBarTop {
   grid-area: navBarTop;
   display: flex;
@@ -192,7 +195,6 @@ a:hover {
   font-size: 0.8rem;
   font-weight: 500;
   border-bottom: 0.5px solid #44475a;
-  border-top: 0.5px solid #44475a;
 }
 .containerGrid .sideBar .fileOpen {
   grid-area: fileOpen;
@@ -209,20 +211,22 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
+.containerGrid .tabs {
+  grid-area: tabs;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #1d1e24;
+  border-bottom: 0.5px solid #44475a;
+  user-select: none;
+  overflow-x: hidden;
+}
 .containerGrid .mainArea {
   display: grid;
   grid-area: mainArea;
   background-color: #282a36;
   gap: 0px 0px;
   grid-auto-flow: row;
-}
-.containerGrid .mainArea .tabs {
-  grid-area: tabs;
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: #1d1e24;
-  border-top: 0.5px solid #44475a;
-  border-bottom: 0.5px solid #44475a;
+  overflow: hidden;
 }
 .containerGrid .mainArea .rootPath {
   grid-area: rootPath;
@@ -253,7 +257,7 @@ a:hover {
   justify-content: space-around;
   cursor: default;
   padding-left: 10px;
-  font-size: 12px;
+  font-size: 11px;
 }
 .containerGrid .footer .iconsFooterL .bi {
   align-self: center;
@@ -273,9 +277,24 @@ a:hover {
 }
 @media screen and (max-width: 600px) {
   .containerGrid {
-    grid-template-columns: 0.15fr 0.55fr 3fr;
-    grid-template-rows: 0.15fr 4.15fr 0.15fr;
-    grid-template-areas: "navBarTop navBarTop navBarTop" "mainArea mainArea mainArea" "mainArea mainArea mainArea" "mainArea mainArea mainArea" "footer footer footer";
+    grid-template-columns: 0.45fr 3fr;
+    grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
+    grid-template-areas: "menuBurger navBarTop" "menuBurger tabs" "mainArea mainArea" "footer footer";
+  }
+  .containerGrid .menuIconContainer {
+    grid-area: menuBurger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d1e24;
+  }
+  .containerGrid .menuIconContainer .menuBurgerIcon {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .containerGrid .navBarTop {
+    flex-direction: row-reverse;
   }
   .containerGrid .navBarTop span {
     padding-left: 1px;
@@ -283,50 +302,99 @@ a:hover {
   .containerGrid .navBarTop .iconoMenu .menuNavBarTop {
     display: none;
   }
-  .containerGrid .sideBar {
-    display: none;
+  .containerGrid .slideInDown {
+    animation-name: slideInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  @keyframes slideInDown {
+    0% {
+      transform: translateY(-100%);
+      visibility: visible;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .containerGrid .slideOutUp {
+    animation-name: slideOutUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  @keyframes slideOutUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      visibility: hidden;
+      transform: translateY(-100%);
+    }
   }
   .containerGrid .navBarAside {
     display: none;
+    grid-area: initial;
+    position: fixed;
+    width: 47px;
+    top: 44px;
+    left: 0;
+    bottom: 17px;
+  }
+  .containerGrid .navBarAside.navBarAsideRes {
+    display: block;
+    animation: slideInDown 1s;
+  }
+  .containerGrid .sideBar {
+    display: none;
+    grid-area: initial;
+    position: fixed;
+    width: 200px;
+    top: 44px;
+    left: 46px;
+    bottom: 17px;
+    border-top: 0.5px solid #44475a;
+    overflow-y: auto;
+  }
+  .containerGrid .sideBar.sideBarRes {
+    display: block;
   }
   .containerGrid .mainArea {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.1fr 0.1fr 2.8fr;
-    grid-template-areas: "tabs tabs tabs" "rootPath rootPath rootPath" "mainView mainView mainView";
+    grid-template-areas: "rootPath rootPath rootPath" "mainView mainView mainView" "mainView mainView mainView";
   }
 }
 @media screen and (min-width: 601px) and (max-width: 1023px) {
   .containerGrid {
-    grid-template-columns: 0.1fr 1fr 3.2fr;
-    grid-template-rows: 0.15fr 4.15fr 0.15fr;
-    grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside footer footer";
+    grid-template-columns: 0.1fr 0.5fr 3fr;
+    grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
+    grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar tabs" "navBarAside sideBar mainArea" "navBarAside footer footer";
   }
   .containerGrid .sideBar {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 2.8fr;
-    grid-template-areas: "titleSideBar titleSideBar titleSideBar" "fileOpen fileOpen fileOpen" "viewSideBar viewSideBar viewSideBar";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.15fr 0.1fr 4fr;
+    grid-template-areas: "titleSideBar" "fileOpen" "viewSideBar";
   }
   .containerGrid .mainArea {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 2.8fr;
-    grid-template-areas: "tabs tabs tabs" "rootPath rootPath rootPath" "mainView mainView mainView";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 4fr;
+    grid-template-areas: "rootPath" "mainView";
   }
 }
 @media screen and (min-width: 1024px) {
   .containerGrid {
     grid-template-columns: 0.1fr 0.5fr 3fr;
-    grid-template-rows: 0.15fr 4.15fr 0.15fr;
-    grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside sideBar mainArea" "navBarAside footer footer";
+    grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
+    grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar tabs" "navBarAside sideBar mainArea" "navBarAside footer footer";
   }
   .containerGrid .sideBar {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 2.8fr;
-    grid-template-areas: "titleSideBar titleSideBar titleSideBar" "fileOpen fileOpen fileOpen" "viewSideBar viewSideBar viewSideBar";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.15fr 0.1fr 4fr;
+    grid-template-areas: "titleSideBar" "fileOpen" "viewSideBar";
   }
   .containerGrid .mainArea {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 2.8fr;
-    grid-template-areas: "tabs tabs tabs" "rootPath rootPath rootPath" "mainView mainView mainView";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 4fr;
+    grid-template-areas: "rootPath" "mainView";
   }
 }
 
@@ -537,7 +605,15 @@ a:hover {
   font-size: 13px;
   padding: 7px;
   resize: none;
+  border: none;
   grid-area: 2/1/3/2;
+  border-right: 0.5px solid #44475a;
+  border-top: 0.5px solid #44475a;
+}
+.playGroundGrid .html .htmlArea:focus {
+  outline: none;
+  border-top: 1px solid #f0f8ff;
+  box-shadow: 10px -5px 10px -3px #719ece;
 }
 .playGroundGrid .css {
   grid-area: 1/2/4/3;
@@ -566,7 +642,16 @@ a:hover {
   font-size: 13px;
   padding: 7px;
   resize: none;
+  border: none;
   grid-area: 2/2/3/3;
+  border-right: 0.5px solid #44475a;
+  border-top: 0.5px solid #44475a;
+  border-left: 0;
+}
+.playGroundGrid .css .cssArea:focus {
+  outline: none;
+  border-top: 1px solid #f0f8ff;
+  box-shadow: 10px -5px 10px -3px #719ece;
 }
 .playGroundGrid .javaScript {
   grid-area: 1/3/4/4;
@@ -594,7 +679,14 @@ a:hover {
   font-size: 13px;
   padding: 7px;
   resize: none;
+  border: none;
   grid-area: 2/3/3/4;
+  border-top: 0.5px solid #44475a;
+}
+.playGroundGrid .javaScript .javaScriptArea:focus {
+  outline: none;
+  border-top: 1px solid #f0f8ff;
+  box-shadow: 10px -5px 10px -3px #719ece;
 }
 .playGroundGrid .outPutArea {
   grid-area: 4/1/4/4;

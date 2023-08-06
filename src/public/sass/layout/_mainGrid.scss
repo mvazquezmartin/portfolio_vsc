@@ -12,6 +12,12 @@
   gap: 0px 0px;
   grid-auto-flow: row;
 
+  .menuIconContainer {
+    .menuBurgerIcon {
+      display: none;
+    }
+  }
+
   .navBarTop {
     grid-area: navBarTop;
     display: flex;
@@ -124,7 +130,6 @@
       font-size: 0.8rem;
       font-weight: 500;
       border-bottom: $style-border-grid;
-      border-top: $style-border-grid;
     }
 
     .fileOpen {
@@ -145,21 +150,22 @@
     }
   }
 
+  .tabs {
+    grid-area: tabs;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: $color-moreDarkGrey;
+    border-bottom: $style-border-grid;
+    user-select: none;
+    overflow-x: hidden;
+  }
   .mainArea {
     display: grid;
     grid-area: mainArea;
     background-color: $color-lightGrey;
     gap: 0px 0px;
     grid-auto-flow: row;
-
-    .tabs {
-      grid-area: tabs;
-      display: flex;
-      flex-wrap: nowrap;
-      background-color: $color-moreDarkGrey;
-      border-top: $style-border-grid;
-      border-bottom: $style-border-grid;
-    }
+    overflow: hidden;
 
     .rootPath {
       grid-area: rootPath;
@@ -193,7 +199,7 @@
       justify-content: space-around;
       cursor: default;
       padding-left: 10px;
-      font-size: 12px;
+      font-size: 11px;
 
       .bi {
         align-self: center;
@@ -219,16 +225,30 @@
   // MOBILE - TABLET - DESKTOP RESPONSIVE
 
   @include mobile {
-    grid-template-columns: 0.15fr 0.55fr 3fr;
-    grid-template-rows: 0.15fr 4.15fr 0.15fr;
+    grid-template-columns: 0.45fr 3fr;
+    grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
     grid-template-areas:
-      "navBarTop navBarTop navBarTop"
-      "mainArea mainArea mainArea"
-      "mainArea mainArea mainArea"
-      "mainArea mainArea mainArea"
-      "footer footer footer";
+      "menuBurger navBarTop"
+      "menuBurger tabs"
+      "mainArea mainArea"
+      "footer footer";
+
+    .menuIconContainer {
+      grid-area: menuBurger;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-darkGrey;
+
+      .menuBurgerIcon {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+    }
 
     .navBarTop {
+      flex-direction: row-reverse;
       span {
         padding-left: 1px;
       }
@@ -239,79 +259,130 @@
       }
     }
 
-    .sideBar {
-      display: none;
+    .slideInDown {
+      animation-name: slideInDown;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+
+      @keyframes slideInDown {
+        0% {
+          transform: translateY(-100%);
+          visibility: visible;
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    }
+
+    .slideOutUp {
+      animation-name: slideOutUp;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+
+      @keyframes slideOutUp {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          visibility: hidden;
+          transform: translateY(-100%);
+        }
+      }
     }
 
     .navBarAside {
       display: none;
+      grid-area: initial;
+      position: fixed;
+      width: 47px;
+      top: 44px;
+      left: 0;
+      bottom: 17px;
+
+      &.navBarAsideRes {
+        display: block;
+        animation: slideInDown 1s;
+      }
+    }
+
+    .sideBar {
+      display: none;
+      grid-area: initial;
+      position: fixed;
+      width: 200px;
+      top: 44px;
+      left: 46px;
+      bottom: 17px;
+      border-top: $style-border-grid;
+      overflow-y: auto;
+
+      &.sideBarRes {
+        display: block;
+      }
     }
 
     .mainArea {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 0.1fr 0.1fr 2.8fr;
       grid-template-areas:
-        "tabs tabs tabs"
         "rootPath rootPath rootPath"
+        "mainView mainView mainView"
         "mainView mainView mainView";
     }
   }
 
   @include tablet {
-    grid-template-columns: 0.1fr 1fr 3.2fr;
-    grid-template-rows: 0.15fr 4.15fr 0.15fr;
+    grid-template-columns: 0.1fr 0.5fr 3fr;
+    grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas:
       "navBarTop navBarTop navBarTop"
-      "navBarAside sideBar mainArea"
-      "navBarAside sideBar mainArea"
+      "navBarAside sideBar tabs"
       "navBarAside sideBar mainArea"
       "navBarAside footer footer";
 
     .sideBar {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 0.1fr 0.1fr 2.8fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.15fr 0.1fr 4fr;
       grid-template-areas:
-        "titleSideBar titleSideBar titleSideBar"
-        "fileOpen fileOpen fileOpen"
-        "viewSideBar viewSideBar viewSideBar";
+        "titleSideBar"
+        "fileOpen"
+        "viewSideBar";
     }
 
     .mainArea {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 0.1fr 0.1fr 2.8fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.1fr 4fr;
       grid-template-areas:
-        "tabs tabs tabs"
-        "rootPath rootPath rootPath"
-        "mainView mainView mainView";
+        "rootPath"
+        "mainView";
     }
   }
 
   @include desktop {
     grid-template-columns: 0.1fr 0.5fr 3fr;
-    grid-template-rows: 0.15fr 4.15fr 0.15fr;
+    grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas:
       "navBarTop navBarTop navBarTop"
-      "navBarAside sideBar mainArea"
-      "navBarAside sideBar mainArea"
+      "navBarAside sideBar tabs"
       "navBarAside sideBar mainArea"
       "navBarAside footer footer";
 
     .sideBar {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 0.1fr 0.1fr 2.8fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.15fr 0.1fr 4fr;
       grid-template-areas:
-        "titleSideBar titleSideBar titleSideBar"
-        "fileOpen fileOpen fileOpen"
-        "viewSideBar viewSideBar viewSideBar";
+        "titleSideBar"
+        "fileOpen"
+        "viewSideBar";
     }
 
     .mainArea {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 0.1fr 0.1fr 2.8fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.1fr 4fr;
       grid-template-areas:
-        "tabs tabs tabs"
-        "rootPath rootPath rootPath"
-        "mainView mainView mainView";
+        "rootPath"
+        "mainView";
     }
   }
 }
