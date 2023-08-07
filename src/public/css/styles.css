@@ -287,6 +287,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     background-color: #1d1e24;
+    border-bottom: 0.5px solid #44475a;
   }
   .containerGrid .menuIconContainer .menuBurgerIcon {
     display: block;
@@ -302,60 +303,41 @@ a:hover {
   .containerGrid .navBarTop .iconoMenu .menuNavBarTop {
     display: none;
   }
-  .containerGrid .slideInDown {
-    animation-name: slideInDown;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
-  @keyframes slideInDown {
-    0% {
-      transform: translateY(-100%);
-      visibility: visible;
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  .containerGrid .slideOutUp {
-    animation-name: slideOutUp;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
-  @keyframes slideOutUp {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      visibility: hidden;
-      transform: translateY(-100%);
-    }
-  }
   .containerGrid .navBarAside {
-    display: none;
     grid-area: initial;
-    position: fixed;
-    width: 47px;
-    top: 44px;
-    left: 0;
-    bottom: 17px;
+    visibility: hidden;
+    position: absolute;
+    width: 13%;
+    height: 0;
+    top: 7%;
+    transition: all 0, 5s ease;
   }
   .containerGrid .navBarAside.navBarAsideRes {
-    display: block;
-    animation: slideInDown 1s;
+    visibility: visible;
+    height: 90.4%;
+    transition: all 1s ease;
+  }
+  .containerGrid .navBarAside * {
+    transition: all 0.1s ease;
   }
   .containerGrid .sideBar {
-    display: none;
+    visibility: hidden;
     grid-area: initial;
-    position: fixed;
-    width: 200px;
-    top: 44px;
-    left: 46px;
-    bottom: 17px;
+    position: absolute;
+    width: 0;
+    height: 90.4%;
+    top: 7%;
+    left: 13%;
     border-top: 0.5px solid #44475a;
     overflow-y: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.15fr 0.1fr 4fr;
+    grid-template-areas: "titleSideBar" "fileOpen" "viewSideBar";
+    transition: all 0.5s ease;
   }
   .containerGrid .sideBar.sideBarRes {
-    display: block;
+    visibility: visible;
+    width: 56%;
   }
   .containerGrid .mainArea {
     grid-template-columns: 1fr 1fr 1fr;

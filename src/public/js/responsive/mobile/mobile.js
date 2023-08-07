@@ -18,6 +18,12 @@ const mobileResponsive = () => {
     titleElement.textContent = "Matias Vazquez Martin - Visual Studio Code";
   }
 
+  // const removeSideBarResFromIcons = () => {
+  //   for (const icon of sideBarIcon) {
+  //     icon.classList.remove("sideBarRes");
+  //   }
+  // };
+
   const closeMenu = () => {
     navBarAside.classList.remove("navBarAsideRes");
     sideBar.classList.remove("sideBarRes");
@@ -30,7 +36,12 @@ const mobileResponsive = () => {
 
   for (const icon of sideBarIcon) {
     icon.addEventListener("click", () => {
-      sideBar.classList.add("sideBarRes");
+      console.log(icon.classList.contains("active"))
+      if (icon.classList.contains("active")) {
+        icon.classList.toggle("sideBarRes");
+      }else{
+        icon.classList.add("sideBarRes");
+      }
     });
   }
 

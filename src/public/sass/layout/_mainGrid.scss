@@ -239,6 +239,7 @@
       justify-content: center;
       align-items: center;
       background-color: $color-darkGrey;
+      border-bottom: $style-border-grid;
 
       .menuBurgerIcon {
         display: block;
@@ -259,66 +260,47 @@
       }
     }
 
-    .slideInDown {
-      animation-name: slideInDown;
-      animation-duration: 1s;
-      animation-fill-mode: both;
-
-      @keyframes slideInDown {
-        0% {
-          transform: translateY(-100%);
-          visibility: visible;
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-    }
-
-    .slideOutUp {
-      animation-name: slideOutUp;
-      animation-duration: 1s;
-      animation-fill-mode: both;
-
-      @keyframes slideOutUp {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          visibility: hidden;
-          transform: translateY(-100%);
-        }
-      }
-    }
-
     .navBarAside {
-      display: none;
       grid-area: initial;
-      position: fixed;
-      width: 47px;
-      top: 44px;
-      left: 0;
-      bottom: 17px;
+      visibility: hidden;
+      position: absolute;
+      width: 13%;
+      height: 0;
+      top: 7%;
+      transition: all 0,5s ease;
 
       &.navBarAsideRes {
-        display: block;
-        animation: slideInDown 1s;
+        visibility: visible;
+        height: 90.4%;
+        transition: all 1s ease;
+      }
+
+      & * {
+        transition: all 0.1s ease;
       }
     }
 
     .sideBar {
-      display: none;
+      visibility: hidden;
       grid-area: initial;
-      position: fixed;
-      width: 200px;
-      top: 44px;
-      left: 46px;
-      bottom: 17px;
+      position: absolute;
+      width: 0;
+      height: 90.4%;
+      top: 7%;
+      left: 13%;
       border-top: $style-border-grid;
       overflow-y: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.15fr 0.1fr 4fr;
+      grid-template-areas:
+        "titleSideBar"
+        "fileOpen"
+        "viewSideBar";
+      transition: all 0.5s ease;
 
       &.sideBarRes {
-        display: block;
+        visibility: visible;
+        width: 56%;
       }
     }
 
