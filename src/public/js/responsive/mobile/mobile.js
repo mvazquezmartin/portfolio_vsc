@@ -11,18 +11,16 @@ const mobileResponsive = () => {
   const sideBarIcon = document.getElementsByClassName("iconNavBarAside");
 
   const isMobile = window.matchMedia("(max-width: 767px)").matches;
+  let statusSideBar = {
+    pre: "",
+    now: "",
+  };
 
   if (isMobile) {
     titleElement.textContent = "MvM Dev - Visual Studio Code";
   } else {
     titleElement.textContent = "Matias Vazquez Martin - Visual Studio Code";
   }
-
-  // const removeSideBarResFromIcons = () => {
-  //   for (const icon of sideBarIcon) {
-  //     icon.classList.remove("sideBarRes");
-  //   }
-  // };
 
   const closeMenu = () => {
     navBarAside.classList.remove("navBarAsideRes");
@@ -36,12 +34,15 @@ const mobileResponsive = () => {
 
   for (const icon of sideBarIcon) {
     icon.addEventListener("click", () => {
-      console.log(icon.classList.contains("active"))
-      if (icon.classList.contains("active")) {
-        icon.classList.toggle("sideBarRes");
-      }else{
-        icon.classList.add("sideBarRes");
+      statusSideBar.pre = icon.id;
+
+      if (statusSideBar.pre !== statusSideBar.now) {
+        sideBar.classList.add("sideBarRes");
+      } else if (statusSideBar.pre === statusSideBar.now) {
+        sideBar.classList.toggle("sideBarRes");
       }
+
+      statusSideBar.now = icon.id;
     });
   }
 

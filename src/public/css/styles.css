@@ -310,15 +310,15 @@ a:hover {
     width: 13%;
     height: 0;
     top: 7%;
-    transition: all 0, 5s ease;
+    transition: all 0.5s ease;
   }
   .containerGrid .navBarAside.navBarAsideRes {
     visibility: visible;
     height: 90.4%;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
   }
-  .containerGrid .navBarAside * {
-    transition: all 0.1s ease;
+  .containerGrid .navBarAside .toolTipText {
+    display: none;
   }
   .containerGrid .sideBar {
     visibility: hidden;
@@ -813,6 +813,29 @@ a:hover {
 .stackViewTabs .stackLinkCoder a:hover {
   color: #f0f8ff;
 }
+@media screen and (max-width: 600px) {
+  .stackViewTabs {
+    justify-content: space-around;
+  }
+  .stackViewTabs .stackTitleView {
+    height: auto;
+  }
+  .stackViewTabs .stackTitleView h1 {
+    font-size: 1.5rem;
+  }
+  .stackViewTabs .stackDescriptionView {
+    height: auto;
+    font-size: 0.8rem;
+    max-width: 90%;
+  }
+  .stackViewTabs .stackCertificado {
+    max-width: 90%;
+  }
+  .stackViewTabs .stackLinkCoder {
+    height: auto;
+    font-size: 0.8rem;
+  }
+}
 
 .tab {
   padding-left: 10px;
@@ -900,10 +923,10 @@ a:hover {
 }
 .chatContainerGrid .chatTitle .h1Container {
   width: 80%;
+  font-size: 2rem;
 }
 .chatContainerGrid .chatTitle .h1Container h1 {
   text-align: center;
-  font-size: 2rem;
 }
 .chatContainerGrid .chatTitle .btnContainer {
   display: flex;
@@ -933,7 +956,6 @@ a:hover {
   top: 1px;
 }
 .chatContainerGrid .chatTitle .btnContainer .btnDisconnectect {
-  width: 120px;
   box-shadow: inset 0px 1px 0px 0px #cf866c;
   background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
   background-color: #d0451b;
@@ -944,7 +966,7 @@ a:hover {
   color: #ffffff;
   font-family: Arial;
   font-size: 15px;
-  padding: 9px 23px;
+  padding: 9px 12px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #854629;
 }
@@ -969,8 +991,6 @@ a:hover {
   padding-left: 1rem;
   border-bottom: 0.5px solid #44475a;
   border-right: 0.5px solid #44475a;
-}
-.chatContainerGrid .userConnectedBox .userTitle p {
   font-size: 1.5rem;
 }
 .chatContainerGrid .userConnectedBox .userConnected {
@@ -990,6 +1010,7 @@ a:hover {
   display: grid;
   gap: 0px 0px;
   grid-area: messageLogBox;
+  overflow-y: auto;
 }
 .chatContainerGrid .messageLogBox .logTittle {
   grid-area: logTittle;
@@ -997,8 +1018,6 @@ a:hover {
   align-items: center;
   padding-left: 1rem;
   border-bottom: 0.5px solid #44475a;
-}
-.chatContainerGrid .messageLogBox .logTittle p {
   font-size: 1.5rem;
 }
 .chatContainerGrid .messageLogBox .messageLog {
@@ -1021,13 +1040,11 @@ a:hover {
 .chatContainerGrid .sendMessage .sendMsg {
   height: 50%;
   width: 80%;
-  padding-left: 1rem;
   background-color: #191a21;
   color: #f0f8ff;
   font-size: 1rem;
 }
 .chatContainerGrid .sendMessage .sendMsg::placeholder {
-  font-size: 1rem;
   text-align: center;
 }
 @media screen and (max-width: 600px) {
@@ -1036,15 +1053,43 @@ a:hover {
     grid-template-rows: 0.3fr 2.4fr 0.7fr;
     grid-template-areas: "chatTitle chatTitle" "userConnectedBox messageLogBox" "sendMessage sendMessage";
   }
+  .chatContainerGrid .chatTitle .h1Container {
+    font-size: 1.2rem;
+  }
+  .chatContainerGrid .chatTitle .btnContainer .btnConnection {
+    padding: 7px 15px;
+    font-size: 12px;
+  }
+  .chatContainerGrid .chatTitle .btnContainer .btnDisconnectect {
+    padding: 7px 8px;
+    font-size: 12px;
+  }
   .chatContainerGrid .userConnectedBox {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.4fr 1.6fr 1fr;
     grid-template-areas: "userTitle userTitle userTitle" "userConnected userConnected userConnected" "userConnected userConnected userConnected";
   }
+  .chatContainerGrid .userConnectedBox .userTitle {
+    font-size: 0.8rem;
+    text-align: center;
+    padding-left: 0;
+  }
+  .chatContainerGrid .userConnectedBox .userConnected .userDiv {
+    font-size: 0.8rem;
+  }
   .chatContainerGrid .messageLogBox {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.4fr 1.6fr 1fr;
     grid-template-areas: "logTittle logTittle logTittle" "messageLog messageLog messageLog" "messageLog messageLog messageLog";
+  }
+  .chatContainerGrid .messageLogBox .logTittle {
+    font-size: 0.8rem;
+  }
+  .chatContainerGrid .messageLogBox .messageLog {
+    font-size: 0.8rem;
+  }
+  .chatContainerGrid .sendMessage .sendMsg::placeholder {
+    font-size: 0.7rem;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 1023px) {

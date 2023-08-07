@@ -13,9 +13,9 @@
 
     .h1Container {
       width: 80%;
+      font-size: 2rem;
       h1 {
         text-align: center;
-        font-size: 2rem;
       }
     }
 
@@ -50,7 +50,6 @@
       }
 
       .btnDisconnectect {
-        width: 120px;
         box-shadow: inset 0px 1px 0px 0px #cf866c;
         background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
         background-color: #d0451b;
@@ -61,7 +60,7 @@
         color: #ffffff;
         font-family: Arial;
         font-size: 15px;
-        padding: 9px 23px;
+        padding: 9px 12px;
         text-decoration: none;
         text-shadow: 0px 1px 0px #854629;
 
@@ -90,10 +89,7 @@
       padding-left: 1rem;
       border-bottom: $style-border-grid;
       border-right: $style-border-grid;
-
-      p {
-        font-size: 1.5rem;
-      }
+      font-size: 1.5rem;
     }
 
     .userConnected {
@@ -116,6 +112,7 @@
     display: grid;
     gap: 0px 0px;
     grid-area: messageLogBox;
+    overflow-y: auto;
 
     .logTittle {
       grid-area: logTittle;
@@ -123,10 +120,7 @@
       align-items: center;
       padding-left: 1rem;
       border-bottom: $style-border-grid;
-
-      p {
-        font-size: 1.5rem;
-      }
+      font-size: 1.5rem;
     }
 
     .messageLog {
@@ -151,13 +145,11 @@
     .sendMsg {
       height: 50%;
       width: 80%;
-      padding-left: 1rem;
       background-color: $color-darkBlue;
       color: $color-white;
       font-size: 1rem;
 
       &::placeholder {
-        font-size: 1rem;
         text-align: center;
       }
     }
@@ -171,6 +163,22 @@
       "chatTitle chatTitle"
       "userConnectedBox messageLogBox"
       "sendMessage sendMessage";
+    .chatTitle {
+      .h1Container {
+        font-size: 1.2rem;
+      }
+
+      .btnContainer {
+        .btnConnection {
+          padding: 7px 15px;
+          font-size: 12px;
+        }
+        .btnDisconnectect {
+          padding: 7px 8px;
+          font-size: 12px;
+        }
+      }
+    }
 
     .userConnectedBox {
       grid-template-columns: 1fr 1fr 1fr;
@@ -179,6 +187,16 @@
         "userTitle userTitle userTitle"
         "userConnected userConnected userConnected"
         "userConnected userConnected userConnected";
+      .userTitle {
+        font-size: 0.8rem;
+        text-align: center;
+        padding-left: 0;
+      }
+      .userConnected {
+        .userDiv {
+          font-size: 0.8rem;
+        }
+      }
     }
 
     .messageLogBox {
@@ -188,6 +206,20 @@
         "logTittle logTittle logTittle"
         "messageLog messageLog messageLog"
         "messageLog messageLog messageLog";
+      .logTittle {
+        font-size: 0.8rem;
+      }
+      .messageLog {
+        font-size: 0.8rem;
+      }
+    }
+
+    .sendMessage {
+      .sendMsg {
+        &::placeholder {
+          font-size: 0.7rem;
+        }
+      }
     }
   }
 
