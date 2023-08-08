@@ -103,23 +103,23 @@
   }
 
   @include mobile {
-    justify-content: space-around;
-    .stackTitleView{
+    justify-content: space-evenly;
+    .stackTitleView {
       height: auto;
 
-      h1{
+      h1 {
         font-size: 1.5rem;
       }
     }
-    .stackDescriptionView{
+    .stackDescriptionView {
       height: auto;
       font-size: 0.8rem;
-      max-width: 90%;      
+      max-width: 90%;
     }
-    .stackCertificado{
-      max-width: 90%;      
+    .stackCertificado {
+      max-width: 90%;
     }
-    .stackLinkCoder{
+    .stackLinkCoder {
       height: auto;
       font-size: 0.8rem;
     }

@@ -19,6 +19,7 @@ const iconPath = {
   PLAYGROUND: "./assets/pencil-svgrepo-com.svg",
   OPEN_FOLDER: "./assets/folder-open.svg",
   CLOSE_FOLDER: "./assets/folder-close.svg",
+  CLOSE_X: "./assets/close-sm-svgrepo-com.svg",
 };
 
 const imgPath = {

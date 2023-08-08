@@ -1,3 +1,6 @@
+//DEPRECADO POR TABMANAGER
+//primer sistemas de tabs 
+
 const closeX = "./assets/close-sm-svgrepo-com.svg";
 
 const tabs = [];

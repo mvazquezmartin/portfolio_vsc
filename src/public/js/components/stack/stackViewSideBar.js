@@ -1,4 +1,5 @@
-import { createTab } from "../tabs/tabsRender.js";
+import { tabManager } from "../tabs/TabsManager.js";
+import { createTab } from "../tabs/tabs.js";
 import { stacks } from "./stackObj.js";
 import { stackView } from "./stackView.js";
 
@@ -41,7 +42,7 @@ const stackRenderViewSideBar = (stacks) => {
 const openStack = (evento) => {
   const id = evento.target.closest(".stackFlex").dataset.tab;
   const stack = stacks.find((e) => e.id === id);
-  createTab(stack.title, () => stackView(stack), stack.image);
+  tabManager.create(stack.title, () => stackView(stack), stack.image);
 };
 
 export { stackRenderViewSideBar };

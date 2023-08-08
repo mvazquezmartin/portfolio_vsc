@@ -1,0 +1,143 @@
+import { iconPath } from "../../assetsPath/assetsPath.js";
+
+class TabManager {
+  constructor() {
+    this.closeX = iconPath.CLOSE_X;
+    this.tabs = [];
+    this.activeTabIndex = -1;
+  }
+
+  create(title, content, icon) {
+    const existingTabIndex = this.tabs.findIndex((tab) => tab.title === title);
+
+    if (existingTabIndex !== -1) {
+      this.setActive(existingTabIndex);
+    } else {
+      const tab = {
+        title: title,
+        content: content,
+        icon: icon,
+        close: this.closeX,
+      };
+
+      this.tabs.push(tab);
+      this.setActive(this.tabs.length - 1);
+    }
+
+    this.render();
+    this.renderMainView();
+    this.activeFocus();
+  }
+
+  render() {
+    const tabsContainer = document.getElementById("tabs");
+    tabsContainer.innerHTML = "";
+
+    const rootPath = document.getElementById("rootPath");
+    rootPath.style.visibility = "visible";
+
+    this.tabs.forEach((tab, index) => {
+      const tabDiv = document.createElement("div");
+      tabDiv.classList.add("tab");
+
+      const tabIcon = document.createElement("img");
+      tabIcon.setAttribute("src", tab.icon);
+      tabIcon.classList.add("iconTab");
+
+      const tabElement = document.createElement("div");
+      tabElement.classList.add("tabTitle");
+      tabElement.textContent = tab.title;
+
+      tabDiv.addEventListener("click", () => {
+        this.setActive(index);
+      });
+
+      const closeButton = document.createElement("img");
+      closeButton.setAttribute("src", tab.close);
+      closeButton.classList.add("closeButton");
+      closeButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        this.close(index);
+      });
+
+      tabDiv.appendChild(tabIcon);
+      tabDiv.appendChild(tabElement);
+      tabDiv.appendChild(closeButton);
+      tabsContainer.appendChild(tabDiv);
+    });
+  }
+
+  setActive(index) {
+    if (this.tabs[index]) {
+      this.activeTabIndex = index;
+      this.render();
+      this.renderMainView();
+      this.activeFocus();
+    }
+  }
+
+  activeFocus() {
+    const tabButtons = document.querySelectorAll(".tab");
+    const activeTabButton = tabButtons[this.activeTabIndex];
+    tabButtons.forEach((button) => {
+      button.classList.remove("activeTab");
+    });
+    activeTabButton.classList.add("activeTab");
+  }
+
+  close(index) {
+    const rootPath = document.getElementById("rootPath");
+    rootPath.textContent = "";
+
+    const mainViewContainer = document.getElementById("mainView");
+    mainViewContainer.textContent = "";
+
+    const wasActiveTab = index === this.activeTabIndex;
+
+    this.tabs.splice(index, 1);
+    this.render();
+
+    if (wasActiveTab) {
+      const nextActiveTabIndex = index === this.tabs.length ? index - 1 : index;
+      this.setActive(nextActiveTabIndex);
+    } else {
+      const newActiveTabIndex =
+        this.activeTabIndex >= index
+          ? this.activeTabIndex - 1
+          : this.activeTabIndex;
+      this.setActive(newActiveTabIndex);
+      this.renderMainView();
+    }
+
+    if (this.tabs.length === 0) {
+      this.noTabs();
+    }
+  }
+
+  renderMainView() {
+    const mainViewContainer = document.getElementById("mainView");
+    mainViewContainer.innerHTML = "";
+
+    if (this.activeTabIndex !== -1 && this.tabs[this.activeTabIndex]) {
+      const activeTab = this.tabs[this.activeTabIndex];
+      activeTab.content();
+    }
+  }
+
+  noTabs() {
+    const mainView = document.getElementById("mainView");
+
+    const heroMain = document.createElement("div");
+    heroMain.classList.add("heroMain");
+
+    const txt = document.createElement("p");
+    txt.textContent = "HOLA MUNDO!";
+
+    heroMain.appendChild(txt);
+    mainView.appendChild(heroMain);
+  }
+}
+
+const tabManager = new TabManager();
+
+export { tabManager };

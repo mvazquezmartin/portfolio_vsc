@@ -3,7 +3,7 @@ import { renderExplorer } from "./js/components/explorerSideBar/explorer.js";
 import { gridGithubRender } from "./js/components/github/gridRender.js";
 import { renderMainText } from "./js/components/heroIndex/heroIndex.js";
 import { renderStack } from "./js/components/stack/stack.js";
-import { createTab } from "./js/components/tabs/tabsRender.js";
+import { tabManager } from "./js/components/tabs/TabsManager.js";
 import { mobileResponsive } from "./js/responsive/mobile/mobile.js";
 import { btnFocus } from "./js/utils/btnFocus.js";
 
@@ -20,14 +20,18 @@ const btnNavBarAside = document.querySelectorAll(".iconNavBarAside");
 explorer.addEventListener("click", renderExplorer);
 stack.addEventListener("click", renderStack);
 inicio.addEventListener("click", () =>
-  createTab("Get Started", renderMainText, iconPath.VSC)
+  tabManager.create("Get Started", renderMainText, iconPath.VSC)
 );
+// () =>
+//   createTab("Get Started", renderMainText, iconPath.VSC)
 github.addEventListener("click", gridGithubRender);
+
 window.addEventListener("load", mobileResponsive);
 window.addEventListener("resize", mobileResponsive);
 
 // EJECUCION DE FUNCIONES
 
 btnFocus(btnNavBarAside);
-createTab("Get Started", renderMainText, iconPath.VSC);
+tabManager.create("Get Started", renderMainText, iconPath.VSC);
+//createTab("Get Started", renderMainText, iconPath.VSC);
 renderExplorer();

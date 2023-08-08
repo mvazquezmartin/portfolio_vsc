@@ -12,8 +12,8 @@ const mobileResponsive = () => {
 
   const isMobile = window.matchMedia("(max-width: 767px)").matches;
   let statusSideBar = {
-    pre: "",
     now: "",
+    pre: "",
   };
 
   if (isMobile) {
@@ -34,15 +34,15 @@ const mobileResponsive = () => {
 
   for (const icon of sideBarIcon) {
     icon.addEventListener("click", () => {
-      statusSideBar.pre = icon.id;
+      statusSideBar.now = icon.id;
 
-      if (statusSideBar.pre !== statusSideBar.now) {
+      if (statusSideBar.now !== statusSideBar.pre) {
         sideBar.classList.add("sideBarRes");
-      } else if (statusSideBar.pre === statusSideBar.now) {
+      } else if (statusSideBar.now === statusSideBar.pre) {
         sideBar.classList.toggle("sideBarRes");
       }
 
-      statusSideBar.now = icon.id;
+      statusSideBar.pre = icon.id;
     });
   }
 

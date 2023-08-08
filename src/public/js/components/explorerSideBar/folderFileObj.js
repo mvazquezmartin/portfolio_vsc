@@ -1,3 +1,4 @@
+import { tabManager } from "../tabs/TabsManager.js";
 import { iconPath, imgPath } from "../../assetsPath/assetsPath.js";
 import { ilyudo } from "../assets/1Lyud0.js";
 import { chatRender } from "../chat/chatRender.js";
@@ -6,7 +7,6 @@ import { magic8BallRender } from "../magic8ball/magic8ball.js";
 import { readmeRender8Ball } from "../magic8ball/readme.js";
 import { playGroundRender } from "../playground/playGround.js";
 import { readmeRender } from "../playground/readme.js";
-import { createTab } from "../tabs/tabsRender.js";
 
 const assetsFolder = {
   folderName: "Assets",
@@ -15,17 +15,23 @@ const assetsFolder = {
       name: "chess_meme.jpg",
       icon: iconPath.JPG,
       function: () =>
-        createTab(
+        tabManager.create(
           "chess_meme.jpg",
           () => ilyudo(imgPath.CHESS_MEME, "chess_meme"),
           iconPath.JPG
         ),
+
+      // createTab(
+      //   "chess_meme.jpg",
+      //   () => ilyudo(imgPath.CHESS_MEME, "chess_meme"),
+      //   iconPath.JPG
+      // ),
     },
     {
       name: "loroArquitecto.jpg",
       icon: iconPath.JPG,
       function: () =>
-        createTab(
+        tabManager.create(
           "loroArquitecto.jpg",
           () => ilyudo(imgPath.DEPENDE_MEME, "loroArquitecto"),
           iconPath.JPG
@@ -35,13 +41,17 @@ const assetsFolder = {
       name: "judo.jpg",
       icon: iconPath.JPG,
       function: () =>
-        createTab("judo.jpg", () => ilyudo(imgPath.JUDO, "judo"), iconPath.JPG),
+        tabManager.create(
+          "judo.jpg",
+          () => ilyudo(imgPath.JUDO, "judo"),
+          iconPath.JPG
+        ),
     },
     {
       name: "setUp.jpg",
       icon: iconPath.JPG,
       function: () =>
-        createTab(
+        tabManager.create(
           "setUp.jpg",
           () => ilyudo(imgPath.SETUP, "setUp"),
           iconPath.JPG
@@ -58,12 +68,17 @@ const playGroundFolder = {
       name: "playGround.js",
       icon: iconPath.JAVASCRIPT,
       function: () =>
-        createTab("playGround.js", playGroundRender, iconPath.PLAYGROUND),
+        tabManager.create(
+          "playGround.js",
+          playGroundRender,
+          iconPath.PLAYGROUND
+        ),
     },
     {
       name: "readme_pg.txt",
       icon: iconPath.TXT,
-      function: () => createTab("readme_pg.txt", readmeRender, iconPath.TXT),
+      function: () =>
+        tabManager.create("readme_pg.txt", readmeRender, iconPath.TXT),
     },
   ],
   subfolders: [],
@@ -76,13 +91,13 @@ const magic8Ball = {
       name: "magic8Ball.js",
       icon: iconPath.JAVASCRIPT,
       function: () =>
-        createTab("magic8Ball.js", magic8BallRender, iconPath.M8B),
+        tabManager.create("magic8Ball.js", magic8BallRender, iconPath.M8B),
     },
     {
       name: "readme_m8b.txt",
       icon: iconPath.TXT,
       function: () =>
-        createTab("readme_m8b.txt", readmeRender8Ball, iconPath.TXT),
+        tabManager.create("readme_m8b.txt", readmeRender8Ball, iconPath.TXT),
     },
   ],
   subfolders: [],
@@ -94,15 +109,14 @@ const chat = {
     {
       name: "socketChat-1.0v.js",
       icon: iconPath.JAVASCRIPT,
-      function: () => {
-        createTab("SocketChat", chatRender, iconPath.CHAT);
-      },
+      function: () =>
+        tabManager.create("SocketChat", chatRender, iconPath.CHAT),
     },
     {
       name: "readme_chat.txt",
       icon: iconPath.TXT,
       function: () =>
-        createTab("readme_chattxt", readmeRenderChat, iconPath.TXT),
+        tabManager.create("readme_chattxt", readmeRenderChat, iconPath.TXT),
     },
   ],
   subfolders: [],

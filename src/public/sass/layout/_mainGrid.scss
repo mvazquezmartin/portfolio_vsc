@@ -267,17 +267,16 @@
       width: 13%;
       height: 0;
       top: 7%;
-      transition: all 0.5s ease;
-
+      transition: all 1s ease;
+      
       &.navBarAsideRes {
         visibility: visible;
-        height: 90.4%;
-        transition: all 0.5s ease;
+        height: 90.4%;               
       }
 
-      // & * {
-      //   transition: all 0.1s ease;
-      // }
+      & * {
+        transition: none;
+      }
       .toolTipText {
         display: none;
       }

@@ -310,12 +310,14 @@ a:hover {
     width: 13%;
     height: 0;
     top: 7%;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
   }
   .containerGrid .navBarAside.navBarAsideRes {
     visibility: visible;
     height: 90.4%;
-    transition: all 0.5s ease;
+  }
+  .containerGrid .navBarAside * {
+    transition: none;
   }
   .containerGrid .navBarAside .toolTipText {
     display: none;
@@ -815,7 +817,7 @@ a:hover {
 }
 @media screen and (max-width: 600px) {
   .stackViewTabs {
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .stackViewTabs .stackTitleView {
     height: auto;
