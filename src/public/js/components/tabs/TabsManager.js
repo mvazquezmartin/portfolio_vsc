@@ -5,23 +5,43 @@ class TabManager {
     this.closeX = iconPath.CLOSE_X;
     this.tabs = [];
     this.activeTabIndex = -1;
+    this.lastClickTime = 0;
   }
 
   create(title, content, icon) {
-    const existingTabIndex = this.tabs.findIndex((tab) => tab.title === title);
+    const tab = {
+      title: title,
+      content: content,
+      icon: icon,
+      isOpen: false,
+      lastClickTime: 0,
+    };
+    console.log("tabs", this.tabs);
 
-    if (existingTabIndex !== -1) {
-      this.setActive(existingTabIndex);
-    } else {
-      const tab = {
-        title: title,
-        content: content,
-        icon: icon,
-        close: this.closeX,
-      };
-
+    if (this.doubleClickDetected()) {
+      this.tabs.pop();
+      tab.isOpen = true;
       this.tabs.push(tab);
       this.setActive(this.tabs.length - 1);
+    } else {
+      const existingTabIndex = this.tabs.findIndex(
+        (tab) => tab.title === title
+      );
+      if (existingTabIndex !== -1) {        
+        this.setActive(existingTabIndex);
+        return;
+      }
+      const isNotOpen = this.tabs.findIndex((tab) => !tab.isOpen);
+      if (isNotOpen !== -1) {
+        this.tabs[isNotOpen].title = title;
+        this.tabs[isNotOpen].content = content;
+        this.tabs[isNotOpen].icon = icon;
+        this.tabs[isNotOpen].isOpen = false;
+        this.setActive(isNotOpen);
+      } else {
+        this.tabs.push(tab);
+        this.setActive(this.tabs.length - 1);
+      }
     }
 
     this.render();
@@ -46,6 +66,9 @@ class TabManager {
 
       const tabElement = document.createElement("div");
       tabElement.classList.add("tabTitle");
+      if (!tab.isOpen) {
+        tabElement.style.fontStyle = "italic";
+      }
       tabElement.textContent = tab.title;
 
       tabDiv.addEventListener("click", () => {
@@ -53,7 +76,7 @@ class TabManager {
       });
 
       const closeButton = document.createElement("img");
-      closeButton.setAttribute("src", tab.close);
+      closeButton.setAttribute("src", this.closeX);
       closeButton.classList.add("closeButton");
       closeButton.addEventListener("click", (event) => {
         event.stopPropagation();
@@ -127,6 +150,9 @@ class TabManager {
   noTabs() {
     const mainView = document.getElementById("mainView");
 
+    const rootPath = document.getElementById("rootPath");
+    rootPath.style.visibility = "hidden";
+
     const heroMain = document.createElement("div");
     heroMain.classList.add("heroMain");
 
@@ -135,6 +161,19 @@ class TabManager {
 
     heroMain.appendChild(txt);
     mainView.appendChild(heroMain);
+  }
+
+  doubleClickDetected() {
+    const now = new Date().getTime();
+    const timeSinceLastClick = now - this.lastClickTime;
+
+    if (timeSinceLastClick < 300) {
+      this.lastClickTime = 0;
+      return true;
+    }
+
+    this.lastClickTime = now;
+    return false;
   }
 }
 

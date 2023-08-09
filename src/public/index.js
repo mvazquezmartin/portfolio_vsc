@@ -33,5 +33,4 @@ window.addEventListener("resize", mobileResponsive);
 
 btnFocus(btnNavBarAside);
 tabManager.create("Get Started", renderMainText, iconPath.VSC);
-//createTab("Get Started", renderMainText, iconPath.VSC);
 renderExplorer();

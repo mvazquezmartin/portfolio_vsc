@@ -1,5 +1,4 @@
 import { tabManager } from "../tabs/TabsManager.js";
-import { createTab } from "../tabs/tabs.js";
 import { stacks } from "./stackObj.js";
 import { stackView } from "./stackView.js";
 

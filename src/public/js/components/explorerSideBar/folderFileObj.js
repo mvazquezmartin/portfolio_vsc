@@ -20,12 +20,6 @@ const assetsFolder = {
           () => ilyudo(imgPath.CHESS_MEME, "chess_meme"),
           iconPath.JPG
         ),
-
-      // createTab(
-      //   "chess_meme.jpg",
-      //   () => ilyudo(imgPath.CHESS_MEME, "chess_meme"),
-      //   iconPath.JPG
-      // ),
     },
     {
       name: "loroArquitecto.jpg",

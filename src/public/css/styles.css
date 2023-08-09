@@ -277,6 +277,8 @@ a:hover {
 }
 @media screen and (max-width: 600px) {
   .containerGrid {
+    position: relative;
+    height: 93.2vh;
     grid-template-columns: 0.45fr 3fr;
     grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
     grid-template-areas: "menuBurger navBarTop" "menuBurger tabs" "mainArea mainArea" "footer footer";
@@ -336,6 +338,9 @@ a:hover {
     grid-template-rows: 0.15fr 0.1fr 4fr;
     grid-template-areas: "titleSideBar" "fileOpen" "viewSideBar";
     transition: all 0.5s ease;
+  }
+  .containerGrid .sideBar .fileOpen {
+    background-color: #343746;
   }
   .containerGrid .sideBar.sideBarRes {
     visibility: visible;

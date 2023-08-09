@@ -8,7 +8,7 @@
 .containerGrid {
   display: grid;
   color: $color-white;
-  height: 100vh;
+  height: 100vh;  
   gap: 0px 0px;
   grid-auto-flow: row;
 
@@ -225,6 +225,9 @@
   // MOBILE - TABLET - DESKTOP RESPONSIVE
 
   @include mobile {
+    position: relative;
+    height: 93.2vh;
+    //height: 100vh;
     grid-template-columns: 0.45fr 3fr;
     grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
     grid-template-areas:
@@ -299,6 +302,9 @@
         "fileOpen"
         "viewSideBar";
       transition: all 0.5s ease;
+      .fileOpen{
+        background-color: $color-littleLightGrey;
+      }
 
       &.sideBarRes {
         visibility: visible;
@@ -343,7 +349,7 @@
     }
   }
 
-  @include desktop {
+  @include desktop {    
     grid-template-columns: 0.1fr 0.5fr 3fr;
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas:
