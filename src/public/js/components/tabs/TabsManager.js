@@ -14,24 +14,38 @@ class TabManager {
       content: content,
       icon: icon,
       isOpen: false,
-      lastClickTime: 0,
     };
-    console.log("tabs", this.tabs);
 
     if (this.doubleClickDetected()) {
-      this.tabs.pop();
-      tab.isOpen = true;
-      this.tabs.push(tab);
-      this.setActive(this.tabs.length - 1);
+      const existingTabIndex = this.tabs.findIndex(
+        (tab) => tab.title === title
+      );
+
+      if (existingTabIndex !== -1) {
+        if (this.tabs[existingTabIndex].isOpen) {
+          this.setActive(existingTabIndex);
+        } else {
+          this.tabs[existingTabIndex].isOpen = true;
+          this.setActive(existingTabIndex);
+        }
+      } else {
+        this.tabs.pop();
+        tab.isOpen = true;
+        this.tabs.push(tab);
+        this.setActive(this.tabs.length - 1);
+      }
     } else {
       const existingTabIndex = this.tabs.findIndex(
         (tab) => tab.title === title
       );
-      if (existingTabIndex !== -1) {        
+
+      if (existingTabIndex !== -1) {
         this.setActive(existingTabIndex);
         return;
       }
+
       const isNotOpen = this.tabs.findIndex((tab) => !tab.isOpen);
+
       if (isNotOpen !== -1) {
         this.tabs[isNotOpen].title = title;
         this.tabs[isNotOpen].content = content;

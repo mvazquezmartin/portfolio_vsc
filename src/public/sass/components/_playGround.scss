@@ -8,8 +8,9 @@
   height: 100%;
   width: 100%;
 
-  .html {
+  .htmlStyle {
     grid-area: 1 / 1 / 4 / 2;
+    position: relative;
 
     .htmlTitle {
       display: flex;
@@ -33,9 +34,13 @@
       border-right: $style-border-grid;
       border-top: $style-border-grid;
     }
+
+    pre code.hljs {
+      position: absolute;
+    }
   }
 
-  .css {
+  .cssStyle {
     grid-area: 1 / 2 / 4 / 3;
 
     .cssTitle {
@@ -56,14 +61,14 @@
 
     .cssArea {
       @include areaPlayGround;
-      grid-area: 2 / 2 / 3 / 3;      
+      grid-area: 2 / 2 / 3 / 3;
       border-right: $style-border-grid;
       border-top: $style-border-grid;
       border-left: 0;
     }
   }
 
-  .javaScript {
+  .javaScriptStyle {
     grid-area: 1 / 3 / 4 / 4;
 
     .javaScriptTitle {

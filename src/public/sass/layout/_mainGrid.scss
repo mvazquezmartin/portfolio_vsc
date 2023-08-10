@@ -147,6 +147,7 @@
       grid-area: viewSideBar;
       display: flex;
       flex-direction: column;
+      user-select: none;      
     }
   }
 

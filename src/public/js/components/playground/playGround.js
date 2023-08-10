@@ -1,6 +1,8 @@
-const htmlIcon = "./assets/html-5-svgrepo-com.svg";
-const cssIcon = "./assets/css-3-svgrepo-com.svg";
-const jsIcon = "./assets/javascript-svgrepo-com.svg";
+import { iconPath } from "../../assetsPath/assetsPath.js";
+
+const htmlIcon = iconPath.HTML;
+const cssIcon = iconPath.CSS;
+const jsIcon = iconPath.JAVASCRIPT;
 
 const playGroundRender = () => {
   const path = document.getElementById("rootPath");
@@ -58,16 +60,19 @@ const playGroundRender = () => {
   miNodoHtmlTitle.appendChild(miNodoHtmlIcon);
   miNodoHtmlTitle.appendChild(miNodoHtmlP);
   miNodoHtml.appendChild(miNodoHtmlArea);
+
   miNodo.appendChild(miNodoCss);
   miNodoCss.appendChild(miNodoCssTitle);
   miNodoCssTitle.appendChild(miNodoCssIcon);
   miNodoCssTitle.appendChild(miNodoCssP);
   miNodoCss.appendChild(miNodoCssArea);
+
   miNodo.appendChild(miNodoJavaScript);
   miNodoJavaScript.appendChild(miNodoJavaScriptTitle);
   miNodoJavaScriptTitle.appendChild(miNodoJavaScriptIcon);
   miNodoJavaScriptTitle.appendChild(miNodoJavaScriptP);
   miNodoJavaScript.appendChild(miNodoJavaScriptArea);
+
   miNodo.appendChild(miNodoOutPutArea);
   miNodoOutPutArea.appendChild(miNodoIframe);
   mainView.appendChild(miNodo);
