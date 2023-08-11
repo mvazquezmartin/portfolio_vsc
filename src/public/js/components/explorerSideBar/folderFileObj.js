@@ -132,7 +132,7 @@ const folder1 = {
   ],
   subfolders: [
     {
-      folderName: "Carpeta0",
+      folderName: "Inventario v1.0",
       files: [
         {
           name: "archivo.nshe",
@@ -153,7 +153,30 @@ const folder1 = {
       subfolders: [],
     },
     {
-      folderName: "Carpeta1",
+      folderName: "Inventario v0.6",
+      files: [
+        {
+          name: "Archivo3.txt",
+          icon: "./assets/code-file-svgrepo-com.svg",
+          function: () => console.log("archivo3"),
+        },
+      ],
+      subfolders: [
+        {
+          folderName: "Subcarpeta1",
+          files: [
+            {
+              name: "Archivo4.txt",
+              icon: "./assets/code-file-svgrepo-com.svg",
+              function: () => console.log("archivo4"),
+            },
+          ],
+          subfolders: [],
+        },
+      ],
+    },
+    {
+      folderName: "Inventario v0.2",
       files: [
         {
           name: "Archivo3.txt",

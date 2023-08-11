@@ -42,7 +42,7 @@ const magic8BallRender = () => {
   const respuestaContainer = document.createElement("div");
   respuestaContainer.classList.add("respuestaContainer");
 
-  const respuesta = document.createElement("p");
+  const respuesta = document.createElement("div");
   respuesta.classList.add("respuesta");
   respuesta.setAttribute("id", "res");
 

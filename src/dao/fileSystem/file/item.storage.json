@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Bandage - Finger Cots",
+    "description": "Replacement of Right Eye with Nonaut Sub, Perc Approach",
+    "price": 80,
+    "thumbnail": "http://dummyimage.com/x.png/dddddd/000000",
+    "code": "47781-299",
+    "stock": 97,
+    "status": true
+  },
+  {
+    "id": 2,
+    "title": "Cookies - Englishbay Chochip",
+    "description": "Occlusion of Hemiazygos Vein, Percutaneous Approach",
+    "price": 28,
+    "thumbnail": "http://dummyimage.com/x.png/5fa2dd/ffffff",
+    "code": "49349-528",
+    "stock": 46,
+    "status": true
+  },
+  {
+    "id": 3,
+    "title": "MODIFICAION DE PRUEBA",
+    "description": "Alteration of Left Lower Eyelid, Open Approach",
+    "price": "453",
+    "thumbnail": "http://dummyimage.com/x.png/cc0000/ffffff",
+    "code": "43538-140ASDASD",
+    "stock": "97",
+    "status": true
+  }
+]

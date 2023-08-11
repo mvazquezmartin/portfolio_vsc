@@ -10,7 +10,6 @@
 
   .htmlStyle {
     grid-area: 1 / 1 / 4 / 2;
-    position: relative;
 
     .htmlTitle {
       display: flex;
@@ -33,10 +32,6 @@
       grid-area: 2 / 1 / 3 / 2;
       border-right: $style-border-grid;
       border-top: $style-border-grid;
-    }
-
-    pre code.hljs {
-      position: absolute;
     }
   }
 

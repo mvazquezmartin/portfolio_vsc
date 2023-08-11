@@ -12,7 +12,7 @@ const playGroundRender = () => {
   miNodo.classList.add("playGroundGrid");
 
   const miNodoHtml = document.createElement("div");
-  miNodoHtml.classList.add("html");
+  miNodoHtml.classList.add("htmlStyle");
   const miNodoHtmlTitle = document.createElement("div");
   miNodoHtmlTitle.classList.add("htmlTitle");
   const miNodoHtmlIcon = document.createElement("img");
@@ -25,7 +25,7 @@ const playGroundRender = () => {
   miNodoHtmlArea.textContent = `<div class="button-container">\n<button onclick="changeColorCounter(this)">Click Me!</button>\n<p id="counter"></p>\n</div>`;
 
   const miNodoCss = document.createElement("div");
-  miNodoCss.classList.add("css");
+  miNodoCss.classList.add("cssStyle");
   const miNodoCssTitle = document.createElement("div");
   miNodoCssTitle.classList.add("cssTitle");
   const miNodoCssIcon = document.createElement("img");
@@ -38,7 +38,7 @@ const playGroundRender = () => {
   miNodoCssArea.textContent = `.button-container{\ndisplay:flex;\nflex-direction: column;\njustify-content: center;\nalign-items: center;\nheight: 100%;\nwidth: 100%;\nbackground:#343746;\n}\n\nbutton{\npadding:20px;\nfont-size:20px;\nbackground:#FF0000;\ncolor:#fff;\nborder-radius: 10%;\n}\n\np{\ncolor:#fff;\nfont-size:20px;\nheight:20px;\nmargin-block-start: 1rem;\nmargin-block-end: 1rem;\n}`;
 
   const miNodoJavaScript = document.createElement("div");
-  miNodoJavaScript.classList.add("javaScript");
+  miNodoJavaScript.classList.add("javaScriptStyle");
   const miNodoJavaScriptTitle = document.createElement("div");
   miNodoJavaScriptTitle.classList.add("javaScriptTitle");
   const miNodoJavaScriptIcon = document.createElement("img");

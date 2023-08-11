@@ -8,14 +8,12 @@
 .containerGrid {
   display: grid;
   color: $color-white;
-  height: 100vh;  
+  height: 100vh;
   gap: 0px 0px;
   grid-auto-flow: row;
 
-  .menuIconContainer {
-    .menuBurgerIcon {
-      display: none;
-    }
+  a#menu-icon {
+    display: none;
   }
 
   .navBarTop {
@@ -147,7 +145,7 @@
       grid-area: viewSideBar;
       display: flex;
       flex-direction: column;
-      user-select: none;      
+      user-select: none;
     }
   }
 
@@ -232,23 +230,51 @@
     grid-template-columns: 0.45fr 3fr;
     grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
     grid-template-areas:
-      "menuBurger navBarTop"
-      "menuBurger tabs"
+      "menuIcon navBarTop"
+      "menuIcon tabs"
       "mainArea mainArea"
       "footer footer";
 
-    .menuIconContainer {
-      grid-area: menuBurger;
+    a#menu-icon {
+      grid-area: menuIcon;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
+      //padding: 25%;
       background-color: $color-darkGrey;
       border-bottom: $style-border-grid;
 
-      .menuBurgerIcon {
-        display: block;
-        font-size: 1.8rem;
-        cursor: pointer;
+      .bar {
+        margin: 3px;
+        width: 25px;
+        height: 3px;
+        background: $color-white;
+        border-radius: 1.5px;
+        transition: margin 0.7s, transform 0.7s;
+
+        // same as above but with prefixes added
+        -webkit-transition: margin 0.7s, -webkit-transform 0.7s;
+        -o-transition: margin 0.7s, transform 0.7s;
+        transition: margin 0.7s, transform 0.7s, -webkit-transform 0.7s;
+      }
+
+      &.close {
+        .bar:first-child {
+          -webkit-transform: translateY(9px) rotate(45deg);
+          -ms-transform: translateY(9px) rotate(45deg);
+          transform: translateY(9px) rotate(45deg);
+        }
+
+        .bar:nth-child(2) {
+          opacity: 0;
+        }
+
+        .bar:last-child {
+          -webkit-transform: translateY(-9px) rotate(-45deg);
+          -ms-transform: translateY(-9px) rotate(-45deg);
+          transform: translateY(-9px) rotate(-45deg);
+        }
       }
     }
 
@@ -271,11 +297,11 @@
       width: 13%;
       height: 0;
       top: 7%;
-      transition: all 1s ease;
-      
+      transition: all 0.8s ease;
+
       &.navBarAsideRes {
         visibility: visible;
-        height: 90.4%;               
+        height: 90.4%;
       }
 
       & * {
@@ -303,7 +329,8 @@
         "fileOpen"
         "viewSideBar";
       transition: all 0.5s ease;
-      .fileOpen{
+
+      .fileOpen {
         background-color: $color-littleLightGrey;
       }
 
@@ -350,7 +377,7 @@
     }
   }
 
-  @include desktop {    
+  @include desktop {
     grid-template-columns: 0.1fr 0.5fr 3fr;
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas:
