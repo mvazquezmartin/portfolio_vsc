@@ -22,8 +22,6 @@ stack.addEventListener("click", renderStack);
 inicio.addEventListener("click", () =>
   tabManager.create("Get Started", renderMainText, iconPath.VSC)
 );
-// () =>
-//   createTab("Get Started", renderMainText, iconPath.VSC)
 github.addEventListener("click", gridGithubRender);
 
 window.addEventListener("load", mobileResponsive);

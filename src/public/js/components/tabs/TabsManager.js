@@ -89,6 +89,15 @@ class TabManager {
         this.setActive(index);
       });
 
+      tabDiv.addEventListener("dblclick", () => {
+        if (!tab.isOpen) {
+          this.tabs.pop();
+          tab.isOpen = true;
+          this.tabs.push(tab);
+          this.setActive(this.tabs.length - 1);
+        }
+      });
+
       const closeButton = document.createElement("img");
       closeButton.setAttribute("src", this.closeX);
       closeButton.classList.add("closeButton");

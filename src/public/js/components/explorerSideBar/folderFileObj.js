@@ -104,13 +104,13 @@ const chat = {
       name: "socketChat-1.0v.js",
       icon: iconPath.JAVASCRIPT,
       function: () =>
-        tabManager.create("SocketChat", chatRender, iconPath.CHAT),
+        tabManager.create("SocketChat.js", chatRender, iconPath.CHAT),
     },
     {
       name: "readme_chat.txt",
       icon: iconPath.TXT,
       function: () =>
-        tabManager.create("readme_chattxt", readmeRenderChat, iconPath.TXT),
+        tabManager.create("readme_chat.txt", readmeRenderChat, iconPath.TXT),
     },
   ],
   subfolders: [],

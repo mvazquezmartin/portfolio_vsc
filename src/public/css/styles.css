@@ -3,7 +3,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small, strike, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -724,29 +724,73 @@ a:hover {
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding: 2rem;
 }
-.readme .line-numbers, .readmeContainerM8b .line-numbers {
-  display: flex;
-  width: auto;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 0 15px;
-  user-select: none;
-  border-right: 0.5px solid #44475a;
+.readme .readmeStyle, .readmeContainerM8b .readmeStyle {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #5f5f5f;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.readme .line-numbers span, .readmeContainerM8b .line-numbers span {
-  font-family: "Fira Code", monospace;
-  font-size: 1rem;
-  color: #6272a4;
+.readme .readmeStyle h1, .readmeContainerM8b .readmeStyle h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  border-bottom: 0.5px solid #44475a;
+  padding-bottom: 10px;
 }
-.readme .text-container, .readmeContainerM8b .text-container {
-  white-space: pre-wrap;
-  padding-left: 15px;
-  text-align: left;
-  margin-top: 1px;
+.readme .readmeStyle h2, .readmeContainerM8b .readmeStyle h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 0.5px solid #44475a;
+  padding-bottom: 5px;
 }
-.readme .text-container p, .readmeContainerM8b .text-container p {
-  font-family: "Courier New", Courier, monospace;
+.readme .readmeStyle h3, .readmeContainerM8b .readmeStyle h3 {
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+.readme .readmeStyle p, .readmeContainerM8b .readmeStyle p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.readme .readmeStyle code, .readmeContainerM8b .readmeStyle code {
+  font-family: "Courier New", monospace;
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.readme .readmeStyle a, .readmeContainerM8b .readmeStyle a {
+  color: #007bff;
+  text-decoration: none;
+}
+.readme .readmeStyle a:hover, .readmeContainerM8b .readmeStyle a:hover {
+  text-decoration: underline;
+}
+.readme .readmeStyle ul, .readmeContainerM8b .readmeStyle ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+.readme .readmeStyle li, .readmeContainerM8b .readmeStyle li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.readme .readmeStyle img, .readmeContainerM8b .readmeStyle img {
+  max-width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .readme, .readmeContainerM8b {
+    padding: 0.8rem;
+  }
+  .readme .readmeStyle, .readmeContainerM8b .readmeStyle {
+    max-width: 90%;
+  }
 }
 
 .readmeContainerM8b {
