@@ -28,6 +28,9 @@ const magic8BallRender = () => {
   const containerM8B = document.createElement("div");
   containerM8B.classList.add("containerM8B");
 
+  const borderContainer = document.createElement("div");
+  borderContainer.classList.add("borderContainer");
+
   const titleContainer = document.createElement("div");
   titleContainer.classList.add("titleM8B");
 
@@ -58,14 +61,16 @@ const magic8BallRender = () => {
     // Reiniciar la animación
     DOMRta.style.animation = "none";
     void DOMRta.offsetWidth;
-    DOMRta.style.animation = `typing ${typingDuration}ms steps(${respuestaText.length}) 1s 1 normal both, blink 1s steps(1) infinite`;
+    DOMRta.style.animation = `typing ${typingDuration}ms steps(${respuestaText.length}) 1s 1 normal both, blink 650ms steps(44) infinite normal`;
   }
 
-  containerM8B.appendChild(titleContainer);
+  containerM8B.appendChild(borderContainer);
+  borderContainer.appendChild(titleContainer);
   titleContainer.appendChild(title);
-  containerM8B.appendChild(buttonPregunta);
+  borderContainer.appendChild(buttonPregunta)  
+  borderContainer.appendChild(respuestaContainer)
   respuestaContainer.appendChild(respuesta);
-  containerM8B.appendChild(respuestaContainer);
+  //containerM8B.appendChild(respuestaContainer);
   mainView.appendChild(containerM8B);
 };
 

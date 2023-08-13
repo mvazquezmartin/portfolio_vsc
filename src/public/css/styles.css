@@ -120,12 +120,12 @@ a:hover {
   cursor: default;
 }
 .containerGrid .navBarTop .iconoMenu .menuNavBarTop span {
-  padding: 0 8px;
+  padding: 3px 8px;
   transition: 0.3s;
   cursor: default;
 }
 .containerGrid .navBarTop .iconoMenu .menuNavBarTop span:hover {
-  background-color: #282a36;
+  background-color: #333649;
   border-radius: 5px;
 }
 .containerGrid .navBarTop .titleVSC {
@@ -522,14 +522,26 @@ a:hover {
   align-items: center;
   flex-direction: column;
 }
-.containerM8B .titleM8B {
+.containerM8B .borderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 50%;
+  height: 50%;
+  -webkit-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
+  -moz-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
+  box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
+}
+.containerM8B .borderContainer .titleM8B {
   margin-bottom: 1.5rem;
 }
-.containerM8B .titleM8B h1 {
+.containerM8B .borderContainer .titleM8B h1 {
   font-size: 3rem;
   font-weight: 600;
 }
-.containerM8B .btnRta {
+.containerM8B .borderContainer .btnRta {
   margin-bottom: 1.5rem;
   box-shadow: inset 0px -3px 7px 0px #29bbff;
   background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
@@ -545,24 +557,25 @@ a:hover {
   text-decoration: none;
   text-shadow: 0px 1px 0px #263666;
 }
-.containerM8B .btnRta:hover {
+.containerM8B .borderContainer .btnRta:hover {
   background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
   background-color: #0688fa;
 }
-.containerM8B .btnRta:active {
+.containerM8B .borderContainer .btnRta:active {
   position: relative;
   top: 1px;
 }
-.containerM8B .respuestaContainer {
-  height: 60px;
+.containerM8B .borderContainer .respuestaContainer {
+  height: 1.5rem;
 }
-.containerM8B .respuestaContainer .respuesta {
+.containerM8B .borderContainer .respuestaContainer .respuesta {
   width: 0;
   text-align: center;
   overflow: hidden;
   white-space: nowrap;
   font-size: 1.5rem;
   border-right: 0.15em solid #18bdec;
+  transform: translateY(-50%);
 }
 
 @keyframes typing {
@@ -574,19 +587,28 @@ a:hover {
   }
 }
 @keyframes blink {
-  50% {
-    border-color: transparent;
+  from {
+    border-right-color: #18bdec;
+  }
+  to {
+    border-right-color: transparent;
   }
 }
 @media screen and (max-width: 600px) {
-  .containerM8B .titleM8B h1 {
+  .containerM8B .borderContainer {
+    width: 90%;
+  }
+  .containerM8B .borderContainer .titleM8B h1 {
     font-size: 2rem;
   }
-  .containerM8B .btnRta {
+  .containerM8B .borderContainer .btnRta {
     font-size: 0.8rem;
     padding: 12px 15px;
   }
-  .containerM8B .respuestaContainer .respuesta {
+  .containerM8B .borderContainer .respuestaContainer {
+    height: 1rem;
+  }
+  .containerM8B .borderContainer .respuestaContainer .respuesta {
     font-size: 1rem;
   }
 }
@@ -782,7 +804,11 @@ a:hover {
   line-height: 1.5;
 }
 .readme .readmeStyle img, .readmeContainerM8b .readmeStyle img {
-  max-width: 100%;
+  max-width: 60%;
+}
+.readme .readmeStyle code, .readmeContainerM8b .readmeStyle code {
+  background-color: transparent;
+  font-size: 12px;
 }
 @media screen and (max-width: 600px) {
   .readme, .readmeContainerM8b {
@@ -790,6 +816,12 @@ a:hover {
   }
   .readme .readmeStyle, .readmeContainerM8b .readmeStyle {
     max-width: 90%;
+  }
+  .readme .readmeStyle img, .readmeContainerM8b .readmeStyle img {
+    max-width: 100%;
+  }
+  .readme .readmeStyle code, .readmeContainerM8b .readmeStyle code {
+    white-space: pre-line;
   }
 }
 

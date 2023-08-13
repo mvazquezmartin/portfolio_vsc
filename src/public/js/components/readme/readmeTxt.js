@@ -1,5 +1,3 @@
-import { imgPath } from "../../assetsPath/assetsPath.js";
-
 const readme = {
   playground: `
   # <center> 📝 PlayGround by EazyTutorial (GreatStack ) </center>
@@ -7,7 +5,7 @@ const readme = {
   permite a los usuarios escribir y probar fragmentos de código HTML, CSS y JavaScript.
   Consta de tres secciones principales: HTML, CSS y JavaScript, junto con un área de salida
   que muestra el resultado combinado del código del usuario.
-  ## 📚 Features
+  ## 👷‍♂️ ¿Cómo Funciona?
   
   ### **Renderización del Playground:**
   - La función playGroundRender crea una disposición estructurada de HTML para el playground
@@ -26,11 +24,9 @@ const readme = {
   el resultado combinado del HTML y el CSS del usuario, junto con el JavaScript ejecutado.
   ### **Ejecución Inicial:**
   - La función run se llama inicialmente para llenar el área de salida con el ejemplo de código
-  por defecto.
+  por defecto.  
   
-  
-  
-  ## 📝 Nota:
+  ## 📝 Nota
   - El código proporcionado es un ejemplo básico de una interfaz de playground y se puede
   personalizar y mejorar según los requisitos de tu proyecto.
   - Los usuarios pueden modificar el código HTML, CSS y JavaScript en tiempo real y observar
@@ -59,7 +55,7 @@ const readme = {
   
   
   
-  ## 👷‍♂️ Cómo Funciona
+  ## 👷‍♂️ ¿Cómo Funciona?
   
   - **Interfaz de Usuario:** El juego ofrece una interfaz de usuario que muestra un título ("Magic 8 Ball") y un botón.
   - **Ingreso de Pregunta:** Cuando el usuario hace clic en el botón "Click para obtener tu respuesta", se genera y muestra una respuesta aleatoria.
@@ -84,11 +80,77 @@ const readme = {
   en mis proyectos, pero a veces menos es más.  
   Por el aprecio que me genera ver mis comienzos, optimice el código y de esta forma simplificandolo,
   y de un aspecto más legible.
-  <br/>
-  <br/>
-  ![Codigo](${imgPath.M8B_CODE})
-  
-  
+  <br/>  
+  <pre>
+  <code class="hljs language-javascript">
+  function randomNum(max){
+    return Math.floor(Math.random()*max);
+  }
+  function whileSoN(){
+    while (jugar!='s' && jugar!='n'){
+    jugar = prompt('Te dije S ó N !!! (＞︿＜)').toLowerCase();
+    } 
+  }
+  let jugar = prompt('Hola! (っ◕‿◕)っ ¿Quieres consultarme tu futuro? S/N').toLowerCase();
+  whileSoN();
+  while (jugar == 's'){	
+    let pregunta = prompt('(｡◕‿◕｡) Hazme una pregunta..')
+    switch (randomNum(10)){
+      case 0:			
+        alert(pregunta+' '+'(ಠ‿ಠ) Es cierto.');
+        jugar = prompt('(⊃｡•́‿•̀｡)⊃ ¿Quieres hacer otra pregunta? S/N').toLowerCase();
+        whileSoN();
+        break;
+      case 1:
+        alert(pregunta+' '+'( ͡° ͜ʖ ͡°) Es decididamente así.');
+        jugar = prompt('(⊃｡•́‿•̀｡)⊃¿Quieres hacer otra pregunta? S/N').toLowerCase();
+        whileSoN();
+        break;
+      case 2:
+        alert(pregunta+' '+'(°‿‿°) Sin lugar a dudas.');
+        jugar = prompt('(⊃｡•́‿•̀｡)⊃ ¿Quieres hacer otra pregunta? S/N').toLowerCase();			
+        whileSoN();
+        break;
+      case 3:
+        alert(pregunta+' '+'（　ﾟДﾟ） Respuesta confusa, vuelve a intentarlo.');
+        jugar = prompt('(⊃｡•́‿•̀｡)⊃¿Quieres hacer otra pregunta? S/N').toLowerCase();
+        whileSoN();
+        break;
+      case 4:
+        alert(pregunta+' '+'(⩾﹏⩽) Vuelve a preguntar más tarde.');
+        jugar = prompt('(⊃｡•́‿•̀｡)⊃¿Quieres hacer otra pregunta? S/N').toLowerCase();
+        whileSoN();
+        break;
+      case 5:
+        alert(pregunta+' '+'(҂◡_◡) Mejor no decirte ahora.');
+        jugar = prompt('(⊃｡•́‿•̀｡)⊃¿Quieres hacer otra pregunta? S/N').toLowerCase();
+        whileSoN();
+        break;
+      case 6:
+        alert(pregunta+' '+'(ಠ_ಠ) No cuentes con ello.');
+        jugar = prompt('(⊃｡•́‿•̀｡)⊃¿Quieres hacer otra pregunta? S/N').toLowerCase();
+        whileSoN();
+        break;
+      case 7:
+        alert(pregunta+' '+'(⊙﹏⊙) Mi respuesta es no.');
+        jugar = prompt('(⊃｡•́‿•̀｡)⊃¿Quieres hacer otra pregunta? S/N').toLowerCase();
+        whileSoN();
+        break;
+      case 8:
+        alert(pregunta+' '+'(ಥ⌣ಥ) Mis fuentes dicen que no.');
+        jugar = prompt('(⊃｡•́‿•̀｡)⊃¿Quieres hacer otra pregunta? S/N').toLowerCase();
+        whileSoN();
+        break;
+      case 9:
+        alert(pregunta+' '+'(╬ ಠ益ಠ) No se, lo unico que puedo afirmar que el Bojo es un flancito');
+        jugar = prompt('(⊃｡•́‿•̀｡)⊃¿Quieres hacer otra pregunta? S/N').toLowerCase();			
+        whileSoN();
+        break;
+    }	
+  }
+   alert('Adios (⩾﹏⩽)');
+   </code>
+   </pre>  
   ## 👤 Authors
   
   - [@mvazquezmartin](https://github.com/mvazquezmartin)<base target="_blank">
@@ -107,13 +169,13 @@ const readme = {
   
   
   
-  ## 👷‍♂️ Cómo Funciona
+  ## 👷‍♂️ ¿Cómo Funciona?
   
   ### <ins>**Cliente**</ins>
   El archivo **chat.js** contiene el código para la parte del cliente de la aplicación de chat. Aquí se describen las principales funciones y eventos que se manejan en el cliente:  
   1. **Conexión del Usuario:**
   - El cliente se conecta al servidor de Socket.IO.
-  - El usuario puede introducir su nombre a través de una ventana emergente (sweetAlert) cuando hace clic en el botón "Connect".
+  - El usuario debe introducir su nombre a través de una ventana emergente (sweetAlert) cuando hace clic en el botón "Connect".
   - Una vez conectado, el cliente emite el evento "**newUser**" al servidor con el nombre del usuario.
   - Los usuarios conectados se actualizan en la lista de usuarios y se muestra una alerta de conexión exitosa.  
   2. **Desconexión del Usuario:**
@@ -144,7 +206,7 @@ const readme = {
   Quiero agradecerle a **Diego Naranjo**, mi profesor en CoderHouse Backend, por ser una fuente constante de motivación y aliento. A veces puede ser abrumador aprender una nueva habilidad, pero sus palabras de aliento y apoyo han sido un impulso increíble para seguir adelante.
   ## Authors
   
-  - [@mvazquezmartin](https://https://github.com/mvazquezmartin)<base target="_blank">
+  - [@mvazquezmartin](https://github.com/mvazquezmartin)<base target="_blank">
   
   
   `,

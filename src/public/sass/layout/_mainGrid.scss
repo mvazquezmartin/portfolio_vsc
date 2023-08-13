@@ -40,13 +40,13 @@
         cursor: default;
 
         span {
-          padding: 0 8px;
+          padding: 3px 8px;
           transition: 0.3s;
           cursor: default;
         }
 
         span:hover {
-          background-color: $color-lightGrey;
+          background-color: #333649;
           border-radius: 5px;
         }
       }
