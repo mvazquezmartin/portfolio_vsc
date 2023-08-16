@@ -47,7 +47,8 @@ const renderMainText = () => {
   //container Hero aside
   const miNodoHeroContainerAside = document.createElement("div");
   miNodoHeroContainerAside.classList.add("containerIntroAside");
-  miNodoHeroContainerAside.textContent = "ESTO ES UNA PRUEBA";
+   const lenguageH2 = document.createElement("h2")
+   lenguageH2.textContent = "Developed with:"
 
   //inserto mi Nodo
   miNodo.appendChild(miNodoHeroContainer);
@@ -60,6 +61,7 @@ const renderMainText = () => {
   miNodoDescription.appendChild(miNodoIconoStack);
   miNodoDescription.appendChild(miNodoTituloRecientes);
   miNodo.appendChild(miNodoHeroContainerAside);
+  miNodoHeroContainerAside.appendChild(lenguageH2)
   mainView.appendChild(miNodo);
 };
 

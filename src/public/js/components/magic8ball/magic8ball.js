@@ -67,10 +67,9 @@ const magic8BallRender = () => {
   containerM8B.appendChild(borderContainer);
   borderContainer.appendChild(titleContainer);
   titleContainer.appendChild(title);
-  borderContainer.appendChild(buttonPregunta)  
-  borderContainer.appendChild(respuestaContainer)
+  borderContainer.appendChild(buttonPregunta);
+  borderContainer.appendChild(respuestaContainer);
   respuestaContainer.appendChild(respuesta);
-  //containerM8B.appendChild(respuestaContainer);
   mainView.appendChild(containerM8B);
 };
 

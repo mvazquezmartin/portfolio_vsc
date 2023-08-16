@@ -4,7 +4,7 @@ class TabManager {
   constructor() {
     this.closeX = iconPath.CLOSE_X;
     this.tabs = [];
-    this.activeTabIndex = -1;
+    this.activeTabIndex = 0;
     this.lastClickTime = 0;
   }
 

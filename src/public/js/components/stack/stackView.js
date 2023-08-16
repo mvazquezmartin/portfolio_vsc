@@ -25,7 +25,7 @@ const stackView = (stack) => {
     miNodoLinkCertificado.setAttribute("target", "_blank");
     miNodoLinkCertificado.textContent = "Link CoderHouse";
     //stack certificado
-    const miNodoCertificadoDiv = document.createElement("div");
+    const miNodoCertificadoDiv = document.createElement("picture");
     miNodoCertificadoDiv.classList.add("stackCertificado");
     const miNodoCertificado = document.createElement("img");
     miNodoCertificado.setAttribute("src", stack.certificado);

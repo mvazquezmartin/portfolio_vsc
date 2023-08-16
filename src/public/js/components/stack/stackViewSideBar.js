@@ -12,7 +12,7 @@ const stackRenderViewSideBar = (stacks) => {
     miNodo.dataset.tab = stack.id;
     miNodo.addEventListener("click", openStack);
     //imagen div container
-    const miNodoDivImg = document.createElement("div");
+    const miNodoDivImg = document.createElement("picture");
     miNodoDivImg.classList.add("stackDivImg");
     //imagen stack
     const miNodoImgStack = document.createElement("img");

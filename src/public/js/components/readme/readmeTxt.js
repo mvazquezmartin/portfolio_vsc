@@ -1,7 +1,7 @@
 const readme = {
   playground: `
   # <center> 📝 PlayGround by EazyTutorial (GreatStack ) </center>
-  Este código JavaScript define una función que genera una interfaz basada en la web que
+  Se define una función que genera una interfaz basada en la web que
   permite a los usuarios escribir y probar fragmentos de código HTML, CSS y JavaScript.
   Consta de tres secciones principales: HTML, CSS y JavaScript, junto con un área de salida
   que muestra el resultado combinado del código del usuario.
@@ -66,7 +66,7 @@ const readme = {
   
   ## 📌 Explicación del Código
   
-  El código JavaScript proporcionado define una función **magic8BallRender** que crea y configura la interfaz del juego de la Magic 8 Ball. A continuación, se describe cada uno de los componentes clave:  
+  Se define una función **magic8BallRender** que crea y configura la interfaz del juego de la Magic 8 Ball. A continuación, se describe cada uno de los componentes clave:  
   
   - **Arreglo de Respuestas:** El arreglo **rta** contiene una lista de posibles respuestas de la Bola 8 Mágica, representadas por emojis y texto.
   - **Manipulación del DOM:** El código crea y manipula diversos elementos HTML utilizando la API del DOM (Document Object Model) para construir la interfaz del juego.

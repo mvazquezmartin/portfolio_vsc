@@ -35,7 +35,7 @@ const playGroundRender = () => {
   const miNodoCssArea = document.createElement("textarea");
   miNodoCssArea.classList.add("cssArea");
   miNodoCssArea.setAttribute("id", "cssCode");
-  miNodoCssArea.textContent = `.button-container{\ndisplay:flex;\nflex-direction: column;\njustify-content: center;\nalign-items: center;\nheight: 100%;\nwidth: 100%;\nbackground:#343746;\n}\n\nbutton{\npadding:20px;\nfont-size:20px;\nbackground:#FF0000;\ncolor:#fff;\nborder-radius: 10%;\n}\n\np{\ncolor:#fff;\nfont-size:20px;\nheight:20px;\nmargin-block-start: 1rem;\nmargin-block-end: 1rem;\n}`;
+  miNodoCssArea.textContent = `.button-container{\ndisplay:flex;\nflex-direction: column;\njustify-content: center;\nalign-items: center;\nheight: 100%;\nwidth: 100%;\nbackground:#343746;\n}\n\nbutton{\npadding:20px;\nfont-size:20px;\nbackground:#FF0000;\ncolor:#fff;\nborder-radius: 10%;\n}\n\np{\nfont-family: Arial;\ncolor:#fff;\nfont-size:20px;\nheight:20px;\nmargin-block-start: 1rem;\nmargin-block-end: 1rem;\n}`;
 
   const miNodoJavaScript = document.createElement("div");
   miNodoJavaScript.classList.add("javaScriptStyle");
