@@ -9,11 +9,11 @@ class ItemManager {
   async getAll() {
     try {
       await this.readFile();
-      const productStatusTrue = this.products.filter(
+      const productStatusTrue = this.items.filter(
         (prod) => prod.status === true
       );
-      this.products = productStatusTrue;
-      return this.products;
+      this.items = productStatusTrue;
+      return this.items;
     } catch (error) {
       console.log(error);
       throw error;
@@ -25,14 +25,15 @@ class ItemManager {
       await this.readFile();
 
       const _id = parseInt(id);
-      const index = this.products.findIndex((prod) => prod.id === _id);
+      const index = this.items.findIndex((prod) => prod.id === _id);
 
-      if (index !== -1) {
-        this.products[index].status = false;
-        await this.saveFile();
-        return this.products[index];
+      if (index === -1) {
+        return [];
       }
-      return [];
+      this.items[index].status = false;
+      await this.saveFile();
+
+      return this.products[index];
     } catch (error) {
       throw error;
     }
@@ -40,18 +41,18 @@ class ItemManager {
 
   async saveFile() {
     try {
-      await fs.promises.writeFile(this.path, JSON.stringify(this.products));
+      await fs.promises.writeFile(this.path, JSON.stringify(this.items));
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   }
 
   async readFile() {
     try {
       const data = await fs.promises.readFile(this.path, "utf-8");
-      if (data) this.products = JSON.parse(data);
+      if (data) this.items = JSON.parse(data);
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   }
 }

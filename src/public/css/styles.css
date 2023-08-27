@@ -753,20 +753,20 @@ a:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .readme .readmeStyle h1, .readmeContainerM8b .readmeStyle h1 {
-  font-size: 24px;
+  font-size: 2rem;
   margin-bottom: 10px;
   border-bottom: 0.5px solid #44475a;
   padding-bottom: 10px;
 }
 .readme .readmeStyle h2, .readmeContainerM8b .readmeStyle h2 {
-  font-size: 20px;
+  font-size: 1.5rem;
   margin-top: 20px;
   margin-bottom: 10px;
   border-bottom: 0.5px solid #44475a;
   padding-bottom: 5px;
 }
 .readme .readmeStyle h3, .readmeContainerM8b .readmeStyle h3 {
-  font-size: 17px;
+  font-size: 1.1rem;
   margin-top: 20px;
   margin-bottom: 10px;
   padding-bottom: 5px;
@@ -812,6 +812,12 @@ a:hover {
   }
   .readme .readmeStyle, .readmeContainerM8b .readmeStyle {
     max-width: 90%;
+  }
+  .readme .readmeStyle h1, .readmeContainerM8b .readmeStyle h1 {
+    font-size: 1.5rem;
+  }
+  .readme .readmeStyle h2, .readmeContainerM8b .readmeStyle h2 {
+    font-size: 1.3rem;
   }
   .readme .readmeStyle img, .readmeContainerM8b .readmeStyle img {
     max-width: 100%;

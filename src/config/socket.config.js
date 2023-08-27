@@ -9,7 +9,7 @@ const setSocket = (app) => {
 
   io.on("connection", (socket) => {
     console.log(
-      colors.yellow("Cliente conectado con id:"),
+      colors.green("Client connected with ID:"),
       colors.cyan(socket.id)
     );
 
@@ -24,7 +24,7 @@ const setSocket = (app) => {
     socket.on("disconnect", () => {
       const userIndex = users.indexOf(socket.user);
       console.log(
-        colors.yellow("Cliente desconectado con id:"),
+        colors.yellow("Client disconnected with ID:"),
         colors.red(socket.id)
       );
       if (userIndex !== -1) {

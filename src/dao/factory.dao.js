@@ -8,6 +8,9 @@ const persistence = (persistenceOption) => {
       const ItemManager = require("./fileSystem/items.manager.fs");
       return new ItemManager(fsStorage);
 
+    case "localstorage":
+      break;
+
     case "mongo":
       break;
 
@@ -17,3 +20,4 @@ const persistence = (persistenceOption) => {
 };
 
 module.exports = persistence;
+
