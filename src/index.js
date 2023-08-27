@@ -2,6 +2,7 @@ const express = require("express");
 const { PORT } = require("./config/app.config");
 const { setSocket } = require("./config/socket.config");
 const router = require("./router");
+const mongoConnect = require("../database");
 
 const app = express();
 
@@ -15,4 +16,5 @@ const httpServer = app.listen(PORT, () => {
   console.log(`Server started on PORT: ${PORT}`);
 });
 
+mongoConnect();
 setSocket(httpServer);

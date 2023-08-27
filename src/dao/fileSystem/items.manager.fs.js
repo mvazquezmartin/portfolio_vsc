@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { v4: uuidv4 } = require("uuid");
 
 class ItemManager {
   constructor(path) {
@@ -16,6 +17,70 @@ class ItemManager {
       return this.items;
     } catch (error) {
       console.log(error);
+      throw error;
+    }
+  }
+
+  async getOneById(id) {
+    try {
+      await this.readFile();
+
+      const pid = id;
+      const item = this.items.find((item) => item._id === pid);
+
+      return item;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async create(item) {
+    try {
+      const {
+        title,
+        description,
+        category,
+        image,
+        price,
+        stock,
+        status = true,
+      } = item;
+      const _id = uuidv4();
+
+      const newItem = {
+        _id,
+        title,
+        description,
+        category,
+        image,
+        price,
+        stock,
+        status,
+      };
+
+      await this.readFile();
+      this.items.push(newItem);
+      await this.saveFile();
+
+      return newItem;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async update(id, updates) {
+    try {
+      await this.readFile();
+      const itemIndex = this.items.findIndex((item) => item._id === id);
+
+      const updateItem = { ...this.items.findIndex(itemIndex), ...updates };
+      this.items[itemIndex] = updateItem;
+
+      await this.saveFile();
+      const item = this.items[itemIndex];
+
+      return item;
+    } catch (error) {
       throw error;
     }
   }
