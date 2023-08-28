@@ -15,9 +15,8 @@ const persistence = (persistenceOption) => {
       break;
 
     default:
-      throw new Error("environment error", environment);
+      throw new Error("environment error", persistenceOption);
   }
 };
 
 module.exports = persistence;
-

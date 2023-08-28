@@ -1,5 +1,8 @@
 const fs = require("fs");
+const path = require("path");
 const { v4: uuidv4 } = require("uuid");
+
+const restartFile = path.join(__dirname, "../restart/restartStorage.json");
 
 class ItemManager {
   constructor(path) {
@@ -25,8 +28,9 @@ class ItemManager {
     try {
       await this.readFile();
 
-      const pid = id;
-      const item = this.items.find((item) => item._id === pid);
+      const iid = Number(id);
+
+      const item = this.items.find((item) => item._id === iid);
 
       return item;
     } catch (error) {
@@ -45,6 +49,7 @@ class ItemManager {
         stock,
         status = true,
       } = item;
+
       const _id = uuidv4();
 
       const newItem = {
@@ -89,16 +94,30 @@ class ItemManager {
     try {
       await this.readFile();
 
-      const _id = parseInt(id);
-      const index = this.items.findIndex((prod) => prod.id === _id);
+      const _id = Number(id);
 
-      if (index === -1) {
-        return [];
-      }
+      const index = this.items.findIndex((prod) => prod._id === _id);
+      if (index === -1) return [];
+
+      const item = this.items[index];
+      if (item.status === false) return [];
+
       this.items[index].status = false;
       await this.saveFile();
 
-      return this.products[index];
+      return item;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async restart() {
+    try {
+      const data = await fs.promises.readFile(restartFile, "utf-8");
+      this.items = JSON.parse(data);
+      await this.saveFile();
+
+      return { message: "hola mundo" };
     } catch (error) {
       throw error;
     }
