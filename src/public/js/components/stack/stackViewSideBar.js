@@ -1,9 +1,8 @@
 import { tabManager } from "../tabs/TabsManager.js";
-import { stacks } from "./stackObj.js";
 import { stackView } from "./stackView.js";
 
 // Render stack ViewSideBar
-const stackRenderViewSideBar = (stacks) => {
+const stackRenderViewSideBar = (stacks, nodo) => {
   stacks.forEach((stack) => {
     //estructura MiNodo
     const miNodo = document.createElement("div");
@@ -34,14 +33,14 @@ const stackRenderViewSideBar = (stacks) => {
     miNodo.appendChild(miNodoTitleDescription);
     miNodoTitleDescription.appendChild(miNodoTitulo);
     miNodoTitleDescription.appendChild(miNodoDescription);
-    viewSideBar.appendChild(miNodo);
+    nodo.appendChild(miNodo);
   });
-};
 
-const openStack = (evento) => {
-  const id = evento.target.closest(".stackFlex").dataset.tab;
-  const stack = stacks.find((e) => e.id === id);
-  tabManager.create(stack.title, () => stackView(stack), stack.image);
+  function openStack(evento) {
+    const id = evento.target.closest(".stackFlex").dataset.tab;
+    const stack = stacks.find((e) => e.id === id);
+    tabManager.create(stack.title, () => stackView(stack), stack.image);
+  }
 };
 
 export { stackRenderViewSideBar };

@@ -11,6 +11,11 @@ const iconPath = {
   EXPRESS: "./assets/express-svgrepo-com.svg",
   MONGO: "./assets/mongodb-svgrepo-com.svg",
   POSTMAN: "./assets/postman-icon-svgrepo-com.svg",
+  TYPESCRIPT: "./assets/typescript-official-svgrepo-com.svg",
+  NESTJS: "./assets/nestjs-svgrepo-com.svg",
+  POSTGRES: "./assets/postgresql-svgrepo-com.svg",
+  AWS: "./assets/aws-svgrepo-com.svg",
+  PYTHON: "./assets/python-svgrepo-com.svg",
   JPG: "./assets/jpg-svgrepo-com.svg",
   TXT: "./assets/txt-svgrepo-com.svg",
   VSC: "./assets/visual-studio-code-svgrepo-com.svg",
@@ -28,6 +33,11 @@ const imgPath = {
   CHESS_MEME: "./assets/meme01.jpg",
   DEPENDE_MEME: "./assets/meme02.jpg",
   M8B_CODE: "./assets/codeMagic8Ball.png",
+  TYPESCRIPT: "./assets/typescript.png",
+  NESTJS: "./assets/nest.png",
+  POSTGRES: "./assets/postgres.jpg",
+  AWS:"./assets/aws.png",
+  PYTHON:"./assets/python.png"
 };
 
 const certificadoPath = {

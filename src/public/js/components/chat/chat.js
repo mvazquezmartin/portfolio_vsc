@@ -8,6 +8,8 @@ const socket = io();
 const chatFunction = () => {
   const chatBox = document.getElementById("chatBox");
   const btnConnection = document.getElementById("btnConnection");
+  const userConnectedLog = document.getElementById("userConnectedLog");
+  const messageLogs = document.getElementById("messageLogs");
 
   const connecteUser = async () => {
     try {
@@ -33,6 +35,8 @@ const chatFunction = () => {
     socket.disconnect();
     alertConnection(currentUser, "desconectar", "error");
     currentUser = null;
+    userConnectedLog.textContent = "";
+    messageLogs.textContent = "";
     btnConnection.textContent = "Connect";
     btnConnection.classList.remove("btnDisconnectect");
     btnConnection.classList.add("btnConnection");

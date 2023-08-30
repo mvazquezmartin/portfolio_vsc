@@ -1,45 +1,103 @@
 // COMPONETE stackview
-.stackFlex {
+
+.stackRender {
   display: flex;
-  height: 80px;
-  padding: 0.5rem 0 0.5rem 0;
-  cursor: pointer;
-  font-family: $font-OpenSans;
+  flex-direction: column;
+  overflow-y: hidden;
+  transition: 1s;
 
   &:hover {
-    background-color: #5e6479;
+    overflow-y: auto;
   }
 
-  .stackDivImg {
+  .stackFlex {
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    height: 80px;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-family: $font-OpenSans;
 
-  .stackDescriptionTitle {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    justify-content: center;
-    user-select: none;
-    padding-left: 5px;
-
-    .stackTitle {
-      margin: 0;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: $color-white;
+    &:hover {
+      background-color: #5e6479;
     }
 
-    .stackDescription {
-      margin: 0;
-      margin-top: 7px;
-      padding-right: 8px;
-      font-size: 0.7rem;
-      color: #aaaaaa;
-      white-space: nowrap;
+    .stackDivImg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .stackDescriptionTitle {
+      display: flex;
+      flex-direction: column;
       overflow: hidden;
-      text-overflow: ellipsis;
+      justify-content: center;
+      user-select: none;
+      padding-left: 5px;
+
+      .stackTitle {
+        margin: 0;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: $color-white;
+      }
+
+      .stackDescription {
+        margin: 0;
+        margin-top: 7px;
+        padding-right: 8px;
+        font-size: 0.7rem;
+        color: #aaaaaa;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+.recommendedContainer {
+  display: grid;
+  height: 35%;
+  position: relative;
+  transition: 0.7s;
+
+  &.hiddenNTL {
+    height: 2.6%;
+    transition: 0.7s;
+  }
+
+  .nextToLearnTitle {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    border-top: $style-border-grid;
+    border-bottom: $style-border-grid;
+    background-color: $color-lightGrey;
+    min-height: 22px;
+
+    .nextToLearn {
+      font-size: 0.8rem;
+      padding-left: 1rem;
+      font-weight: 600;
+    }
+
+    span {
+      padding-left: 7px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+  }
+
+  .nextToLearnContainer {
+    @extend .stackRender;
+  }
+  @include mobile {
+    height: 45%;
+
+    &.hiddenNTL {
+      height: 4%;
     }
   }
 }
@@ -50,7 +108,7 @@
   min-height: 100%;
   width: 100%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   .stackTitleView {

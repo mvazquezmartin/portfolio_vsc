@@ -1,9 +1,16 @@
+const fs = require("fs");
+const path = require("path");
 const Items = require("./model/item.model");
+const ItemDTO = require("../../dto/item.dto");
+
+const restartFile = path.join(__dirname, "../restart/restartStorage.json");
 
 class ItemManager {
   async getAll() {
     try {
       const data = await Items.find();
+      if (data.length === 0) return null;
+      
       return data;
     } catch (error) {
       throw error;
@@ -12,7 +19,7 @@ class ItemManager {
 
   async getOneById(id) {
     try {
-      const data = await Items.findById(id);
+      const data = await Items.findOne({ _id: id, status: true });
       return data;
     } catch (error) {
       throw error;
@@ -41,6 +48,29 @@ class ItemManager {
     try {
       const data = await Items.findByIdAndUpdate(id, { status: false });
       return data;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async deleteAll() {
+    try {
+      await Items.deleteMany();
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async restart() {
+    try {
+      await Items.deleteMany();
+
+      const items = await fs.promises.readFile(restartFile, "utf-8");
+      const itemsArray = JSON.parse(items);
+
+      const transformedItems = itemsArray.map((item) => new ItemDTO(item));
+
+      await Items.insertMany(transformedItems);
     } catch (error) {
       throw error;
     }

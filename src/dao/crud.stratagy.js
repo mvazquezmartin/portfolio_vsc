@@ -23,6 +23,10 @@ class CRUDStrategy {
     return this.strategy.delete(id);
   }
 
+  deleteAll() {
+    return this.strategy.deleteAll();
+  }
+
   restart() {
     return this.strategy.restart();
   }

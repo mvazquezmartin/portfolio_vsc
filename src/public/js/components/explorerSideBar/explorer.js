@@ -11,8 +11,7 @@ const renderExplorer = () => {
   const fileOpen = document.getElementById("fileOpen");
   fileOpen.textContent = "PORTFOLIO";
 
-  const viewSideBar = document.getElementById("viewSideBar");
-  viewSideBar.style.overflowY = "auto";
+  const viewSideBar = document.getElementById("viewSideBar");  
   viewSideBar.innerHTML = "";
 
   const titleSideBar = document.getElementById("titleSideBar");

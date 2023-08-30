@@ -207,6 +207,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   user-select: none;
+  overflow: hidden;
 }
 .containerGrid .tabs {
   grid-area: tabs;
@@ -275,7 +276,7 @@ a:hover {
 @media screen and (max-width: 600px) {
   .containerGrid {
     position: relative;
-    height: 93.2vh;
+    height: 100vh;
     grid-template-columns: 0.45fr 3fr;
     grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
     grid-template-areas: "menuIcon navBarTop" "menuIcon tabs" "mainArea mainArea" "footer footer";
@@ -457,8 +458,13 @@ a:hover {
 }
 .assetsContainer .assets {
   max-width: 700px;
-  min-width: 350px;
+  min-width: 330px;
   height: auto;
+}
+@media screen and (max-width: 600px) {
+  .assetsContainer .assets {
+    padding: 0 1rem;
+  }
 }
 
 .accordion {
@@ -483,7 +489,7 @@ a:hover {
 
 .panel {
   display: flex;
-  gap: 3px;
+  gap: 1.5px;
   color: #f0f8ff;
   padding-left: 1.2rem;
   font-size: 0.8rem;
@@ -504,6 +510,9 @@ a:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.fileTxt:hover {
+  background-color: rgba(190, 190, 190, 0.2);
 }
 .fileTxt .iconoFile {
   width: 15px;
@@ -552,6 +561,7 @@ a:hover {
   padding: 12px 24px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #263666;
+  user-select: none;
 }
 .containerM8B .borderContainer .btnRta:hover {
   background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
@@ -808,7 +818,7 @@ a:hover {
 }
 @media screen and (max-width: 600px) {
   .readme, .readmeContainerM8b {
-    padding: 0.8rem;
+    padding: 1rem 0;
   }
   .readme .readmeStyle, .readmeContainerM8b .readmeStyle {
     max-width: 90%;
@@ -839,22 +849,31 @@ a:hover {
   max-width: 620px;
 }
 
-.stackFlex {
+.stackRender, .recommendedContainer .nextToLearnContainer {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  transition: 1s;
+}
+.stackRender:hover, .recommendedContainer .nextToLearnContainer:hover {
+  overflow-y: auto;
+}
+.stackRender .stackFlex, .recommendedContainer .nextToLearnContainer .stackFlex {
   display: flex;
   height: 80px;
-  padding: 0.5rem 0 0.5rem 0;
+  padding: 0.5rem;
   cursor: pointer;
   font-family: "Open Sans", sans-serif;
 }
-.stackFlex:hover {
+.stackRender .stackFlex:hover, .recommendedContainer .nextToLearnContainer .stackFlex:hover {
   background-color: #5e6479;
 }
-.stackFlex .stackDivImg {
+.stackRender .stackFlex .stackDivImg, .recommendedContainer .nextToLearnContainer .stackFlex .stackDivImg {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.stackFlex .stackDescriptionTitle {
+.stackRender .stackFlex .stackDescriptionTitle, .recommendedContainer .nextToLearnContainer .stackFlex .stackDescriptionTitle {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -862,13 +881,13 @@ a:hover {
   user-select: none;
   padding-left: 5px;
 }
-.stackFlex .stackDescriptionTitle .stackTitle {
+.stackRender .stackFlex .stackDescriptionTitle .stackTitle, .recommendedContainer .nextToLearnContainer .stackFlex .stackDescriptionTitle .stackTitle {
   margin: 0;
   font-size: 0.9rem;
   font-weight: 600;
   color: #f0f8ff;
 }
-.stackFlex .stackDescriptionTitle .stackDescription {
+.stackRender .stackFlex .stackDescriptionTitle .stackDescription, .recommendedContainer .nextToLearnContainer .stackFlex .stackDescriptionTitle .stackDescription {
   margin: 0;
   margin-top: 7px;
   padding-right: 8px;
@@ -879,12 +898,51 @@ a:hover {
   text-overflow: ellipsis;
 }
 
+.recommendedContainer {
+  display: grid;
+  height: 35%;
+  position: relative;
+  transition: 0.7s;
+}
+.recommendedContainer.hiddenNTL {
+  height: 2.6%;
+  transition: 0.7s;
+}
+.recommendedContainer .nextToLearnTitle {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  border-top: 0.5px solid #44475a;
+  border-bottom: 0.5px solid #44475a;
+  background-color: #282a36;
+  min-height: 22px;
+}
+.recommendedContainer .nextToLearnTitle .nextToLearn {
+  font-size: 0.8rem;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+.recommendedContainer .nextToLearnTitle span {
+  padding-left: 7px;
+  cursor: pointer;
+  font-size: 12px;
+}
+@media screen and (max-width: 600px) {
+  .recommendedContainer {
+    height: 45%;
+  }
+  .recommendedContainer.hiddenNTL {
+    height: 4%;
+  }
+}
+
 .stackViewTabs {
   display: flex;
   min-height: 100%;
   width: 100%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .stackViewTabs .stackTitleView {

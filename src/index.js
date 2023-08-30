@@ -1,3 +1,4 @@
+require("colors");
 const express = require("express");
 const { PORT } = require("./config/app.config");
 const { setSocket } = require("./config/socket.config");
@@ -13,7 +14,7 @@ app.use(express.static("src/public"));
 router(app);
 
 const httpServer = app.listen(PORT, () => {
-  console.log(`Server started on PORT: ${PORT}`);
+  console.log("Server started on PORT: ".green, PORT.cyan);
 });
 
 mongoConnect();

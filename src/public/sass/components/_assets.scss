@@ -5,7 +5,13 @@
   height: 100%;
   .assets {
     max-width: 700px;
-    min-width: 350px;
+    min-width: 330px;
     height: auto;
+  }
+
+  @include mobile {
+    .assets {
+      padding: 0 1rem;
+    }
   }
 }

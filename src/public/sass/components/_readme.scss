@@ -76,7 +76,8 @@
   }
 
   @include mobile {
-    padding: 0.8rem;
+    padding: 1rem 0;
+    
     .readmeStyle {
       max-width: 90%;
       h1 {
