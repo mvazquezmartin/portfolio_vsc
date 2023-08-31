@@ -54,6 +54,9 @@
       }
     }
   }
+  @include mobile {
+    overflow-y: auto;
+  }
 }
 
 .recommendedContainer {

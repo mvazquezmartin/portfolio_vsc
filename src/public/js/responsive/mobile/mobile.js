@@ -36,6 +36,9 @@ const mobileResponsive = () => {
     navBarAside.classList.toggle("navBarAsideRes");
     menu.classList.toggle("close");
     sideBar.classList.remove("sideBarRes");
+    for (const icon of sideBarIcon) {
+      icon.classList.remove("active");
+    }
   });
 
   for (const icon of sideBarIcon) {

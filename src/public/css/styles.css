@@ -897,6 +897,11 @@ a:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media screen and (max-width: 600px) {
+  .stackRender, .recommendedContainer .nextToLearnContainer {
+    overflow-y: auto;
+  }
+}
 
 .recommendedContainer {
   display: grid;
@@ -1316,4 +1321,70 @@ a:hover {
     grid-template-rows: 0.4fr 1.6fr 1fr;
     grid-template-areas: "logTittle logTittle logTittle" "messageLog messageLog messageLog" "messageLog messageLog messageLog";
   }
+}
+
+.repositoriesContainer {
+  overflow-y: hidden;
+}
+.repositoriesContainer:hover {
+  overflow-y: auto;
+}
+.repositoriesContainer .repositoryCard {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 1rem 0;
+  padding: 0 0.5rem;
+  height: 120px;
+}
+.repositoriesContainer .repositoryCard:hover {
+  background-color: rgba(190, 190, 190, 0.2);
+}
+.repositoriesContainer .repositoryCard .avatarAndTitle {
+  display: flex;
+  height: 70%;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top: 1px solid #6b6e7e;
+}
+.repositoriesContainer .repositoryCard .avatarAndTitle img {
+  width: 25%;
+  border-radius: 50%;
+  opacity: 0.1;
+  transition: 1s;
+  padding: 5px;
+}
+.repositoriesContainer .repositoryCard .avatarAndTitle img:hover {
+  opacity: 0.7;
+}
+.repositoriesContainer .repositoryCard .avatarAndTitle .dataRepo {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5rem;
+  width: 75%;
+  justify-content: space-around;
+  border-left: 1px solid #6b6e7e;
+}
+.repositoriesContainer .repositoryCard .avatarAndTitle .dataRepo span a:hover {
+  color: #c4d9eb;
+}
+.repositoriesContainer .repositoryCard .avatarAndTitle .dataRepo p {
+  font-size: 12px;
+}
+.repositoriesContainer .repositoryCard .avatarAndTitle .dataRepo .createdBy {
+  font-size: 14px;
+}
+.repositoriesContainer .repositoryCard .avatarAndTitle .dataRepo .createdBy a {
+  font-size: 12px;
+}
+.repositoriesContainer .repositoryCard .contentContainer {
+  display: flex;
+  align-items: center;
+  height: 30%;
+  font-size: 12px;
+  padding-right: 10px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top: 1px solid #6b6e7e;
+  border-bottom: 1px solid #6b6e7e;
 }

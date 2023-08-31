@@ -1,0 +1,80 @@
+.repositoriesContainer {
+  overflow-y: hidden;
+
+  &:hover {
+    overflow-y: auto;
+  }
+
+  .repositoryCard {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+    height: 120px;
+
+    &:hover {
+      background-color: #bebebe33;
+    }
+
+    .avatarAndTitle {
+      display: flex;
+      height: 70%;
+      //background-color: #3e404c;      
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+      border-top: 1px solid #6b6e7e;
+
+      img {
+        width: 25%;
+        border-radius: 50%;
+        opacity: 0.1;
+        transition: 1s;
+        padding: 5px;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      .dataRepo {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0.5rem;
+        width: 75%;
+        justify-content: space-around;
+        border-left: 1px solid #6b6e7e;
+
+        span {
+          a {
+            &:hover {
+              color: #c4d9eb;
+            }
+          }
+        }
+
+        p {
+          font-size: 12px;
+        }
+        .createdBy {
+          font-size: 14px;
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .contentContainer {
+      display: flex;
+      align-items: center;
+      height: 30%;
+      font-size: 12px;
+      padding-right: 10px;
+      //background-color: #2c2d38;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      border-top: 1px solid #6b6e7e;
+      border-bottom: 1px solid #6b6e7e;
+    }
+  }
+}

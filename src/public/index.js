@@ -1,6 +1,6 @@
 import { iconPath } from "./js/assetsPath/assetsPath.js";
 import { renderExplorer } from "./js/components/explorerSideBar/explorer.js";
-import { gridGithubRender } from "./js/components/github/gridRender.js";
+import { githubMainRender } from "./js/components/github/gridRender.js";
 import { renderMainText } from "./js/components/heroIndex/heroIndex.js";
 import { renderStack } from "./js/components/stack/stack.js";
 import { tabManager } from "./js/components/tabs/TabsManager.js";
@@ -22,7 +22,9 @@ stack.addEventListener("click", renderStack);
 inicio.addEventListener("click", () =>
   tabManager.create("Get Started", renderMainText, iconPath.VSC)
 );
-github.addEventListener("click", gridGithubRender);
+github.addEventListener("click", () =>
+  tabManager.create("Github", githubMainRender, iconPath.GITHUB)
+);
 
 window.addEventListener("load", mobileResponsive);
 window.addEventListener("resize", mobileResponsive);

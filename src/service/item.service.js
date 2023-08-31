@@ -168,6 +168,9 @@ class ItemService {
 const itemService = new ItemService();
 
 module.exports = itemService;
+
+// failed attempt with factory pattern to change persistence at runtime
+//
 // const itemService = {
 //   setStrategy: (persistence) => {
 //     const itemManager = PersistenceContext.strategyChange(persistence);

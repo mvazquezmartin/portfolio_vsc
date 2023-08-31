@@ -1,13 +1,34 @@
-const svgGrid = "https://ghchart.rshah.org/409ba5/mvazquezmartin";
+import { imgPath } from "../../assetsPath/assetsPath.js";
+import { repositories } from "./repositoriesObj.js";
+import { repositoriesRender } from "./repositoriesRender.js";
 
-const gridGithubRender = async () => {
+const githubMainRender = async () => {
+  const titleSideBar = document.getElementById("titleSideBar");
+  titleSideBar.textContent = "GITHUB";
+
+  const fileOpen = document.getElementById("fileOpen");
+  fileOpen.textContent = "REPOSITORIES";
+
+  const viewSideBar = document.getElementById("viewSideBar");
+  viewSideBar.innerHTML = "";
+
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
 
-  const grid = document.createElement("img");
-  grid.setAttribute("src", svgGrid);
+  const repositoriesContainer = document.createElement("div");
+  repositoriesContainer.classList.add("repositoriesContainer");
 
-  mainView.appendChild(grid);
+  const containerGithub = document.createElement("div");
+  containerGithub.classList.add("containerGitHub");
+
+  const calendar = document.createElement("img");
+  calendar.setAttribute("src", imgPath.CALENDAR);
+
+  viewSideBar.appendChild(repositoriesContainer);
+  containerGithub.appendChild(calendar);
+  mainView.appendChild(containerGithub);
+
+  repositoriesRender(repositories, repositoriesContainer);
 };
 
-export { gridGithubRender };
+export { githubMainRender };
