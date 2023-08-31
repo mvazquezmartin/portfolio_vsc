@@ -1,7 +1,3 @@
-import { responsive } from "../responsive.js";
-
-responsive.BREAKPOINT_MOBILE;
-
 // Función para cambiar el texto del elemento 'titleVSC' según el breakpoint
 const mobileResponsive = () => {
   const titleElement = document.querySelector(".titleVSC");

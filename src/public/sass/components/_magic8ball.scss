@@ -14,9 +14,10 @@
     border-radius: 25px;
     width: 50%;
     height: 50%;
+    background-color: #21222c;
     -webkit-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
     -moz-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
-    box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
+    box-shadow: 0px 0px 70px 10px rgba(202, 38, 235, 0.2);
 
     .titleM8B {
       margin-bottom: 1.5rem;
@@ -29,11 +30,11 @@
 
     .btnRta {
       margin-bottom: 1.5rem;
-      box-shadow: inset 0px -3px 7px 0px #29bbff;
-      background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-      background-color: #2dabf9;
+      box-shadow: inset 0px -3px 7px 0px #a064fa;
+      background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
+      background-color: #ca26eb;
       border-radius: 5px;
-      border: 1px solid #0b0e07;
+      border: 1px solid #44315e;
       display: inline-block;
       cursor: pointer;
       color: $color-white;
@@ -41,12 +42,12 @@
       font-size: 1rem;
       padding: 12px 24px;
       text-decoration: none;
-      text-shadow: 0px 1px 0px #263666;
+      text-shadow: 0px 1px 0px #19213b;
       user-select: none;
 
       &:hover {
-        background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
-        background-color: #0688fa;
+        background: linear-gradient(to bottom, #745c99 5%, #ca26eb 100%);
+        background-color: #745c99;
       }
 
       &:active {
@@ -64,7 +65,7 @@
         overflow: hidden;
         white-space: nowrap;
         font-size: 1.5rem;
-        border-right: 0.15em solid #18bdec;
+        border-right: 0.15em solid #bd93f9;
         transform: translateY(-50%);
       }
     }
@@ -83,7 +84,7 @@
 
 @keyframes blink {
   from {
-    border-right-color: #18bdec;
+    border-right-color: #bd93f9;
   }
   to {
     border-right-color: transparent;

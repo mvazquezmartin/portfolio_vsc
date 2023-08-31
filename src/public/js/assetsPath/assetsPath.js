@@ -16,6 +16,7 @@ const iconPath = {
   POSTGRES: "./assets/postgresql-svgrepo-com.svg",
   AWS: "./assets/aws-svgrepo-com.svg",
   PYTHON: "./assets/python-svgrepo-com.svg",
+  TAILWIND: "./assets/tailwind-svgrepo-com.svg",
   GITHUB: "./assets/github-svgrepo-com.svg",
   JPG: "./assets/jpg-svgrepo-com.svg",
   TXT: "./assets/txt-svgrepo-com.svg",
@@ -39,7 +40,8 @@ const imgPath = {
   POSTGRES: "./assets/postgres.jpg",
   AWS: "./assets/aws.png",
   PYTHON: "./assets/python.png",
-  CALENDAR: "https://ghchart.rshah.org/008000/mvazquezmartin",
+  TAILWIND:"./assets/tailwind.png",
+  CALENDAR: "https://ghchart.rshah.org/37086E/mvazquezmartin",
 };
 
 const certificadoPath = {

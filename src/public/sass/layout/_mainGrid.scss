@@ -91,6 +91,11 @@
           color: #5c6a98;
           font-size: 1.7rem;
           cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            color: $color-white;
+          }
         }
 
         .iconUserFlex {

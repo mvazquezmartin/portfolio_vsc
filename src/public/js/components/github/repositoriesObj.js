@@ -6,4 +6,5 @@ export const repositories = [
   "inventario_js",
   "WhatWouldYouRather",
   "chat_51120",
+  "portfolio_vsc",
 ];

@@ -1,11 +1,11 @@
 import { iconPath } from "./js/assetsPath/assetsPath.js";
 import { renderExplorer } from "./js/components/explorerSideBar/explorer.js";
-import { githubMainRender } from "./js/components/github/gridRender.js";
 import { renderMainText } from "./js/components/heroIndex/heroIndex.js";
 import { renderStack } from "./js/components/stack/stack.js";
 import { tabManager } from "./js/components/tabs/TabsManager.js";
-import { mobileResponsive } from "./js/responsive/mobile/mobile.js";
+import { setUpResponsiveEvents } from "./js/responsive/responsive.js";
 import { btnFocus } from "./js/utils/btnFocus.js";
+import { repositoriesRender } from "./js/components/github/repositoriesRender.js";
 
 // QUERY DE ELEMENTOS
 const explorer = document.getElementById("files");
@@ -17,20 +17,25 @@ const btnNavBarAside = document.querySelectorAll(".iconNavBarAside");
 // FUNCIONES
 
 // EVENTLISTENERS
-explorer.addEventListener("click", renderExplorer);
-stack.addEventListener("click", renderStack);
 inicio.addEventListener("click", () =>
   tabManager.create("Get Started", renderMainText, iconPath.VSC)
 );
-github.addEventListener("click", () =>
-  tabManager.create("Github", githubMainRender, iconPath.GITHUB)
-);
-
-window.addEventListener("load", mobileResponsive);
-window.addEventListener("resize", mobileResponsive);
+explorer.addEventListener("click", renderExplorer);
+stack.addEventListener("click", renderStack);
+github.addEventListener("click", repositoriesRender);
 
 // EJECUCION DE FUNCIONES
-
-btnFocus(btnNavBarAside);
+// MOBILE FUNCTION
+setUpResponsiveEvents();
+// FUNCTION
+btnFocus(btnNavBarAside, "active");
 tabManager.create("Get Started", renderMainText, iconPath.VSC);
 renderExplorer();
+
+// function handleClick(event) {
+//   console.log('Clic realizado en:', event.target);
+//   // Coloca aquí tu código de depuración específico
+// }
+
+// // Agregar un oyente de eventos de clic al documento
+// document.addEventListener('click', handleClick);

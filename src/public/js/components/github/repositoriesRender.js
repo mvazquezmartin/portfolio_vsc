@@ -1,4 +1,21 @@
-const repositoriesRender = (repositories, nodo) => {
+import { iconPath } from "../../assetsPath/assetsPath.js";
+import { tabManager } from "../tabs/TabsManager.js";
+import { githubMainRender } from "./gridRender.js";
+import { repositories } from "./repositoriesObj.js";
+
+const repositoriesRender = () => {
+  const titleSideBar = document.getElementById("titleSideBar");
+  titleSideBar.textContent = "GITHUB";
+
+  const fileOpen = document.getElementById("fileOpen");
+  fileOpen.textContent = "REPOSITORIES";
+  
+  const viewSideBar = document.getElementById("viewSideBar");
+  viewSideBar.innerHTML = "";
+
+  const repositoriesContainer = document.createElement("div");
+  repositoriesContainer.classList.add("repositoriesContainer");
+
   repositories.forEach((repository) => {
     fetch(`https://api.github.com/repos/mvazquezmartin/${repository}`)
       .then((response) => {
@@ -11,18 +28,15 @@ const repositoriesRender = (repositories, nodo) => {
         const repositoryCard = document.createElement("div");
         repositoryCard.classList.add("repositoryCard");
 
-        const avatarAndTitle = document.createElement("div");
-        avatarAndTitle.classList.add("avatarAndTitle");
-
-        const profilePicture = document.createElement("img");
-        profilePicture.setAttribute("src", data.owner.avatar_url);
-
         const dataRepo = document.createElement("div");
         dataRepo.classList.add("dataRepo");
 
         const titleContainer = document.createElement("span");
 
+        const iconLink = document.createElement("i");
+        iconLink.classList.add("bi", "bi-link-45deg");
         const title = document.createElement("a");
+        title.classList.add("titleRepo");
         title.setAttribute("href", data.html_url);
         title.setAttribute("target", "_blank");
         title.textContent = data.name;
@@ -30,33 +44,23 @@ const repositoriesRender = (repositories, nodo) => {
         const language = document.createElement("p");
         language.textContent = data.language;
 
-        const created = document.createElement("span");
-        created.classList.add("createdBy");
-        created.textContent = "Created by ";
-
-        const createdLink = document.createElement("a");
-        createdLink.setAttribute("href", data.owner.html_url);
-        createdLink.setAttribute("target", "_blank");
-        createdLink.textContent = data.owner.login;
-
         const contentContainer = document.createElement("div");
         contentContainer.classList.add("contentContainer");
         const content = document.createElement("p");
         content.textContent = data.description;
 
-        avatarAndTitle.appendChild(profilePicture);
+        titleContainer.appendChild(iconLink);
         titleContainer.appendChild(title);
         dataRepo.appendChild(titleContainer);
         dataRepo.appendChild(language);
-        created.appendChild(createdLink);
-        dataRepo.appendChild(created);
-        avatarAndTitle.appendChild(dataRepo);
-        repositoryCard.appendChild(avatarAndTitle);
+        repositoryCard.appendChild(dataRepo);
         contentContainer.appendChild(content);
         repositoryCard.appendChild(contentContainer);
-        nodo.appendChild(repositoryCard);
+        repositoriesContainer.appendChild(repositoryCard);
+        viewSideBar.appendChild(repositoriesContainer);
       });
   });
+  tabManager.create("Github", githubMainRender, iconPath.GITHUB);
 };
 
 export { repositoriesRender };

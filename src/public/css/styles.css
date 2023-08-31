@@ -161,6 +161,10 @@ a:hover {
   color: #5c6a98;
   font-size: 1.7rem;
   cursor: pointer;
+  transition: 0.3s;
+}
+.containerGrid .navBarAside .iconNavBar .iconFlex .iconNavBarAside:hover {
+  color: #f0f8ff;
 }
 .containerGrid .navBarAside .iconNavBar .iconFlex .iconUserFlex {
   display: flex;
@@ -535,9 +539,10 @@ a:hover {
   border-radius: 25px;
   width: 50%;
   height: 50%;
+  background-color: #21222c;
   -webkit-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
   -moz-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
-  box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
+  box-shadow: 0px 0px 70px 10px rgba(202, 38, 235, 0.2);
 }
 .containerM8B .borderContainer .titleM8B {
   margin-bottom: 1.5rem;
@@ -548,11 +553,11 @@ a:hover {
 }
 .containerM8B .borderContainer .btnRta {
   margin-bottom: 1.5rem;
-  box-shadow: inset 0px -3px 7px 0px #29bbff;
-  background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-  background-color: #2dabf9;
+  box-shadow: inset 0px -3px 7px 0px #a064fa;
+  background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
+  background-color: #ca26eb;
   border-radius: 5px;
-  border: 1px solid #0b0e07;
+  border: 1px solid #44315e;
   display: inline-block;
   cursor: pointer;
   color: #f0f8ff;
@@ -560,12 +565,12 @@ a:hover {
   font-size: 1rem;
   padding: 12px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #263666;
+  text-shadow: 0px 1px 0px #19213b;
   user-select: none;
 }
 .containerM8B .borderContainer .btnRta:hover {
-  background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
-  background-color: #0688fa;
+  background: linear-gradient(to bottom, #745c99 5%, #ca26eb 100%);
+  background-color: #745c99;
 }
 .containerM8B .borderContainer .btnRta:active {
   position: relative;
@@ -580,7 +585,7 @@ a:hover {
   overflow: hidden;
   white-space: nowrap;
   font-size: 1.5rem;
-  border-right: 0.15em solid #18bdec;
+  border-right: 0.15em solid #bd93f9;
   transform: translateY(-50%);
 }
 
@@ -594,7 +599,7 @@ a:hover {
 }
 @keyframes blink {
   from {
-    border-right-color: #18bdec;
+    border-right-color: #bd93f9;
   }
   to {
     border-right-color: transparent;
@@ -662,8 +667,8 @@ a:hover {
 }
 .playGroundGrid .htmlStyle .htmlArea:focus {
   outline: none;
-  border-top: 1px solid #f0f8ff;
-  box-shadow: 10px -5px 10px -3px #719ece;
+  border-top: 1px solid #ff79c6;
+  box-shadow: 10px -5px 10px -3px #bd93f9;
 }
 .playGroundGrid .cssStyle {
   grid-area: 1/2/4/3;
@@ -700,8 +705,8 @@ a:hover {
 }
 .playGroundGrid .cssStyle .cssArea:focus {
   outline: none;
-  border-top: 1px solid #f0f8ff;
-  box-shadow: 10px -5px 10px -3px #719ece;
+  border-top: 1px solid #ff79c6;
+  box-shadow: 10px -5px 10px -3px #bd93f9;
 }
 .playGroundGrid .javaScriptStyle {
   grid-area: 1/3/4/4;
@@ -735,8 +740,8 @@ a:hover {
 }
 .playGroundGrid .javaScriptStyle .javaScriptArea:focus {
   outline: none;
-  border-top: 1px solid #f0f8ff;
-  box-shadow: 10px -5px 10px -3px #719ece;
+  border-top: 1px solid #ff79c6;
+  box-shadow: 10px -5px 10px -3px #bd93f9;
 }
 .playGroundGrid .outPutArea {
   grid-area: 4/1/4/4;
@@ -1331,58 +1336,42 @@ a:hover {
 }
 .repositoriesContainer .repositoryCard {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-direction: column;
   margin: 1rem 0;
   padding: 0 0.5rem;
   height: 120px;
+  background-color: #21222c;
 }
 .repositoriesContainer .repositoryCard:hover {
   background-color: rgba(190, 190, 190, 0.2);
 }
-.repositoriesContainer .repositoryCard .avatarAndTitle {
-  display: flex;
-  height: 70%;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-  border-top: 1px solid #6b6e7e;
-}
-.repositoriesContainer .repositoryCard .avatarAndTitle img {
-  width: 25%;
-  border-radius: 50%;
-  opacity: 0.1;
-  transition: 1s;
-  padding: 5px;
-}
-.repositoriesContainer .repositoryCard .avatarAndTitle img:hover {
-  opacity: 0.7;
-}
-.repositoriesContainer .repositoryCard .avatarAndTitle .dataRepo {
+.repositoriesContainer .repositoryCard .dataRepo {
   display: flex;
   flex-direction: column;
   padding-left: 0.5rem;
-  width: 75%;
-  justify-content: space-around;
   border-left: 1px solid #6b6e7e;
 }
-.repositoriesContainer .repositoryCard .avatarAndTitle .dataRepo span a:hover {
-  color: #c4d9eb;
+.repositoriesContainer .repositoryCard .dataRepo span .bi {
+  color: #ca26eb;
+  margin-right: 5px;
 }
-.repositoriesContainer .repositoryCard .avatarAndTitle .dataRepo p {
+.repositoriesContainer .repositoryCard .dataRepo span .titleRepo {
+  color: #bd93f9;
+  transition: 0.2s;
+}
+.repositoriesContainer .repositoryCard .dataRepo span .titleRepo:hover {
+  color: #7a3cb5;
+}
+.repositoriesContainer .repositoryCard .dataRepo p {
   font-size: 12px;
-}
-.repositoriesContainer .repositoryCard .avatarAndTitle .dataRepo .createdBy {
-  font-size: 14px;
-}
-.repositoriesContainer .repositoryCard .avatarAndTitle .dataRepo .createdBy a {
-  font-size: 12px;
+  color: #aaa;
 }
 .repositoriesContainer .repositoryCard .contentContainer {
   display: flex;
   align-items: center;
-  height: 30%;
   font-size: 12px;
-  padding-right: 10px;
+  padding: 5px 10px 5px 0;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top: 1px solid #6b6e7e;

@@ -1,12 +1,11 @@
-const mobile = "600px";
-const desktop = "1024px";
+import { mobileResponsive } from "./mobile/mobile.js";
+import { responsive } from "./responsiveBreakPoints.js";
 
-const responsive = {
-  BREAKPOINT_MOBILE: `(max-width:${mobile})`,
-  BREAKPOINT_DESKTOP: `(min-width: ${desktop})`,
-  BREAKPOINT_TABLET: `(min-width: ${
-    parseInt(mobile) + 1
-  }px) and (max-width: ${parseInt(desktop)-1}px)`,
+const setUpResponsiveEvents = () => {
+  if (window.matchMedia(responsive.BREAKPOINT_MOBILE).matches) {
+    window.addEventListener("load", mobileResponsive);
+    window.addEventListener("resize", mobileResponsive);
+  }
 };
 
-export { responsive };
+export { setUpResponsiveEvents };
