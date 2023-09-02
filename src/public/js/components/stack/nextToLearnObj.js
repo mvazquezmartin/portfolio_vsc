@@ -22,14 +22,14 @@ export const nextToLearnObj = [
     id: "nestJs",
   },
   {
-    title: "POSTGRES SQL",
+    title: "POSTGRESQL",
     image: iconPath.POSTGRES,
     shortDescription:
       "Es un sistema de gestión de bases de datos relacional de código abierto que destaca por su flexibilidad, extensibilidad, seguridad y cumplimiento de estándares SQL. Es una opción popular tanto para pequeñas aplicaciones como para grandes sistemas empresariales debido a su capacidad para manejar una variedad de cargas de trabajo y su enfoque en la confiabilidad y la integridad de los datos.",
     certificado: imgPath.POSTGRES,
     linkCertificado: "https://httpstatusdogs.com/img/404.jpg",
-    path: "Next To Learn > PosgresSQL",
-    id: "postgres",
+    path: "Next To Learn > PosgreSQL",
+    id: "postgresql",
   },
   {
     title: "AWS",

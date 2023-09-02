@@ -55,4 +55,8 @@
       border-bottom: 1px solid #6b6e7e;
     }
   }
+
+  @include mobile {
+    overflow-y: auto;
+  }
 }

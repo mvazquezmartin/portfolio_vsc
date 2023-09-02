@@ -8,14 +8,14 @@ import {
 import { folderFileSideBar } from "./folderFileRender.js";
 
 const renderExplorer = () => {
-  const fileOpen = document.getElementById("fileOpen");
-  fileOpen.textContent = "PORTFOLIO";
-
-  const viewSideBar = document.getElementById("viewSideBar");  
-  viewSideBar.innerHTML = "";
-
   const titleSideBar = document.getElementById("titleSideBar");
   titleSideBar.textContent = "EXPLORER";
+
+  const viewSideBar = document.getElementById("viewSideBar");
+  viewSideBar.innerHTML = "";
+
+  const fileOpen = document.getElementById("fileOpen");
+  fileOpen.textContent = "PORTFOLIO";
 
   //Carpetas en Explorer
   const assets = folderFileSideBar(assetsFolder);
@@ -32,6 +32,12 @@ const renderExplorer = () => {
 
   const carpetaPrueba = folderFileSideBar(folder1);
   viewSideBar.appendChild(carpetaPrueba);
+
+  const collapseFolder = document.createElement("i");
+  collapseFolder.classList.add("bi", "bi-chevron-bar-contract");
+  collapseFolder.addEventListener("click", renderExplorer);
+
+  fileOpen.appendChild(collapseFolder);
 };
 
 export { renderExplorer };

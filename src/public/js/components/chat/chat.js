@@ -14,6 +14,7 @@ const chatFunction = () => {
   const connecteUser = async () => {
     try {
       const result = await alertNewUser();
+      if (result.dismiss === "cancel") return;
       const user = result.value;
       if (socket.connected === false) {
         socket.connect();

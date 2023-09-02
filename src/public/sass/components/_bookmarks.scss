@@ -1,0 +1,108 @@
+.booksmarksContainer {
+  .bookmark {
+    padding: 5px 0 5px 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    height: 25px;
+    cursor: pointer;
+
+    &.activeFile,
+    &:hover {
+      background-color: #bebebe33;
+    }
+
+    img {
+      width: 20px;
+    }
+
+    span {
+      font-family: $font-OpenSans;
+      font-size: 13px;
+    }
+  }
+}
+
+.channelsContainer {
+  overflow-y: auto;
+  .youtubeContainerTitle {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    min-height: 22px;
+    border-top: $style-border-grid;
+    border-bottom: $style-border-grid;
+    background-color: $color-lightGrey;
+    
+    span {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+  }
+  .bookmark {
+    display: flex;
+
+    &.activeFile,
+    &:hover {
+      background-color: #bebebe33;
+    }
+    .thumbnailsCard {
+      width: 30px;
+      border-radius: 50%;
+    }
+    .titleContainerCard {
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.bookmarkMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1rem 0;
+
+  .infoContent {
+    padding: 1rem 2.5rem 2.5rem;
+
+    h1 {
+      text-align: center;
+      border-bottom: $style-border-grid;
+      .bi {
+        font-size: 1.5rem;
+        color: #7a3cb5;
+        margin-right: 5px;
+      }
+      a {
+        font-size: 2rem;
+        color: #ca26eb;
+        font-weight: 600;
+
+        &:hover {
+          color: #7a3cb5;
+        }
+      }
+    }
+
+    .bookmarkDescription {
+      padding-top: 1rem;
+      font-size: 1rem;
+    }
+
+    .bookmarkApplied {
+      padding-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #aaaaaa;
+    }
+  }
+
+  .bookmarkImg {
+    height: 90%;
+    width: 95%;
+  }
+}

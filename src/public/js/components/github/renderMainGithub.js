@@ -2,7 +2,7 @@ import { imgPath } from "../../assetsPath/assetsPath.js";
 // import { repositories } from "./repositoriesObj.js";
 // import { repositoriesRender } from "./repositoriesRender.js";
 
-const githubMainRender = async () => {
+const renderMainGithub = async () => {
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
 
@@ -19,4 +19,4 @@ const githubMainRender = async () => {
   mainView.appendChild(containerGithub);
 };
 
-export { githubMainRender };
+export { renderMainGithub };

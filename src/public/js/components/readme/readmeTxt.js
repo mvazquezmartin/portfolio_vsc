@@ -31,7 +31,7 @@ const readme = {
   personalizar y mejorar según los requisitos de tu proyecto.
   - Los usuarios pueden modificar el código HTML, CSS y JavaScript en tiempo real y observar
   los cambios en el área de salida.
-  ## 🤓 Authors
+  ## 👤 Authors
   
   - [EazyTutorial](https://www.youtube.com/watch?v=tupa5BRHK4Q&ab_channel=GreatStack)<base target="_blank">
   
@@ -204,7 +204,7 @@ const readme = {
   ## 📝 Nota
   
   Quiero agradecerle a **Diego Naranjo**, mi profesor en CoderHouse Backend, por ser una fuente constante de motivación y aliento. A veces puede ser abrumador aprender una nueva habilidad, pero sus palabras de aliento y apoyo han sido un impulso increíble para seguir adelante.
-  ## Authors
+  ## 👤 Authors
   
   - [@mvazquezmartin](https://github.com/mvazquezmartin)<base target="_blank">
   

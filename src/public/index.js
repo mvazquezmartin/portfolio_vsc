@@ -5,12 +5,14 @@ import { renderStack } from "./js/components/stack/stack.js";
 import { tabManager } from "./js/components/tabs/TabsManager.js";
 import { setUpResponsiveEvents } from "./js/responsive/responsive.js";
 import { btnFocus } from "./js/utils/btnFocus.js";
-import { repositoriesRender } from "./js/components/github/repositoriesRender.js";
+import { renderRepositories } from "./js/components/github/renderRepositories.js";
+import { renderBookmarks } from "./js/components/bookmarks/renderBookmarks.js";
 
 // QUERY DE ELEMENTOS
 const explorer = document.getElementById("files");
 const inicio = document.getElementById("inicio");
 const stack = document.getElementById("stack");
+const bookmarks = document.getElementById("bookmarks");
 const github = document.getElementById("github");
 const btnNavBarAside = document.querySelectorAll(".iconNavBarAside");
 
@@ -22,7 +24,8 @@ inicio.addEventListener("click", () =>
 );
 explorer.addEventListener("click", renderExplorer);
 stack.addEventListener("click", renderStack);
-github.addEventListener("click", repositoriesRender);
+bookmarks.addEventListener("click", renderBookmarks);
+github.addEventListener("click", renderRepositories);
 
 // EJECUCION DE FUNCIONES
 // MOBILE FUNCTION

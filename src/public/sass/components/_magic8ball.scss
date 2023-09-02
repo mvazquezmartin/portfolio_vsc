@@ -11,25 +11,93 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #21222c;
     border-radius: 25px;
     width: 50%;
-    height: 50%;
-    background-color: #21222c;
-    -webkit-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
-    -moz-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
-    box-shadow: 0px 0px 70px 10px rgba(202, 38, 235, 0.2);
+    height: 50%;    
+    animation: breath 5.5s infinite;
+
+    @keyframes breath {
+      50% {
+        -webkit-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.17);
+        -moz-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.17);
+        box-shadow: 0px 0px 70px 10px rgba(202, 38, 235, 0.17);
+      }
+    }
 
     .titleM8B {
       margin-bottom: 1.5rem;
 
-      h1 {
+      .glitch {
+        position: relative;
         font-size: 3rem;
-        font-weight: 600;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 3px;
+        z-index: 1;
+        cursor: none;
+
+        &:before,
+        &:after {
+          display: block;
+          content: "Magic 8 Ball";
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0.8;
+        }
+
+        &:before {
+          content: attr(data-text); // Usar el texto del atributo data-text
+          animation: none; // Deshabilitar la animación aquí
+          color: #00ffff;
+          z-index: -1;
+        }
+
+        &:after {
+          content: attr(data-text); // Usar el texto del atributo data-text
+          animation: none; // Deshabilitar la animación aquí
+          color: #ff00ff;
+          z-index: -2;
+        }
+
+        &:hover {
+          &:before {
+            animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+              infinite;
+          }
+
+          &:after {
+            animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+              reverse both infinite;
+          }
+        }
+
+        @keyframes glitch-it {
+          0% {
+            transform: translate(0);
+          }
+          20% {
+            transform: translate(-2px, 2px);
+          }
+          40% {
+            transform: translate(-2px, -2px);
+          }
+          60% {
+            transform: translate(2px, 2px);
+          }
+          80% {
+            transform: translate(2px, -2px);
+          }
+          to {
+            transform: translate(0);
+          }
+        }
       }
     }
 
     .btnRta {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
       box-shadow: inset 0px -3px 7px 0px #a064fa;
       background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
       background-color: #ca26eb;
@@ -57,8 +125,7 @@
     }
 
     .respuestaContainer {
-      height: 1.5rem;
-
+      height: 2rem;
       .respuesta {
         width: 0;
         text-align: center;
@@ -96,7 +163,7 @@
     .borderContainer {
       width: 90%;
       .titleM8B {
-        h1 {
+        .glitch {
           font-size: 2rem;
         }
       }

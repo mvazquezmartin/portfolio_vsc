@@ -1,15 +1,15 @@
 import { iconPath } from "../../assetsPath/assetsPath.js";
 import { tabManager } from "../tabs/TabsManager.js";
-import { githubMainRender } from "./gridRender.js";
+import { renderMainGithub } from "./renderMainGithub.js";
 import { repositories } from "./repositoriesObj.js";
 
-const repositoriesRender = () => {
+const renderRepositories = () => {
   const titleSideBar = document.getElementById("titleSideBar");
   titleSideBar.textContent = "GITHUB";
 
   const fileOpen = document.getElementById("fileOpen");
   fileOpen.textContent = "REPOSITORIES";
-  
+
   const viewSideBar = document.getElementById("viewSideBar");
   viewSideBar.innerHTML = "";
 
@@ -60,7 +60,7 @@ const repositoriesRender = () => {
         viewSideBar.appendChild(repositoriesContainer);
       });
   });
-  tabManager.create("Github", githubMainRender, iconPath.GITHUB);
+  tabManager.create("Github", renderMainGithub, iconPath.GITHUB);
 };
 
-export { repositoriesRender };
+export { renderRepositories };

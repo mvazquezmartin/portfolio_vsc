@@ -91,7 +91,7 @@
           color: #5c6a98;
           font-size: 1.7rem;
           cursor: pointer;
-          transition: 0.3s;
+          transition: color 0.3s;
 
           &:hover {
             color: $color-white;
@@ -106,7 +106,7 @@
           cursor: pointer;
 
           .bi {
-            transition: 0.3s;
+            transition: color 0.3s;
 
             &:hover {
               color: $color-white;
@@ -124,6 +124,7 @@
     gap: 0px 0px;
     grid-auto-flow: row;
     border-right: $style-border-grid;
+    z-index: 2;
 
     .titleSideBar {
       grid-area: titleSideBar;
@@ -133,6 +134,7 @@
       font-size: 0.8rem;
       font-weight: 500;
       border-bottom: $style-border-grid;
+      user-select: none;
     }
 
     .fileOpen {
@@ -140,10 +142,26 @@
       background-color: $color-lightGrey;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       padding-left: 1rem;
       font-size: 0.8rem;
       font-weight: 600;
       border-bottom: $style-border-grid;
+      user-select: none;
+
+      .bi {
+        margin-right: 3px;
+        padding: 3px;
+        color: #cccccc;
+        cursor: pointer;
+        &:hover {
+          background-color: #bebebe33;
+          border-radius: 3px;
+        }
+        &:active {
+          color: #fff;
+        }
+      }
     }
 
     .viewSideBar {
@@ -164,6 +182,7 @@
     user-select: none;
     overflow-x: hidden;
   }
+
   .mainArea {
     display: grid;
     grid-area: mainArea;
@@ -205,6 +224,14 @@
       cursor: default;
       padding-left: 10px;
       font-size: 11px;
+
+      a {
+        display: flex;
+        align-items: center;
+        &:hover {
+          color: $color-pink;
+        }
+      }
 
       .bi {
         align-self: center;

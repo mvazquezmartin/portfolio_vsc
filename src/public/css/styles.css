@@ -161,7 +161,7 @@ a:hover {
   color: #5c6a98;
   font-size: 1.7rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 .containerGrid .navBarAside .iconNavBar .iconFlex .iconNavBarAside:hover {
   color: #f0f8ff;
@@ -174,7 +174,7 @@ a:hover {
   cursor: pointer;
 }
 .containerGrid .navBarAside .iconNavBar .iconFlex .iconUserFlex .bi {
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 .containerGrid .navBarAside .iconNavBar .iconFlex .iconUserFlex .bi:hover {
   color: #f0f8ff;
@@ -186,6 +186,7 @@ a:hover {
   gap: 0px 0px;
   grid-auto-flow: row;
   border-right: 0.5px solid #44475a;
+  z-index: 2;
 }
 .containerGrid .sideBar .titleSideBar {
   grid-area: titleSideBar;
@@ -195,16 +196,32 @@ a:hover {
   font-size: 0.8rem;
   font-weight: 500;
   border-bottom: 0.5px solid #44475a;
+  user-select: none;
 }
 .containerGrid .sideBar .fileOpen {
   grid-area: fileOpen;
   background-color: #282a36;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-left: 1rem;
   font-size: 0.8rem;
   font-weight: 600;
   border-bottom: 0.5px solid #44475a;
+  user-select: none;
+}
+.containerGrid .sideBar .fileOpen .bi {
+  margin-right: 3px;
+  padding: 3px;
+  color: #cccccc;
+  cursor: pointer;
+}
+.containerGrid .sideBar .fileOpen .bi:hover {
+  background-color: rgba(190, 190, 190, 0.2);
+  border-radius: 3px;
+}
+.containerGrid .sideBar .fileOpen .bi:active {
+  color: #fff;
 }
 .containerGrid .sideBar .viewSideBar {
   grid-area: viewSideBar;
@@ -260,6 +277,13 @@ a:hover {
   cursor: default;
   padding-left: 10px;
   font-size: 11px;
+}
+.containerGrid .footer .iconsFooterL a {
+  display: flex;
+  align-items: center;
+}
+.containerGrid .footer .iconsFooterL a:hover {
+  color: #ff79c6;
 }
 .containerGrid .footer .iconsFooterL .bi {
   align-self: center;
@@ -413,7 +437,6 @@ a:hover {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  justify-content: space-around;
   width: 100%;
   height: 100%;
 }
@@ -433,6 +456,7 @@ a:hover {
 }
 .containerHeroView .containerIntroAside .titleMain h2 {
   font-size: 1.5rem;
+  color: #aaa;
 }
 .containerHeroView .containerIntroAside .descriptionMain {
   width: 100%;
@@ -480,7 +504,7 @@ a:hover {
   outline: none;
   font-size: 13px;
   font-family: "Open Sans", sans-serif;
-  margin: 1px 0;
+  padding: 1px 0;
   padding-left: 1rem;
   cursor: pointer;
 }
@@ -494,7 +518,6 @@ a:hover {
 .panel {
   display: flex;
   gap: 1.5px;
-  color: #f0f8ff;
   padding-left: 1.2rem;
   font-size: 0.8rem;
   text-align: left;
@@ -536,23 +559,79 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #21222c;
   border-radius: 25px;
   width: 50%;
   height: 50%;
-  background-color: #21222c;
-  -webkit-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
-  -moz-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.9);
-  box-shadow: 0px 0px 70px 10px rgba(202, 38, 235, 0.2);
+  animation: breath 5.5s infinite;
+}
+@keyframes breath {
+  50% {
+    -webkit-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.17);
+    -moz-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.17);
+    box-shadow: 0px 0px 70px 10px rgba(202, 38, 235, 0.17);
+  }
 }
 .containerM8B .borderContainer .titleM8B {
   margin-bottom: 1.5rem;
 }
-.containerM8B .borderContainer .titleM8B h1 {
+.containerM8B .borderContainer .titleM8B .glitch {
+  position: relative;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 3px;
+  z-index: 1;
+  cursor: none;
+}
+.containerM8B .borderContainer .titleM8B .glitch:before, .containerM8B .borderContainer .titleM8B .glitch:after {
+  display: block;
+  content: "Magic 8 Ball";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+.containerM8B .borderContainer .titleM8B .glitch:before {
+  content: attr(data-text);
+  animation: none;
+  color: #00ffff;
+  z-index: -1;
+}
+.containerM8B .borderContainer .titleM8B .glitch:after {
+  content: attr(data-text);
+  animation: none;
+  color: #ff00ff;
+  z-index: -2;
+}
+.containerM8B .borderContainer .titleM8B .glitch:hover:before {
+  animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+.containerM8B .borderContainer .titleM8B .glitch:hover:after {
+  animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+@keyframes glitch-it {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  to {
+    transform: translate(0);
+  }
 }
 .containerM8B .borderContainer .btnRta {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   box-shadow: inset 0px -3px 7px 0px #a064fa;
   background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
   background-color: #ca26eb;
@@ -577,7 +656,7 @@ a:hover {
   top: 1px;
 }
 .containerM8B .borderContainer .respuestaContainer {
-  height: 1.5rem;
+  height: 2rem;
 }
 .containerM8B .borderContainer .respuestaContainer .respuesta {
   width: 0;
@@ -609,7 +688,7 @@ a:hover {
   .containerM8B .borderContainer {
     width: 90%;
   }
-  .containerM8B .borderContainer .titleM8B h1 {
+  .containerM8B .borderContainer .titleM8B .glitch {
     font-size: 2rem;
   }
   .containerM8B .borderContainer .btnRta {
@@ -813,6 +892,7 @@ a:hover {
 .readme .readmeStyle li, .readmeContainerM8b .readmeStyle li {
   font-size: 16px;
   line-height: 1.5;
+  margin-left: 1rem;
 }
 .readme .readmeStyle img, .readmeContainerM8b .readmeStyle img {
   max-width: 60%;
@@ -952,7 +1032,7 @@ a:hover {
   min-height: 100%;
   width: 100%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 .stackViewTabs .stackTitleView {
@@ -1076,9 +1156,9 @@ a:hover {
   text-align: center;
   padding: 2px 0;
   position: absolute;
-  z-index: 1;
   top: 10px;
   left: 110%;
+  z-index: 3;
 }
 .iconNavBarAside .toolTipText::after {
   content: "";
@@ -1376,4 +1456,101 @@ a:hover {
   border-bottom-left-radius: 3px;
   border-top: 1px solid #6b6e7e;
   border-bottom: 1px solid #6b6e7e;
+}
+@media screen and (max-width: 600px) {
+  .repositoriesContainer {
+    overflow-y: auto;
+  }
+}
+
+.booksmarksContainer .bookmark {
+  padding: 5px 0 5px 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  height: 25px;
+  cursor: pointer;
+}
+.booksmarksContainer .bookmark.activeFile, .booksmarksContainer .bookmark:hover {
+  background-color: rgba(190, 190, 190, 0.2);
+}
+.booksmarksContainer .bookmark img {
+  width: 20px;
+}
+.booksmarksContainer .bookmark span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+}
+
+.channelsContainer {
+  overflow-y: auto;
+}
+.channelsContainer .youtubeContainerTitle {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  min-height: 22px;
+  border-top: 0.5px solid #44475a;
+  border-bottom: 0.5px solid #44475a;
+  background-color: #282a36;
+}
+.channelsContainer .youtubeContainerTitle span {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.channelsContainer .bookmark {
+  display: flex;
+}
+.channelsContainer .bookmark.activeFile, .channelsContainer .bookmark:hover {
+  background-color: rgba(190, 190, 190, 0.2);
+}
+.channelsContainer .bookmark .thumbnailsCard {
+  width: 30px;
+  border-radius: 50%;
+}
+.channelsContainer .bookmark .titleContainerCard span {
+  font-size: 1rem;
+}
+
+.bookmarkMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1rem 0;
+}
+.bookmarkMainContainer .infoContent {
+  padding: 1rem 2.5rem 2.5rem;
+}
+.bookmarkMainContainer .infoContent h1 {
+  text-align: center;
+  border-bottom: 0.5px solid #44475a;
+}
+.bookmarkMainContainer .infoContent h1 .bi {
+  font-size: 1.5rem;
+  color: #7a3cb5;
+  margin-right: 5px;
+}
+.bookmarkMainContainer .infoContent h1 a {
+  font-size: 2rem;
+  color: #ca26eb;
+  font-weight: 600;
+}
+.bookmarkMainContainer .infoContent h1 a:hover {
+  color: #7a3cb5;
+}
+.bookmarkMainContainer .infoContent .bookmarkDescription {
+  padding-top: 1rem;
+  font-size: 1rem;
+}
+.bookmarkMainContainer .infoContent .bookmarkApplied {
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #aaaaaa;
+}
+.bookmarkMainContainer .bookmarkImg {
+  height: 90%;
+  width: 95%;
 }

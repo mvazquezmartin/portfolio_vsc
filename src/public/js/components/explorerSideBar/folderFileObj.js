@@ -32,6 +32,16 @@ const assetsFolder = {
         ),
     },
     {
+      name: "pro_googling.jpg",
+      icon: iconPath.JPG,
+      function: () =>
+        tabManager.create(
+          "pro_googling.jpg",
+          () => ilyudo(imgPath.PRO_GOOGLING, "pro googling"),
+          iconPath.JPG
+        ),
+    },
+    {
       name: "judo.jpg",
       icon: iconPath.JPG,
       function: () =>
@@ -69,10 +79,10 @@ const playGroundFolder = {
         ),
     },
     {
-      name: "readme_pg.txt",
-      icon: iconPath.TXT,
+      name: "readme_pg.md",
+      icon: iconPath.MARKDOWN,
       function: () =>
-        tabManager.create("readme_pg.txt", readmeRender, iconPath.TXT),
+        tabManager.create("readme_pg.md", readmeRender, iconPath.MARKDOWN),
     },
   ],
   subfolders: [],
@@ -88,10 +98,14 @@ const magic8Ball = {
         tabManager.create("magic8Ball.js", magic8BallRender, iconPath.M8B),
     },
     {
-      name: "readme_m8b.txt",
-      icon: iconPath.TXT,
+      name: "readme_m8b.md",
+      icon: iconPath.MARKDOWN,
       function: () =>
-        tabManager.create("readme_m8b.txt", readmeRender8Ball, iconPath.TXT),
+        tabManager.create(
+          "readme_m8b.md",
+          readmeRender8Ball,
+          iconPath.MARKDOWN
+        ),
     },
   ],
   subfolders: [],
@@ -107,10 +121,14 @@ const chat = {
         tabManager.create("SocketChat.js", chatRender, iconPath.CHAT),
     },
     {
-      name: "readme_chat.txt",
-      icon: iconPath.TXT,
+      name: "readme_chat.md",
+      icon: iconPath.MARKDOWN,
       function: () =>
-        tabManager.create("readme_chat.txt", readmeRenderChat, iconPath.TXT),
+        tabManager.create(
+          "readme_chat.md",
+          readmeRenderChat,
+          iconPath.MARKDOWN
+        ),
     },
   ],
   subfolders: [],
