@@ -29,6 +29,9 @@ const renderMainBookmark = (bookmark) => {
   bookmarkApplied.classList.add("bookmarkApplied");
   bookmarkApplied.textContent = `Aplicado en: ${bookmark.applied}`;
 
+  const bookmarkImgContainer = document.createElement("div");
+  bookmarkImgContainer.classList.add("bookmarkImgContainer");
+
   const bookmarkImg = document.createElement("img");
   bookmarkImg.classList.add("bookmarkImg");
   bookmarkImg.setAttribute("src", bookmark.img);
@@ -40,7 +43,8 @@ const renderMainBookmark = (bookmark) => {
   infoContent.appendChild(bookmarkDescription);
   infoContent.appendChild(bookmarkApplied);
   bookmarkMainContainer.appendChild(infoContent);
-  bookmarkMainContainer.appendChild(bookmarkImg);
+  bookmarkImgContainer.appendChild(bookmarkImg);
+  bookmarkMainContainer.appendChild(bookmarkImgContainer);
   mainView.appendChild(bookmarkMainContainer);
 };
 

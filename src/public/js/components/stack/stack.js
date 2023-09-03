@@ -41,10 +41,18 @@ const renderStack = () => {
   titleContainer.appendChild(nextToLearnTitle);
   recommendedContainer.appendChild(nextToLearnContainer);
 
-  stackRenderViewSideBar(stacks, stackRender);
-  stackRenderViewSideBar(nextToLearnObj, nextToLearnContainer);
-  const btn = document.querySelectorAll(".stackFlex");
-  btnFocus(btn, "activeFile");
+  //RENDER STACK INSTALLED
+  stacks.forEach((stack) => {
+    stackRenderViewSideBar(stack, stackRender);
+  });
+
+  //RENDER NEXT TO LEARN
+  nextToLearnObj.forEach((stack) => {
+    stackRenderViewSideBar(stack, nextToLearnContainer);
+  });
+
+  const btnActive = viewSideBar.querySelectorAll(".stackFlex");
+  btnFocus(btnActive, "activeFile");
 
   function hiddenNextToLearn() {
     recommendedContainer.classList.toggle("hiddenNTL");

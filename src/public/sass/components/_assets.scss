@@ -4,9 +4,10 @@
   align-items: center;
   height: 100%;
   .assets {
-    max-width: 700px;
-    min-width: 330px;
+    max-width: 650px;
+    width: 100%;
     height: auto;
+    padding: 1rem;
   }
 
   @include mobile {
