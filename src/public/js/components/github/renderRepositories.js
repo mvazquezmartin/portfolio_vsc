@@ -25,7 +25,6 @@ const renderRepositories = async () => {
         const response = await fetch(
           `https://api.github.com/repos/mvazquezmartin/${repository}`
         );
-        console.log("Testigo");
         if (!response.ok) {
           throw new Error("No se pudo obtener la respuesta de la API");
         }

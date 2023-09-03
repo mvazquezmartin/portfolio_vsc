@@ -28,9 +28,9 @@ const renderBookmarks = async () => {
   const bookmarksContainer = document.createElement("div");
   bookmarksContainer.classList.add("booksmarksContainer");
 
-  bookmarks.forEach((bookmark) =>{
+  bookmarks.forEach((bookmark) => {
     renderFavoriteBookmark(bookmark, bookmarksContainer);
-  })
+  });
 
   viewSideBar.appendChild(bookmarksContainer);
   youtubeContainer.appendChild(youtubeTitle);
@@ -38,12 +38,10 @@ const renderBookmarks = async () => {
   channelsContainer.appendChild(channelsRecommendedContainer);
   viewSideBar.appendChild(channelsContainer);
 
-  // await renderYoutube(youtubeId, channelsRecommendedContainer).then(() => {
-  //   const BtnBookmarks = viewSideBar.querySelectorAll(".bookmark");
-  //   btnFocus(BtnBookmarks, "activeFile");
-  // });
-  const BtnBookmarks = viewSideBar.querySelectorAll(".bookmark");
+  await renderYoutube(youtubeId, channelsRecommendedContainer).then(() => {
+    const BtnBookmarks = viewSideBar.querySelectorAll(".bookmark");
     btnFocus(BtnBookmarks, "activeFile");
+  });
 };
 
 export { renderBookmarks };

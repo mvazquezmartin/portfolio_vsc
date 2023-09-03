@@ -147,18 +147,23 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: 2rem;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
 
   .channelCardContainer {
     display: flex;
-    flex-direction: column;
-    width: 700px;
-    row-gap: 1rem;
+    flex-direction: column;    
+    width: 800px;
+    background-color: $color-darkBlue;
+    border-radius: 15px;
+    box-shadow: 0 0 11px rgba(202, 38, 235, 0.3);
+
     .channelBannerContainer {
-      height: 120px;
+      height: 145px;
       position: relative;
       overflow: hidden;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
       img {
         width: 100%;
         height: auto;
@@ -171,11 +176,12 @@
   .channelInfoContainer {
     display: flex;
     column-gap: 1rem;
+    padding: 10px;
 
     .thumbnailsContainer {
       display: flex;
       justify-content: center;
-      align-items: baseline;
+      align-items: center;
       img {
         min-height: 150px;
         border-radius: 50%;
@@ -187,10 +193,52 @@
       .channelTitle {
         font-size: 2rem;
       }
-      a {
+      .channelCustomUrl {
+        a {
+          color: #7c7c7c;
+          transition: 0.3s;
+          &:hover {
+            color: #bd93f9;
+          }
+        }
       }
       .channelDescription {
-        padding-top: 10px;
+        padding-top: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .videosContainer {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 1rem;
+
+    .videoContainer {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: $color-darkBlue;
+      border-radius: 15px;
+      transition: box-shadow 0.3s;
+      &:hover {        
+        box-shadow: 0 0 11px rgba(202, 38, 235, 0.4);
+      }
+      img {
+        max-width: 350px;
+        border-radius: 15px;
+      }
+      .videoContentContainer {
+        max-width: 350px;
+        padding: 10px 7px;
+        span {
+          a {
+            transition: 0.5s;
+            &:hover {
+              color: #bd93f9;
+            }
+          }
+        }
       }
     }
   }

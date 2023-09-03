@@ -569,8 +569,8 @@ a:hover {
 }
 @keyframes breath {
   50% {
-    -webkit-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.17);
-    -moz-box-shadow: 0px 0px 70px 10px rgba(31, 31, 31, 0.17);
+    -webkit-box-shadow: 0px 0px 70px 10px rgba(202, 38, 235, 0.17);
+    -moz-box-shadow: 0px 0px 70px 10px rgba(202, 38, 235, 0.17);
     box-shadow: 0px 0px 70px 10px rgba(202, 38, 235, 0.17);
   }
 }
@@ -1437,7 +1437,7 @@ a:hover {
   transition: 0.2s;
 }
 .repositoriesContainer .repositoryCard .dataRepo span .titleRepo:hover {
-  color: #7a3cb5;
+  color: #aa26eb;
 }
 .repositoriesContainer .repositoryCard .dataRepo p {
   font-size: 12px;
@@ -1587,19 +1587,23 @@ a:hover {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: 2rem;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
 }
 .channelMainContainer .channelCardContainer {
   display: flex;
   flex-direction: column;
-  width: 700px;
-  row-gap: 1rem;
+  width: 800px;
+  background-color: #191a21;
+  border-radius: 15px;
+  box-shadow: 0 0 11px rgba(202, 38, 235, 0.3);
 }
 .channelMainContainer .channelCardContainer .channelBannerContainer {
-  height: 120px;
+  height: 145px;
   position: relative;
   overflow: hidden;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 .channelMainContainer .channelCardContainer .channelBannerContainer img {
   width: 100%;
@@ -1611,11 +1615,12 @@ a:hover {
 .channelMainContainer .channelInfoContainer {
   display: flex;
   column-gap: 1rem;
+  padding: 10px;
 }
 .channelMainContainer .channelInfoContainer .thumbnailsContainer {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
 }
 .channelMainContainer .channelInfoContainer .thumbnailsContainer img {
   min-height: 150px;
@@ -1628,6 +1633,44 @@ a:hover {
 .channelMainContainer .channelInfoContainer .channelContentContainer .channelTitle {
   font-size: 2rem;
 }
+.channelMainContainer .channelInfoContainer .channelContentContainer .channelCustomUrl a {
+  color: #7c7c7c;
+  transition: 0.3s;
+}
+.channelMainContainer .channelInfoContainer .channelContentContainer .channelCustomUrl a:hover {
+  color: #bd93f9;
+}
 .channelMainContainer .channelInfoContainer .channelContentContainer .channelDescription {
-  padding-top: 10px;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+.channelMainContainer .videosContainer {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 1rem;
+}
+.channelMainContainer .videosContainer .videoContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #191a21;
+  border-radius: 15px;
+  transition: box-shadow 0.3s;
+}
+.channelMainContainer .videosContainer .videoContainer:hover {
+  box-shadow: 0 0 11px rgba(202, 38, 235, 0.4);
+}
+.channelMainContainer .videosContainer .videoContainer img {
+  max-width: 350px;
+  border-radius: 15px;
+}
+.channelMainContainer .videosContainer .videoContainer .videoContentContainer {
+  max-width: 350px;
+  padding: 10px 7px;
+}
+.channelMainContainer .videosContainer .videoContainer .videoContentContainer span a {
+  transition: 0.5s;
+}
+.channelMainContainer .videosContainer .videoContainer .videoContentContainer span a:hover {
+  color: #bd93f9;
 }
