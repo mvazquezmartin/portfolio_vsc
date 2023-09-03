@@ -1,9 +1,5 @@
 .repositoriesContainer {
-  overflow-y: hidden;
-
-  &:hover {
-    overflow-y: auto;
-  }
+  overflow-y: auto;
 
   .repositoryCard {
     display: flex;

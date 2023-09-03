@@ -72,11 +72,12 @@ a:hover {
   background: #44475a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: rgba(85, 85, 85, 0.5333333333);
+  border-radius: 5px;
   /* Handle on hover */
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #666;
 }
 
 .activeFile {
@@ -212,7 +213,7 @@ a:hover {
 }
 .containerGrid .sideBar .fileOpen .bi {
   margin-right: 3px;
-  padding: 3px;
+  padding: 2px;
   color: #cccccc;
   cursor: pointer;
 }
@@ -237,7 +238,7 @@ a:hover {
   background-color: #1d1e24;
   border-bottom: 0.5px solid #44475a;
   user-select: none;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .containerGrid .mainArea {
   display: grid;
@@ -937,10 +938,7 @@ a:hover {
 .stackRender, .recommendedContainer .nextToLearnContainer {
   display: flex;
   flex-direction: column;
-  overflow-y: hidden;
   transition: 1s;
-}
-.stackRender:hover, .recommendedContainer .nextToLearnContainer:hover {
   overflow-y: auto;
 }
 .stackRender .stackFlex, .recommendedContainer .nextToLearnContainer .stackFlex {
@@ -1409,9 +1407,6 @@ a:hover {
 }
 
 .repositoriesContainer {
-  overflow-y: hidden;
-}
-.repositoriesContainer:hover {
   overflow-y: auto;
 }
 .repositoriesContainer .repositoryCard {
@@ -1463,6 +1458,13 @@ a:hover {
   }
 }
 
+.booksmarksContainer {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  transition: 1s;
+  height: 65%;
+}
 .booksmarksContainer .bookmark {
   padding: 5px 0 5px 10px;
   display: flex;
@@ -1483,33 +1485,50 @@ a:hover {
 }
 
 .channelsContainer {
-  overflow-y: auto;
+  display: grid;
+  height: 35%;
+  position: relative;
 }
 .channelsContainer .youtubeContainerTitle {
   display: flex;
   align-items: center;
   position: sticky;
   top: 0;
-  min-height: 22px;
+  height: 22px;
   border-top: 0.5px solid #44475a;
   border-bottom: 0.5px solid #44475a;
   background-color: #282a36;
 }
 .channelsContainer .youtubeContainerTitle span {
+  padding-left: 1rem;
   font-size: 0.8rem;
   font-weight: 600;
 }
-.channelsContainer .bookmark {
+.channelsContainer .channelsRecommendedContainer {
   display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
-.channelsContainer .bookmark.activeFile, .channelsContainer .bookmark:hover {
+.channelsContainer .channelsRecommendedContainer .bookmark {
+  display: flex;
+  align-items: center;
+  padding: 10px 7px;
+  cursor: pointer;
+}
+.channelsContainer .channelsRecommendedContainer .bookmark.activeFile, .channelsContainer .channelsRecommendedContainer .bookmark:hover {
   background-color: rgba(190, 190, 190, 0.2);
 }
-.channelsContainer .bookmark .thumbnailsCard {
-  width: 30px;
+.channelsContainer .channelsRecommendedContainer .bookmark .thumbnailsCard {
+  width: 50px;
   border-radius: 50%;
 }
-.channelsContainer .bookmark .titleContainerCard span {
+.channelsContainer .channelsRecommendedContainer .bookmark .titleContainerCard {
+  padding-left: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.channelsContainer .channelsRecommendedContainer .bookmark .titleContainerCard span {
   font-size: 1rem;
 }
 
@@ -1553,4 +1572,53 @@ a:hover {
 .bookmarkMainContainer .bookmarkImg {
   height: 90%;
   width: 95%;
+}
+
+.channelMainContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 2rem;
+  justify-content: center;
+}
+.channelMainContainer .channelCardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  row-gap: 1rem;
+}
+.channelMainContainer .channelCardContainer .channelBannerContainer {
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+}
+.channelMainContainer .channelCardContainer .channelBannerContainer img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.channelMainContainer .channelInfoContainer {
+  display: flex;
+  column-gap: 1rem;
+}
+.channelMainContainer .channelInfoContainer .thumbnailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.channelMainContainer .channelInfoContainer .thumbnailsContainer img {
+  min-height: 150px;
+  border-radius: 50%;
+}
+.channelMainContainer .channelInfoContainer .channelContentContainer {
+  display: flex;
+  flex-direction: column;
+}
+.channelMainContainer .channelInfoContainer .channelContentContainer .channelTitle {
+  font-size: 2rem;
+}
+.channelMainContainer .channelInfoContainer .channelContentContainer .channelDescription {
+  padding-top: 10px;
 }

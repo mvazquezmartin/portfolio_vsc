@@ -28,6 +28,7 @@ const iconPath = {
   OPEN_FOLDER: "./assets/folder-open.svg",
   CLOSE_FOLDER: "./assets/folder-close.svg",
   CLOSE_X: "./assets/close-sm-svgrepo-com.svg",
+  YOUTUBE: "./assets/youtube-svgrepo-com.svg",
   GRIDLAYOUT: "https://grid.layoutit.com/img/icons/icon-44x44.png",
   SWEETALERT2: "./assets/sweetalert2.png",
   ILOVEIMG: "./assets/icon_iloveimg.png",

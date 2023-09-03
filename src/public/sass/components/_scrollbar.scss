@@ -6,10 +6,11 @@
   }
   /* Handle */
   &-thumb {
-    background: #888;
+    background: #55555588;
+    border-radius: 5px;
     /* Handle on hover */
     &:hover {
-      background: #555;
+      background: #666;
     }
   }
 }

@@ -3,7 +3,7 @@ const renderMainBookmark = (bookmark) => {
   mainView.innerHTML = "";
 
   const path = document.getElementById("rootPath");
-  path.textContent = `Bookmarks > ${bookmark.title}`;
+  path.textContent = `Bookmarks > Favorite > ${bookmark.title}`;
 
   const bookmarkMainContainer = document.createElement("div");
   bookmarkMainContainer.classList.add("bookmarkMainContainer");

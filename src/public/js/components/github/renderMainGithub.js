@@ -1,6 +1,4 @@
 import { imgPath } from "../../assetsPath/assetsPath.js";
-// import { repositories } from "./repositoriesObj.js";
-// import { repositoriesRender } from "./repositoriesRender.js";
 
 const renderMainGithub = async () => {
   const mainView = document.getElementById("mainView");

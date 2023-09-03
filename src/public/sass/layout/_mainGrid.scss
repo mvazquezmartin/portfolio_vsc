@@ -78,7 +78,7 @@
         button.active {
           border-left: 2px solid $color-pink;
           color: $color-white;
-          background-color: rgba(190, 190, 190, 0.2);
+          background-color: rgba(190, 190, 190, 0.2);          
         }
 
         .iconNavBarAside {
@@ -151,7 +151,7 @@
 
       .bi {
         margin-right: 3px;
-        padding: 3px;
+        padding: 2px;
         color: #cccccc;
         cursor: pointer;
         &:hover {
@@ -180,7 +180,7 @@
     background-color: $color-moreDarkGrey;
     border-bottom: $style-border-grid;
     user-select: none;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   .mainArea {

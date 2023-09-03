@@ -19,18 +19,16 @@ const btnNavBarAside = document.querySelectorAll(".iconNavBarAside");
 // FUNCIONES
 
 // EVENTLISTENERS
-inicio.addEventListener("click", () =>
-  tabManager.create("Get Started", renderMainText, iconPath.VSC)
-);
 explorer.addEventListener("click", renderExplorer);
 stack.addEventListener("click", renderStack);
 bookmarks.addEventListener("click", renderBookmarks);
 github.addEventListener("click", renderRepositories);
+inicio.addEventListener("click", () =>
+  tabManager.create("Get Started", renderMainText, iconPath.VSC)
+);
 
 // EJECUCION DE FUNCIONES
-// MOBILE FUNCTION
-setUpResponsiveEvents();
-// FUNCTION
+setUpResponsiveEvents(); // MOBILE FUNCTION
 btnFocus(btnNavBarAside, "active");
 tabManager.create("Get Started", renderMainText, iconPath.VSC);
 renderExplorer();

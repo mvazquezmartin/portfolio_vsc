@@ -1,4 +1,10 @@
 .booksmarksContainer {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  transition: 1s;
+  height: 65%;
+
   .bookmark {
     padding: 5px 0 5px 10px;
     display: flex;
@@ -24,36 +30,57 @@
 }
 
 .channelsContainer {
-  overflow-y: auto;
+  display: grid;
+  height: 35%;
+  position: relative;
+
   .youtubeContainerTitle {
     display: flex;
     align-items: center;
     position: sticky;
     top: 0;
-    min-height: 22px;
+    height: 22px;
     border-top: $style-border-grid;
     border-bottom: $style-border-grid;
     background-color: $color-lightGrey;
-    
+
     span {
+      padding-left: 1rem;
       font-size: 0.8rem;
       font-weight: 600;
     }
   }
-  .bookmark {
-    display: flex;
 
-    &.activeFile,
-    &:hover {
-      background-color: #bebebe33;
-    }
-    .thumbnailsCard {
-      width: 30px;
-      border-radius: 50%;
-    }
-    .titleContainerCard {
-      span {
-        font-size: 1rem;
+  .channelsRecommendedContainer {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    .bookmark {
+      display: flex;
+      align-items: center;
+      padding: 10px 7px;
+      cursor: pointer;
+
+      &.activeFile,
+      &:hover {
+        background-color: #bebebe33;
+      }
+
+      .thumbnailsCard {
+        width: 50px;
+        border-radius: 50%;
+      }
+
+      .titleContainerCard {
+        padding-left: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        span {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -104,5 +131,58 @@
   .bookmarkImg {
     height: 90%;
     width: 95%;
+  }
+}
+
+.channelMainContainer {
+  display: flex;
+  flex-direction: column;  
+  height: 100%;  
+  padding-top: 2rem;
+  justify-content: center;
+
+  .channelCardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    row-gap: 1rem;
+    .channelBannerContainer {
+      height: 120px;
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .channelInfoContainer {
+    display: flex;
+    column-gap: 1rem;
+
+    .thumbnailsContainer {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      img {
+        min-height: 150px;
+        border-radius: 50%;
+      }
+    }
+    .channelContentContainer {
+      display: flex;
+      flex-direction: column;
+      .channelTitle {
+        font-size: 2rem;
+      }
+      a {
+      }
+      .channelDescription {
+        padding-top: 10px;
+      }
+    }
   }
 }

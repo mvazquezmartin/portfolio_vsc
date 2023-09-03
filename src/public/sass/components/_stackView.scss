@@ -2,13 +2,9 @@
 
 .stackRender {
   display: flex;
-  flex-direction: column;
-  overflow-y: hidden;
+  flex-direction: column;  
   transition: 1s;
-
-  &:hover {
-    overflow-y: auto;
-  }
+  overflow-y: auto; 
 
   .stackFlex {
     display: flex;

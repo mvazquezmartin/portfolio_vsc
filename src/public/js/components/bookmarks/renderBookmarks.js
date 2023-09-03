@@ -1,10 +1,9 @@
 import { btnFocus } from "../../utils/btnFocus.js";
-import { tabManager } from "../tabs/TabsManager.js";
 import { bookmarks, youtubeId } from "./bookmarksObj.js";
-import { renderMainBookmark } from "./renderMainBookmark.js";
+import { renderFavoriteBookmark } from "./renderFavoriteBookmark.js";
 import { renderYoutube } from "./renderYoutubeBookmark.js";
 
-const renderBookmarks = () => {
+const renderBookmarks = async () => {
   const titleSideBar = document.getElementById("titleSideBar");
   titleSideBar.textContent = "BOOKMARKS";
 
@@ -23,48 +22,28 @@ const renderBookmarks = () => {
   const youtubeTitle = document.createElement("span");
   youtubeTitle.textContent = "RECOMMENDED CHANNELS";
 
+  const channelsRecommendedContainer = document.createElement("div");
+  channelsRecommendedContainer.classList.add("channelsRecommendedContainer");
+
   const bookmarksContainer = document.createElement("div");
   bookmarksContainer.classList.add("booksmarksContainer");
 
-  bookmarks.forEach((bookmark) => {
-    const bookmarkContainer = document.createElement("div");
-    bookmarkContainer.classList.add("bookmark");
-    bookmarkContainer.setAttribute("id", bookmark.id);
-    bookmarkContainer.dataset.tab = bookmark.id;
-    bookmarkContainer.addEventListener("click", openBookmark);
+  bookmarks.forEach((bookmark) =>{
+    renderFavoriteBookmark(bookmark, bookmarksContainer);
+  })
 
-    const bookmarkIcon = document.createElement("img");
-    bookmarkIcon.setAttribute("src", bookmark.icon);
-    bookmarkIcon.setAttribute("alt", bookmark.title);
-
-    const bookmarkTitle = document.createElement("span");
-    bookmarkTitle.textContent = bookmark.title;
-
-    bookmarksContainer.appendChild(bookmarkContainer);
-    bookmarkContainer.appendChild(bookmarkIcon);
-    bookmarkContainer.appendChild(bookmarkTitle);
-    viewSideBar.appendChild(bookmarksContainer);
-  });
-
-  function openBookmark(event) {
-    const id = event.target.closest(".bookmark").dataset.tab;
-    const bookmark = bookmarks.find((e) => e.id === id);
-
-    tabManager.create(
-      bookmark.title,
-      () => renderMainBookmark(bookmark),
-      bookmark.icon
-    );
-  }
-
+  viewSideBar.appendChild(bookmarksContainer);
   youtubeContainer.appendChild(youtubeTitle);
   channelsContainer.appendChild(youtubeContainer);
+  channelsContainer.appendChild(channelsRecommendedContainer);
   viewSideBar.appendChild(channelsContainer);
 
-  renderYoutube(youtubeId, channelsContainer);
-
+  // await renderYoutube(youtubeId, channelsRecommendedContainer).then(() => {
+  //   const BtnBookmarks = viewSideBar.querySelectorAll(".bookmark");
+  //   btnFocus(BtnBookmarks, "activeFile");
+  // });
   const BtnBookmarks = viewSideBar.querySelectorAll(".bookmark");
-  btnFocus(BtnBookmarks, "activeFile");
+    btnFocus(BtnBookmarks, "activeFile");
 };
 
 export { renderBookmarks };

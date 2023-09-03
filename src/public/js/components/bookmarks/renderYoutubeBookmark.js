@@ -1,34 +1,30 @@
-const renderYoutube = (youtubeChannels, nodo) => {
+import { renderChannelCard } from "./renderChannelCard.js";
+
+const cacheData = {};
+
+const renderYoutube = async (youtubeChannels, nodo) => {
   const channelArray = Object.values(youtubeChannels);
 
-  channelArray.forEach((chanelId) => {
-    fetch(`http://localhost:3030/getinfochannel?channelId=${chanelId}`)
-      .then((response) => {
+  const fetchPromises = channelArray.map(async (channelId) => {
+    try {
+      if (!cacheData[channelId]) {
+        const response = await fetch(
+          `http://localhost:3030/getinfochannel?channelId=${channelId}`
+        );
         if (!response.ok) {
           throw new Error("No se pudo obtener la respuesta de la API");
         }
-        return response.json();
-      })
-      .then((data) => {
-        const channelCard = document.createElement("div");
-        channelCard.classList.add("bookmark");
+        const data = await response.json();
+        cacheData[channelId] = data;
+      }
 
-        const thumbnailsCard = document.createElement("img");
-        thumbnailsCard.classList.add("thumbnailsCard");
-        thumbnailsCard.setAttribute("src", data.payload.thumbnails);
-
-        const titleContainerCard = document.createElement("div");
-        titleContainerCard.classList.add("titleContainerCard");
-
-        const titleCard = document.createElement("span");
-        titleCard.textContent = data.payload.user;
-
-        channelCard.appendChild(thumbnailsCard);
-        titleContainerCard.appendChild(titleCard);
-        channelCard.appendChild(titleContainerCard);
-        nodo.appendChild(channelCard);
-      });
+      renderChannelCard(cacheData[channelId], nodo);
+    } catch (error) {
+      console.log(error);
+    }
   });
+
+  await Promise.all(fetchPromises);
 };
 
 export { renderYoutube };
