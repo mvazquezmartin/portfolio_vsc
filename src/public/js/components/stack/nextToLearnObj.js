@@ -12,6 +12,16 @@ export const nextToLearnObj = [
     id: "typescript",
   },
   {
+    title: "DOCKER",
+    image: iconPath.DOCKER,
+    shortDescription:
+      'Es una plataforma de código abierto diseñada para desarrollar, implementar y ejecutar aplicaciones de manera eficiente en entornos aislados conocidos como "contenedores". Los contenedores son entornos ligeros y portátiles que encapsulan una aplicación y todas sus dependencias, incluidas bibliotecas y configuraciones, en un solo paquete.',
+    certificado: imgPath.DOCKER,
+    linkCertificado: "https://httpstatusdogs.com/img/404.jpg",
+    path: "Next To Learn > Docker",
+    id: "docker",
+  },
+  {
     title: "NEST JS",
     image: iconPath.NESTJS,
     shortDescription:
@@ -60,5 +70,5 @@ export const nextToLearnObj = [
     linkCertificado: "https://httpstatusdogs.com/img/404.jpg",
     path: "Next To Learn > Tailwind",
     id: "tailwind",
-  }
+  },
 ];

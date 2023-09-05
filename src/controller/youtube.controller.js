@@ -50,7 +50,7 @@ router.get("/", async (req, res) => {
 
     await cacheService.create(channelId, channelInfo);
 
-    console.log("HELLO WORLD!")
+    console.log("HELLO WORLD!:", channelData.brandingSettings.channel.title);
 
     res.status(dataResponse.status).json({
       status: dataResponse.statusText,

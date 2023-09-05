@@ -41,7 +41,7 @@
   }
 
   &.activeTab {
-    border-top: 0.5px solid $color-pink;
+    box-shadow: inset 0px 1px 0 $color-pink;
     background-color: rgba(190, 190, 190, 0.1);
     flex-shrink: 0;
 

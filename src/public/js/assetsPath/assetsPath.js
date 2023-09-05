@@ -17,6 +17,7 @@ const iconPath = {
   AWS: "./assets/aws-svgrepo-com.svg",
   PYTHON: "./assets/python-svgrepo-com.svg",
   TAILWIND: "./assets/tailwind-svgrepo-com.svg",
+  DOCKER: "./assets/docker-svgrepo-com.svg",
   GITHUB: "./assets/github-svgrepo-com.svg",
   JPG: "./assets/jpg-svgrepo-com.svg",
   TXT: "./assets/txt-svgrepo-com.svg",
@@ -42,6 +43,8 @@ const iconPath = {
   CODEWARS: "./assets/icon_codewars.png",
   SVGREPO: "./assets/icon_svgrepo.png",
   ROADMAP: "./assets/icon_roadmap.png",
+  RAPIDAPI: "./assets/icon_rapidapi.png",
+  CODEPEN: "./assets/codepen-svgrepo-com.svg",
 };
 
 const imgPath = {
@@ -57,6 +60,7 @@ const imgPath = {
   AWS: "./assets/aws.png",
   PYTHON: "./assets/python.png",
   TAILWIND: "./assets/tailwind.png",
+  DOCKER: "./assets/docker.png",
   CALENDAR: "https://ghchart.rshah.org/37086E/mvazquezmartin",
   GRIDLAYOUT: "./assets/Screenshot_gridlayoutit.png",
   SWEETALERT2: "./assets/Screenshot_sweetalert2.png",
@@ -72,6 +76,8 @@ const imgPath = {
   CODEWARS: "./assets/Screenshot_codewars.png",
   SVGREPO: "./assets/Screenshot_svgrepo.png",
   ROADMAP: "./assets/Screenshot_roadmap.png",
+  RAPIDAPI: "./assets/Screenshot_rapidapi.png",
+  CODEPEN: "./assets/Screenshot_codepen.png",
 };
 
 const certificadoPath = {

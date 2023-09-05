@@ -137,16 +137,16 @@ const chat = {
 const folder1 = {
   folderName: "Inventario",
   files: [
-    // {
-    //   name: "Archivo1.txt",
-    //   icon: "./assets/code-file-svgrepo-com.svg",
-    //   function: () => console.log("archivo1"),
-    // },
-    // {
-    //   name: "Archivo2.txt",
-    //   icon: "./assets/code-file-svgrepo-com.svg",
-    //   function: () => console.log("archivo1"),
-    // },
+    {
+      name: "Archivo1.txt",
+      icon: "./assets/code-file-svgrepo-com.svg",
+      function: () => console.log("archivo1"),
+    },
+    {
+      name: "Archivo2.txt",
+      icon: "./assets/code-file-svgrepo-com.svg",
+      function: () => console.log("archivo1"),
+    },
   ],
   subfolders: [
     {

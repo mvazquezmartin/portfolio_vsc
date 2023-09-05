@@ -76,9 +76,9 @@
         height: 100%;
 
         button.active {
-          border-left: 2px solid $color-pink;
+          box-shadow: inset 1.5px 0 $color-pink;
           color: $color-white;
-          background-color: rgba(190, 190, 190, 0.2);          
+          background-color: rgba(190, 190, 190, 0.2);
         }
 
         .iconNavBarAside {
@@ -152,7 +152,7 @@
       .bi {
         margin-right: 3px;
         padding: 2px;
-        color: #cccccc;
+        color: #888;
         cursor: pointer;
         &:hover {
           background-color: #bebebe33;
@@ -228,8 +228,9 @@
       a {
         display: flex;
         align-items: center;
+        transition: 0.5s;
         &:hover {
-          color: $color-pink;
+          color: #bd93f9;
         }
       }
 

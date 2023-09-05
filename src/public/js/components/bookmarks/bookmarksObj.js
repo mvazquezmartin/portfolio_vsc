@@ -142,6 +142,26 @@ const bookmarks = [
     id: "codewars",
     applied: " - ",
   },
+  {
+    icon: iconPath.RAPIDAPI,
+    title: "Rapid API",
+    description:
+      "Es una plataforma que facilita el acceso a una amplia variedad de API (Interfaces de Programación de Aplicaciones) de terceros. Las API son conjuntos de reglas y protocolos que permiten que diferentes aplicaciones y servicios se comuniquen entre sí. RapidAPI actúa como un mercado o marketplace donde los desarrolladores pueden buscar, encontrar, probar y conectar fácilmente con miles de API diferentes en una sola plataforma.",
+    img: imgPath.RAPIDAPI,
+    link: "https://rapidapi.com/",
+    id: "rapidapi",
+    applied: " - ",
+  },
+  {
+    icon: iconPath.CODEPEN,
+    title: "Codepen",
+    description:
+      "Es una plataforma en línea que brinda a los desarrolladores web y diseñadores una experiencia de desarrollo y colaboración en tiempo real. Con CodePen.io, los usuarios pueden crear, editar y compartir código HTML, CSS y JavaScript de manera interactiva y visual. La plataforma ofrece un editor de código en vivo que muestra los cambios instantáneamente a medida que se escriben, lo que facilita la experimentación y la visualización de resultados en tiempo real.",
+    img: imgPath.CODEPEN,
+    link: "https://codepen.io/",
+    id: "codepen",
+    applied: " - ",
+  },
 ];
 
 const youtubeId = {

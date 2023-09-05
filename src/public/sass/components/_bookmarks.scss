@@ -1,7 +1,7 @@
 .booksmarksContainer {
   display: flex;
   flex-direction: column;
-  overflow-y: hidden;
+  overflow-y: auto;
   transition: 1s;
   height: 65%;
 
@@ -107,11 +107,12 @@
       }
       a {
         font-size: 2rem;
-        color: #ca26eb;
+        color: #bd93f9;
         font-weight: 600;
+        transition: 0.5s;
 
         &:hover {
-          color: #7a3cb5;
+          color: #aa26eb;
         }
       }
     }
@@ -139,12 +140,13 @@
       height: auto;
       max-width: 1110px;
       width: 100%;
+      border-radius: 10px;
     }
   }
 }
 
 .channelMainContainer {
-  display: flex;
+display: flex;
   flex-direction: column;
   height: 100%;
   align-items: center;
@@ -152,8 +154,10 @@
 
   .channelCardContainer {
     display: flex;
-    flex-direction: column;    
-    width: 800px;
+    flex-direction: column;
+    margin: 2rem 0;
+    max-width: 800px;
+    width: 100%;
     background-color: $color-darkBlue;
     border-radius: 15px;
     box-shadow: 0 0 11px rgba(202, 38, 235, 0.3);
@@ -166,7 +170,8 @@
       border-top-left-radius: 15px;
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -205,27 +210,30 @@
       .channelDescription {
         padding-top: 1rem;
         font-size: 0.9rem;
+        white-space: pre-line;
       }
     }
   }
 
   .videosContainer {
     display: flex;
-    align-items: flex-start;
-    column-gap: 1rem;
+    width: 100%;
+    justify-content: space-evenly;
 
     .videoContainer {
       display: flex;
-      flex-direction: column;
-      height: 100%;
+      flex-direction: column;      
       background-color: $color-darkBlue;
       border-radius: 15px;
+      max-width: 300px;
+      width: 100%;
       transition: box-shadow 0.3s;
-      &:hover {        
+      &:hover {
         box-shadow: 0 0 11px rgba(202, 38, 235, 0.4);
       }
       img {
-        max-width: 350px;
+        height: auto;
+        width: 100%;
         border-radius: 15px;
       }
       .videoContentContainer {

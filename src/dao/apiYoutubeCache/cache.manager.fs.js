@@ -18,12 +18,15 @@ class CacheManager {
 
       return channelData || null;
     } catch (error) {
+      console.error("Error in getOne:", error);
       throw error;
     }
   }
 
   async create(channelId, channelInfo) {
     try {
+      await this.readFile();
+
       const newData = {
         channelId,
         data: channelInfo,
@@ -34,13 +37,16 @@ class CacheManager {
       );
 
       if (existingDataIndex !== -1) {
-        this.data[existingDataIndex] = newData;
+        this.data[existingDataIndex].data = channelInfo;
       }
 
       this.data.push(newData);
 
       await this.saveFile();
-    } catch (error) {}
+    } catch (error) {
+      console.error("Error in create:", error);
+      throw error;
+    }
   }
 
   async readFile() {
@@ -48,6 +54,7 @@ class CacheManager {
       const data = await fs.promises.readFile(this.filePath, "utf-8");
       if (data) this.data = JSON.parse(data);
     } catch (error) {
+      console.error("Error in readFile:", error);
       throw error;
     }
   }
@@ -56,6 +63,7 @@ class CacheManager {
     try {
       await fs.promises.writeFile(this.filePath, JSON.stringify(this.data));
     } catch (error) {
+      console.error("Error in saveFile:", error);
       throw error;
     }
   }

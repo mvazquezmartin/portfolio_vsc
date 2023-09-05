@@ -24,13 +24,13 @@ stack.addEventListener("click", renderStack);
 bookmarks.addEventListener("click", renderBookmarks);
 github.addEventListener("click", renderRepositories);
 inicio.addEventListener("click", () =>
-  tabManager.create("Get Started", renderMainText, iconPath.VSC)
+  tabManager.create("Welcome", renderMainText, iconPath.VSC)
 );
 
 // EJECUCION DE FUNCIONES
 setUpResponsiveEvents(); // MOBILE FUNCTION
 btnFocus(btnNavBarAside, "active");
-tabManager.create("Get Started", renderMainText, iconPath.VSC);
+tabManager.create("Welcome", renderMainText, iconPath.VSC);
 renderExplorer();
 
 // function handleClick(event) {

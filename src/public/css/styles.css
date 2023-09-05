@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -148,7 +149,7 @@ a:hover {
   height: 100%;
 }
 .containerGrid .navBarAside .iconNavBar .iconFlex button.active {
-  border-left: 2px solid #ff79c6;
+  box-shadow: inset 1.5px 0 #ff79c6;
   color: #f0f8ff;
   background-color: rgba(190, 190, 190, 0.2);
 }
@@ -214,7 +215,7 @@ a:hover {
 .containerGrid .sideBar .fileOpen .bi {
   margin-right: 3px;
   padding: 2px;
-  color: #cccccc;
+  color: #888;
   cursor: pointer;
 }
 .containerGrid .sideBar .fileOpen .bi:hover {
@@ -282,9 +283,10 @@ a:hover {
 .containerGrid .footer .iconsFooterL a {
   display: flex;
   align-items: center;
+  transition: 0.5s;
 }
 .containerGrid .footer .iconsFooterL a:hover {
-  color: #ff79c6;
+  color: #bd93f9;
 }
 .containerGrid .footer .iconsFooterL .bi {
   align-self: center;
@@ -467,6 +469,79 @@ a:hover {
 .containerHeroView .containerIntroAside .descriptionMain h6 {
   margin-top: 1rem;
 }
+.containerHeroView .containerIntroAside .containerLenguage {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.containerHeroView .containerIntroAside .containerLenguage .iconContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.containerHeroView .containerIntroAside .containerLenguage .iconContainer .iconsHero img {
+  width: 64px;
+}
+.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .rangeContainer {
+  width: 300px;
+  height: 10px;
+  background-color: lightgray;
+  position: relative;
+  border-radius: 25%;
+}
+.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageJavascript {
+  width: 60%;
+  height: 100%;
+  background-color: #f1e05a; /* Color de JavaScript */
+  position: absolute;
+}
+.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageCss {
+  width: 18.7%;
+  height: 100%;
+  background-color: #563d7c; /* Color de CSS */
+  position: absolute;
+  left: 60%; /* Colocar después de JavaScript */
+}
+.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageSass {
+  width: 18.2%;
+  height: 100%;
+  background-color: #c6538c; /* Color de Sass */
+  position: absolute;
+  left: 78.7%; /* Colocar después de CSS */
+}
+.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageHtml {
+  width: 3.1%;
+  height: 100%;
+  background-color: #e34c26; /* Color de HTML */
+  position: absolute;
+  left: 96.9%; /* Colocar después de Sass */
+}
+.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer {
+  padding-top: 1rem;
+}
+.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage {
+  display: flex;
+  column-gap: 0.9rem;
+}
+.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .dotJs {
+  color: #f1e05a;
+  font-size: 9px;
+}
+.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .dotCss {
+  color: #563d7c;
+  font-size: 9px;
+}
+.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .dotSass {
+  color: #c6538c;
+  font-size: 9px;
+}
+.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .dotHtml {
+  color: #e34c26;
+  font-size: 9px;
+}
+.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage span {
+  font-size: 12px;
+  padding-left: 5px;
+}
 @media screen and (max-width: 600px) {
   .containerHeroView {
     flex-direction: column;
@@ -489,11 +564,12 @@ a:hover {
   max-width: 650px;
   width: 100%;
   height: auto;
-  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
 }
 @media screen and (max-width: 600px) {
   .assetsContainer .assets {
-    padding: 0 1rem;
+    margin: 0 1rem;
   }
 }
 
@@ -1040,10 +1116,9 @@ a:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 70px;
 }
 .stackViewTabs .stackTitleView h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
 }
 .stackViewTabs .stackDescriptionView {
@@ -1051,7 +1126,6 @@ a:hover {
   justify-content: center;
   align-items: center;
   color: #888;
-  height: 125px;
   max-width: 700px;
   text-align: center;
 }
@@ -1066,7 +1140,6 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
   width: 100%;
   text-align: center;
 }
@@ -1076,7 +1149,7 @@ a:hover {
   transition: 0.5s;
 }
 .stackViewTabs .stackLinkCoder a:hover {
-  color: #f0f8ff;
+  color: #bd93f9;
 }
 @media screen and (max-width: 600px) {
   .stackViewTabs {
@@ -1136,7 +1209,7 @@ a:hover {
   border-radius: 3px;
 }
 .tab.activeTab {
-  border-top: 0.5px solid #ff79c6;
+  box-shadow: inset 0px 1px 0 #ff79c6;
   background-color: rgba(190, 190, 190, 0.1);
   flex-shrink: 0;
 }
@@ -1462,7 +1535,7 @@ a:hover {
 .booksmarksContainer {
   display: flex;
   flex-direction: column;
-  overflow-y: hidden;
+  overflow-y: auto;
   transition: 1s;
   height: 65%;
 }
@@ -1555,11 +1628,12 @@ a:hover {
 }
 .bookmarkMainContainer .infoContent h1 a {
   font-size: 2rem;
-  color: #ca26eb;
+  color: #bd93f9;
   font-weight: 600;
+  transition: 0.5s;
 }
 .bookmarkMainContainer .infoContent h1 a:hover {
-  color: #7a3cb5;
+  color: #aa26eb;
 }
 .bookmarkMainContainer .infoContent .bookmarkDescription {
   padding-top: 1rem;
@@ -1581,6 +1655,7 @@ a:hover {
   height: auto;
   max-width: 1110px;
   width: 100%;
+  border-radius: 10px;
 }
 
 .channelMainContainer {
@@ -1593,7 +1668,9 @@ a:hover {
 .channelMainContainer .channelCardContainer {
   display: flex;
   flex-direction: column;
-  width: 800px;
+  margin: 2rem 0;
+  max-width: 800px;
+  width: 100%;
   background-color: #191a21;
   border-radius: 15px;
   box-shadow: 0 0 11px rgba(202, 38, 235, 0.3);
@@ -1607,7 +1684,8 @@ a:hover {
 }
 .channelMainContainer .channelCardContainer .channelBannerContainer img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1643,25 +1721,28 @@ a:hover {
 .channelMainContainer .channelInfoContainer .channelContentContainer .channelDescription {
   padding-top: 1rem;
   font-size: 0.9rem;
+  white-space: pre-line;
 }
 .channelMainContainer .videosContainer {
   display: flex;
-  align-items: flex-start;
-  column-gap: 1rem;
+  width: 100%;
+  justify-content: space-evenly;
 }
 .channelMainContainer .videosContainer .videoContainer {
   display: flex;
   flex-direction: column;
-  height: 100%;
   background-color: #191a21;
   border-radius: 15px;
+  max-width: 300px;
+  width: 100%;
   transition: box-shadow 0.3s;
 }
 .channelMainContainer .videosContainer .videoContainer:hover {
   box-shadow: 0 0 11px rgba(202, 38, 235, 0.4);
 }
 .channelMainContainer .videosContainer .videoContainer img {
-  max-width: 350px;
+  height: auto;
+  width: 100%;
   border-radius: 15px;
 }
 .channelMainContainer .videosContainer .videoContainer .videoContentContainer {

@@ -1,7 +1,7 @@
 .containerHeroView {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;  
+  align-items: center;
   width: 100%;
   height: 100%;
 
@@ -35,7 +35,91 @@
         margin-top: 1rem;
       }
     }
+
+    .containerLenguage {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      h2 {
+      }
+      .iconContainer {
+        display: flex;
+        justify-content: space-evenly;
+
+        .iconsHero {
+          img {
+            width: 64px;
+          }
+        }
+      }
+      .rangeAndPercentageContainer {
+        .rangeContainer {
+          width: 300px;
+          height: 10px;
+          background-color: lightgray;
+          position: relative;
+          border-radius: 25%;
+
+          .percentageJavascript {
+            width: 60%;
+            height: 100%;
+            background-color: #f1e05a; /* Color de JavaScript */
+            position: absolute;
+          }
+          .percentageCss {
+            width: 18.7%;
+            height: 100%;
+            background-color: #563d7c; /* Color de CSS */
+            position: absolute;
+            left: 60%; /* Colocar después de JavaScript */
+          }
+          .percentageSass {
+            width: 18.2%;
+            height: 100%;
+            background-color: #c6538c; /* Color de Sass */
+            position: absolute;
+            left: 78.7%; /* Colocar después de CSS */
+          }
+          .percentageHtml {
+            width: 3.1%;
+            height: 100%;
+            background-color: #e34c26; /* Color de HTML */
+            position: absolute;
+            left: 96.9%; /* Colocar después de Sass */
+          }
+        }
+        .percentageLenguageContainer {
+          padding-top: 1rem;
+          .rowLenguage {
+            display: flex;
+            column-gap: 0.9rem;
+
+            .dotJs {
+              color: #f1e05a;
+              font-size: 9px;
+            }
+            .dotCss {
+              color: #563d7c;
+              font-size: 9px;
+            }
+            .dotSass {
+              color: #c6538c;
+              font-size: 9px;
+            }
+            .dotHtml {
+              color: #e34c26;
+              font-size: 9px;
+            }
+            span {
+              font-size: 12px;
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+    }
   }
+
   @include mobile {
     flex-direction: column;
 
