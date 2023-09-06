@@ -1,0 +1,28 @@
+.mainContactContainer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+  .contactContainer {
+    width: 50%;
+    div {
+      color: $color-pink;
+    }
+    .methodLineContact {
+      .contactMethod {
+        color: #8be9fd;
+      }
+      .doubleDot {
+        color: $color-pink;
+      }
+      .linkContainer {
+        color: #f1fa8c;
+        a {
+        }
+      }
+    }
+  }
+  .formContact {
+    width: 50%;
+  }
+}

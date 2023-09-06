@@ -1,9 +1,6 @@
 import { iconPath } from "../../assetsPath/assetsPath.js";
 
 const renderMainText = () => {
-  const mainView = document.getElementById("mainView");
-  mainView.innerHTML = "";
-
   const rootPath = document.getElementById("rootPath");
   rootPath.style.visibility = "hidden";
 
@@ -59,6 +56,7 @@ const renderMainText = () => {
   const iconContainerJavascript = document.createElement("picture");
   iconContainerJavascript.classList.add("iconsHero");
   const iconJavascript = document.createElement("img");
+  iconJavascript.classList.add("iconJavascript");
   iconJavascript.setAttribute("src", iconPath.JAVASCRIPT);
   iconJavascript.setAttribute("alt", "icono javascript");
 
@@ -101,6 +99,7 @@ const renderMainText = () => {
   const firstLineLenguage = document.createElement("div");
   firstLineLenguage.classList.add("rowLenguage");
   const lenguagePercentageJs = document.createElement("div");
+  lenguagePercentageJs.classList.add("lenguage");
   const dotJs = document.createElement("span");
   dotJs.classList.add("bi", "bi-circle-fill", "dotJs");
   const spanJs = document.createElement("span");
@@ -110,6 +109,7 @@ const renderMainText = () => {
   spanJsPercentage.textContent = "60%";
 
   const lenguagePercentageCss = document.createElement("div");
+  lenguagePercentageCss.classList.add("lenguage");
   const dotCss = document.createElement("span");
   dotCss.classList.add("bi", "bi-circle-fill", "dotCss");
   const spanCss = document.createElement("span");
@@ -121,6 +121,7 @@ const renderMainText = () => {
   const secondLineLenguage = document.createElement("div");
   secondLineLenguage.classList.add("rowLenguage");
   const lenguagePercentageSass = document.createElement("div");
+  lenguagePercentageSass.classList.add("lenguage");
   const dotSass = document.createElement("span");
   dotSass.classList.add("bi", "bi-circle-fill", "dotSass");
   const spanSass = document.createElement("span");
@@ -130,6 +131,7 @@ const renderMainText = () => {
   spanSassPercentage.textContent = "18.2%";
 
   const lenguagePercentageHtml = document.createElement("div");
+  lenguagePercentageHtml.classList.add("lenguage");
   const dotHtml = document.createElement("span");
   dotHtml.classList.add("bi", "bi-circle-fill", "dotHtml");
   const spanHtml = document.createElement("span");

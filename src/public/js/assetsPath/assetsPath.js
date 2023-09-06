@@ -23,6 +23,7 @@ const iconPath = {
   TXT: "./assets/txt-svgrepo-com.svg",
   MARKDOWN: "./assets/markdown-svgrepo-com.svg",
   VSC: "./assets/visual-studio-code-svgrepo-com.svg",
+  CONTACT: "./assets/envelope-email-svgrepo-com.svg",
   M8B: "./assets/pool-8-ball-svgrepo-com.svg",
   CHAT: "./assets/chat-svgrepo-com.svg",
   PLAYGROUND: "./assets/pencil-svgrepo-com.svg",
@@ -45,6 +46,8 @@ const iconPath = {
   ROADMAP: "./assets/icon_roadmap.png",
   RAPIDAPI: "./assets/icon_rapidapi.png",
   CODEPEN: "./assets/codepen-svgrepo-com.svg",
+  CANIUSE: "./assets/caniuse-svgrepo-com.svg",
+  README: "./assets/readme-svgrepo-com.svg",
 };
 
 const imgPath = {
@@ -78,6 +81,8 @@ const imgPath = {
   ROADMAP: "./assets/Screenshot_roadmap.png",
   RAPIDAPI: "./assets/Screenshot_rapidapi.png",
   CODEPEN: "./assets/Screenshot_codepen.png",
+  CANIUSE: "./assets/Screenshot_caniuse.png",
+  README: "./assets/Screenshot_readme.png",
 };
 
 const certificadoPath = {

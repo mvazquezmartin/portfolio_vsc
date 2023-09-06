@@ -7,6 +7,7 @@ import { setUpResponsiveEvents } from "./js/responsive/responsive.js";
 import { btnFocus } from "./js/utils/btnFocus.js";
 import { renderRepositories } from "./js/components/github/renderRepositories.js";
 import { renderBookmarks } from "./js/components/bookmarks/renderBookmarks.js";
+import { renderMainContact } from "./js/components/contact/renderMainContact.js";
 
 // QUERY DE ELEMENTOS
 const explorer = document.getElementById("files");
@@ -14,6 +15,7 @@ const inicio = document.getElementById("inicio");
 const stack = document.getElementById("stack");
 const bookmarks = document.getElementById("bookmarks");
 const github = document.getElementById("github");
+const contact = document.getElementById("contact");
 const btnNavBarAside = document.querySelectorAll(".iconNavBarAside");
 
 // FUNCIONES
@@ -23,6 +25,9 @@ explorer.addEventListener("click", renderExplorer);
 stack.addEventListener("click", renderStack);
 bookmarks.addEventListener("click", renderBookmarks);
 github.addEventListener("click", renderRepositories);
+contact.addEventListener("click", () =>
+  tabManager.create("Contact", renderMainContact, iconPath.CONTACT)
+);
 inicio.addEventListener("click", () =>
   tabManager.create("Welcome", renderMainText, iconPath.VSC)
 );

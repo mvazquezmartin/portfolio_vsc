@@ -37,7 +37,7 @@ class CacheManager {
       );
 
       if (existingDataIndex !== -1) {
-        this.data[existingDataIndex].data = channelInfo;
+        this.data[existingDataIndex] = newData;
       }
 
       this.data.push(newData);
@@ -61,7 +61,8 @@ class CacheManager {
 
   async saveFile() {
     try {
-      await fs.promises.writeFile(this.filePath, JSON.stringify(this.data));
+      const jsonData = JSON.stringify(this.data);
+      await fs.promises.writeFile(this.filePath, jsonData);
     } catch (error) {
       console.error("Error in saveFile:", error);
       throw error;

@@ -162,6 +162,26 @@ const bookmarks = [
     id: "codepen",
     applied: " - ",
   },
+  {
+    icon: iconPath.CANIUSE,
+    title: "Can I use",
+    description:
+      'Sitio web muy útil para los desarrolladores web y diseñadores que desean conocer la compatibilidad de las diferentes tecnologías web con los navegadores de Internet. El nombre "Can I Use" se traduce al español como "¿Puedo usarlo?" y es precisamente lo que este sitio web te ayuda a determinar.',
+    img: imgPath.CANIUSE,
+    link: "https://caniuse.com/",
+    id: "caniuse",
+    applied: " - ",
+  },
+  {
+    icon: iconPath.README,
+    title: "Readme",
+    description:
+      'Es un servicio en línea que ayuda a crear documentación para proyectos de software y sitios web de una manera más sencilla y visual. El nombre "ReadMe" sugiere su función principal: ayudar a los desarrolladores y equipos de proyectos a crear documentación clara y legible que los usuarios puedan leer fácilmente.',
+    img: imgPath.README,
+    link: "https://readme.so/",
+    id: "readme",
+    applied: "readme_m8b.md, readme_pg.md, readme_chat.md.",
+  },
 ];
 
 const youtubeId = {

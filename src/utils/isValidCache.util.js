@@ -14,7 +14,8 @@ const isValidCache = async () => {
     const currentTime = new Date().getTime();
     const fileAge = currentTime - stats.mtime.getTime();
 
-    const cacheExpiration = 24 * 60 * 60 * 1000;
+    //const cacheExpiration = 24 * 60 * 60 * 1000;
+    const cacheExpiration = 5 * 60 * 1000;
 
     return fileAge <= cacheExpiration;
   } catch (error) {

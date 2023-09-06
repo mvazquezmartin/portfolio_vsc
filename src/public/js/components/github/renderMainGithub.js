@@ -5,7 +5,7 @@ const renderMainGithub = async () => {
   mainView.innerHTML = "";
 
   const path = document.getElementById("rootPath");
-  path.textContent = "Portfolio > Github";
+  path.textContent = "@mvazquezartin > Github";
 
   const containerGithub = document.createElement("div");
   containerGithub.classList.add("containerGitHub");
