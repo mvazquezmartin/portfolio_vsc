@@ -1,3 +1,5 @@
+//DEPRECADO POR CLASS CACHEMANAGER
+
 const fs = require("fs");
 const path = require("path");
 
@@ -6,15 +8,18 @@ const cacheFilePath = path.join(
   "../dao/apiYoutubeCache/file/cacheYoutube.json"
 );
 
-const isValidCache = async () => {
+const cacheData = require(cacheFilePath);
+
+const isValidCache = (channelId) => {
   try {
     if (!fs.existsSync(cacheFilePath)) return false;
+    if (!cacheData[channelId]) return false;
 
-    const stats = await fs.statSync(cacheFilePath);
     const currentTime = new Date().getTime();
-    const fileAge = currentTime - stats.mtime.getTime();
+    const lastUpdatedTime = cacheData[channelId].timestamp;
+    const fileAge = currentTime - lastUpdatedTime;
 
-    //const cacheExpiration = 24 * 60 * 60 * 1000;
+    // const cacheExpiration = 24 * 60 * 60 * 1000;
     const cacheExpiration = 5 * 60 * 1000;
 
     return fileAge <= cacheExpiration;

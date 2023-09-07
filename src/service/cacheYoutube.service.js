@@ -14,7 +14,7 @@ class CacheService {
 
   async getOne(channelId) {
     const data = await this.cacheManager.getOne(channelId);
-    if (!data) return {payload: null}
+    if (!data) return { payload: null };
     return {
       code: HTTP_STATUS_CODES.OK,
       status: "success",
@@ -24,6 +24,19 @@ class CacheService {
 
   async create(channelId, channelInfo) {
     await this.cacheManager.create(channelId, channelInfo);
+  }
+
+  async delete(channelId) {
+    await this.cacheManager.delete(channelId);
+  }
+
+  async isValidCache(channelId) {
+    try {
+      return await this.cacheManager.isValidCache(channelId);
+    } catch (error) {
+      console.log("Error in validCache:", error);
+      throw error;
+    }
   }
 }
 

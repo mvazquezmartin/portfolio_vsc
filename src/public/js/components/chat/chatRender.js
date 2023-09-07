@@ -8,7 +8,7 @@ const chatRender = () => {
   miNodoContainer.classList.add("chatContainerGrid");
 
   const titleDiv = document.createElement("div");
-  titleDiv.classList.add("chatTitle");  
+  titleDiv.classList.add("chatTitle");
   const h1Container = document.createElement("div");
   h1Container.classList.add("h1Container");
   const titleH1 = document.createElement("h1");
@@ -57,7 +57,7 @@ const chatRender = () => {
   log.classList.add("log");
   log.setAttribute("id", "messageLogs");
 
-  miNodoContainer.appendChild(titleDiv);  
+  miNodoContainer.appendChild(titleDiv);
   titleDiv.appendChild(h1Container);
   h1Container.appendChild(titleH1);
   titleDiv.appendChild(btnContainer);

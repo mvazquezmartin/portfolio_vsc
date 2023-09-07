@@ -2,32 +2,33 @@ const { Router } = require("express");
 const { API_KEY } = require("../config/apiGoogle");
 const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
 const { default: axios } = require("axios");
-const isValidCache = require("../utils/isValidCache.util");
 const cacheService = require("../service/cacheYoutube.service");
 
 const router = Router();
 
 router.get("/", async (req, res) => {
-  const { channelId } = req.query;
-
-  if (await isValidCache()) {
-    const response = await cacheService.getOne(channelId);
-    if (response.payload !== null) {
-      return res.status(response.code).json({
-        status: response.status,
-        payload: response.payload,
-      });
-    }
-  }
-
   try {
-    const dataResponse = await axios.get(
-      `https://www.googleapis.com/youtube/v3/channels?part=brandingSettings,snippet&id=${channelId}&key=${API_KEY}`
-    );
+    const { channelId } = req.query;
 
-    const videosResponse = await axios.get(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&order=date&type=video&maxResults=4&key=${API_KEY}`
-    );
+    const isValid = await cacheService.isValidCache(channelId);
+    if (isValid) {
+      const response = await cacheService.getOne(channelId);
+      if (response.payload !== null) {
+        return res.status(response.code).json({
+          status: response.status,
+          payload: response.payload,
+        });
+      }
+    }
+
+    const [dataResponse, videosResponse] = await Promise.all([
+      axios.get(
+        `https://www.googleapis.com/youtube/v3/channels?part=brandingSettings,snippet&id=${channelId}&key=${API_KEY}`
+      ),
+      axios.get(
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&order=date&type=video&maxResults=4&key=${API_KEY}`
+      ),
+    ]);
 
     const channelData = dataResponse.data.items[0];
     const videos = videosResponse.data.items;
@@ -48,6 +49,7 @@ router.get("/", async (req, res) => {
       latestVideo: videoInfo,
     };
 
+    //await cacheService.delete(channelId);
     await cacheService.create(channelId, channelInfo);
 
     console.log("HELLO WORLD!:", channelData.brandingSettings.channel.title);

@@ -1,5 +1,41 @@
 [
   {
+    "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
+    "data": {
+      "channel": "freeCodeCamp.org",
+      "customUrl": "@freecodecamp",
+      "description": "Learn to code for free.",
+      "banner": "https://yt3.googleusercontent.com/YENZNQNejlcYytisl7SbdB76TRQa_qs3felodPY9EPvY1l7ZXdbZV4jtSfBITDPE54_1nK5osg",
+      "thumbnails": "https://yt3.ggpht.com/ytc/AOPolaTs1IEit9EUooQAJkWS4SkpUE7oMDXYrjIgnOk1Kw=s88-c-k-c0x00ffffff-no-rj",
+      "latestVideo": [
+        {
+          "videoId": "TV6tFPfz0go",
+          "title": "YouTube Clone – T3 Stack Tutorial (Next.js, TypeScript, Tailwind CSS)",
+          "thumbnail": "https://i.ytimg.com/vi/TV6tFPfz0go/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=TV6tFPfz0go&ab_channel=freeCodeCamp.org"
+        },
+        {
+          "videoId": "gwOVynGnDZA",
+          "title": "Full Stack Next.js, Typescript, Firebase Tutorial – Google Drive Clone",
+          "thumbnail": "https://i.ytimg.com/vi/gwOVynGnDZA/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=gwOVynGnDZA&ab_channel=freeCodeCamp.org"
+        },
+        {
+          "videoId": "KeBxopnhizw",
+          "title": "JavaScript Modules Crash Course",
+          "thumbnail": "https://i.ytimg.com/vi/KeBxopnhizw/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=KeBxopnhizw&ab_channel=freeCodeCamp.org"
+        },
+        {
+          "videoId": "5199E50O7SI",
+          "title": "GraphQL Course for Beginners",
+          "thumbnail": "https://i.ytimg.com/vi/5199E50O7SI/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=5199E50O7SI&ab_channel=freeCodeCamp.org"
+        }
+      ]
+    }
+  },
+  {
     "channelId": "UCjXAQ-cayM4mIZmUZKMFW_w",
     "data": {
       "channel": "Programador X",
@@ -8,6 +44,12 @@
       "banner": "https://yt3.googleusercontent.com/Eww-HpQycKjrFU-KKsjbxuAcxYanM916ta8OVuSQBcjfvOjL47y1GXCImgICrDVLSpG92ch0e_k",
       "thumbnails": "https://yt3.ggpht.com/QAKnwF21V1gXr1I8O2ZQNBDdS6OvF7JLAEZWLprKZp9Vxe4_6NDZn32yhOSPmY5c-S7nQBN2=s88-c-k-c0x00ffffff-no-rj",
       "latestVideo": [
+        {
+          "videoId": "7h2jU5kGSwQ",
+          "title": "Técnicas de HACKEO que puedes prevenir! 👺(ciberseguridad) #shorts",
+          "thumbnail": "https://i.ytimg.com/vi/7h2jU5kGSwQ/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=7h2jU5kGSwQ&ab_channel=Programador X"
+        },
         {
           "videoId": "lGkASjPPjBQ",
           "title": "Día en la vida de un PROGRAMADOR NÓMADA | Java 🇮🇩 (mi último vlog)",
@@ -25,84 +67,42 @@
           "title": "Encuesta de Stack Overflow a programadores 🧑🏽‍💻 #shorts",
           "thumbnail": "https://i.ytimg.com/vi/VcKWqmuZuTA/hqdefault.jpg",
           "videoLink": "https://www.youtube.com/watch?v=VcKWqmuZuTA&ab_channel=Programador X"
-        },
-        {
-          "videoId": "ppPwBLEfWV8",
-          "title": "Salarios de Ingenieros de Software... Cuánto gana un programador en LATAM/España/USA? #shorts",
-          "thumbnail": "https://i.ytimg.com/vi/ppPwBLEfWV8/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=ppPwBLEfWV8&ab_channel=Programador X"
         }
       ]
     }
   },
   {
-    "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
+    "channelId": "UCxPD7bsocoAMq8Dj18kmGyQ",
     "data": {
-      "channel": "freeCodeCamp.org",
-      "customUrl": "@freecodecamp",
-      "description": "Learn to code for free.",
-      "banner": "https://yt3.googleusercontent.com/YENZNQNejlcYytisl7SbdB76TRQa_qs3felodPY9EPvY1l7ZXdbZV4jtSfBITDPE54_1nK5osg",
-      "thumbnails": "https://yt3.ggpht.com/ytc/AOPolaTs1IEit9EUooQAJkWS4SkpUE7oMDXYrjIgnOk1Kw=s88-c-k-c0x00ffffff-no-rj",
+      "channel": "MoureDev by Brais Moure",
+      "customUrl": "@mouredev",
+      "description": "Tutoriales de programación y desarrollo de software. Aprende a crear aplicaciones Android e iOS con Android Studio, Xcode, Flutter, Kotlin, Swift, Dart, a programar con Python y mucho más...\n\nTodas las semanas un nuevo vídeo.\n\nHola 👋🏼 Mi nombre es Brais Moure\nSoy ingeniero de software desde hace más de 12 años. Actualmente trabajo como freelance full-stack developer iOS y Android. Además creo contenido formativo sobre programación y tecnología en redes. \n\nBienvenid@!\n",
+      "banner": "https://yt3.googleusercontent.com/xuA8YUhKZcREEfys5Dv3GtoMalQKcezKk22AlJ_-TOMATYn9NuZX5-UJtiqP5pZtFnHKXuDuR_U",
+      "thumbnails": "https://yt3.ggpht.com/ytc/AOPolaSva2kONboCUD4CiotJ7RWBpaCD-ZaB6ZC2JkMFpw=s88-c-k-c0x00ffffff-no-rj",
       "latestVideo": [
         {
-          "videoId": "_ZvnD73m40o",
-          "title": "Prompt Engineering Tutorial – Master ChatGPT and LLM Responses",
-          "thumbnail": "https://i.ytimg.com/vi/_ZvnD73m40o/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=_ZvnD73m40o&ab_channel=freeCodeCamp.org"
+          "videoId": "jLOI5VdZZ_c",
+          "title": "Instala VSCODE en iOS y ANDROID",
+          "thumbnail": "https://i.ytimg.com/vi/jLOI5VdZZ_c/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=jLOI5VdZZ_c&ab_channel=MoureDev by Brais Moure"
         },
         {
-          "videoId": "KeBxopnhizw",
-          "title": "JavaScript Modules Crash Course",
-          "thumbnail": "https://i.ytimg.com/vi/KeBxopnhizw/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=KeBxopnhizw&ab_channel=freeCodeCamp.org"
+          "videoId": "u0XqRgjgMgI",
+          "title": "¡Llega el DÍA DE LA PROGRAMACIÓN!",
+          "thumbnail": "https://i.ytimg.com/vi/u0XqRgjgMgI/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=u0XqRgjgMgI&ab_channel=MoureDev by Brais Moure"
         },
         {
-          "videoId": "5199E50O7SI",
-          "title": "GraphQL Course for Beginners",
-          "thumbnail": "https://i.ytimg.com/vi/5199E50O7SI/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=5199E50O7SI&ab_channel=freeCodeCamp.org"
+          "videoId": "3UCZltG8iCY",
+          "title": "Resuelvo esta PRUEBA TÉCNICA para PROGRAMADORES Junior en cualquier LENGUAJE",
+          "thumbnail": "https://i.ytimg.com/vi/3UCZltG8iCY/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=3UCZltG8iCY&ab_channel=MoureDev by Brais Moure"
         },
         {
-          "videoId": "-42K44A1oMA",
-          "title": "MERN Stack Tutorial - Book Store Project",
-          "thumbnail": "https://i.ytimg.com/vi/-42K44A1oMA/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=-42K44A1oMA&ab_channel=freeCodeCamp.org"
-        }
-      ]
-    }
-  },
-  {
-    "channelId": "UCgZoKiTvvpEnr1zI6Kv_i7A",
-    "data": {
-      "channel": "ManzDev",
-      "customUrl": "@manzdev",
-      "description": "👨‍💻 Canal oficial de ManzDev. Directos de Twitch, fragmentos, contenido de diseño y desarrollo web: HTML, CSS, Javascript, terminal de Linux y mucho más.",
-      "banner": "https://yt3.googleusercontent.com/aakJC_vyWqxkayO-g1yJ7iDTrBhQu4-0WZ2L4jtRP8VD2P2SJZtAjvX5qU2VbK9pSGejPZ1_VA",
-      "thumbnails": "https://yt3.ggpht.com/ytc/AOPolaTXu0R0s0siECqQ99c6i27isHygGRRe85F9-fr1=s88-c-k-c0x00ffffff-no-rj",
-      "latestVideo": [
-        {
-          "videoId": "gqV4MJhvuAs",
-          "title": "Mientras tanto... Homer CSS... #html #css #javascript #programacion #frontend #animaciones",
-          "thumbnail": "https://i.ytimg.com/vi/gqV4MJhvuAs/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=gqV4MJhvuAs&ab_channel=ManzDev"
-        },
-        {
-          "videoId": "XMgK7y3YPOI",
-          "title": "Container Queries CSS #html #css #javascript #programacion #frontend",
-          "thumbnail": "https://i.ytimg.com/vi/XMgK7y3YPOI/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=XMgK7y3YPOI&ab_channel=ManzDev"
-        },
-        {
-          "videoId": "uTaDVEKlZgY",
-          "title": "La etiqueta HTML datalist",
-          "thumbnail": "https://i.ytimg.com/vi/uTaDVEKlZgY/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=uTaDVEKlZgY&ab_channel=ManzDev"
-        },
-        {
-          "videoId": "UnZEc4_3d0U",
-          "title": "Animaciones con View Animation API (2/3) #css  #animaciones #html #javascript #programacion",
-          "thumbnail": "https://i.ytimg.com/vi/UnZEc4_3d0U/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=UnZEc4_3d0U&ab_channel=ManzDev"
+          "videoId": "2u7JlBEavx0",
+          "title": "Crea una WEB usando solo PYTHON",
+          "thumbnail": "https://i.ytimg.com/vi/2u7JlBEavx0/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=2u7JlBEavx0&ab_channel=MoureDev by Brais Moure"
         }
       ]
     }
@@ -117,12 +117,6 @@
       "thumbnails": "https://yt3.ggpht.com/ytc/AOPolaR9oDiFI1IrhUH9ot4A76ecdxURoQSHL818cHKS4A=s88-c-k-c0x00ffffff-no-rj",
       "latestVideo": [
         {
-          "videoId": "GoYZ3hh1kqQ",
-          "title": "Hosting gratuitos para tu frontend y backend. Para desplegar tus proyectos de programación sin pagar",
-          "thumbnail": "https://i.ytimg.com/vi/GoYZ3hh1kqQ/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=GoYZ3hh1kqQ&ab_channel=midudev"
-        },
-        {
           "videoId": "TrCCCRFq114",
           "title": "Para mejorar en programación hay que practicar. ¡Con este recurso gratuito practicas!",
           "thumbnail": "https://i.ytimg.com/vi/TrCCCRFq114/hqdefault.jpg",
@@ -135,10 +129,16 @@
           "videoLink": "https://www.youtube.com/watch?v=rxYo_ElUo2g&ab_channel=midudev"
         },
         {
-          "videoId": "sqyJVoEoPQk",
-          "title": "Google saca su propio editor de código para programadores!",
-          "thumbnail": "https://i.ytimg.com/vi/sqyJVoEoPQk/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=sqyJVoEoPQk&ab_channel=midudev"
+          "videoId": "14JdHNLqZeI",
+          "title": "La mejor forma de aprender programación es… ¡programando! Mis sitios favoritos para practicar",
+          "thumbnail": "https://i.ytimg.com/vi/14JdHNLqZeI/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=14JdHNLqZeI&ab_channel=midudev"
+        },
+        {
+          "videoId": "UZarokfByTs",
+          "title": "¿Cómo me ORGANIZO? Mi SECRETO para ser más PRODUCTIVO y APRENDER más rápido programación",
+          "thumbnail": "https://i.ytimg.com/vi/UZarokfByTs/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=UZarokfByTs&ab_channel=midudev"
         }
       ]
     }
@@ -180,78 +180,6 @@
     }
   },
   {
-    "channelId": "UCxPD7bsocoAMq8Dj18kmGyQ",
-    "data": {
-      "channel": "MoureDev by Brais Moure",
-      "customUrl": "@mouredev",
-      "description": "Tutoriales de programación y desarrollo de software. Aprende a crear aplicaciones Android e iOS con Android Studio, Xcode, Flutter, Kotlin, Swift, Dart, a programar con Python y mucho más...\n\nTodas las semanas un nuevo vídeo.\n\nHola 👋🏼 Mi nombre es Brais Moure\nSoy ingeniero de software desde hace más de 12 años. Actualmente trabajo como freelance full-stack developer iOS y Android. Además creo contenido formativo sobre programación y tecnología en redes. \n\nBienvenid@!\n",
-      "banner": "https://yt3.googleusercontent.com/xuA8YUhKZcREEfys5Dv3GtoMalQKcezKk22AlJ_-TOMATYn9NuZX5-UJtiqP5pZtFnHKXuDuR_U",
-      "thumbnails": "https://yt3.ggpht.com/ytc/AOPolaSva2kONboCUD4CiotJ7RWBpaCD-ZaB6ZC2JkMFpw=s88-c-k-c0x00ffffff-no-rj",
-      "latestVideo": [
-        {
-          "videoId": "u0XqRgjgMgI",
-          "title": "¡Llega el DÍA DE LA PROGRAMACIÓN!",
-          "thumbnail": "https://i.ytimg.com/vi/u0XqRgjgMgI/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=u0XqRgjgMgI&ab_channel=MoureDev by Brais Moure"
-        },
-        {
-          "videoId": "3UCZltG8iCY",
-          "title": "Resuelvo esta PRUEBA TÉCNICA para PROGRAMADORES Junior en cualquier LENGUAJE",
-          "thumbnail": "https://i.ytimg.com/vi/3UCZltG8iCY/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=3UCZltG8iCY&ab_channel=MoureDev by Brais Moure"
-        },
-        {
-          "videoId": "xAd-JnoS8zU",
-          "title": "Confirmado! Los programadores no sabemos dibujar...",
-          "thumbnail": "https://i.ytimg.com/vi/xAd-JnoS8zU/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=xAd-JnoS8zU&ab_channel=MoureDev by Brais Moure"
-        },
-        {
-          "videoId": "2u7JlBEavx0",
-          "title": "Crea una WEB usando solo PYTHON",
-          "thumbnail": "https://i.ytimg.com/vi/2u7JlBEavx0/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=2u7JlBEavx0&ab_channel=MoureDev by Brais Moure"
-        }
-      ]
-    }
-  },
-  {
-    "channelId": "UCsBjURrPoezykLs9EqgamOA",
-    "data": {
-      "channel": "Fireship",
-      "customUrl": "@fireship",
-      "description": "High-intensity ⚡ code tutorials and tech news to help you ship your app faster. New videos every week covering the topics every programmer should know. \n\nThe original home of #100SecondsOfCode #TheCodeReport and #CodeThisNotThat. Created by Jeff Delaney. \n\nBuilding an app? Get project support, advanced full courses, and more at https://fireship.io",
-      "banner": "https://yt3.googleusercontent.com/nQxZwEfVWgF8zhdqc3gWTFmnDY21uPt6KMxw0m0-pRgW_lOt8jjAAfmFsC6ZRkMjZO-MeCxN6Q",
-      "thumbnails": "https://yt3.ggpht.com/ytc/AOPolaQ2iMmw9cWFFjnwa13nBwtZQbl-AqGYkkiTqNaTLg=s88-c-k-c0x00ffffff-no-rj",
-      "latestVideo": [
-        {
-          "videoId": "7bmsDg4BaKw",
-          "title": "my browser, my paste",
-          "thumbnail": "https://i.ytimg.com/vi/7bmsDg4BaKw/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=7bmsDg4BaKw&ab_channel=Fireship"
-        },
-        {
-          "videoId": "HzBA6FIn_Bo",
-          "title": "The ruthless forking of Terraform",
-          "thumbnail": "https://i.ytimg.com/vi/HzBA6FIn_Bo/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=HzBA6FIn_Bo&ab_channel=Fireship"
-        },
-        {
-          "videoId": "r5NQecwZs1A",
-          "title": "CPU vs GPU vs TPU vs DPU vs QPU",
-          "thumbnail": "https://i.ytimg.com/vi/r5NQecwZs1A/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=r5NQecwZs1A&ab_channel=Fireship"
-        },
-        {
-          "videoId": "8ofsE7xiGho",
-          "title": "Microsoft Excel just got Python",
-          "thumbnail": "https://i.ytimg.com/vi/8ofsE7xiGho/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=8ofsE7xiGho&ab_channel=Fireship"
-        }
-      ]
-    }
-  },
-  {
     "channelId": "UCMn28O1sQGochG94HdlthbA",
     "data": {
       "channel": "Fazt Code",
@@ -288,6 +216,42 @@
     }
   },
   {
+    "channelId": "UCsBjURrPoezykLs9EqgamOA",
+    "data": {
+      "channel": "Fireship",
+      "customUrl": "@fireship",
+      "description": "High-intensity ⚡ code tutorials and tech news to help you ship your app faster. New videos every week covering the topics every programmer should know. \n\nThe original home of #100SecondsOfCode #TheCodeReport and #CodeThisNotThat. Created by Jeff Delaney. \n\nBuilding an app? Get project support, advanced full courses, and more at https://fireship.io",
+      "banner": "https://yt3.googleusercontent.com/nQxZwEfVWgF8zhdqc3gWTFmnDY21uPt6KMxw0m0-pRgW_lOt8jjAAfmFsC6ZRkMjZO-MeCxN6Q",
+      "thumbnails": "https://yt3.ggpht.com/ytc/AOPolaQ2iMmw9cWFFjnwa13nBwtZQbl-AqGYkkiTqNaTLg=s88-c-k-c0x00ffffff-no-rj",
+      "latestVideo": [
+        {
+          "videoId": "5ChkQKUzDCs",
+          "title": "Big projects are ditching TypeScript… wtf?",
+          "thumbnail": "https://i.ytimg.com/vi/5ChkQKUzDCs/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=5ChkQKUzDCs&ab_channel=Fireship"
+        },
+        {
+          "videoId": "7bmsDg4BaKw",
+          "title": "my browser, my paste",
+          "thumbnail": "https://i.ytimg.com/vi/7bmsDg4BaKw/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=7bmsDg4BaKw&ab_channel=Fireship"
+        },
+        {
+          "videoId": "HzBA6FIn_Bo",
+          "title": "The ruthless forking of Terraform",
+          "thumbnail": "https://i.ytimg.com/vi/HzBA6FIn_Bo/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=HzBA6FIn_Bo&ab_channel=Fireship"
+        },
+        {
+          "videoId": "r5NQecwZs1A",
+          "title": "CPU vs GPU vs TPU vs DPU vs QPU",
+          "thumbnail": "https://i.ytimg.com/vi/r5NQecwZs1A/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=r5NQecwZs1A&ab_channel=Fireship"
+        }
+      ]
+    }
+  },
+  {
     "channelId": "UCP15FVAA2UL-QOcGhy7-ezA",
     "data": {
       "channel": "EDteam",
@@ -297,10 +261,10 @@
       "thumbnails": "https://yt3.ggpht.com/IwyRA05tmAiXDsv8KtFh3GYjkYTaTHAV-iaDDPDFrfal0qklJuaz4ULKE67n0ycgjgfLmfY1spE=s88-c-k-c0x00ffffff-no-rj",
       "latestVideo": [
         {
-          "videoId": "h0rQeWGrxHs",
-          "title": "¿Quién es el dueño de lo que produce la IA? Esta demanda puede CAMBIARLO TODO | #EDchismes 2023.29",
-          "thumbnail": "https://i.ytimg.com/vi/h0rQeWGrxHs/hqdefault_live.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=h0rQeWGrxHs&ab_channel=EDteam"
+          "videoId": "24_ueXL_-Bo",
+          "title": "¿Cuáles son las etapas del desarrollo web? | Alexys Lozada y Beto Quiroga",
+          "thumbnail": "https://i.ytimg.com/vi/24_ueXL_-Bo/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=24_ueXL_-Bo&ab_channel=EDteam"
         },
         {
           "videoId": "F22hssrnBts",
@@ -360,6 +324,41 @@
     }
   },
   {
+    "channelId": "UC4FHiPgS1KXkUMx3dxBUtPg",
+    "data": {
+      "channel": "HolaMundo",
+      "customUrl": "@holamundodev",
+      "banner": "https://yt3.googleusercontent.com/H4gcAv3zm9Fr0wsScDfc9Fur7XtGUxptwhKWXkW3CLfzQCZBZ-7dTewnatnTshOXlQBe_cwYWQ",
+      "thumbnails": "https://yt3.ggpht.com/Z69fhRL9_OaXsDz-XsCUe2sGIqU7G1F5Mwl0PwlBsx_ll13K0nLb47q7_RMen7NHvzMVDgd2=s88-c-k-c0x00ffffff-no-rj",
+      "latestVideo": [
+        {
+          "videoId": "FcdZCNP7B_A",
+          "title": "Conversemos? hablemos de lo que quieran :)",
+          "thumbnail": "https://i.ytimg.com/vi/FcdZCNP7B_A/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=FcdZCNP7B_A&ab_channel=HolaMundo"
+        },
+        {
+          "videoId": "6MbCxU35SN4",
+          "title": "Conversemos? hablemos de lo que quieran :)",
+          "thumbnail": "https://i.ytimg.com/vi/6MbCxU35SN4/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=6MbCxU35SN4&ab_channel=HolaMundo"
+        },
+        {
+          "videoId": "IimBRwHhW54",
+          "title": "Python en una hora para principiantes!",
+          "thumbnail": "https://i.ytimg.com/vi/IimBRwHhW54/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=IimBRwHhW54&ab_channel=HolaMundo"
+        },
+        {
+          "videoId": "s8GVyZD84zk",
+          "title": "Los programadores necesitan magister?",
+          "thumbnail": "https://i.ytimg.com/vi/s8GVyZD84zk/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=s8GVyZD84zk&ab_channel=HolaMundo"
+        }
+      ]
+    }
+  },
+  {
     "channelId": "UCCPJTSHMeae1Ll9uuG-zlkA",
     "data": {
       "channel": "deivchoi",
@@ -396,41 +395,6 @@
     }
   },
   {
-    "channelId": "UC4FHiPgS1KXkUMx3dxBUtPg",
-    "data": {
-      "channel": "HolaMundo",
-      "customUrl": "@holamundodev",
-      "banner": "https://yt3.googleusercontent.com/H4gcAv3zm9Fr0wsScDfc9Fur7XtGUxptwhKWXkW3CLfzQCZBZ-7dTewnatnTshOXlQBe_cwYWQ",
-      "thumbnails": "https://yt3.ggpht.com/Z69fhRL9_OaXsDz-XsCUe2sGIqU7G1F5Mwl0PwlBsx_ll13K0nLb47q7_RMen7NHvzMVDgd2=s88-c-k-c0x00ffffff-no-rj",
-      "latestVideo": [
-        {
-          "videoId": "2QcoxbQfUSo",
-          "title": "Tienes que aprender Docker ahora! más de 5 horas! conciso, fácil de entender y práctico!",
-          "thumbnail": "https://i.ytimg.com/vi/2QcoxbQfUSo/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=2QcoxbQfUSo&ab_channel=HolaMundo"
-        },
-        {
-          "videoId": "FcdZCNP7B_A",
-          "title": "Conversemos? hablemos de lo que quieran :)",
-          "thumbnail": "https://i.ytimg.com/vi/FcdZCNP7B_A/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=FcdZCNP7B_A&ab_channel=HolaMundo"
-        },
-        {
-          "videoId": "6MbCxU35SN4",
-          "title": "Conversemos? hablemos de lo que quieran :)",
-          "thumbnail": "https://i.ytimg.com/vi/6MbCxU35SN4/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=6MbCxU35SN4&ab_channel=HolaMundo"
-        },
-        {
-          "videoId": "IimBRwHhW54",
-          "title": "Python en una hora para principiantes!",
-          "thumbnail": "https://i.ytimg.com/vi/IimBRwHhW54/hqdefault.jpg",
-          "videoLink": "https://www.youtube.com/watch?v=IimBRwHhW54&ab_channel=HolaMundo"
-        }
-      ]
-    }
-  },
-  {
     "channelId": "UCGsVaz3QTFdspLqt79jIuPA",
     "data": {
       "channel": "Guinxu",
@@ -447,7 +411,7 @@
         },
         {
           "videoId": "vOCPUapZ4C8",
-          "title": "Cómo simulan NIEVE los videojuegos",
+          "title": "Cómo simulan NIEVE los videojuegos ⛄",
           "thumbnail": "https://i.ytimg.com/vi/vOCPUapZ4C8/hqdefault.jpg",
           "videoLink": "https://www.youtube.com/watch?v=vOCPUapZ4C8&ab_channel=Guinxu"
         },
@@ -462,6 +426,42 @@
           "title": "Transparencia simulada en Sonic The Hedgehog",
           "thumbnail": "https://i.ytimg.com/vi/ArWk3W3x8fo/hqdefault.jpg",
           "videoLink": "https://www.youtube.com/watch?v=ArWk3W3x8fo&ab_channel=Guinxu"
+        }
+      ]
+    }
+  },
+  {
+    "channelId": "UCqGONXW1ORgz5Y4qK-0JdkQ",
+    "data": {
+      "channel": "Joe Grand",
+      "customUrl": "@joegrand",
+      "description": "Hacking, electronics, and random projects featuring Joe Grand, a computer engineer, hardware hacker, teacher, daddy, TV host, former member of L0pht Heavy Industries and juvenile delinquent, sometimes known as Kingpin. \n\nBEWARE OF SCAMMERS AND IMPERSONATORS! I DO NOT RESPOND TO PUBLIC COMMENTS. CONTACT ME ONLY THROUGH THE LINKS BELOW.\n",
+      "banner": "https://yt3.googleusercontent.com/jcPR5cXBFfeay6_A6klGHS2C2lfsQIjvlor9tWt5cp3OMzB24Fd-W6v_GPlU8FxpFK2eCJWO8A",
+      "thumbnails": "https://yt3.ggpht.com/Q6WSi2rUhFWc7Ak2y9BZgD0_tAQOjcR1vzeOU1mHeMPBCvwEB1xFkzW-0htjNLMtbtbrebwYsGA=s88-c-k-c0x00ffffff-no-rj",
+      "latestVideo": [
+        {
+          "videoId": "bZFQDeBpHmg",
+          "title": "THE WORLD&#39;S THINNEST BOOMBOX",
+          "thumbnail": "https://i.ytimg.com/vi/bZFQDeBpHmg/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=bZFQDeBpHmg&ab_channel=Joe Grand"
+        },
+        {
+          "videoId": "icBD5PiyoyI",
+          "title": "Hacking a Samsung Galaxy for $6,000,000 in Bitcoin!?",
+          "thumbnail": "https://i.ytimg.com/vi/icBD5PiyoyI/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=icBD5PiyoyI&ab_channel=Joe Grand"
+        },
+        {
+          "videoId": "JX1iBVxB7uA",
+          "title": "Joe Grand&#39;s Open Lab: YouTube Live AMA #2 🔴",
+          "thumbnail": "https://i.ytimg.com/vi/JX1iBVxB7uA/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=JX1iBVxB7uA&ab_channel=Joe Grand"
+        },
+        {
+          "videoId": "BERsLyZGSNM",
+          "title": "Joe Grand&#39;s Open Lab: YouTube Live AMA 🔴",
+          "thumbnail": "https://i.ytimg.com/vi/BERsLyZGSNM/hqdefault.jpg",
+          "videoLink": "https://www.youtube.com/watch?v=BERsLyZGSNM&ab_channel=Joe Grand"
         }
       ]
     }

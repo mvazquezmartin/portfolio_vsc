@@ -365,6 +365,7 @@ a:hover {
   .containerGrid .navBarAside.navBarAsideRes {
     visibility: visible;
     height: 90.4%;
+    z-index: 4;
   }
   .containerGrid .navBarAside * {
     transition: none;
@@ -1679,24 +1680,31 @@ a:hover {
   align-items: center;
   justify-content: space-around;
 }
-.channelMainContainer .channelCardContainer {
+.channelMainContainer .channelCardAndNote {
+  display: flex;
+  justify-content: space-around;
+  cursor: default;
+}
+.channelMainContainer .channelCardAndNote .channelCardContainer {
   display: flex;
   flex-direction: column;
-  margin: 2rem 0;
   max-width: 800px;
-  width: 100%;
+  width: 70%;
   background-color: #191a21;
   border-radius: 15px;
+  transition: box-shadow 0.3s;
+}
+.channelMainContainer .channelCardAndNote .channelCardContainer:hover {
   box-shadow: 0 0 11px rgba(202, 38, 235, 0.3);
 }
-.channelMainContainer .channelCardContainer .channelBannerContainer {
+.channelMainContainer .channelCardAndNote .channelCardContainer .channelBannerContainer {
   height: 145px;
   position: relative;
   overflow: hidden;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
-.channelMainContainer .channelCardContainer .channelBannerContainer img {
+.channelMainContainer .channelCardAndNote .channelCardContainer .channelBannerContainer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1704,38 +1712,65 @@ a:hover {
   top: 50%;
   transform: translateY(-50%);
 }
-.channelMainContainer .channelInfoContainer {
+.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer {
   display: flex;
   column-gap: 1rem;
   padding: 10px;
 }
-.channelMainContainer .channelInfoContainer .thumbnailsContainer {
+.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .thumbnailsContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.channelMainContainer .channelInfoContainer .thumbnailsContainer img {
+.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .thumbnailsContainer img {
   min-height: 150px;
   border-radius: 50%;
 }
-.channelMainContainer .channelInfoContainer .channelContentContainer {
+.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .channelContentContainer {
   display: flex;
   flex-direction: column;
 }
-.channelMainContainer .channelInfoContainer .channelContentContainer .channelTitle {
+.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .channelContentContainer .channelTitle {
   font-size: 2rem;
 }
-.channelMainContainer .channelInfoContainer .channelContentContainer .channelCustomUrl a {
+.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .channelContentContainer .channelCustomUrl a {
   color: #7c7c7c;
   transition: 0.3s;
 }
-.channelMainContainer .channelInfoContainer .channelContentContainer .channelCustomUrl a:hover {
+.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .channelContentContainer .channelCustomUrl a:hover {
   color: #bd93f9;
 }
-.channelMainContainer .channelInfoContainer .channelContentContainer .channelDescription {
+.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .channelContentContainer .channelDescription {
   padding-top: 1rem;
   font-size: 0.9rem;
   white-space: pre-line;
+}
+.channelMainContainer .channelCardAndNote .channelNoteMainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: fit-content;
+  border-radius: 15px;
+  transition: box-shadow 0.3s;
+  color: #bbb;
+}
+.channelMainContainer .channelCardAndNote .channelNoteMainContainer:hover {
+  box-shadow: 0 0 11px rgba(202, 38, 235, 0.4);
+}
+.channelMainContainer .channelCardAndNote .channelNoteMainContainer .channelNoteTitleContainer {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  background-color: #191a21;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding-left: 1rem;
+}
+.channelMainContainer .channelCardAndNote .channelNoteMainContainer .channelNoteContainer {
+  padding: 1rem;
+  background-color: #343541;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .channelMainContainer .videosContainer {
   display: flex;
@@ -1754,20 +1789,20 @@ a:hover {
 .channelMainContainer .videosContainer .videoContainer:hover {
   box-shadow: 0 0 11px rgba(202, 38, 235, 0.4);
 }
-.channelMainContainer .videosContainer .videoContainer img {
+.channelMainContainer .videosContainer .videoContainer a {
+  height: 100%;
+  transition: 0.5s;
+}
+.channelMainContainer .videosContainer .videoContainer a:hover {
+  color: #bd93f9;
+}
+.channelMainContainer .videosContainer .videoContainer a img {
   height: auto;
   width: 100%;
   border-radius: 15px;
 }
-.channelMainContainer .videosContainer .videoContainer .videoContentContainer {
-  max-width: 350px;
-  padding: 10px 7px;
-}
-.channelMainContainer .videosContainer .videoContainer .videoContentContainer span a {
-  transition: 0.5s;
-}
-.channelMainContainer .videosContainer .videoContainer .videoContentContainer span a:hover {
-  color: #bd93f9;
+.channelMainContainer .videosContainer .videoContainer a .videoContentContainer {
+  padding: 10px;
 }
 
 .mainContactContainer {

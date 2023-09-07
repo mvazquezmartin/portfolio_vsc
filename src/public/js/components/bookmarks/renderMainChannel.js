@@ -1,3 +1,5 @@
+import { channelNotes } from "./bookmarksObj.js";
+
 const renderMainChannel = (channel) => {
   const mainView = document.getElementById("mainView");
   mainView.innerHTML = "";
@@ -7,6 +9,9 @@ const renderMainChannel = (channel) => {
 
   const channelMainContainer = document.createElement("div");
   channelMainContainer.classList.add("channelMainContainer");
+
+  const channelCardAndNoteContainer = document.createElement("div");
+  channelCardAndNoteContainer.classList.add("channelCardAndNote");
 
   const channelCardContainer = document.createElement("div");
   channelCardContainer.classList.add("channelCardContainer");
@@ -53,9 +58,32 @@ const renderMainChannel = (channel) => {
   const videosContainer = document.createElement("div");
   videosContainer.classList.add("videosContainer");
 
+  const channelFormated = channel.channel.replace(/[ .]/g, "_");
+  const channelNoteData = Object.keys(channelNotes).find(
+    (key) => key === channelFormated
+  );
+  const note = channelNotes[channelNoteData];
+
+  const channelNoteMainContainer = document.createElement("div");
+  channelNoteMainContainer.classList.add("channelNoteMainContainer");
+
+  const channelNoteTitleContainer = document.createElement("div");
+  channelNoteTitleContainer.classList.add("channelNoteTitleContainer");
+  const channelNoteTitle = document.createElement("p");
+  channelNoteTitle.textContent = "Nota:";
+
+  const channelNoteContainer = document.createElement("div");
+  channelNoteContainer.classList.add("channelNoteContainer");
+  const channelNote = document.createElement("p");
+  channelNote.textContent = note;
+
   channel.latestVideo.forEach((video) => {
     const videoContainer = document.createElement("div");
     videoContainer.classList.add("videoContainer");
+
+    const videoLink = document.createElement("a");
+    videoLink.setAttribute("href", video.videoLink);
+    videoLink.setAttribute("target", "_blank");
 
     const videoThumbnails = document.createElement("img");
     videoThumbnails.classList.add("videoThumbnails");
@@ -65,20 +93,17 @@ const renderMainChannel = (channel) => {
     const videoContentContainer = document.createElement("div");
     videoContentContainer.classList.add("videoContentContainer");
 
-    const videoTitle = document.createElement("span");
-    const videoLink = document.createElement("a");
-    videoLink.setAttribute("href", video.videoLink);
-    videoLink.setAttribute("target", "_blank");
-    videoLink.textContent = video.title;
+    const videoTitle = document.createElement("p");
+    videoTitle.textContent = video.title;
 
-    videoContainer.appendChild(videoThumbnails);
-    videoContainer.appendChild(videoContentContainer);
+    videoContainer.appendChild(videoLink);
+    videoLink.appendChild(videoThumbnails);
+    videoLink.appendChild(videoContentContainer);
     videoContentContainer.appendChild(videoTitle);
-    videoTitle.appendChild(videoLink);
     videosContainer.appendChild(videoContainer);
   });
-
-  channelMainContainer.appendChild(channelCardContainer);
+  channelMainContainer.appendChild(channelCardAndNoteContainer);
+  channelCardAndNoteContainer.appendChild(channelCardContainer);
   channelBannerContainer.appendChild(channelBanner);
   channelCardContainer.appendChild(channelBannerContainer);
   channelCardContainer.appendChild(channelInfoContainer);
@@ -89,6 +114,11 @@ const renderMainChannel = (channel) => {
   channelCustomUrl.appendChild(channelLink);
   channelContentContainer.appendChild(channelCustomUrl);
   channelContentContainer.appendChild(channelDescription);
+  channelCardAndNoteContainer.appendChild(channelNoteMainContainer);
+  channelNoteMainContainer.appendChild(channelNoteTitleContainer);
+  channelNoteTitleContainer.appendChild(channelNoteTitle);
+  channelNoteMainContainer.appendChild(channelNoteContainer);
+  channelNoteContainer.appendChild(channelNote);
   channelMainContainer.appendChild(videosContainer);
   mainView.appendChild(channelMainContainer);
 };
