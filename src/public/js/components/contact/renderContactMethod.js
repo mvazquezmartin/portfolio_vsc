@@ -15,6 +15,7 @@ const renderContactMethod = (method, nodo) => {
 
   const link = document.createElement("a");
   link.setAttribute("href", method.link);
+  link.setAttribute("target", "_blank");
   link.textContent = '"' + method.data + '"' + ",";
 
   methodLineContainer.appendChild(contactMethod);

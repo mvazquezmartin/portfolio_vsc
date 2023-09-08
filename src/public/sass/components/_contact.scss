@@ -2,58 +2,160 @@
   display: flex;
   height: 100%;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
   row-gap: 2rem;
+  padding-top: 2rem;
 
-  .contactContainer {
+  .contactSocialContainer {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    background-color: $color-darkGrey;
-    border-radius: 15px;
-    padding: 1rem;
-    font-family: $font-FireCode;
-    font-size: 1.3rem;
+    width: 45%;
+    cursor: default;
+    word-wrap: break-word;
 
-    .squareBrackets {
-      color: $color-white;
+    .socialTitle {
+      font-size: 1.4rem;
+      padding-bottom: 2rem;
     }
-    .brackets {
-      color: $color-pink;
-      padding-left: 1rem;
-    }
-    .methodLineContainer {
-      padding-left: 2rem;
-      padding-bottom: 1rem;
-      .contactMethod {
-        color: #8be9fd;
+    .contactContainer {
+      font-size: 18px;
+      border-radius: 14px;
+      padding: 1.5rem;
+      background-color: $color-darkGrey;
+      font-family: $font-FireCode;
+      .squareBrackets {
+        color: $color-white;
       }
-      .doubleDot {
+
+      .bracketObj {
         color: $color-pink;
+        padding-left: 2%;
       }
-      .linkContainer {
-        a {
-          color: #f1fa8c;
-          transition: color 0.7s;
-          &:hover {
-            color: $color-white;
+      .socialDiv {
+        padding-left: 4%;
+        .socialSpan {
+          color: #8be9fd;
+        }
+        .socialDoubleDot {
+          color: $color-pink;
+        }
+        .socialBrackets {
+        }
+      }
+
+      .brackets {
+        color: #bd93f9;
+        padding-left: 20%;
+        padding-bottom: 1%;
+      }
+      .contactMethodContainer {
+        padding-left: 21%;
+        .methodLineContainer {
+          padding-bottom: 1%;
+          .contactMethod {
+            color: #8be9fd;
+          }
+          .doubleDot {
+            color: $color-pink;
+          }
+          .linkContainer {
+            a {
+              color: #f1fa8c;
+              transition: color 0.3s;
+              &:hover {
+                color: #a87df1;
+              }
+            }
           }
         }
       }
     }
   }
-  #formContact {
-    display: flex;
-    flex-direction: column;
+
+  .formContactContainer {
     width: 45%;
-    #inputname {
+    border-left: 1px solid #bd93f9;
+
+    .formTitle {
+      font-size: 1.4rem;
+      padding-left: 4rem;
+      padding-bottom: 10px;
+      cursor: default;
     }
-    #inputEmail {
-    }
-    #inputSubject {
-    }
-    #inputMessage {
-      height: 10rem;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding-left: 4rem;
+
+      input {
+        height: 45px;
+        margin-top: 7px;
+        background-color: $color-darkGrey;
+        border-style: none;
+        border-width: 0;
+        border-color: transparent;
+        border-radius: 5px;
+
+        &:focus {
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgba(189, 147, 249, 0.7);
+          outline: none;
+        }
+      }
+
+      label {
+        margin-top: 18px;
+        font-size: 14px;
+      }
+
+      .nameAndEmailContainer {
+        display: flex;
+        column-gap: 1rem;
+
+        .nameAndEmail {
+          display: flex;
+          flex-direction: column;
+          width: 40%;
+        }
+      }
+
+      #inputSubject {
+      }
+
+      #inputMessage {
+        height: 10rem;
+        margin-bottom: 18px;
+      }
+
+      button {
+        box-shadow: inset 0px -3px 7px 0px #a064fa;
+        background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
+        background-color: #ca26eb;
+        border-radius: 5px;
+        border: 1px solid #44315e;
+        display: inline-block;
+        cursor: pointer;
+        color: $color-white;
+        font-family: $font-Arial;
+        font-size: 1rem;
+        padding: 12px;
+        width: 110px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #19213b;
+        user-select: none;
+
+        &:hover {
+          background: linear-gradient(to bottom, #745c99 5%, #ca26eb 100%);
+          background-color: #745c99;
+        }
+
+        &:active {
+          position: relative;
+          top: 1px;
+        }
+      }
     }
   }
 }

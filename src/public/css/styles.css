@@ -162,7 +162,7 @@ a:hover {
   color: #5c6a98;
   font-size: 1.7rem;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.1s;
 }
 .containerGrid .navBarAside .iconNavBar .iconFlex .iconNavBarAside:hover {
   color: #f0f8ff;
@@ -403,7 +403,7 @@ a:hover {
 }
 @media screen and (min-width: 601px) and (max-width: 1023px) {
   .containerGrid {
-    grid-template-columns: 0.1fr 0.5fr 3fr;
+    grid-template-columns: 0.1fr 170px minmax(0, 3fr);
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar tabs" "navBarAside sideBar mainArea" "navBarAside footer footer";
   }
@@ -420,7 +420,7 @@ a:hover {
 }
 @media screen and (min-width: 1024px) {
   .containerGrid {
-    grid-template-columns: 0.1fr 0.5fr 3fr;
+    grid-template-columns: 0.1fr 270px minmax(0, 3fr);
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar tabs" "navBarAside sideBar mainArea" "navBarAside footer footer";
   }
@@ -1677,19 +1677,19 @@ a:hover {
   display: flex;
   flex-direction: column;
   height: 100%;
-  align-items: center;
-  justify-content: space-around;
+  padding: 3%;
+  row-gap: 10%;
+  overflow-y: auto;
 }
 .channelMainContainer .channelCardAndNote {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   cursor: default;
 }
 .channelMainContainer .channelCardAndNote .channelCardContainer {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
-  width: 70%;
+  width: 60%;
   background-color: #191a21;
   border-radius: 15px;
   transition: box-shadow 0.3s;
@@ -1775,7 +1775,8 @@ a:hover {
 .channelMainContainer .videosContainer {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  column-gap: 3%;
 }
 .channelMainContainer .videosContainer .videoContainer {
   display: flex;
@@ -1809,48 +1810,137 @@ a:hover {
   display: flex;
   height: 100%;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
   row-gap: 2rem;
+  padding-top: 2rem;
 }
-.mainContactContainer .contactContainer {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  background-color: #1d1e24;
-  border-radius: 15px;
-  padding: 1rem;
-  font-family: "Fira Code", monospace;
-  font-size: 1.3rem;
-}
-.mainContactContainer .contactContainer .squareBrackets {
-  color: #f0f8ff;
-}
-.mainContactContainer .contactContainer .brackets {
-  color: #ff79c6;
-  padding-left: 1rem;
-}
-.mainContactContainer .contactContainer .methodLineContainer {
-  padding-left: 2rem;
-  padding-bottom: 1rem;
-}
-.mainContactContainer .contactContainer .methodLineContainer .contactMethod {
-  color: #8be9fd;
-}
-.mainContactContainer .contactContainer .methodLineContainer .doubleDot {
-  color: #ff79c6;
-}
-.mainContactContainer .contactContainer .methodLineContainer .linkContainer a {
-  color: #f1fa8c;
-  transition: color 0.7s;
-}
-.mainContactContainer .contactContainer .methodLineContainer .linkContainer a:hover {
-  color: #f0f8ff;
-}
-.mainContactContainer #formContact {
+.mainContactContainer .contactSocialContainer {
   display: flex;
   flex-direction: column;
   width: 45%;
+  cursor: default;
+  word-wrap: break-word;
 }
-.mainContactContainer #formContact #inputMessage {
+.mainContactContainer .contactSocialContainer .socialTitle {
+  font-size: 1.4rem;
+  padding-bottom: 2rem;
+}
+.mainContactContainer .contactSocialContainer .contactContainer {
+  font-size: 18px;
+  border-radius: 14px;
+  padding: 1.5rem;
+  background-color: #1d1e24;
+  font-family: "Fira Code", monospace;
+}
+.mainContactContainer .contactSocialContainer .contactContainer .squareBrackets {
+  color: #f0f8ff;
+}
+.mainContactContainer .contactSocialContainer .contactContainer .bracketObj {
+  color: #ff79c6;
+  padding-left: 2%;
+}
+.mainContactContainer .contactSocialContainer .contactContainer .socialDiv {
+  padding-left: 4%;
+}
+.mainContactContainer .contactSocialContainer .contactContainer .socialDiv .socialSpan {
+  color: #8be9fd;
+}
+.mainContactContainer .contactSocialContainer .contactContainer .socialDiv .socialDoubleDot {
+  color: #ff79c6;
+}
+.mainContactContainer .contactSocialContainer .contactContainer .brackets {
+  color: #bd93f9;
+  padding-left: 20%;
+  padding-bottom: 1%;
+}
+.mainContactContainer .contactSocialContainer .contactContainer .contactMethodContainer {
+  padding-left: 21%;
+}
+.mainContactContainer .contactSocialContainer .contactContainer .contactMethodContainer .methodLineContainer {
+  padding-bottom: 1%;
+}
+.mainContactContainer .contactSocialContainer .contactContainer .contactMethodContainer .methodLineContainer .contactMethod {
+  color: #8be9fd;
+}
+.mainContactContainer .contactSocialContainer .contactContainer .contactMethodContainer .methodLineContainer .doubleDot {
+  color: #ff79c6;
+}
+.mainContactContainer .contactSocialContainer .contactContainer .contactMethodContainer .methodLineContainer .linkContainer a {
+  color: #f1fa8c;
+  transition: color 0.3s;
+}
+.mainContactContainer .contactSocialContainer .contactContainer .contactMethodContainer .methodLineContainer .linkContainer a:hover {
+  color: #a87df1;
+}
+.mainContactContainer .formContactContainer {
+  width: 45%;
+  border-left: 1px solid #bd93f9;
+}
+.mainContactContainer .formContactContainer .formTitle {
+  font-size: 1.4rem;
+  padding-left: 4rem;
+  padding-bottom: 10px;
+  cursor: default;
+}
+.mainContactContainer .formContactContainer form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 4rem;
+}
+.mainContactContainer .formContactContainer form input {
+  height: 45px;
+  margin-top: 7px;
+  background-color: #1d1e24;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  border-radius: 5px;
+}
+.mainContactContainer .formContactContainer form input:focus {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(189, 147, 249, 0.7);
+  outline: none;
+}
+.mainContactContainer .formContactContainer form label {
+  margin-top: 18px;
+  font-size: 14px;
+}
+.mainContactContainer .formContactContainer form .nameAndEmailContainer {
+  display: flex;
+  column-gap: 1rem;
+}
+.mainContactContainer .formContactContainer form .nameAndEmailContainer .nameAndEmail {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.mainContactContainer .formContactContainer form #inputMessage {
   height: 10rem;
+  margin-bottom: 18px;
+}
+.mainContactContainer .formContactContainer form button {
+  box-shadow: inset 0px -3px 7px 0px #a064fa;
+  background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
+  background-color: #ca26eb;
+  border-radius: 5px;
+  border: 1px solid #44315e;
+  display: inline-block;
+  cursor: pointer;
+  color: #f0f8ff;
+  font-family: Arial;
+  font-size: 1rem;
+  padding: 12px;
+  width: 110px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #19213b;
+  user-select: none;
+}
+.mainContactContainer .formContactContainer form button:hover {
+  background: linear-gradient(to bottom, #745c99 5%, #ca26eb 100%);
+  background-color: #745c99;
+}
+.mainContactContainer .formContactContainer form button:active {
+  position: relative;
+  top: 1px;
 }

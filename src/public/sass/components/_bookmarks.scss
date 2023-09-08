@@ -149,19 +149,22 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  align-items: center;
-  justify-content: space-around;
+  padding: 3%;
+  row-gap: 10%;
+  overflow-y: auto;
+  // align-items: center;
+  // justify-content: space-around;
 
   .channelCardAndNote {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     cursor: default;
 
     .channelCardContainer {
       display: flex;
       flex-direction: column;
-      max-width: 800px;
-      width: 70%;
+      // max-width: 800px;
+      width: 60%;
       background-color: $color-darkBlue;
       border-radius: 15px;
       transition: box-shadow 0.3s;
@@ -257,7 +260,8 @@
   .videosContainer {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    column-gap: 3%;
 
     .videoContainer {
       display: flex;

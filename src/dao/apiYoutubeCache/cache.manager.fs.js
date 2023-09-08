@@ -93,7 +93,7 @@ class CacheManager {
       const fileAge = currentTime - lastUpdatedTime;
 
       const cacheExpiration = 24 * 60 * 60 * 1000;
-      //const cacheExpiration = 5 * 60 * 1000;
+      // const cacheExpiration = 5 * 60 * 1000;
 
       return fileAge <= cacheExpiration;
     } catch (error) {

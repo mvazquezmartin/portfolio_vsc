@@ -10,7 +10,7 @@
   color: $color-white;
   height: 100vh;
   gap: 0px 0px;
-  grid-auto-flow: row;
+  grid-auto-flow: row;  
 
   a#menu-icon {
     display: none;
@@ -91,7 +91,7 @@
           color: #5c6a98;
           font-size: 1.7rem;
           cursor: pointer;
-          transition: color 0.3s;
+          transition: color 0.1s;
 
           &:hover {
             color: $color-white;
@@ -386,7 +386,8 @@
   }
 
   @include tablet {
-    grid-template-columns: 0.1fr 0.5fr 3fr;
+    // grid-template-columns: 0.1fr 0.5fr 3fr;
+    grid-template-columns: 0.1fr 170px minmax(0, 3fr);
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas:
       "navBarTop navBarTop navBarTop"
@@ -413,7 +414,8 @@
   }
 
   @include desktop {
-    grid-template-columns: 0.1fr 0.5fr 3fr;
+    //grid-template-columns: 0.1fr 0.5fr 3fr;
+    grid-template-columns: 0.1fr 270px minmax(0, 3fr);
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas:
       "navBarTop navBarTop navBarTop"

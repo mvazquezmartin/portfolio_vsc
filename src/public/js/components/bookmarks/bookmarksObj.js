@@ -230,9 +230,9 @@ const channelNotes = {
   Guinxu:
     "Aunque no sea dedicado a la programación, es un canal que consumo ya que Guinxu es un apasionado en lo que hace. Explica como se logran ciertos efectos en los videojuegos, que métodos utilizar para optimizar el rendimiento y mucho mas.",
   Nate_Gentile:
-    "Siempre tuve como hobby la tecnología y en especial, las computadoras. Nate sube gran cantidad de contenido armando PC con los últimos componentes, modding o noticias del mundo tech.",
+    "Siempre tuve como hobby la tecnología y en especial las computadoras. Nate sube gran cantidad de contenido armando PC con los últimos componentes, modding o noticias del mundo tech.",
   Joe_Grand:
-    "Es un ingeniero en electrónica, inventor y hacker de hardware estadounidense conocido en la comunidad hacker como Kingpin. Aunque no es muy activo en Youtube, los videos que tiene son impresionante como indaga y llega a lo mas profundo para corromper el sistema de seguridad de un dispositivo.",
+    "Es un ingeniero electrónico, inventor y hacker de hardware estadounidense conocido en la comunidad hacker como Kingpin. Aunque no es muy activo en Youtube, los videos que tiene son impresionante como indaga y llega a lo mas profundo para corromper el sistema de seguridad de un dispositivo.",
   Joaquin_Leal:
     "Cuando estuve trabajando en una empresa que hacia rig de minería de ETH, había un problema con una marca de placa de video que rendía muchos menos de lo esperado. Investigando como solucionarlo, llegue al canal de Joaquin que resolvía la problemática. Desde entonces, me enamore de su proyecto y sigo día a día sus avances.",
 };

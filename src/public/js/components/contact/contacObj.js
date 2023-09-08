@@ -2,7 +2,7 @@ const contactMethod = [
   {
     method: "email",
     data: "matias.vazquezmartin@gmail.com",
-    link: "",
+    link: "mailto: matias.vazquezmartin@gmail.com",
   },
   {
     method: "linkedin",
