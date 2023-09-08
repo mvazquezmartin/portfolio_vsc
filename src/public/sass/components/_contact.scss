@@ -1,14 +1,30 @@
 .mainContactContainer {
   display: flex;
   height: 100%;
+  justify-content: space-around;
   align-items: center;
+  row-gap: 2rem;
 
   .contactContainer {
-    width: 50%;
-    div {
-      color: $color-pink;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: $color-darkGrey;
+    border-radius: 15px;
+    padding: 1rem;
+    font-family: $font-FireCode;
+    font-size: 1.3rem;
+
+    .squareBrackets {
+      color: $color-white;
     }
-    .methodLineContact {
+    .brackets {
+      color: $color-pink;
+      padding-left: 1rem;
+    }
+    .methodLineContainer {
+      padding-left: 2rem;
+      padding-bottom: 1rem;
       .contactMethod {
         color: #8be9fd;
       }
@@ -16,13 +32,28 @@
         color: $color-pink;
       }
       .linkContainer {
-        color: #f1fa8c;
         a {
+          color: #f1fa8c;
+          transition: color 0.7s;
+          &:hover {
+            color: $color-white;
+          }
         }
       }
     }
   }
-  .formContact {
-    width: 50%;
+  #formContact {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    #inputname {
+    }
+    #inputEmail {
+    }
+    #inputSubject {
+    }
+    #inputMessage {
+      height: 10rem;
+    }
   }
 }

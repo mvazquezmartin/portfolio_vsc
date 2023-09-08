@@ -1808,23 +1808,49 @@ a:hover {
 .mainContactContainer {
   display: flex;
   height: 100%;
+  justify-content: space-around;
   align-items: center;
+  row-gap: 2rem;
 }
 .mainContactContainer .contactContainer {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  background-color: #1d1e24;
+  border-radius: 15px;
+  padding: 1rem;
+  font-family: "Fira Code", monospace;
+  font-size: 1.3rem;
 }
-.mainContactContainer .contactContainer div {
+.mainContactContainer .contactContainer .squareBrackets {
+  color: #f0f8ff;
+}
+.mainContactContainer .contactContainer .brackets {
   color: #ff79c6;
+  padding-left: 1rem;
 }
-.mainContactContainer .contactContainer .methodLineContact .contactMethod {
+.mainContactContainer .contactContainer .methodLineContainer {
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+.mainContactContainer .contactContainer .methodLineContainer .contactMethod {
   color: #8be9fd;
 }
-.mainContactContainer .contactContainer .methodLineContact .doubleDot {
+.mainContactContainer .contactContainer .methodLineContainer .doubleDot {
   color: #ff79c6;
 }
-.mainContactContainer .contactContainer .methodLineContact .linkContainer {
+.mainContactContainer .contactContainer .methodLineContainer .linkContainer a {
   color: #f1fa8c;
+  transition: color 0.7s;
 }
-.mainContactContainer .formContact {
-  width: 50%;
+.mainContactContainer .contactContainer .methodLineContainer .linkContainer a:hover {
+  color: #f0f8ff;
+}
+.mainContactContainer #formContact {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.mainContactContainer #formContact #inputMessage {
+  height: 10rem;
 }

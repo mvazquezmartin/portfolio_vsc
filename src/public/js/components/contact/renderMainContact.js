@@ -11,8 +11,18 @@ const renderMainContact = () => {
 
   const contactContainer = document.createElement("div");
   contactContainer.classList.add("contactContainer");
+
   const openSquareBracketsContainer = document.createElement("div");
+  openSquareBracketsContainer.classList.add("squareBrackets");
   openSquareBracketsContainer.textContent = "[";
+
+  const openBrackets = document.createElement("div");
+  openBrackets.classList.add("brackets");
+  openBrackets.textContent = "{";
+
+  const closeBrackets = document.createElement("div");
+  closeBrackets.classList.add("brackets");
+  closeBrackets.textContent = "},";
 
   const contactMethodContainer = document.createElement("div");
   contactMethodContainer.classList.add("contactMethodContainer");
@@ -22,11 +32,14 @@ const renderMainContact = () => {
   });
 
   const closeSquareBracketsContainer = document.createElement("div");
+  closeSquareBracketsContainer.classList.add("squareBrackets");
   closeSquareBracketsContainer.textContent = "],";
 
   mainContactContainer.appendChild(contactContainer);
   contactContainer.appendChild(openSquareBracketsContainer);
+  contactContainer.appendChild(openBrackets);
   contactContainer.appendChild(contactMethodContainer);
+  contactContainer.appendChild(closeBrackets);
   contactContainer.appendChild(closeSquareBracketsContainer);
 
   renderContactForm(mainContactContainer);
