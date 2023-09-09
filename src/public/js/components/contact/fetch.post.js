@@ -7,11 +7,17 @@ const post = () => {
   newMessage.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const data = new FormData(newMessage);
+    const formData = new FormData(newMessage);
+
     const message = {
       date: new Date(),
+      ...Object.fromEntries(formData),
     };
-    data.forEach((value, key) => (message[key] = value));
+
+    // const message = {
+    //   date: new Date(),
+    // };
+    // formData.forEach((value, key) => (message[key] = value));
 
     fetch(url, {
       headers: {
