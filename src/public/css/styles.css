@@ -1810,10 +1810,8 @@ a:hover {
 
 .mainContactContainer {
   display: flex;
-  height: 100%;
   justify-content: space-around;
   align-items: baseline;
-  row-gap: 2rem;
   padding-top: 2rem;
 }
 .mainContactContainer .contactSocialContainer {
@@ -1889,7 +1887,8 @@ a:hover {
   flex-direction: column;
   padding-left: 4rem;
 }
-.mainContactContainer .formContactContainer form input {
+.mainContactContainer .formContactContainer form input,
+.mainContactContainer .formContactContainer form #inputMessage {
   font-family: "Fira Code", monospace;
   font-size: 1.1rem;
   color: #f0f8ff;
@@ -1902,7 +1901,8 @@ a:hover {
   border-color: transparent;
   border-radius: 5px;
 }
-.mainContactContainer .formContactContainer form input:focus {
+.mainContactContainer .formContactContainer form input:focus,
+.mainContactContainer .formContactContainer form #inputMessage:focus {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(189, 147, 249, 0.7);
@@ -1922,24 +1922,10 @@ a:hover {
   width: 40%;
 }
 .mainContactContainer .formContactContainer form #inputMessage {
-  font-size: 1.1rem;
-  font-family: "Fira Code", monospace;
-  padding: 10px 14px;
   height: 10rem;
-  margin-top: 7px;
+  padding-top: 10px;
   margin-bottom: 18px;
-  color: #f0f8ff;
-  background-color: #1d1e24;
-  border-style: none;
-  border-width: 0;
-  border-color: transparent;
-  border-radius: 5px;
-}
-.mainContactContainer .formContactContainer form #inputMessage:focus {
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(189, 147, 249, 0.7);
-  outline: none;
+  resize: none;
 }
 .mainContactContainer .formContactContainer form button {
   box-shadow: inset 0px -3px 7px 0px #a064fa;

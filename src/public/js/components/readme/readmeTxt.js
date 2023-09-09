@@ -42,11 +42,6 @@ const readme = {
   herramienta invaluable en mi propio viaje de aprendizaje en FrontEnd. Desde HTML y CSS
   hasta JavaScript y React, sus lecciones han sido fundamentales en mi comprensión de estas
   tecnologías.  
-  
-  En resumen, no puedo agradecerles lo suficiente por el increíble trabajo que hacen.
-  Ustedes están haciendo una diferencia real, y estoy seguro de que muchos, como yo, están
-  agradecidos por su trabajo.
-  
   `,
   magic8ball: `
   # <center> 🎱 Magic 8 Ball </center>

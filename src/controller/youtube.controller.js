@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { API_KEY } = require("../config/apiGoogle");
+const { API_KEY } = require("../config/app.config");
 const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
 const { default: axios } = require("axios");
 const CacheService = require("../service/cacheYoutube.service");
