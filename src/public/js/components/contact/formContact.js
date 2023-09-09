@@ -25,6 +25,7 @@ const renderContactForm = (nodo) => {
   inputName.setAttribute("type", "text");
   inputName.setAttribute("name", "name");
   inputName.setAttribute("id", "inputName");
+  inputName.setAttribute("required", "true");
 
   const labelEmail = document.createElement("label");
   labelEmail.setAttribute("for", "email");
@@ -33,6 +34,7 @@ const renderContactForm = (nodo) => {
   inputEmail.setAttribute("type", "email");
   inputEmail.setAttribute("name", "email");
   inputEmail.setAttribute("id", "inputEmail");
+  inputEmail.setAttribute("required", "true");
 
   const labelSubject = document.createElement("label");
   labelSubject.setAttribute("for", "subject");
@@ -41,14 +43,16 @@ const renderContactForm = (nodo) => {
   inputSubject.setAttribute("type", "text");
   inputSubject.setAttribute("name", "subject");
   inputSubject.setAttribute("id", "inputSubject");
+  inputSubject.setAttribute("required", "true")
 
   const labelMessage = document.createElement("label");
   labelMessage.setAttribute("for", "message");
   labelMessage.textContent = "MENSAJE";
-  const inputMessage = document.createElement("input");
+  const inputMessage = document.createElement("textarea");
   inputMessage.setAttribute("type", "text");
   inputMessage.setAttribute("name", "message");
   inputMessage.setAttribute("id", "inputMessage");
+  inputMessage.setAttribute("required", "true")
 
   const inputSubmit = document.createElement("button");
   inputSubmit.setAttribute("type", "submit");

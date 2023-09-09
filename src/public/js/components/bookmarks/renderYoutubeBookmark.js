@@ -9,7 +9,7 @@ const renderYoutube = async (youtubeChannels, nodo) => {
     try {
       if (!cacheData[channelId]) {
         const response = await fetch(
-          `http://localhost:3030/getinfochannel?channelId=${channelId}`
+          `http://localhost:3030/getinfochannels?channelId=${channelId}`
         );
         if (!response.ok) {
           throw new Error("No se pudo obtener la respuesta de la API");

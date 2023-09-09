@@ -40,6 +40,6 @@ class CacheService {
   }
 }
 
-const cacheService = new CacheService(cachePath);
+// const cacheService = new CacheService(cachePath);
 
-module.exports = cacheService;
+module.exports = new CacheService(cachePath)

@@ -146,13 +146,13 @@ router.delete("/:id", async (req, res) => {
 });
 
 // DELETE ALL
-router.delete("/", async(req,res)=>{
+router.delete("/", async (req, res) => {
   try {
-    const {persistence} = req.query
+    const { persistence } = req.query;
 
-    ItemService.setPersistence(persistence)
+    ItemService.setPersistence(persistence);
 
-    const response = await ItemService.deleteAll()
+    const response = await ItemService.deleteAll();
 
     res.status(response.code).json({
       status: response.status,
@@ -165,6 +165,6 @@ router.delete("/", async(req,res)=>{
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
       .json({ status: "error", message: "Something gone wrong" });
   }
-})
+});
 
 module.exports = router;

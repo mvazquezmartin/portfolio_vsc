@@ -165,9 +165,7 @@ class ItemService {
   }
 }
 
-const itemService = new ItemService();
-
-module.exports = itemService;
+module.exports = new ItemService();
 
 // failed attempt with factory pattern to change persistence at runtime
 //

@@ -1767,6 +1767,7 @@ a:hover {
   padding-left: 1rem;
 }
 .channelMainContainer .channelCardAndNote .channelNoteMainContainer .channelNoteContainer {
+  font-size: 0.9rem;
   padding: 1rem;
   background-color: #343541;
   border-bottom-left-radius: 15px;
@@ -1804,6 +1805,7 @@ a:hover {
 }
 .channelMainContainer .videosContainer .videoContainer a .videoContentContainer {
   padding: 10px;
+  font-size: 0.9rem;
 }
 
 .mainContactContainer {
@@ -1888,8 +1890,12 @@ a:hover {
   padding-left: 4rem;
 }
 .mainContactContainer .formContactContainer form input {
+  font-family: "Fira Code", monospace;
+  font-size: 1.1rem;
+  color: #f0f8ff;
   height: 45px;
   margin-top: 7px;
+  padding-left: 14px;
   background-color: #1d1e24;
   border-style: none;
   border-width: 0;
@@ -1916,8 +1922,24 @@ a:hover {
   width: 40%;
 }
 .mainContactContainer .formContactContainer form #inputMessage {
+  font-size: 1.1rem;
+  font-family: "Fira Code", monospace;
+  padding: 10px 14px;
   height: 10rem;
+  margin-top: 7px;
   margin-bottom: 18px;
+  color: #f0f8ff;
+  background-color: #1d1e24;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  border-radius: 5px;
+}
+.mainContactContainer .formContactContainer form #inputMessage:focus {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(189, 147, 249, 0.7);
+  outline: none;
 }
 .mainContactContainer .formContactContainer form button {
   box-shadow: inset 0px -3px 7px 0px #a064fa;

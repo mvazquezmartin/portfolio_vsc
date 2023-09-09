@@ -39,8 +39,6 @@
         .socialDoubleDot {
           color: $color-pink;
         }
-        .socialBrackets {
-        }
       }
 
       .brackets {
@@ -89,8 +87,12 @@
       padding-left: 4rem;
 
       input {
+        font-family: $font-FireCode;
+        font-size: 1.1rem;
+        color: $color-white;
         height: 45px;
         margin-top: 7px;
+        padding-left: 14px;
         background-color: $color-darkGrey;
         border-style: none;
         border-width: 0;
@@ -121,12 +123,26 @@
         }
       }
 
-      #inputSubject {
-      }
-
       #inputMessage {
+        font-size: 1.1rem;
+        font-family: $font-FireCode;
+        padding: 10px 14px;
         height: 10rem;
+        margin-top: 7px;
         margin-bottom: 18px;
+        color: $color-white;
+        background-color: $color-darkGrey;
+        border-style: none;
+        border-width: 0;
+        border-color: transparent;
+        border-radius: 5px;
+
+        &:focus {
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgba(189, 147, 249, 0.7);
+          outline: none;
+        }
       }
 
       button {

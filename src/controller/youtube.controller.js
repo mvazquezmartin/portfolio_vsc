@@ -2,7 +2,7 @@ const { Router } = require("express");
 const { API_KEY } = require("../config/apiGoogle");
 const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
 const { default: axios } = require("axios");
-const cacheService = require("../service/cacheYoutube.service");
+const CacheService = require("../service/cacheYoutube.service");
 
 const router = Router();
 
@@ -10,9 +10,9 @@ router.get("/", async (req, res) => {
   try {
     const { channelId } = req.query;
 
-    const isValid = await cacheService.isValidCache(channelId);
+    const isValid = await CacheService.isValidCache(channelId);
     if (isValid) {
-      const response = await cacheService.getOne(channelId);
+      const response = await CacheService.getOne(channelId);
       if (response.payload !== null) {
         return res.status(response.code).json({
           status: response.status,
@@ -49,8 +49,8 @@ router.get("/", async (req, res) => {
       latestVideo: videoInfo,
     };
 
-    //await cacheService.delete(channelId);
-    await cacheService.create(channelId, channelInfo);
+    //await CacheService.delete(channelId);
+    await CacheService.create(channelId, channelInfo);
 
     console.log("HELLO WORLD!:", channelData.brandingSettings.channel.title);
 

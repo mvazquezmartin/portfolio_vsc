@@ -1,6 +1,7 @@
 import { contactMethod } from "./contacObj.js";
 import { renderContactForm } from "./formContact.js";
 import { renderContactMethod } from "./renderContactMethod.js";
+import { post } from "./post.fetch.js";
 
 const renderMainContact = () => {
   const path = document.getElementById("rootPath");
@@ -76,6 +77,8 @@ const renderMainContact = () => {
   renderContactForm(mainContactContainer);
 
   mainView.appendChild(mainContactContainer);
+
+  post();
 };
 
 export { renderMainContact };
