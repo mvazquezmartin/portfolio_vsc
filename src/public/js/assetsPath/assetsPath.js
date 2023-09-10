@@ -19,6 +19,8 @@ const iconPath = {
   TAILWIND: "./assets/tailwind-svgrepo-com.svg",
   DOCKER: "./assets/docker-svgrepo-com.svg",
   GITHUB: "./assets/github-svgrepo-com.svg",
+  GIT: "./assets/git-svgrepo-com.svg",
+  DOTENV: "./assets/dotenv-svgrepo-com.svg",
   JPG: "./assets/jpg-svgrepo-com.svg",
   TXT: "./assets/txt-svgrepo-com.svg",
   MARKDOWN: "./assets/markdown-svgrepo-com.svg",

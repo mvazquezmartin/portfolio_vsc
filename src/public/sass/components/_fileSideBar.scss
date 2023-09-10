@@ -5,9 +5,9 @@
   border: none;
   text-align: left;
   outline: none;
-  font-size: 13px;
+  font-size: 14px;
   font-family: $font-OpenSans;
-  padding: 1px 0;
+  padding: 3px 0;
   padding-left: 1rem;
   cursor: pointer;
 
@@ -37,14 +37,13 @@
 }
 
 .fileTxt {
-  margin-left: 1rem;
-  padding: 0;
+  padding: 2px 0 2px 1rem;
   color: $color-white;
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 13px;
+  font-size: 14px;
 
   &:hover {
     background-color: #bebebe33;
@@ -52,6 +51,6 @@
 
   .iconoFile {
     width: 15px;
-    margin-right: 1px;
+    margin-right: 2px;
   }
 }

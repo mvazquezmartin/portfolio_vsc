@@ -7,6 +7,7 @@ import { magic8BallRender } from "../magic8ball/magic8ball.js";
 import { readmeRender8Ball } from "../magic8ball/readme.js";
 import { playGroundRender } from "../playground/playGround.js";
 import { readmeRender } from "../playground/readme.js";
+import { renderJson } from "./fileExplorerRender.js";
 
 const assetsFolder = {
   folderName: "Assets",
@@ -134,9 +135,28 @@ const chat = {
   subfolders: [],
 };
 
-const test = {
+const readme = {
   name: "README.md",
   icon: iconPath.MARKDOWN,
+  function: () => console.log("archivo1"),
+};
+
+const dotenv = {
+  name: ".env",
+  icon: iconPath.DOTENV,
+  function: () => console.log("archivo1"),
+};
+
+const packageJson = {
+  name: "package.json",
+  icon: iconPath.NODEJS,
+  function: () =>
+    tabManager.create("package.json", renderJson, iconPath.NODEJS),
+};
+
+const gitIgnore = {
+  name: ".gitignore",
+  icon: iconPath.GIT,
   function: () => console.log("archivo1"),
 };
 
@@ -225,4 +245,14 @@ const folder1 = {
   ],
 };
 
-export { assetsFolder, playGroundFolder, folder1, magic8Ball, chat, test };
+export {
+  assetsFolder,
+  playGroundFolder,
+  folder1,
+  magic8Ball,
+  chat,
+  readme,
+  packageJson,
+  gitIgnore,
+  dotenv,
+};

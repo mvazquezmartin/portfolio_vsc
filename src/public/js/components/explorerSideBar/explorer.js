@@ -1,10 +1,13 @@
 import {
   assetsFolder,
   chat,
+  dotenv,
   folder1,
+  gitIgnore,
   magic8Ball,
+  packageJson,
   playGroundFolder,
-  test,
+  readme,
 } from "./folderFileObj.js";
 import { folderFileSideBar } from "./folderFileRender.js";
 
@@ -34,8 +37,17 @@ const renderExplorer = () => {
   const carpetaPrueba = folderFileSideBar(folder1);
   viewSideBar.appendChild(carpetaPrueba);
 
-  const test2 = folderFileSideBar(test);
-  viewSideBar.appendChild(test2);
+  const env = folderFileSideBar(dotenv);
+  viewSideBar.appendChild(env);
+
+  const readmeMain = folderFileSideBar(readme);
+  viewSideBar.appendChild(readmeMain);
+
+  const ignore = folderFileSideBar(gitIgnore);
+  viewSideBar.appendChild(ignore);
+
+  const json = folderFileSideBar(packageJson);
+  viewSideBar.appendChild(json);
 
   const collapseFolder = document.createElement("i");
   collapseFolder.classList.add("bi", "bi-chevron-bar-contract");
