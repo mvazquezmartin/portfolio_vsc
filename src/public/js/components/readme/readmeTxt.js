@@ -206,13 +206,15 @@ const readme = {
   
   `,
   README:`
-  # VSCode Portfolio
+  # <center> VSCode Portfolio </center>
   Un sitio web con temática de Visual Studio Code construido con un solo HTML, SASS y JavaScript. Más que un clásico README, voy a contar los desafíos y progresos que atravesé replicando la estética y algunas funcionalidades de VSCode.
   ## 📚 Tech Stack 👨‍💻
   
-  **Cliente:** [![My Skills](https://skillicons.dev/icons?i=html,sass,js)](https://skillicons.dev)
+  **Cliente:**  
+  [![My Skills](https://skillicons.dev/icons?i=html,sass,js)](https://skillicons.dev)
   
-  **Servidor:** [![My Skills](https://skillicons.dev/icons?i=nodejs,express)](https://skillicons.dev)
+  **Servidor:**  
+  [![My Skills](https://skillicons.dev/icons?i=nodejs,express)](https://skillicons.dev)
   
   **Dependencias:** Axios, Dotenv, Mongoose, Multer, Path, Socket.io.  
   **Librerias:** Bootstrap Icons, SweetAlert2, HighlightJs, MarkedJs.
