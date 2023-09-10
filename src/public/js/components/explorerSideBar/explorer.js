@@ -4,6 +4,7 @@ import {
   folder1,
   magic8Ball,
   playGroundFolder,
+  test,
 } from "./folderFileObj.js";
 import { folderFileSideBar } from "./folderFileRender.js";
 
@@ -32,6 +33,9 @@ const renderExplorer = () => {
 
   const carpetaPrueba = folderFileSideBar(folder1);
   viewSideBar.appendChild(carpetaPrueba);
+
+  const test2 = folderFileSideBar(test);
+  viewSideBar.appendChild(test2);
 
   const collapseFolder = document.createElement("i");
   collapseFolder.classList.add("bi", "bi-chevron-bar-contract");

@@ -134,6 +134,12 @@ const chat = {
   subfolders: [],
 };
 
+const test = {
+  name: "README.md",
+  icon: iconPath.MARKDOWN,
+  function: () => console.log("archivo1"),
+};
+
 const folder1 = {
   folderName: "Inventario",
   files: [
@@ -219,4 +225,4 @@ const folder1 = {
   ],
 };
 
-export { assetsFolder, playGroundFolder, folder1, magic8Ball, chat };
+export { assetsFolder, playGroundFolder, folder1, magic8Ball, chat, test };

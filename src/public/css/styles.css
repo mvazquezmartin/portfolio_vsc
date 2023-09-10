@@ -623,13 +623,14 @@ a:hover {
 }
 
 .fileTxt {
-  margin-left: 7px;
+  margin-left: 1rem;
   padding: 0;
   color: #f0f8ff;
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 13px;
 }
 .fileTxt:hover {
   background-color: rgba(190, 190, 190, 0.2);
