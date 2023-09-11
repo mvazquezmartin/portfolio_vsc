@@ -8,6 +8,7 @@ import { readmeRender8Ball } from "../magic8ball/readme.js";
 import { playGroundRender } from "../playground/playGround.js";
 import { readmeRender } from "../playground/readme.js";
 import { renderJson } from "./fileExplorerRender.js";
+import { readmeMain } from "../readme/mainReadme.js";
 
 const assetsFolder = {
   folderName: "Assets",
@@ -138,7 +139,7 @@ const chat = {
 const readme = {
   name: "README.md",
   icon: iconPath.MARKDOWN,
-  function: () => console.log("archivo1"),
+  function: () => tabManager.create("README.md", readmeMain, iconPath.MARKDOWN),
 };
 
 const dotenv = {

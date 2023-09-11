@@ -205,36 +205,36 @@ const youtubeId = {
 
 const channelNotes = {
   freeCodeCamp_org:
-    "Este canal siempre es bueno tenerlo en vista. Aporta información valiosa y una gran cantidad de recursos para empezar en el camino de un nuevo lenguaje o desde cero. Tienen canal en español e ingles, aunque para tener en cuenta, el canal en ingles tiene contenido mas actualizado.",
+    "Este canal siempre es bueno tenerlo en vista. Aporta información valiosa y una gran cantidad de recursos para empezar en el camino de un nuevo lenguaje o desde cero. Tienen canal en español e inglés, aunque para tener en cuenta, el canal en inglés tiene contenido más actualizado.",
   MoureDev_by_Brais_Moure:
     'Moure es un experto ingeniero de software, que comparte su conocimiento y experiencias. Sus cursos que tiene publicado son excelentes, recomiendo ver "Primeros pasos desde cero" antes de empezar con un nuevo lenguaje, otorga un buen panorama de los principios del lenguaje en una hora. Actualmente, lo consumo en modo de postcast cuando transmite en twitch.',
   ManzDev:
     "Envidiable los diseños que construye en el frontend, lo que hace Manz con CSS puro es de admirar. Tiene variedad de videos donde aporta conceptos básicos y fundamentos de CSS, desde etiquetas HTML hasta dibujar un GameBoy. Actualmente, lo consumo en modo postcast cuando transmite en twitch.",
   Programador_X:
-    "Xavier con su vasto currículum en grandes empresas, comparte su experiencia de como llego hasta ahí y el camino que siguió. Ademas creo su academia para formar nuevos programadores. Muy motivador para que uno pueda llegar a las metas deseadas.",
+    "Xavier con su vasto currículum en grandes empresas, comparte su experiencia de como llego hasta ahí y el camino que siguió. Además creo su academia para formar nuevos programadores. Muy motivador para que uno pueda llegar a las metas deseadas.",
   midudev:
-    "Fue unos de los primeros canales en español que conocí cuando empece a investigar que era ser un desarrollador full stack. Tuve la suerte de toparme con Midu, me despejo mis principales dudas y me motivo a emprender en este viaje de ser programador. Actualmente, lo consumo en modo postcast cuando transmite en twitch.",
-  Fazt: "Con Fazt me mantengo informado de las ultimas noticias de informática, ademas muestra el uso de las nuevas tecnologías o cambios en los lenguajes. Esta mas enfocado en el contenido backend, por lo que me ayudo mucho a llegar donde estoy ahora.",
+    "Fue unos de los primeros canales en español que conocí cuando empecé a investigar que era ser un desarrollador full stack. Tuve la suerte de toparme con Midu, me despejo mis principales dudas y me motivo a emprender en este viaje de ser programador. Actualmente, lo consumo en modo postcast cuando transmite en twitch.",
+  Fazt: "Con Fazt me mantengo informado de las últimas noticias de informática, además muestra el uso de las nuevas tecnologías o cambios en los lenguajes. Está más enfocado en el contenido backend, por lo que me ayudo mucho a llegar donde estoy ahora.",
   Fazt_Code:
-    "FaztCode es el canal secundario de Fazt donde comparte y publica videos extensos creando proyectos académicos con un stack definido. Siempre es bueno ver código de otra persona, y ademas, con buenas practicas.",
+    "FaztCode es el canal secundario de Fazt donde comparte y publica videos extensos creando proyectos académicos con un stack definido. Siempre es bueno ver código de otra persona, y además, con buenas prácticas.",
   Fireship:
-    'Canal en ingles, aporta las ultimas noticias tecnológicas y también gran variedad de tutoriales. Su serie "... in 100 seconds" le agrega un poco de humor a cada lenguaje que analiza.',
+    'Canal en inglés, aporta las últimas noticias tecnológicas y también gran variedad de tutoriales. Su serie "... in 100 seconds" le agrega un poco de humor a cada lenguaje que analiza.',
   GreatStack:
-    'Canal en ingles. Anteriormente, EazyTutorial, con él aprendí los principios básicos de html y css. Tiene publicado gran variedad de videos haciendo sitios web con esas dos tecnologías sin ninguna librería o framework, código limpio y sencillo de entender. La serie "JavaScript Tutorial for Beginners" es de mis preferidas.',
+    'Canal en inglés. Anteriormente, EazyTutorial, con él aprendí los principios básicos de html y css. Tiene publicado gran variedad de videos haciendo sitios web con esas dos tecnologías, sin ninguna librería o framework, código limpio y sencillo de entender. La serie "JavaScript Tutorial for Beginners" es de mis preferidas.',
   EDteam:
-    'EDteam, ademas de ser un canal de youtubee, tiene una plataforma educativa. Brindan cursos tanto para principiantes como para usuarios más avanzados. Tiene gran cantidad de videos explicando referencias al mundo de la programación como: "¿Qué es la programación orientada a objetos?", "¿Qué es una API?" y muchos mas.',
+    'EDteam, además de ser un canal de YouTube, tiene una plataforma educativa. Brindan cursos tanto para principiantes como para usuarios más avanzados. Tiene gran cantidad de videos explicando referencias al mundo de la programación como: "¿Qué es la programación orientada a objetos?", "¿Qué es una API?", y muchos más.',
   HolaMundo:
     "Es conocido por ser un canal en español dedicado a la programación y la tecnología. El canal se centra en la creación de contenido educativo y tutoriales sobre una amplia variedad de temas relacionados con la informática y el desarrollo de software. Estos temas pueden incluir programación, desarrollo web, aplicaciones móviles, lenguajes de programación, herramientas de desarrollo y más.",
   deivchoi:
     "Al canal de Deivchoi lo conocí cuando estaba investigando sobre el mundo de desarrollo web, dio la casualidad que cuando empezó a compartir videos, él estaba comenzando sus estudios, compartía sus errores y aciertos en el aprendizaje. Su historia y como dio un cambio de rumbo a su vida, me hizo sentir identificado.",
   Guinxu:
-    "Aunque no sea dedicado a la programación, es un canal que consumo ya que Guinxu es un apasionado en lo que hace. Explica como se logran ciertos efectos en los videojuegos, que métodos utilizar para optimizar el rendimiento y mucho mas.",
+    "Aunque no sea dedicado a la programación, es un canal que consumo, ya que Guinxu es un apasionado en lo que hace. Explica como se logran ciertos efectos en los videojuegos, que métodos utilizar para optimizar el rendimiento y mucho más.",
   Nate_Gentile:
     "Siempre tuve como hobby la tecnología y en especial las computadoras. Nate sube gran cantidad de contenido armando PC con los últimos componentes, modding o noticias del mundo tech.",
   Joe_Grand:
-    "Es un ingeniero electrónico, inventor y hacker de hardware estadounidense conocido en la comunidad hacker como Kingpin. Aunque no es muy activo en Youtube, los videos que tiene son impresionante como indaga y llega a lo mas profundo para corromper el sistema de seguridad de un dispositivo.",
+    "Es un ingeniero electrónico, inventor y hacker de hardware estadounidense, conocido en la comunidad hacker como Kingpin. Aunque no es muy activo en Youtube, los videos que tiene son impresionante como indaga y llega a lo más profundo para corromper el sistema de seguridad de un dispositivo.",
   Joaquin_Leal:
-    "Cuando estuve trabajando en una empresa que hacia rig de minería de ETH, había un problema con una marca de placa de video que rendía muchos menos de lo esperado. Investigando como solucionarlo, llegue al canal de Joaquin que resolvía la problemática. Desde entonces, me enamore de su proyecto y sigo día a día sus avances.",
+    "Cuando estuve trabajando en una empresa que contruía rig de minería de ETH, había un problema con una marca de placa de video que rendía muchos menos de lo esperado. Investigando como solucionarlo, llegue al canal de Joaquin que resolvía la problemática. Desde entonces, me enamoré de su proyecto y sigo día a día sus avances.",
 };
 
 export { bookmarks, youtubeId, channelNotes };

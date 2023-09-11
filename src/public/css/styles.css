@@ -936,9 +936,6 @@ a:hover {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.readme .readmeStyle .myJson, .readmeContainerM8b .readmeStyle .myJson {
-  font-size: 1rem;
-}
 .readme .readmeStyle h1, .readmeContainerM8b .readmeStyle h1 {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -969,6 +966,9 @@ a:hover {
   padding: 2px 4px;
   border: 1px solid #ddd;
   border-radius: 3px;
+}
+.readme .readmeStyle .language-javascript, .readmeContainerM8b .readmeStyle .language-javascript {
+  font-size: 1rem;
 }
 .readme .readmeStyle a, .readmeContainerM8b .readmeStyle a {
   color: #007bff;
@@ -1013,6 +1013,9 @@ a:hover {
   .readme .readmeStyle code, .readmeContainerM8b .readmeStyle code {
     white-space: pre-line;
   }
+  .readme .readmeStyle .language-javascript, .readmeContainerM8b .readmeStyle .language-javascript {
+    font-size: 12px;
+  }
 }
 
 .readmeContainerM8b {
@@ -1032,6 +1035,7 @@ a:hover {
   flex-direction: column;
   transition: 1s;
   overflow-y: auto;
+  height: 100%;
 }
 .stackRender .stackFlex, .recommendedContainer .nextToLearnContainer .stackFlex {
   display: flex;
@@ -1085,7 +1089,7 @@ a:hover {
   transition: 0.7s;
 }
 .recommendedContainer.hiddenNTL {
-  height: 2.6%;
+  height: 2.2%;
   transition: 0.7s;
 }
 .recommendedContainer .nextToLearnTitle {
@@ -1678,7 +1682,7 @@ a:hover {
   flex-direction: column;
   height: 100%;
   padding: 3%;
-  row-gap: 10%;
+  row-gap: 15%;
   overflow-y: auto;
 }
 .channelMainContainer .channelCardAndNote {
@@ -1951,4 +1955,10 @@ a:hover {
 .mainContactContainer .formContactContainer form button:active {
   position: relative;
   top: 1px;
+}
+
+.language-json {
+  font-size: 18px;
+  white-space: pre-line;
+  padding-left: 1rem;
 }

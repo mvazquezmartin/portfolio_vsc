@@ -1,11 +1,9 @@
-import { readmeCreate } from "../readme/readmeCreate.js";
+import { highlight } from "../../utils/highlight.js";
 
 const fileContext = {
-  context: `
-  <pre>
-  <code class="hljs language-json myJson">
+  context: `  
   {
-    "name": "mvazquezmartindev",
+    "name": "vscode_portfolio",
     "version": "1.0.0",
     "description": "Portoflio con tematica VSCode, theme Dracula. Desarrolado en Html, Sass y JavaScript.",
     "main": "./src/index.js",
@@ -39,16 +37,13 @@ const fileContext = {
     "devDependencies": {
       "colors": "^1.4.0"
     }
-  }
-  </code>
-   </pre> 
+  }  
   `,
 };
 
 const renderJson = () => {
   const ruta = "Portfolio > package.json";
-  readmeCreate(ruta, fileContext.context);
+  highlight(ruta, fileContext.context, "json");
   hljs.highlightAll();
 };
-
 export { renderJson };

@@ -5,6 +5,7 @@
   flex-direction: column;
   transition: 1s;
   overflow-y: auto;
+  height: 100%;
 
   .stackFlex {
     display: flex;
@@ -62,7 +63,7 @@
   transition: 0.7s;
 
   &.hiddenNTL {
-    height: 2.6%;
+    height: 2.2%;
     transition: 0.7s;
   }
 

@@ -12,10 +12,6 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    .myJson{
-      font-size: 1rem;
-    }
-
     h1 {
       font-size: 2rem;
       margin-bottom: 10px;
@@ -50,6 +46,9 @@
       border: 1px solid #ddd;
       border-radius: 3px;
     }
+    .language-javascript {
+      font-size: 1rem;
+    }
 
     a {
       color: #007bff;
@@ -82,7 +81,7 @@
 
   @include mobile {
     padding: 1rem 0;
-    
+
     .readmeStyle {
       max-width: 90%;
       h1 {
@@ -96,6 +95,9 @@
       }
       code {
         white-space: pre-line;
+      }
+      .language-javascript {
+        font-size: 12px;
       }
     }
   }
