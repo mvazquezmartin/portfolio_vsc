@@ -109,7 +109,7 @@ const bookmarks = [
     img: imgPath.HIGHLIGHT,
     link: "https://highlightjs.org/",
     id: "highlightJs",
-    applied: "readme_m8b.md.",
+    applied: "readme_m8b.md, package.json.",
   },
   {
     icon: iconPath.AOS,
