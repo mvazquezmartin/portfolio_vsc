@@ -5,7 +5,7 @@
   border: none;
   text-align: left;
   outline: none;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-family: $font-OpenSans;
   padding: 3px 0;
   padding-left: 1rem;
@@ -25,7 +25,6 @@
   display: flex;
   gap: 1.5px;
   padding-left: 1.2rem;
-  font-size: 0.8rem;
   text-align: left;
   flex-direction: column;
   max-height: 0;
@@ -43,7 +42,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 14px;
+  font-size: 0.9rem;
 
   &:hover {
     background-color: #bebebe33;

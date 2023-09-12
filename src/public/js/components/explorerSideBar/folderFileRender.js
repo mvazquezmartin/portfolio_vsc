@@ -51,7 +51,7 @@ const folderFileSideBar = (folder, funcion, icono) => {
         panel.style.maxHeight = null;
         iconFolder.setAttribute("src", iconPath.CLOSE_FOLDER);
       } else {
-        panel.style.maxHeight = "300px";
+        panel.style.maxHeight = "500px";
         iconFolder.setAttribute("src", iconPath.OPEN_FOLDER);
       }
     });

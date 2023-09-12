@@ -592,7 +592,7 @@ a:hover {
   border: none;
   text-align: left;
   outline: none;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-family: "Open Sans", sans-serif;
   padding: 3px 0;
   padding-left: 1rem;
@@ -609,7 +609,6 @@ a:hover {
   display: flex;
   gap: 1.5px;
   padding-left: 1.2rem;
-  font-size: 0.8rem;
   text-align: left;
   flex-direction: column;
   max-height: 0;
@@ -626,7 +625,7 @@ a:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 .fileTxt:hover {
   background-color: rgba(190, 190, 190, 0.2);
@@ -1574,7 +1573,7 @@ a:hover {
 }
 .booksmarksContainer .bookmark span {
   font-family: "Open Sans", sans-serif;
-  font-size: 13px;
+  font-size: 0.9rem;
 }
 
 .channelsContainer {

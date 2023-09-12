@@ -59,7 +59,6 @@ class TabManager {
     }
 
     this.render();
-    this.renderMainView();
     this.activeFocus();
   }
 
@@ -152,7 +151,6 @@ class TabManager {
           ? this.activeTabIndex - 1
           : this.activeTabIndex;
       this.setActive(newActiveTabIndex);
-      this.renderMainView();
     }
 
     if (this.tabs.length === 0) {
@@ -161,8 +159,8 @@ class TabManager {
   }
 
   renderMainView() {
-    const mainViewContainer = document.getElementById("mainView");
-    mainViewContainer.innerHTML = "";
+    const mainView = document.getElementById("mainView");
+    mainView.innerHTML = "";
 
     if (this.activeTabIndex !== -1 && this.tabs[this.activeTabIndex]) {
       const activeTab = this.tabs[this.activeTabIndex];

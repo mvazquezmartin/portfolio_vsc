@@ -9,6 +9,7 @@ import { playGroundRender } from "../playground/playGround.js";
 import { readmeRender } from "../playground/readme.js";
 import { renderJson } from "./fileExplorerRender.js";
 import { readmeMain } from "../readme/mainReadme.js";
+import { renderMainCrud } from "../crud/renderMainCrud.js";
 
 const assetsFolder = {
   folderName: "Assets",
@@ -162,17 +163,29 @@ const gitIgnore = {
 };
 
 const folder1 = {
-  folderName: "Inventario",
+  folderName: "CRUD",
   files: [
     {
       name: "Archivo1.txt",
       icon: "./assets/code-file-svgrepo-com.svg",
-      function: () => console.log("archivo1"),
+      function: () => {
+        tabManager.create(
+          "inventario",
+          () => renderMainCrud("filesystem", "ruta1"),
+          iconPath.CODE
+        );
+      },
     },
     {
       name: "Archivo2.txt",
       icon: "./assets/code-file-svgrepo-com.svg",
-      function: () => console.log("archivo1"),
+      function: () => {
+        tabManager.create(
+          "inventario2",
+          renderMainCrud.bind(null, "mongodb", "ruta"),
+          iconPath.CODE
+        );
+      },
     },
   ],
   subfolders: [
