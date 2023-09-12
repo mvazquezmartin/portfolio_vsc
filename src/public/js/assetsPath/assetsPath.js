@@ -97,8 +97,10 @@ const certificadoPath = {
   REACTJS: "./assets/Certificado-ReactJs.png",
   REACTJS_LINK:
     "https://www.coderhouse.com/certificados/63f606fcff4216000e5d1ee0",
-  BACKEND: "https://http.cat/404",
-  BACKEND_LINK: "https://httpstatusdogs.com/img/404.jpg",
+  BACKEND: "./assets/certificado-Backend.png",
+  BACKEND_LINK: "https://www.coderhouse.com/certificados/64ffc47ec65d476d826412d7?lang=es",
+  FULLSTACK: "./assets/certificado-Backend.png",
+  FULLSTACK_LINK: "https://www.coderhouse.com/certificados/64ffc47fc65d476f916412dd?lang=es"
 };
 
 export { imgPath, iconPath, certificadoPath };
