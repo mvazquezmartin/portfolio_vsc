@@ -23,18 +23,18 @@ const renderMainChannel = (channel) => {
   channelBanner.setAttribute("src", channel.banner);
   channelBanner.setAttribute("alt", channel.channel);
 
-  const channelInfoContainer = document.createElement("div");
-  channelInfoContainer.classList.add("channelInfoContainer");
+  const channelImgTitleContainer = document.createElement("div");
+  channelImgTitleContainer.classList.add("imgTitleContainer");
 
   const thumbnailsContainer = document.createElement("div");
   thumbnailsContainer.classList.add("thumbnailsContainer");
 
+  const channelTitlteLinkContainer = document.createElement("div");
+  channelTitlteLinkContainer.classList.add("titleLinkContainer");
+
   const channelThumbnails = document.createElement("img");
   channelThumbnails.setAttribute("src", channel.thumbnails);
   channelThumbnails.setAttribute("alt", channel.customUrl);
-
-  const channelContentContainer = document.createElement("div");
-  channelContentContainer.classList.add("channelContentContainer");
 
   const channelTitle = document.createElement("p");
   channelTitle.classList.add("channelTitle");
@@ -50,6 +50,12 @@ const renderMainChannel = (channel) => {
   );
   channelLink.setAttribute("target", "_blank");
   channelLink.textContent = channel.customUrl;
+
+  const channelInfoContainer = document.createElement("div");
+  channelInfoContainer.classList.add("channelInfoContainer");
+
+  const channelContentContainer = document.createElement("div");
+  channelContentContainer.classList.add("channelContentContainer");
 
   const channelDescription = document.createElement("p");
   channelDescription.classList.add("channelDescription");
@@ -102,17 +108,21 @@ const renderMainChannel = (channel) => {
     videoContentContainer.appendChild(videoTitle);
     videosContainer.appendChild(videoContainer);
   });
+
   channelMainContainer.appendChild(channelCardAndNoteContainer);
   channelCardAndNoteContainer.appendChild(channelCardContainer);
   channelBannerContainer.appendChild(channelBanner);
   channelCardContainer.appendChild(channelBannerContainer);
-  channelCardContainer.appendChild(channelInfoContainer);
+  channelCardContainer.appendChild(channelImgTitleContainer);
+  channelImgTitleContainer.appendChild(thumbnailsContainer);
   thumbnailsContainer.appendChild(channelThumbnails);
-  channelInfoContainer.appendChild(thumbnailsContainer);
-  channelInfoContainer.appendChild(channelContentContainer);
-  channelContentContainer.appendChild(channelTitle);
+  // channelInfoContainer.appendChild(thumbnailsContainer);
+  channelImgTitleContainer.appendChild(channelTitlteLinkContainer);
+  channelTitlteLinkContainer.appendChild(channelTitle);
   channelCustomUrl.appendChild(channelLink);
-  channelContentContainer.appendChild(channelCustomUrl);
+  channelTitlteLinkContainer.appendChild(channelCustomUrl);
+  channelCardContainer.appendChild(channelInfoContainer);
+  channelInfoContainer.appendChild(channelContentContainer);
   channelContentContainer.appendChild(channelDescription);
   channelCardAndNoteContainer.appendChild(channelNoteMainContainer);
   channelNoteMainContainer.appendChild(channelNoteTitleContainer);

@@ -1715,37 +1715,48 @@ a:hover {
   top: 50%;
   transform: translateY(-50%);
 }
-.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer {
+.channelMainContainer .channelCardAndNote .channelCardContainer .imgTitleContainer {
   display: flex;
+  padding: 1rem;
   column-gap: 1rem;
-  padding: 10px;
 }
-.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .thumbnailsContainer {
+.channelMainContainer .channelCardAndNote .channelCardContainer .imgTitleContainer .thumbnailsContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 13%;
 }
-.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .thumbnailsContainer img {
-  min-height: 150px;
+.channelMainContainer .channelCardAndNote .channelCardContainer .imgTitleContainer .thumbnailsContainer img {
+  height: auto;
+  width: 100%;
   border-radius: 50%;
+}
+.channelMainContainer .channelCardAndNote .channelCardContainer .imgTitleContainer .titleLinkContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+}
+.channelMainContainer .channelCardAndNote .channelCardContainer .imgTitleContainer .titleLinkContainer .channelTitle {
+  font-size: 2rem;
+}
+.channelMainContainer .channelCardAndNote .channelCardContainer .imgTitleContainer .titleLinkContainer .channelCustomUrl a {
+  color: #7c7c7c;
+  transition: 0.3s;
+}
+.channelMainContainer .channelCardAndNote .channelCardContainer .imgTitleContainer .titleLinkContainer .channelCustomUrl a:hover {
+  color: #bd93f9;
+}
+.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer {
+  display: flex;
+  padding: 0 1rem 1rem 1rem;
 }
 .channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .channelContentContainer {
   display: flex;
   flex-direction: column;
 }
-.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .channelContentContainer .channelTitle {
-  font-size: 2rem;
-}
-.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .channelContentContainer .channelCustomUrl a {
-  color: #7c7c7c;
-  transition: 0.3s;
-}
-.channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .channelContentContainer .channelCustomUrl a:hover {
-  color: #bd93f9;
-}
 .channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .channelContentContainer .channelDescription {
-  padding-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   white-space: pre-line;
 }
 .channelMainContainer .channelCardAndNote .channelNoteMainContainer {
@@ -1809,6 +1820,35 @@ a:hover {
 .channelMainContainer .videosContainer .videoContainer a .videoContentContainer {
   padding: 10px;
   font-size: 0.9rem;
+}
+@media screen and (max-width: 600px) {
+  .channelMainContainer {
+    row-gap: 2rem;
+  }
+  .channelMainContainer .channelCardAndNote {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  .channelMainContainer .channelCardAndNote .channelCardContainer {
+    width: 100%;
+  }
+  .channelMainContainer .channelCardAndNote .channelCardContainer .imgTitleContainer .thumbnailsContainer {
+    width: 25%;
+  }
+  .channelMainContainer .channelCardAndNote .channelCardContainer .imgTitleContainer .titleLinkContainer .channelTitle {
+    font-size: 1.5rem;
+  }
+  .channelMainContainer .channelCardAndNote .channelCardContainer .channelInfoContainer .channelContentContainer .channelDescription {
+    font-size: 0.9rem;
+  }
+  .channelMainContainer .channelCardAndNote .channelNoteMainContainer {
+    width: 100%;
+  }
+  .channelMainContainer .videosContainer {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
 }
 
 .mainContactContainer {
