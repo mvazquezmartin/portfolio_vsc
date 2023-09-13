@@ -63,13 +63,13 @@
       list-style-type: disc;
       padding-left: 20px;
       margin-bottom: 15px;
+      li {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-left: 1rem;
+      }
     }
 
-    li {
-      font-size: 16px;
-      line-height: 1.5;
-      margin-left: 1rem;
-    }
     img {
       max-width: 60%;
     }
@@ -83,13 +83,23 @@
     padding: 1rem 0;
 
     .readmeStyle {
-      max-width: 90%;
+      max-width: 95%;
       h1 {
         font-size: 1.5rem;
       }
       h2 {
         font-size: 1.3rem;
       }
+      p {
+        font-size: 0.9rem;
+      }
+      ul {
+        padding-left: 10px;
+        li {
+          font-size: 0.9rem;
+        }
+      }
+
       img {
         max-width: 100%;
       }

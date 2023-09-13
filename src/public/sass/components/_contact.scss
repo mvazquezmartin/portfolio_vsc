@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: baseline;
-  padding-top: 2rem;
+  padding: 3%;
 
   .contactSocialContainer {
     display: flex;
@@ -79,7 +79,7 @@
       cursor: default;
     }
 
-    form {
+    #formContact {
       display: flex;
       flex-direction: column;
       padding-left: 4rem;
@@ -154,6 +154,51 @@
         &:active {
           position: relative;
           top: 1px;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    row-gap: 1.5rem;
+
+    .contactSocialContainer {
+      width: 100%;
+      .socialTitle {
+        padding-bottom: 1rem;
+      }
+      .contactContainer {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        .brackets {
+          padding-left: 7%;
+        }
+        .contactMethodContainer {
+          padding-left: 9%;
+        }
+      }
+    }
+
+    .formContactContainer {
+      width: 100%;
+      border-left: none;
+      border-top: 1px solid #bd93f9;
+
+      .formTitle {
+        padding-left: 0;
+        padding-top: 1rem;
+      }
+      #formContact {
+        padding-left: 0;
+        input,
+        #inputMessage {
+          font-size: 0.9rem;
+        }
+        .nameAndEmailContainer {
+          .nameAndEmail {
+            width: 48%;
+          }
         }
       }
     }

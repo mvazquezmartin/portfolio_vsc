@@ -580,7 +580,7 @@ a:hover {
   border-radius: 10px;
 }
 @media screen and (max-width: 600px) {
-  .assetsContainer .assets {
+  .assetsContainer {
     margin: 0 1rem;
   }
 }
@@ -981,7 +981,7 @@ a:hover {
   padding-left: 20px;
   margin-bottom: 15px;
 }
-.readme .readmeStyle li, .readmeContainerM8b .readmeStyle li {
+.readme .readmeStyle ul li, .readmeContainerM8b .readmeStyle ul li {
   font-size: 16px;
   line-height: 1.5;
   margin-left: 1rem;
@@ -998,13 +998,22 @@ a:hover {
     padding: 1rem 0;
   }
   .readme .readmeStyle, .readmeContainerM8b .readmeStyle {
-    max-width: 90%;
+    max-width: 95%;
   }
   .readme .readmeStyle h1, .readmeContainerM8b .readmeStyle h1 {
     font-size: 1.5rem;
   }
   .readme .readmeStyle h2, .readmeContainerM8b .readmeStyle h2 {
     font-size: 1.3rem;
+  }
+  .readme .readmeStyle p, .readmeContainerM8b .readmeStyle p {
+    font-size: 0.9rem;
+  }
+  .readme .readmeStyle ul, .readmeContainerM8b .readmeStyle ul {
+    padding-left: 10px;
+  }
+  .readme .readmeStyle ul li, .readmeContainerM8b .readmeStyle ul li {
+    font-size: 0.9rem;
   }
   .readme .readmeStyle img, .readmeContainerM8b .readmeStyle img {
     max-width: 100%;
@@ -1855,7 +1864,7 @@ a:hover {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
-  padding-top: 2rem;
+  padding: 3%;
 }
 .mainContactContainer .contactSocialContainer {
   display: flex;
@@ -1925,13 +1934,13 @@ a:hover {
   padding-bottom: 10px;
   cursor: default;
 }
-.mainContactContainer .formContactContainer form {
+.mainContactContainer .formContactContainer #formContact {
   display: flex;
   flex-direction: column;
   padding-left: 4rem;
 }
-.mainContactContainer .formContactContainer form input,
-.mainContactContainer .formContactContainer form #inputMessage {
+.mainContactContainer .formContactContainer #formContact input,
+.mainContactContainer .formContactContainer #formContact #inputMessage {
   font-family: "Fira Code", monospace;
   font-size: 1.1rem;
   color: #f0f8ff;
@@ -1944,33 +1953,33 @@ a:hover {
   border-color: transparent;
   border-radius: 5px;
 }
-.mainContactContainer .formContactContainer form input:focus,
-.mainContactContainer .formContactContainer form #inputMessage:focus {
+.mainContactContainer .formContactContainer #formContact input:focus,
+.mainContactContainer .formContactContainer #formContact #inputMessage:focus {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(189, 147, 249, 0.7);
   outline: none;
 }
-.mainContactContainer .formContactContainer form label {
+.mainContactContainer .formContactContainer #formContact label {
   margin-top: 18px;
   font-size: 14px;
 }
-.mainContactContainer .formContactContainer form .nameAndEmailContainer {
+.mainContactContainer .formContactContainer #formContact .nameAndEmailContainer {
   display: flex;
   column-gap: 1rem;
 }
-.mainContactContainer .formContactContainer form .nameAndEmailContainer .nameAndEmail {
+.mainContactContainer .formContactContainer #formContact .nameAndEmailContainer .nameAndEmail {
   display: flex;
   flex-direction: column;
   width: 40%;
 }
-.mainContactContainer .formContactContainer form #inputMessage {
+.mainContactContainer .formContactContainer #formContact #inputMessage {
   height: 10rem;
   padding-top: 10px;
   margin-bottom: 18px;
   resize: none;
 }
-.mainContactContainer .formContactContainer form button {
+.mainContactContainer .formContactContainer #formContact button {
   box-shadow: inset 0px -3px 7px 0px #a064fa;
   background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
   background-color: #ca26eb;
@@ -1987,13 +1996,54 @@ a:hover {
   text-shadow: 0px 1px 0px #19213b;
   user-select: none;
 }
-.mainContactContainer .formContactContainer form button:hover {
+.mainContactContainer .formContactContainer #formContact button:hover {
   background: linear-gradient(to bottom, #745c99 5%, #ca26eb 100%);
   background-color: #745c99;
 }
-.mainContactContainer .formContactContainer form button:active {
+.mainContactContainer .formContactContainer #formContact button:active {
   position: relative;
   top: 1px;
+}
+@media screen and (max-width: 600px) {
+  .mainContactContainer {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  .mainContactContainer .contactSocialContainer {
+    width: 100%;
+  }
+  .mainContactContainer .contactSocialContainer .socialTitle {
+    padding-bottom: 1rem;
+  }
+  .mainContactContainer .contactSocialContainer .contactContainer {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  .mainContactContainer .contactSocialContainer .contactContainer .brackets {
+    padding-left: 7%;
+  }
+  .mainContactContainer .contactSocialContainer .contactContainer .contactMethodContainer {
+    padding-left: 9%;
+  }
+  .mainContactContainer .formContactContainer {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #bd93f9;
+  }
+  .mainContactContainer .formContactContainer .formTitle {
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+  .mainContactContainer .formContactContainer #formContact {
+    padding-left: 0;
+  }
+  .mainContactContainer .formContactContainer #formContact input,
+  .mainContactContainer .formContactContainer #formContact #inputMessage {
+    font-size: 0.9rem;
+  }
+  .mainContactContainer .formContactContainer #formContact .nameAndEmailContainer .nameAndEmail {
+    width: 48%;
+  }
 }
 
 .language-json {
