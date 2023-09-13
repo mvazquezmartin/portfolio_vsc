@@ -274,7 +274,7 @@ a:hover {
   justify-content: space-around;
   cursor: default;
   padding-left: 10px;
-  font-size: 11px;
+  font-size: 12px;
 }
 .containerGrid .footer .iconsFooterL a {
   display: flex;
@@ -1680,9 +1680,20 @@ a:hover {
 }
 .bookmarkMainContainer .bookmarkImgContainer .bookmarkImg {
   height: auto;
-  max-width: 1110px;
+  max-width: 1300px;
   width: 100%;
   border-radius: 10px;
+}
+@media screen and (max-width: 600px) {
+  .bookmarkMainContainer {
+    padding: 1rem;
+  }
+  .bookmarkMainContainer .infoContent .bookmarkDescription {
+    font-size: 0.9rem;
+  }
+  .bookmarkMainContainer .bookmarkImgContainer {
+    padding: 1.5rem 0;
+  }
 }
 
 .channelMainContainer {

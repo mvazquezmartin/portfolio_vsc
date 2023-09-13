@@ -138,9 +138,21 @@
 
     .bookmarkImg {
       height: auto;
-      max-width: 1110px;
+      max-width: 1300px;
       width: 100%;
       border-radius: 10px;
+    }
+  }
+
+  @include mobile {
+    padding: 1rem;
+    .infoContent {
+      .bookmarkDescription {
+        font-size: 0.9rem;
+      }
+    }
+    .bookmarkImgContainer {
+      padding: 1.5rem 0;
     }
   }
 }
