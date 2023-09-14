@@ -69,12 +69,7 @@ const readme = {
   - **Restablecimiento de Animación:** Antes de aplicar la animación de escritura para mostrar la respuesta, se restablece cualquier animación existente para garantizar una ejecución fluida de la animación.
   ## 📝 Nota
   
-  Este pequeño proyecto fueron mis primeros pasos en JavaScript.
-  A continuación, está el código original que funcionaba con alert y prompt,
-  función con while, utilizando switch. Siempre intenté aplicar todo lo aprendido
-  en mis proyectos, pero a veces menos es más.  
-  Por el aprecio que me genera ver mis comienzos, optimice el código y de esta forma simplificandolo,
-  y de un aspecto más legible.
+  Este pequeño proyecto fueron mis primeros pasos en JavaScript. A continuación, está el código original que funcionaba con alert y prompt, función con while, utilizando switch. Siempre intenté aplicar todo lo aprendido en mis proyectos, pero a veces menos es más. Por el aprecio que me genera ver mis comienzos, optimicé el código y de esta forma simplificándolo, y de un aspecto más legible.
   <br/>  
   <pre>
   <code class="hljs language-javascript">
@@ -205,7 +200,7 @@ const readme = {
   
   
   `,
-  README:`
+  README: `
   # <center> VSCode Portfolio </center>
   Un sitio web con temática de Visual Studio Code construido con un solo HTML, SASS y JavaScript. Más que un clásico README, voy a contar los desafíos y progresos que atravesé replicando la estética y algunas funcionalidades de VSCode.
   ## 📚 Tech Stack 👨‍💻
@@ -255,12 +250,12 @@ const readme = {
   ## ⭐ Bookmarks
   ### 📌 "Favorite"
   Básicamente, están los sitios web que utilice de ayuda para construir el portfolio, y además otros sitios que me parecen interesante de compartir. Continuaré añadiendo más a medida que los descubra.
-  ### 📼 Recommended Channels
+  ### 📼 "Recommended Channels"
   Con la misma idea que "Favorite", solo que en esta sección comparto los canales de YouTube que consumo a diario y que considero que brindan buen material.  
   Lo interesante de esta sección, es que consumo la api YouTube Data V3 para la información de los canales. Debido a la cantidad de datos que solicito, cumplía la cuota de peticiones diaria en un lapso corto, por ende cree un archivo JSON que funciona como una memoria cache donde se almacena una copia de las respuestas. Este archivo se actualiza cada 24 horas, ya que la información no va a variar demasiado en ese tiempo.
   ## 📞 Contact
   A pesar de su aparente simplicidad como una presentación de mis redes de contacto, su creación resultó más desafiante de lo esperado. Estoy satisfecho con el resultado final, que se asemeja a la estructura de un archivo JSON.
-  ## 🐱 Github`
+  ## 🐱 Github`,
 };
 
 export { readme };

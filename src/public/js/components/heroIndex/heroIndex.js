@@ -2,6 +2,7 @@ import { iconPath } from "../../assetsPath/assetsPath.js";
 
 const renderMainText = () => {
   const rootPath = document.getElementById("rootPath");
+  rootPath.textContent = "";
   rootPath.style.visibility = "hidden";
 
   //estructura

@@ -66,10 +66,12 @@ class TabManager {
     const tabsContainer = document.getElementById("tabs");
     tabsContainer.innerHTML = "";
 
-    const rootPath = document.getElementById("rootPath");
-    rootPath.style.visibility = "visible";
-
+    
     this.tabs.forEach((tab, index) => {
+      if(tab.title !== "Welcome"){
+        const rootPath = document.getElementById("rootPath");
+        rootPath.style.visibility = "visible";
+      }
       const tabDiv = document.createElement("div");
       tabDiv.classList.add("tab");
 

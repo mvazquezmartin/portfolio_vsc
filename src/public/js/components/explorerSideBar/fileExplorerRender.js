@@ -57,26 +57,26 @@ const fileContext = {
   MY_API_KEY= ***************************************
   `,
   gitignore: `
-  # Ignorar archivos binarios y ejecutables
+  # Archivos binarios y ejecutables
   *.exe
   *.log
   
-  # Ignorar directorio de dependencias de Node.js
+  # Directorio de dependencias de Node.js
   /node_modules/
   
-  # Ignorar archivos de configuración local
+  # Achivos de configuración local
   .env
   .env.local
   
-  # Ignorar archivos de compilación
+  # Achivos de compilación
   *.class
   *.o
   
-  # Ignorar directorios de configuración de IDE
+  # Directorios de configuración de IDE
   .idea/
   .vscode/
   
-  # Ignorar archivos de caché de sistema operativo
+  # Achivos de caché de sistema operativo
   Thumbs.db
   .DS_Store
   `,
