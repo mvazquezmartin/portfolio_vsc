@@ -981,13 +981,14 @@ a:hover {
 }
 .readme .readmeStyle code, .readmeContainerM8b .readmeStyle code {
   font-family: "Courier New", monospace;
-  background-color: #f0f0f0;
   padding: 2px 4px;
   border: 1px solid #ddd;
   border-radius: 3px;
+  background-color: transparent;
+  font-size: 12px;
 }
 .readme .readmeStyle .language-javascript, .readmeContainerM8b .readmeStyle .language-javascript {
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 .readme .readmeStyle a, .readmeContainerM8b .readmeStyle a {
   color: #007bff;
@@ -995,6 +996,9 @@ a:hover {
 }
 .readme .readmeStyle a:hover, .readmeContainerM8b .readmeStyle a:hover {
   text-decoration: underline;
+}
+.readme .readmeStyle ol, .readmeContainerM8b .readmeStyle ol {
+  padding-left: 20px;
 }
 .readme .readmeStyle ul, .readmeContainerM8b .readmeStyle ul {
   list-style-type: disc;
@@ -1008,10 +1012,6 @@ a:hover {
 }
 .readme .readmeStyle img, .readmeContainerM8b .readmeStyle img {
   max-width: 60%;
-}
-.readme .readmeStyle code, .readmeContainerM8b .readmeStyle code {
-  background-color: transparent;
-  font-size: 12px;
 }
 @media screen and (max-width: 600px) {
   .readme, .readmeContainerM8b {
@@ -2077,8 +2077,18 @@ a:hover {
   }
 }
 
-.language-json {
-  font-size: 18px;
-  white-space: pre-line;
-  padding-left: 1rem;
+.containerHl .hljs {
+  padding: 0;
+}
+.containerHl .language-json,
+.containerHl .language-ini {
+  font-size: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .containerHl .language-json,
+  .containerHl .language-ini {
+    font-size: 0.9rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }

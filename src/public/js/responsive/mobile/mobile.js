@@ -37,18 +37,25 @@ const mobileResponsive = () => {
     }
   });
 
+  // CAPTURAR ID DEL ELEMENTO README AND CONTACT
   for (const icon of sideBarIcon) {
-    icon.addEventListener("click", () => {
-      statusSideBar.now = icon.id;
+    if (icon.id !== "readme" && icon.id !== "contact") {
+      icon.addEventListener("click", () => {
+        statusSideBar.now = icon.id;
 
-      if (statusSideBar.now !== statusSideBar.pre) {
-        sideBar.classList.add("sideBarRes");
-      } else if (statusSideBar.now === statusSideBar.pre) {
-        sideBar.classList.toggle("sideBarRes");
-      }
+        if (statusSideBar.now !== statusSideBar.pre) {
+          sideBar.classList.add("sideBarRes");
+        } else if (statusSideBar.now === statusSideBar.pre) {
+          sideBar.classList.toggle("sideBarRes");
+        }
 
-      statusSideBar.pre = icon.id;
-    });
+        statusSideBar.pre = icon.id;
+      });
+    } else {
+      icon.addEventListener("click", () => {
+        sideBar.classList.remove("sideBarRes");
+      });
+    }
   }
 
   document.addEventListener("click", (event) => {

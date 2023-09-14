@@ -1,7 +1,7 @@
 import { highlight } from "../../utils/highlight.js";
 
 const fileContext = {
-  context: `  
+  json: `  
   {
     "name": "vscode_portfolio",
     "version": "1.0.0",
@@ -39,11 +39,64 @@ const fileContext = {
     }
   }  
   `,
+  dotenv: `
+  # APP CONFIG
+  PORT= ****
+
+  # MONGODB
+  DB_ADMIN= *****************
+  DB_PASSWORD= ********************
+  DB_HOST= ********************************
+
+  # API KEY YOUTUBE DATA V3
+  API_KEY= ***************************************
+  API_KEY2= ***************************************
+  API_KEY3= ***************************************
+
+  # MY API KEY
+  MY_API_KEY= ***************************************
+  `,
+  gitignore: `
+  # Ignorar archivos binarios y ejecutables
+  *.exe
+  *.log
+  
+  # Ignorar directorio de dependencias de Node.js
+  /node_modules/
+  
+  # Ignorar archivos de configuración local
+  .env
+  .env.local
+  
+  # Ignorar archivos de compilación
+  *.class
+  *.o
+  
+  # Ignorar directorios de configuración de IDE
+  .idea/
+  .vscode/
+  
+  # Ignorar archivos de caché de sistema operativo
+  Thumbs.db
+  .DS_Store
+  `,
+};
+
+const renderDotenv = () => {
+  const ruta = "Portfolio > .env";
+  highlight(ruta, fileContext.dotenv, "ini");
+  hljs.highlightAll();
 };
 
 const renderJson = () => {
   const ruta = "Portfolio > package.json";
-  highlight(ruta, fileContext.context, "json");
+  highlight(ruta, fileContext.json, "json");
   hljs.highlightAll();
 };
-export { renderJson };
+
+const renderGitignore = () => {
+  const ruta = "Portfolio > .gitignore";
+  highlight(ruta, fileContext.gitignore, "ini");
+  hljs.highlightAll();
+};
+export { renderJson, renderDotenv, renderGitignore };

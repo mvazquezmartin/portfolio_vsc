@@ -7,7 +7,11 @@ import { magic8BallRender } from "../magic8ball/magic8ball.js";
 import { readmeRender8Ball } from "../magic8ball/readme.js";
 import { playGroundRender } from "../playground/playGround.js";
 import { readmeRender } from "../playground/readme.js";
-import { renderJson } from "./fileExplorerRender.js";
+import {
+  renderDotenv,
+  renderGitignore,
+  renderJson,
+} from "./fileExplorerRender.js";
 import { readmeMain } from "../readme/mainReadme.js";
 import { renderMainCrud } from "../crud/renderMainCrud.js";
 
@@ -146,7 +150,7 @@ const readme = {
 const dotenv = {
   name: ".env",
   icon: iconPath.DOTENV,
-  function: () => console.log("archivo1"),
+  function: () => tabManager.create(".env", renderDotenv, iconPath.DOTENV),
 };
 
 const packageJson = {
@@ -159,7 +163,8 @@ const packageJson = {
 const gitIgnore = {
   name: ".gitignore",
   icon: iconPath.GIT,
-  function: () => console.log("archivo1"),
+  function: () =>
+    tabManager.create(".gitignore", renderGitignore, iconPath.GIT),
 };
 
 const folder1 = {
