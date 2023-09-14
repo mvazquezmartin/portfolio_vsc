@@ -41,12 +41,15 @@ const fileContext = {
   `,
   dotenv: `
   # APP CONFIG
-  PORT= ****
+  PORT= ********
 
   # MONGODB
   DB_ADMIN= *****************
   DB_PASSWORD= ********************
   DB_HOST= ********************************
+
+  # JWT
+  JWT_KEY= *******************
 
   # API KEY YOUTUBE DATA V3
   API_KEY= ***************************************
