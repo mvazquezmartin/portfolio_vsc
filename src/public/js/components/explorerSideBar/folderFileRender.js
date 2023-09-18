@@ -1,9 +1,9 @@
 import { iconPath } from "../../assetsPath/assetsPath.js";
 import { btnFocus } from "../../utils/btnFocus.js";
 
-const renderFile = (file, funcion, icono) => {
+const renderFile = (file, funcion, icono, className = null) => {
   const miNodoTxtSpan = document.createElement("div");
-  miNodoTxtSpan.classList.add("fileTxt");
+  miNodoTxtSpan.classList.add("fileTxt", className);
   miNodoTxtSpan.addEventListener("click", file.function);
   const miNodoIcono = document.createElement("img");
   miNodoIcono.classList.add("iconoFile");
@@ -13,7 +13,7 @@ const renderFile = (file, funcion, icono) => {
   return miNodoTxtSpan;
 };
 
-const folderFileSideBar = (folder, funcion, icono) => {
+const folderFileSideBar = (folder) => {
   const miNodo = document.createElement("div");
 
   if (folder.folderName) {
@@ -35,13 +35,18 @@ const folderFileSideBar = (folder, funcion, icono) => {
 
     // Renderizar subcarpetas primero
     folder.subfolders.forEach((subfolder) => {
-      const subfolderNode = folderFileSideBar(subfolder, funcion, icono);
+      const subfolderNode = folderFileSideBar(subfolder);
       miNodoSpan.appendChild(subfolderNode);
     });
 
     // Renderizar archivos después
     folder.files.forEach((file) => {
-      const fileNode = renderFile(file, funcion, icono);
+      const fileNode = renderFile(
+        file,
+        folder.funcion,
+        folder.icono,
+        folder.className
+      );
       miNodoSpan.appendChild(fileNode);
     });
 
@@ -55,12 +60,20 @@ const folderFileSideBar = (folder, funcion, icono) => {
         iconFolder.setAttribute("src", iconPath.OPEN_FOLDER);
       }
     });
-  } else if (folder.name && folder.icon && folder.function) {
+  } else if (
+    (folder.name && folder.icon && folder.function) ||
+    folder.className
+  ) {
     // Si es un archivo individual
-    const fileNode = renderFile(folder, funcion, icono);
+    const fileNode = renderFile(
+      folder,
+      folder.funcion,
+      folder.icono,
+      folder.className
+    );
     miNodo.appendChild(fileNode);
   }
-  
+
   const btnFolder = miNodo.querySelectorAll(".accordion");
   const btnFile = miNodo.querySelectorAll(".fileTxt");
   btnFocus(btnFolder, "activeFile");

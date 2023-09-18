@@ -151,6 +151,7 @@ const dotenv = {
   name: ".env",
   icon: iconPath.DOTENV,
   function: () => tabManager.create(".env", renderDotenv, iconPath.DOTENV),
+  className: "gitignore",
 };
 
 const packageJson = {
@@ -165,6 +166,7 @@ const gitIgnore = {
   icon: iconPath.GIT,
   function: () =>
     tabManager.create(".gitignore", renderGitignore, iconPath.GIT),
+  className: "gitignore",
 };
 
 const folder1 = {
