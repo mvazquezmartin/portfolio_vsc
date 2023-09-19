@@ -42,7 +42,7 @@ async function renderMainCrud(persistence, version) {
 
   const renderComponents = new RenderComponentsCrud(persistence);
 
-  renderComponents.btnCrud("Find");
+  renderComponents.btnCrud("Search");
   renderComponents.btnCrud("Create");
   renderComponents.btnCrud("Modify");
   renderComponents.btnCrud("Delete");

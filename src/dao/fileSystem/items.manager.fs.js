@@ -77,7 +77,7 @@ class ItemManager {
 
       const itemIndex = this.items.findIndex((prod) => prod._id === id);
 
-      if (index === -1 || !this.items[itemIndex].status) return null;
+      if (itemIndex === -1 || !this.items[itemIndex].status) return null;
 
       this.items[itemIndex].status = false;
       await this.saveFile();

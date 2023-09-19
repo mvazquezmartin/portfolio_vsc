@@ -63,19 +63,17 @@
   transition: 0.7s;
 
   &.hiddenNTL {
-    height: 2.2%;
+    height: 21px;
     transition: 0.7s;
   }
 
   .nextToLearnTitle {
     display: flex;
     align-items: center;
-    position: sticky;
-    top: 0;
     border-top: $style-border-grid;
     border-bottom: $style-border-grid;
     background-color: $color-lightGrey;
-    min-height: 22px;
+    height: 22px;
 
     .nextToLearn {
       font-size: 0.8rem;
@@ -95,10 +93,6 @@
   }
   @include mobile {
     height: 45%;
-
-    &.hiddenNTL {
-      height: 3.5dvb;
-    }
   }
 }
 

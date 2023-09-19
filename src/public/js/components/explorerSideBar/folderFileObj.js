@@ -172,23 +172,23 @@ const folder1 = {
   folderName: "CRUD",
   files: [
     {
-      name: "Archivo1.txt",
+      name: "CRUDFilesystem.js",
       icon: "./assets/code-file-svgrepo-com.svg",
       function: () => {
         tabManager.create(
-          "inventario",
-          () => renderMainCrud("filesystem", "ruta1"),
+          "CRUD Filesystem",
+          () => renderMainCrud("filesystem", "fileSystem"),
           iconPath.CODE
         );
       },
     },
     {
-      name: "Archivo2.txt",
+      name: "CRUDMongoDB.js",
       icon: "./assets/code-file-svgrepo-com.svg",
       function: () => {
         tabManager.create(
-          "inventario2",
-          renderMainCrud.bind(null, "mongodb", "ruta"),
+          "CRUD MongoDB",
+          renderMainCrud.bind(null, "mongodb", "mongodb"),
           iconPath.CODE
         );
       },

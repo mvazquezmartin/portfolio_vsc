@@ -198,7 +198,7 @@
       font-size: 0.8rem;
       color: $color-rootPath;
       padding-left: 1rem;
-      border-bottom: $style-border-grid;      
+      border-bottom: $style-border-grid;
     }
 
     .mainView {
@@ -259,8 +259,6 @@
 
   @include mobile {
     position: relative;
-    //height: 93.2vh;
-    // height: 100vh;
     grid-template-columns: 0.45fr 3fr;
     grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
     grid-template-areas:

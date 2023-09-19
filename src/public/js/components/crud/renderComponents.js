@@ -25,23 +25,23 @@ class RenderComponentsCrud {
       title.textContent = item.title;
 
       const category = document.createElement("p");
-      category.textContent = item.category;
+      category.textContent = "Category: " + item.category;
 
       const description = document.createElement("p");
       description.textContent = item.description;
 
       const stock = document.createElement("p");
-      stock.textContent = item.stock;
+      stock.textContent = "Stock: " + item.stock;
 
       const price = document.createElement("p");
-      price.textContent = item.price;
+      price.textContent = "Price: $" + item.price;
 
       container.appendChild(img);
       container.appendChild(containerContent);
       containerContent.appendChild(id);
       containerContent.appendChild(title);
-      containerContent.appendChild(category);
       containerContent.appendChild(description);
+      containerContent.appendChild(category);
       containerContent.appendChild(stock);
       containerContent.appendChild(price);
 
@@ -61,39 +61,80 @@ class RenderComponentsCrud {
     btn.addEventListener("click", () => {
       this.handleBtnCrud(context);
     });
-
     this.domSelector.mainBtns.appendChild(btn);
   }
 
   async handleBtnCrud(context) {
     switch (context) {
-      case "Find":
+      case "Search":
         this.domSelector.renderActionBtn.textContent = "";
-        const inputId = document.createElement("input");
-        inputId.classList.add("inputCrud");
 
-        const btn = document.createElement("button");
-        btn.classList.add("btnCrud");
-        btn.textContent = context;
+        const inputIdFind = document.createElement("input");
+        inputIdFind.classList.add("inputCrud");
 
-        btn.addEventListener("click", async () => {
-          const itemId = inputId.value;
-          const response = await this.request.getOneById(itemId);
-          console.log(typeof response.payload);
+        const btnSearch = document.createElement("button");
+        btnSearch.classList.add("btnCrud");
+        btnSearch.textContent = context;
+
+        btnSearch.addEventListener("click", async () => {
+          const itemFind = inputIdFind.value;
+          const response = await this.request.getOneById(itemFind);
+          console.log(response);
           this.itemCard([response.payload]);
         });
 
-        this.domSelector.renderActionBtn.appendChild(inputId);
-        this.domSelector.renderActionBtn.appendChild(btn);
+        this.domSelector.renderActionBtn.appendChild(inputIdFind);
+        this.domSelector.renderActionBtn.appendChild(btnSearch);
 
         break;
       case "Create":
+
         break;
       case "Modify":
         break;
       case "Delete":
+        this.domSelector.renderActionBtn.textContent = "";
+
+        const inputIdDelete = document.createElement("input");
+        inputIdDelete.classList.add("inputCrud");
+
+        const btnDelete = document.createElement("button");
+        btnDelete.classList.add("btnCrud");
+        btnDelete.textContent = context;
+
+        btnDelete.addEventListener("click", async () => {
+          const itemDelete = inputIdDelete.value;
+          const response = await this.request.delete(itemDelete);
+          console.log(response);
+        });
+
+        this.domSelector.renderActionBtn.appendChild(inputIdDelete);
+        this.domSelector.renderActionBtn.appendChild(btnDelete);
+
         break;
       case "Reset":
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          color: "#fff",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, reset it!",
+        }).then(async (result) => {
+          if (result.isConfirmed) {
+            await this.request.restart();
+            await this.getAll();
+            Swal.fire({
+              title: "Reseted!",
+              text: "Your file has been reseted.",
+              icon: "success",
+              color: "#fff",
+            });
+          }
+        });
+
         break;
     }
   }

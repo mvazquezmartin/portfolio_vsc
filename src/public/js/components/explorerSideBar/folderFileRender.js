@@ -16,7 +16,7 @@ const renderFile = (file, funcion, icono, className = "sidebarFile") => {
 const folderFileSideBar = (folder) => {
   const miNodo = document.createElement("div");
 
-  if (folder.folderName) {    
+  if (folder.folderName) {
     const miNodoButton = document.createElement("button");
     miNodoButton.classList.add("accordion");
 
@@ -74,7 +74,7 @@ const folderFileSideBar = (folder) => {
   }
 
   const btnFolder = miNodo.querySelectorAll(".accordion");
-  const btnFile = miNodo.querySelectorAll(".fileTxt");
+  const btnFile = miNodo.querySelectorAll(".file");
   btnFocus(btnFolder, "activeFile");
   btnFocus(btnFile, "activeFile");
 

@@ -1120,18 +1120,16 @@ a:hover {
   transition: 0.7s;
 }
 .recommendedContainer.hiddenNTL {
-  height: 2.2%;
+  height: 21px;
   transition: 0.7s;
 }
 .recommendedContainer .nextToLearnTitle {
   display: flex;
   align-items: center;
-  position: sticky;
-  top: 0;
   border-top: 0.5px solid #44475a;
   border-bottom: 0.5px solid #44475a;
   background-color: #282a36;
-  min-height: 22px;
+  height: 22px;
 }
 .recommendedContainer .nextToLearnTitle .nextToLearn {
   font-size: 0.8rem;
@@ -1146,9 +1144,6 @@ a:hover {
 @media screen and (max-width: 600px) {
   .recommendedContainer {
     height: 45%;
-  }
-  .recommendedContainer.hiddenNTL {
-    height: 3.5dvb;
   }
 }
 
@@ -1936,11 +1931,11 @@ a:hover {
 }
 .mainContactContainer .contactSocialContainer .contactContainer .brackets {
   color: #bd93f9;
-  padding-left: 20%;
+  padding-left: 18%;
   padding-bottom: 1%;
 }
 .mainContactContainer .contactSocialContainer .contactContainer .contactMethodContainer {
-  padding-left: 21%;
+  padding-left: 19%;
 }
 .mainContactContainer .contactSocialContainer .contactContainer .contactMethodContainer .methodLineContainer {
   padding-bottom: 1%;
