@@ -166,7 +166,6 @@ const gitIgnore = {
   icon: iconPath.GIT,
   function: () =>
     tabManager.create(".gitignore", renderGitignore, iconPath.GIT),
-  className: "gitignore",
 };
 
 const folder1 = {

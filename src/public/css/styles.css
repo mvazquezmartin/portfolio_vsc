@@ -84,7 +84,7 @@ a:hover {
 .containerGrid {
   display: grid;
   color: #f0f8ff;
-  height: 100vh;
+  height: 100dvh;
   gap: 0px 0px;
   grid-auto-flow: row;
 }
@@ -303,7 +303,6 @@ a:hover {
 @media screen and (max-width: 600px) {
   .containerGrid {
     position: relative;
-    height: 100vh;
     grid-template-columns: 0.45fr 3fr;
     grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
     grid-template-areas: "menuIcon navBarTop" "menuIcon tabs" "mainArea mainArea" "footer footer";
@@ -618,7 +617,7 @@ a:hover {
   text-align: left;
 }
 
-.fileTxt {
+.file {
   padding: 2px 0 2px 1rem;
   color: #f0f8ff;
   cursor: pointer;
@@ -627,10 +626,10 @@ a:hover {
   text-overflow: ellipsis;
   font-size: 0.9rem;
 }
-.fileTxt:hover {
+.file:hover {
   background-color: rgba(190, 190, 190, 0.2);
 }
-.fileTxt .iconoFile {
+.file .iconoFile {
   width: 15px;
   margin-right: 2px;
 }
@@ -1149,7 +1148,7 @@ a:hover {
     height: 45%;
   }
   .recommendedContainer.hiddenNTL {
-    height: 4%;
+    height: 3.5dvb;
   }
 }
 
@@ -2079,6 +2078,86 @@ a:hover {
   .mainContactContainer .formContactContainer #formContact .nameAndEmailContainer .nameAndEmail {
     width: 48%;
   }
+}
+
+.containerCRUDMain {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  row-gap: 2rem;
+  height: 100%;
+}
+.containerCRUDMain .containerTitle {
+  font-size: 2rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.containerCRUDMain .containerCRUD {
+  display: flex;
+  width: 100%;
+  column-gap: 2rem;
+}
+.containerCRUDMain .containerCRUD .containerCRUDBtns {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  row-gap: 1rem;
+}
+.containerCRUDMain .containerCRUD .containerCRUDBtns .containerBtns {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2rem;
+}
+.containerCRUDMain .containerCRUD .containerCRUDBtns .containerRenderBtns {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.1rem;
+}
+.containerCRUDMain .containerCRUD .containerItems {
+  display: flex;
+  flex-wrap: wrap;
+}
+.containerCRUDMain input {
+  height: 45px;
+  color: #f0f8ff;
+  font-size: 1rem;
+  background-color: #1d1e24;
+  border-style: none;
+  border-width: 0;
+  border-color: transparent;
+  border-radius: 5px;
+}
+.containerCRUDMain input:focus {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(189, 147, 249, 0.7);
+  outline: none;
+}
+.containerCRUDMain .btnCrud {
+  box-shadow: inset 0px -3px 7px 0px #a064fa;
+  background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
+  background-color: #ca26eb;
+  border-radius: 5px;
+  border: 1px solid #44315e;
+  display: inline-block;
+  cursor: pointer;
+  color: #f0f8ff;
+  font-family: Arial;
+  font-size: 1rem;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #19213b;
+  user-select: none;
+}
+.containerCRUDMain .btnCrud:hover {
+  background: linear-gradient(to bottom, #745c99 5%, #ca26eb 100%);
+  background-color: #745c99;
+}
+.containerCRUDMain .btnCrud:active {
+  position: relative;
+  top: 1px;
 }
 
 .containerHl .hljs {

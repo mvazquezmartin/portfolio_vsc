@@ -1,9 +1,9 @@
 import { iconPath } from "../../assetsPath/assetsPath.js";
 import { btnFocus } from "../../utils/btnFocus.js";
 
-const renderFile = (file, funcion, icono, className = null) => {
+const renderFile = (file, funcion, icono, className = "sidebarFile") => {
   const miNodoTxtSpan = document.createElement("div");
-  miNodoTxtSpan.classList.add("fileTxt", className);
+  miNodoTxtSpan.classList.add("file", className);
   miNodoTxtSpan.addEventListener("click", file.function);
   const miNodoIcono = document.createElement("img");
   miNodoIcono.classList.add("iconoFile");
@@ -16,8 +16,7 @@ const renderFile = (file, funcion, icono, className = null) => {
 const folderFileSideBar = (folder) => {
   const miNodo = document.createElement("div");
 
-  if (folder.folderName) {
-    // Si es una carpeta
+  if (folder.folderName) {    
     const miNodoButton = document.createElement("button");
     miNodoButton.classList.add("accordion");
 
