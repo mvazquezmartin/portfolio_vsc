@@ -1,5 +1,6 @@
 import { RequestCRUD } from "./RequestCRUD.js";
 import { DomSelector } from "./DomSelector.js";
+import { renderInputDeleteModify } from "./renderInputDeleteModify.js";
 
 class RenderComponentsCrud {
   constructor(persistence) {
@@ -87,11 +88,22 @@ class RenderComponentsCrud {
         this.domSelector.renderActionBtn.appendChild(btnSearch);
 
         break;
+
       case "Create":
+        this.domSelector.renderActionBtn.textContent = "";
+
+        const nodoCreate = this.domSelector.renderActionBtn;
+        renderInputDeleteModify("Create", nodoCreate);
 
         break;
       case "Modify":
+        this.domSelector.renderActionBtn.textContent = "";
+
+        const nodoDelete = this.domSelector.renderActionBtn;
+        renderInputDeleteModify("Modify", nodoDelete);
+
         break;
+
       case "Delete":
         this.domSelector.renderActionBtn.textContent = "";
 
@@ -112,6 +124,7 @@ class RenderComponentsCrud {
         this.domSelector.renderActionBtn.appendChild(btnDelete);
 
         break;
+
       case "Reset":
         Swal.fire({
           title: "Are you sure?",
