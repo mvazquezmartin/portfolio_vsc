@@ -34,7 +34,9 @@ export const renderInputDeleteModify = (context, nodo) => {
   const labelImg = document.createElement("label");
   labelImg.textContent = "UPLOAD IMAGE:";
   const loadImg = document.createElement("button");
+  loadImg.textContent = "Upload Image   "
   loadImg.classList.add("bi", "bi-upload", "btnCrud");
+  
   const btn = document.createElement("button");
   btn.classList.add("btnCrud");
   btn.type = "submit";
@@ -49,7 +51,7 @@ export const renderInputDeleteModify = (context, nodo) => {
   form.appendChild(inputCategory);
   form.appendChild(inputStock);
   form.appendChild(inputPrice);
-  form.appendChild(labelImg);
+  // form.appendChild(labelImg);
   form.appendChild(loadImg);
   form.appendChild(btn);
 

@@ -734,7 +734,7 @@ a:hover {
   color: #f0f8ff;
   font-family: Arial;
   font-size: 1rem;
-  padding: 12px 24px;
+  padding: 16px 24px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #19213b;
   user-select: none;
@@ -2106,6 +2106,9 @@ a:hover {
   flex-direction: column;
   row-gap: 0.2rem;
 }
+.containerCRUDMain .containerCRUD .containerCRUDBtns .containerBtns .btnCrud:last-child {
+  margin-top: 2rem;
+}
 .containerCRUDMain .containerCRUD .containerCRUDBtns .containerRenderBtns {
   display: flex;
   flex-direction: column;
@@ -2115,6 +2118,12 @@ a:hover {
   display: flex;
   flex-direction: column;
   row-gap: 0.3rem;
+}
+.containerCRUDMain .containerCRUD .containerCRUDBtns .containerRenderBtns #formCrud .bi {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .containerCRUDMain .containerCRUD .containerItems {
   display: flex;

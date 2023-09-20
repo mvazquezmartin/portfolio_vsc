@@ -71,22 +71,33 @@ class RenderComponentsCrud {
         this.domSelector.renderActionBtn.textContent = "";
 
         const inputIdFind = document.createElement("input");
+        inputIdFind.placeholder = "ID";
         inputIdFind.classList.add("inputCrud");
 
         const btnSearch = document.createElement("button");
         btnSearch.classList.add("btnCrud");
         btnSearch.textContent = context;
 
-        btnSearch.addEventListener("click", async () => {
-          const itemFind = inputIdFind.value;
-          const response = await this.request.getOneById(itemFind);
-          console.log(response);
-          this.itemCard([response.payload]);
-        });
-
         this.domSelector.renderActionBtn.appendChild(inputIdFind);
         this.domSelector.renderActionBtn.appendChild(btnSearch);
 
+        btnSearch.addEventListener("click", async () => {
+          const itemFind =
+            inputIdFind.value.trim() === ""
+              ? "invalid"
+              : inputIdFind.value.trim();
+          try {
+            const response = await this.request.getOneById(itemFind);
+            this.itemCard([response.payload]);
+          } catch (error) {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: error.message,
+              color: "#fff",
+            });
+          }
+        });
         break;
 
       case "Create":
@@ -108,6 +119,7 @@ class RenderComponentsCrud {
         this.domSelector.renderActionBtn.textContent = "";
 
         const inputIdDelete = document.createElement("input");
+        inputIdDelete.placeholder = "ID";
         inputIdDelete.classList.add("inputCrud");
 
         const btnDelete = document.createElement("button");

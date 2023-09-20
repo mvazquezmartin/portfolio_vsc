@@ -1,5 +1,6 @@
 const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
 const CRUDContext = require("../dao/crud.context");
+const { validId, validIdFs } = require("../utils/isValidId");
 
 class ItemService {
   constructor() {
@@ -36,7 +37,18 @@ class ItemService {
 
   async getOneById(id) {
     try {
+      if (!(validId(id) || validIdFs(id)) || id === "invalid") {
+        return {
+          code: HTTP_STATUS_CODES.BAD_REQUEST,
+          status: "error",
+          message: "The ID is invalid",
+          payload: [],
+        };
+      }
+
       const data = await this.itemManager.getOneById(id);
+
+      console.log(data);
 
       if (!data)
         return {
@@ -53,6 +65,7 @@ class ItemService {
         payload: data,
       };
     } catch (error) {
+      console.log(error);
       throw error;
     }
   }
@@ -74,6 +87,15 @@ class ItemService {
 
   async update(id, update) {
     try {
+      if (!(validId(id) || validIdFs(id))) {
+        return {
+          code: HTTP_STATUS_CODES.BAD_REQUEST,
+          status: "error",
+          message: "The ID is invalid",
+          payload: [],
+        };
+      }
+
       const item = await this.itemManager.getOneById(id);
 
       if (!item) {
@@ -104,6 +126,15 @@ class ItemService {
 
   async delete(id) {
     try {
+      if (!(validId(id) || validIdFs(id))) {
+        return {
+          code: HTTP_STATUS_CODES.BAD_REQUEST,
+          status: "error",
+          message: "The ID is invalid",
+          payload: [],
+        };
+      }
+
       const data = await this.itemManager.delete(id);
 
       if (!data)
@@ -155,7 +186,7 @@ class ItemService {
       await this.itemManager.restart();
       return {
         code: HTTP_STATUS_CODES.OK,
-        status: "succes",
+        status: "success",
         message: "Items restart to orinal file",
         payload: [],
       };
