@@ -1,17 +1,19 @@
 import { RequestCRUD } from "./RequestCRUD.js";
 import { DomSelector } from "./DomSelector.js";
-import { renderInputDeleteModify } from "./renderInputDeleteModify.js";
+import { RenderCreateModify } from "./RenderCreateModify.js";
 
 class RenderComponentsCrud {
   constructor(persistence) {
     this.request = new RequestCRUD(persistence);
     this.domSelector = new DomSelector();
+    this.renderCreateModify = new RenderCreateModify();
   }
 
   async itemCard(data) {
     this.domSelector.mainView.textContent = "";
     data.forEach((item) => {
       const container = document.createElement("div");
+      container.classList.add("itemCard");
 
       const img = document.createElement("img");
       img.src = item.image;
@@ -101,18 +103,14 @@ class RenderComponentsCrud {
         break;
 
       case "Create":
-        this.domSelector.renderActionBtn.textContent = "";
-
-        const nodoCreate = this.domSelector.renderActionBtn;
-        renderInputDeleteModify("Create", nodoCreate);
+        this.renderCreateModify.renderForm(
+          context,
+          this.request,
+          this.getAll.bind(this)
+        );
 
         break;
       case "Modify":
-        this.domSelector.renderActionBtn.textContent = "";
-
-        const nodoDelete = this.domSelector.renderActionBtn;
-        renderInputDeleteModify("Modify", nodoDelete);
-
         break;
 
       case "Delete":
@@ -127,9 +125,27 @@ class RenderComponentsCrud {
         btnDelete.textContent = context;
 
         btnDelete.addEventListener("click", async () => {
-          const itemDelete = inputIdDelete.value;
-          const response = await this.request.delete(itemDelete);
-          console.log(response);
+          const itemDelete =
+            inputIdDelete.value.trim() === ""
+              ? "invalid"
+              : inputIdDelete.value.trim();
+          try {
+            const response = await this.request.delete(itemDelete);
+            Swal.fire({
+              title: response.title,
+              text: response.message,
+              icon: response.status,
+              color: "#fff",
+            });
+            await this.getAll();
+          } catch (error) {
+            Swal.fire({
+              title: error.title,
+              text: error.message,
+              icon: error.status,
+              color: "#fff",
+            });
+          }
         });
 
         this.domSelector.renderActionBtn.appendChild(inputIdDelete);

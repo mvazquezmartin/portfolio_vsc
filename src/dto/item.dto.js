@@ -4,8 +4,8 @@ class ItemDTO {
     this.description = item.description;
     this.category = item.category;
     this.image = item.image;
-    this.price = item.price;
-    this.stock = item.stock;
+    this.price = Number(item.price);
+    this.stock = Number(item.stock);
   }
 }
 

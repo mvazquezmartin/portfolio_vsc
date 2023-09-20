@@ -8,7 +8,7 @@ class RequestCRUD {
       const response = await fetch(url, {
         method: method,
         headers: {
-          "Countent-Type": "application/json",
+          "Content-Type": "application/json",
         },
         body: data ? JSON.stringify(data) : null,
       });
@@ -40,7 +40,7 @@ class RequestCRUD {
 
   async modify(id, item) {
     const url = `/cruds/${id}?persistence=${this.persistence}`;
-    return this.sendRequest("PATH", url, item);
+    return this.sendRequest("PATCH", url, item);
   }
 
   async delete(id) {

@@ -87,7 +87,7 @@ class ItemService {
 
   async update(id, update) {
     try {
-      if (!(validId(id) || validIdFs(id))) {
+      if (!(validId(id) || validIdFs(id)) || id === "invalid") {
         return {
           code: HTTP_STATUS_CODES.BAD_REQUEST,
           status: "error",
@@ -126,9 +126,10 @@ class ItemService {
 
   async delete(id) {
     try {
-      if (!(validId(id) || validIdFs(id))) {
+      if (!(validId(id) || validIdFs(id)) || id === "invalid") {
         return {
           code: HTTP_STATUS_CODES.BAD_REQUEST,
+          title: "Error!",
           status: "error",
           message: "The ID is invalid",
           payload: [],
@@ -140,6 +141,7 @@ class ItemService {
       if (!data)
         return {
           code: HTTP_STATUS_CODES.NOT_FOUND,
+          title: "Error!",
           status: "error",
           message: "No item found with that id",
           payload: [],
@@ -147,8 +149,9 @@ class ItemService {
 
       return {
         code: HTTP_STATUS_CODES.OK,
+        title: "Deleted!",
         status: "success",
-        message: "Item delete",
+        message: "Item deleted successfully",
         payload: data,
       };
     } catch (error) {

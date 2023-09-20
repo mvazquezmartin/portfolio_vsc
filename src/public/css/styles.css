@@ -2122,15 +2122,21 @@ a:hover {
 .containerCRUDMain .containerCRUD .containerCRUDBtns .containerRenderBtns #formCrud .bi {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  column-gap: 7px;
 }
 .containerCRUDMain .containerCRUD .containerItems {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
+  width: 80%;
   border-left: 1px solid #bd93f9;
   padding-left: 2rem;
+}
+.containerCRUDMain .containerCRUD .containerItems .itemCard {
+  flex: 0 1 calc(25% - 10px);
+  height: max-content;
 }
 .containerCRUDMain input {
   height: 45px;

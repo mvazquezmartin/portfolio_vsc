@@ -78,6 +78,8 @@ router.post("/", async (req, res) => {
     const { persistence } = req.query;
     const item = req.body;
 
+    if (!item.image) item.image = "https://dummyimage.com/300x200/000/fff";
+
     ItemService.setPersistence(persistence);
 
     const newItem = new ItemDTO(item);
@@ -133,6 +135,7 @@ router.delete("/:id", async (req, res) => {
     const response = await ItemService.delete(id);
 
     res.status(response.code).json({
+      title: response.title,
       status: response.status,
       message: response.message,
       payload: response.payload,
