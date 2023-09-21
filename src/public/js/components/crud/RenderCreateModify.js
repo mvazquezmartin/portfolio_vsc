@@ -7,7 +7,8 @@ export class RenderCreateModify {
   renderForm(context, request, method) {
     this.domSelector.renderActionBtn.textContent = "";
     const formCrud = document.createElement("form");
-    formCrud.setAttribute("id", "formCrud");
+    formCrud.id = "formCrud";
+    formCrud.enctype = "multipart/form-data";
 
     const inputId = document.createElement("input");
     inputId.placeholder = "ID";
@@ -38,9 +39,32 @@ export class RenderCreateModify {
     inputPrice.name = "price";
     inputPrice.placeholder = "PRICE";
 
-    const loadImg = document.createElement("button");
-    loadImg.textContent = "Upload Image   ";
-    loadImg.classList.add("bi", "bi-upload", "btnCrud");
+    const inputDivImg = document.createElement("div");
+    inputDivImg.classList.add("inputDivImg");
+
+    const inputImg = document.createElement("input");
+    inputImg.type = "file";
+    inputImg.name = "image";
+    inputImg.id = "inputImage";
+    inputImg.classList.add("customFile");
+    inputImg.style.display = "none";
+
+    const labelImg = document.createElement("label");
+    labelImg.setAttribute("for", "inputImage");
+    labelImg.classList.add("btnCrud");
+    labelImg.textContent = "Upload Image";
+
+    inputImg.addEventListener("change", () => {
+      if (inputImg.files.length > 0) {
+        labelImg.textContent = inputImg.files[0].name;
+      } else {
+        labelImg.textContent = "Upload Image";
+      }
+    });
+
+    const iconoBi = document.createElement("i");
+    iconoBi.style.marginLeft = "5px";
+    iconoBi.classList.add("bi", "bi-upload");
 
     const btn = document.createElement("button");
     btn.classList.add("btnCrud");
@@ -56,7 +80,10 @@ export class RenderCreateModify {
     formCrud.appendChild(inputCategory);
     formCrud.appendChild(inputStock);
     formCrud.appendChild(inputPrice);
-    formCrud.appendChild(loadImg);
+    formCrud.appendChild(inputDivImg);
+    inputDivImg.appendChild(inputImg);
+    inputDivImg.appendChild(labelImg);
+    labelImg.appendChild(iconoBi);
     formCrud.appendChild(btn);
 
     this.domSelector.renderActionBtn.appendChild(formCrud);

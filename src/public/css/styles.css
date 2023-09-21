@@ -2123,12 +2123,11 @@ a:hover {
   flex-direction: column;
   row-gap: 0.3rem;
 }
-.containerCRUDMain .containerCRUD .containerCRUDBtns .containerRenderBtns #formCrud .bi {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  column-gap: 7px;
+.containerCRUDMain .containerCRUD .containerCRUDBtns .containerRenderBtns #formCrud .inputDivImg {
+  display: inline-block;
+}
+.containerCRUDMain .containerCRUD .containerCRUDBtns .containerRenderBtns #formCrud .inputDivImg .customFile::-webkit-file-upload-button {
+  visibility: hidden;
 }
 .containerCRUDMain .containerCRUD .containerItems {
   display: flex;

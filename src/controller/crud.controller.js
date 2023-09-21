@@ -2,6 +2,7 @@ const { Router } = require("express");
 const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
 const ItemService = require("../service/item.service");
 const ItemDTO = require("../dto/item.dto");
+const upload = require("../middlewares/upload.middleware");
 
 const router = Router();
 
@@ -73,12 +74,17 @@ router.get("/:id", async (req, res) => {
 });
 
 // CREATE NEW ITEM
-router.post("/", async (req, res) => {
+router.post("/", upload.single("image"), async (req, res) => {
   try {
+    if (req.file) {
+      console.log("se cargo la img");
+    }
     const { persistence } = req.query;
     const item = req.body;
+    if (req.file && req.file.length !== 0) {
+    }
 
-    if (!item.image) item.image = "https://dummyimage.com/300x200/000/fff";
+    // if (!item.image) item.image = "https://dummyimage.com/300x200/000/fff";
 
     ItemService.setPersistence(persistence);
 

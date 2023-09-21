@@ -14,7 +14,7 @@ app.use(express.static("src/public"));
 router(app);
 
 const httpServer = app.listen(PORT, () => {
-  console.log("Server started on PORT: ".green, PORT.cyan);
+  console.log("Server started on PORT:".green, PORT.cyan);
 });
 
 mongoConnect();
