@@ -19,19 +19,29 @@ const mobileResponsive = () => {
   }
 
   const closeMenu = () => {
-    navBarAside.classList.remove("navBarAsideRes");
-    sideBar.classList.remove("sideBarRes");
-    menu.classList.remove("close");
-    for (const icon of sideBarIcon) {
-      icon.classList.remove("active");
+    const removeClasses = () => {
+      navBarAside.classList.remove("navBarAsideRes");
+      menu.classList.remove("close");
+      for (const icon of sideBarIcon) {
+        icon.classList.remove("active");
+      }
+    };
+
+    if (!sideBar.classList.contains("sideBarRes")) {
+      removeClasses();
     }
+
+    sideBar.classList.remove("sideBarRes");
+    setTimeout(() => {
+      removeClasses();
+    }, 500);
   };
 
   menu.addEventListener("click", (e) => {
     e.preventDefault();
-    navBarAside.classList.toggle("navBarAsideRes");
     menu.classList.toggle("close");
     sideBar.classList.remove("sideBarRes");
+    navBarAside.classList.toggle("navBarAsideRes");
     for (const icon of sideBarIcon) {
       icon.classList.remove("active");
     }
@@ -39,7 +49,11 @@ const mobileResponsive = () => {
 
   // CAPTURAR ID DEL ELEMENTO README AND CONTACT
   for (const icon of sideBarIcon) {
-    if (icon.id !== "readme" && icon.id !== "contact") {
+    if (
+      icon.id !== "readme" &&
+      icon.id !== "contact" &&
+      icon.id !== "account"
+    ) {
       icon.addEventListener("click", () => {
         statusSideBar.now = icon.id;
 

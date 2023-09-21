@@ -356,15 +356,19 @@ a:hover {
     width: 13%;
     height: 0;
     top: 7%;
+    z-index: 4;
     transition: all 0.8s ease;
+  }
+  .containerGrid .navBarAside * {
+    opacity: 0;
+    transition: opacity 1s ease !important;
   }
   .containerGrid .navBarAside.navBarAsideRes {
     visibility: visible;
     height: 90.4%;
-    z-index: 4;
   }
-  .containerGrid .navBarAside * {
-    transition: none;
+  .containerGrid .navBarAside.navBarAsideRes * {
+    opacity: 1;
   }
   .containerGrid .navBarAside .toolTipText {
     display: none;

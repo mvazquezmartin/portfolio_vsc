@@ -111,6 +111,7 @@ class RenderComponentsCrud {
 
         break;
       case "Modify":
+        this.renderCreateModify.renderForm(context, this.request)
         break;
 
       case "Delete":

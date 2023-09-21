@@ -329,17 +329,24 @@
       width: 13%;
       height: 0;
       top: 7%;
+      z-index: 4;
       transition: all 0.8s ease;
+
+      & * {
+        opacity: 0;
+        transition: opacity 1s ease !important;
+      }
 
       &.navBarAsideRes {
         visibility: visible;
         height: 90.4%;
-        z-index: 4;
+        // transition: all 0.8s ease;
+        & * {
+          opacity: 1;
+          // transition: all 0.8s ease;
+        }
       }
 
-      & * {
-        transition: none;
-      }
       .toolTipText {
         display: none;
       }

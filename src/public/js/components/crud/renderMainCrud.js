@@ -1,8 +1,8 @@
 import { RenderComponentsCrud } from "./RenderComponents.js";
 
-async function renderMainCrud(persistence, version) {
+async function renderMainCrud(persistence) {
   const path = document.getElementById("rootPath");
-  path.textContent = `Portfolio > CRUD > Inventario ${version}`;
+  path.textContent = `Portfolio > CRUD > CRUD ${persistence}`;
 
   const containerCRUDMain = document.createElement("div");
   containerCRUDMain.classList.add("containerCRUDMain");

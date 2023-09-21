@@ -172,72 +172,45 @@ const folder1 = {
   folderName: "CRUD",
   files: [
     {
-      name: "CRUDFilesystem.js",
-      icon: "./assets/code-file-svgrepo-com.svg",
-      function: () => {
-        tabManager.create(
-          "CRUD Filesystem",
-          () => renderMainCrud("filesystem", "fileSystem"),
-          iconPath.CODE
-        );
-      },
-    },
-    {
-      name: "CRUDMongoDB.js",
-      icon: "./assets/code-file-svgrepo-com.svg",
-      function: () => {
-        tabManager.create(
-          "CRUD MongoDB",
-          renderMainCrud.bind(null, "mongodb", "mongodb"),
-          iconPath.CODE
-        );
-      },
+      name: "readme_crud.md",
+      icon: iconPath.MARKDOWN,
+      function: console.log("README!"),
     },
   ],
   subfolders: [
     {
-      folderName: "Inventario v1.0",
+      folderName: "CRUD v1.0",
       files: [
         {
-          name: "archivo.nshe",
-          icon: "./assets/code-file-svgrepo-com.svg",
-          function: () => console.log("archivonasheee"),
-        },
-        {
-          name: "Archivo1.txt",
-          icon: "./assets/code-file-svgrepo-com.svg",
-          function: () => console.log("archivo1"),
-        },
-        {
-          name: "Archivo2.txt",
-          icon: "./assets/code-file-svgrepo-com.svg",
-          function: () => console.log("archivo2"),
+          name: "CRUD MongoDB.js",
+          icon: iconPath.CODE,
+          function: () => {
+            tabManager.create(
+              "CRUD MongoDB",
+              () => renderMainCrud("mongodb"),
+              iconPath.CODE
+            );
+          },
         },
       ],
       subfolders: [],
     },
     {
-      folderName: "Inventario v0.6",
+      folderName: "CRUD v0.6",
       files: [
         {
-          name: "Archivo3.txt",
-          icon: "./assets/code-file-svgrepo-com.svg",
-          function: () => console.log("archivo3"),
+          name: "CRUD Filesystem.js",
+          icon: iconPath.CODE,
+          function: () => {
+            tabManager.create(
+              "CRUD Filesystem",
+              () => renderMainCrud("filesystem"),
+              iconPath.CODE
+            );
+          },
         },
       ],
-      subfolders: [
-        {
-          folderName: "Subcarpeta1",
-          files: [
-            {
-              name: "Archivo4.txt",
-              icon: "./assets/code-file-svgrepo-com.svg",
-              function: () => console.log("archivo4"),
-            },
-          ],
-          subfolders: [],
-        },
-      ],
+      subfolders: [],
     },
     {
       folderName: "Inventario v0.2",
