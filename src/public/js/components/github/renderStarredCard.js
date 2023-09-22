@@ -1,4 +1,4 @@
-const renderRepositoryCard = (data, nodo) => {
+const renderStarredCard = (data, nodo) => {
   const repositoryCard = document.createElement("div");
   repositoryCard.classList.add("repositoryCard");
 
@@ -13,7 +13,7 @@ const renderRepositoryCard = (data, nodo) => {
   title.classList.add("titleRepo");
   title.setAttribute("href", data.html_url);
   title.setAttribute("target", "_blank");
-  title.textContent = data.name;
+  title.textContent = data.name.toUpperCase();
 
   const language = document.createElement("p");
   language.textContent = data.language;
@@ -33,4 +33,4 @@ const renderRepositoryCard = (data, nodo) => {
   nodo.appendChild(repositoryCard);
 };
 
-export { renderRepositoryCard };
+export { renderStarredCard };

@@ -76,11 +76,12 @@ router.get("/:id", async (req, res) => {
 // CREATE NEW ITEM
 router.post("/", upload.single("image"), async (req, res) => {
   try {
+    const { persistence } = req.query;
+    const item = req.body;
+
     if (req.file) {
       console.log("se cargo la img");
     }
-    const { persistence } = req.query;
-    const item = req.body;
     if (req.file && req.file.length !== 0) {
     }
 

@@ -20,7 +20,7 @@ const upload = multer({
   fileFilter: (req, file, cb) => {
     if (file.mimetype.startsWith("image/")) {
       cb(null, true);
-    } else if(err){
+    } else {
       cb(new Error("Only images are allowed"), false);
     }
   },
@@ -33,7 +33,13 @@ upload.any = (err, req, res, next) => {
       message: "Error uploading file",
       details: err.message,
     });
+  } else if (err) {
+    return res.status(HTTP_STATUS_CODES.BAD_REQUEST).json({
+      status: "error",
+      message: err.message,
+    });
   }
+  next();
 };
 
 module.exports = upload;

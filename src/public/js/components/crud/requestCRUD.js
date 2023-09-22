@@ -5,6 +5,7 @@ class RequestCRUD {
 
   async sendRequest(method, url, data = null) {
     try {
+      console.log(data);
       const response = await fetch(url, {
         method: method,
         headers: {

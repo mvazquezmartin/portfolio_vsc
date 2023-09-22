@@ -98,9 +98,10 @@ export class RenderCreateModify {
 
       data.forEach((value, key) => {
         if (key === "price" || key === "stock") {
-          obj[key] = parseInt(value);
+          obj[key] = Number(value);
+        } else {
+          obj[key] = value;
         }
-        obj[key] = value;
       });
 
       switch (context) {

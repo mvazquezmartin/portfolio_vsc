@@ -48,8 +48,6 @@ class ItemService {
 
       const data = await this.itemManager.getOneById(id);
 
-      console.log(data);
-
       if (!data)
         return {
           code: HTTP_STATUS_CODES.NOT_FOUND,

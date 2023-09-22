@@ -4,20 +4,31 @@ class CacheManager {
   constructor(path) {
     this.data = [];
     this.filePath = path;
-    this.channelIdIndex = {};
+    this.idIndex = {};
   }
 
-  async getOne(channelId) {
+  async getAll() {
     try {
       await this.readFile();
 
       if (!this.data) return null;
 
-      if (!this.channelIdIndex[channelId]) return null;
+      return this.data;
+    } catch (error) {
+      console.error("Error in getAll:", error);
+      throw error;
+    }
+  }
 
-      const channelData = this.data.find(
-        (channel) => channel.channelId === channelId
-      );
+  async getOne(id) {
+    try {
+      await this.readFile();
+
+      if (!this.data) return null;
+
+      if (!this.idIndex[id]) return null;
+
+      const channelData = this.data.find((channel) => channel.id === id);
 
       return channelData || null;
     } catch (error) {
@@ -26,24 +37,24 @@ class CacheManager {
     }
   }
 
-  async create(channelId, channelInfo) {
+  async create(id, channelInfo) {
     try {
       await this.readFile();
 
       const newData = {
-        channelId,
+        id,
         data: channelInfo,
         timestamp: new Date().getTime(),
       };
 
-      if (!this.channelIdIndex[channelId]) {
+      if (!this.idIndex[id]) {
         this.data.push(newData);
-        this.channelIdIndex[channelId] = true;
+        this.idIndex[id] = true;
 
         await this.saveFile();
       } else {
         const existingDataIndex = this.data.findIndex(
-          (channel) => channel.channelId === channelId
+          (channel) => channel.id === id
         );
 
         this.data[existingDataIndex] = newData;
@@ -56,12 +67,12 @@ class CacheManager {
     }
   }
 
-  async delete(channelId) {
+  async delete(id) {
     try {
       await this.readFile();
 
       const existingDataIndex = this.data.findIndex(
-        (channel) => channel.channelId === channelId
+        (channel) => channel.id === id
       );
 
       if (existingDataIndex !== -1) {
@@ -74,17 +85,15 @@ class CacheManager {
     }
   }
 
-  async isValidCache(channelId) {
+  async isValidCache(id) {
     try {
       await this.readFile();
 
       if (!this.data) return false;
 
-      if (!this.channelIdIndex[channelId]) return false;
+      if (!this.idIndex[id]) return false;
 
-      const channelData = this.data.find(
-        (channel) => channel.channelId === channelId
-      );
+      const channelData = this.data.find((channel) => channel.id === id);
 
       if (!channelData) return false;
 
@@ -108,7 +117,7 @@ class CacheManager {
       if (data) {
         this.data = JSON.parse(data);
         this.data.forEach((item) => {
-          this.channelIdIndex[item.channelId] = true;
+          this.idIndex[item.id] = true;
         });
       }
     } catch (error) {

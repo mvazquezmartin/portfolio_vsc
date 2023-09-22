@@ -174,7 +174,7 @@ const folder1 = {
     {
       name: "readme_crud.md",
       icon: iconPath.MARKDOWN,
-      function: console.log("README!"),
+      function: () => console.log("README!"),
     },
   ],
   subfolders: [

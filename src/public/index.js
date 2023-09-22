@@ -5,7 +5,7 @@ import { renderStack } from "./js/components/stack/stack.js";
 import { tabManager } from "./js/components/tabs/TabsManager.js";
 import { setUpResponsiveEvents } from "./js/responsive/responsive.js";
 import { btnFocus } from "./js/utils/btnFocus.js";
-import { renderRepositories } from "./js/components/github/renderRepositories.js";
+import { renderGithub } from "./js/components/github/renderGithub.js";
 import { renderBookmarks } from "./js/components/bookmarks/renderBookmarks.js";
 import { renderMainContact } from "./js/components/contact/renderMainContact.js";
 import { readmeMain } from "./js/components/readme/mainReadme.js";
@@ -26,7 +26,7 @@ const btnNavBarAside = document.querySelectorAll(".iconNavBarAside");
 explorer.addEventListener("click", renderExplorer);
 stack.addEventListener("click", renderStack);
 bookmarks.addEventListener("click", renderBookmarks);
-github.addEventListener("click", renderRepositories);
+github.addEventListener("click", renderGithub);
 contact.addEventListener("click", () =>
   tabManager.create("Contact", renderMainContact, iconPath.CONTACT)
 );
