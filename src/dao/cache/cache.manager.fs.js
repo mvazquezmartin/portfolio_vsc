@@ -28,22 +28,22 @@ class CacheManager {
 
       if (!this.idIndex[id]) return null;
 
-      const channelData = this.data.find((channel) => channel.id === id);
+      const dataFromCache = this.data.find((channel) => channel.id === id);
 
-      return channelData || null;
+      return dataFromCache || null;
     } catch (error) {
       console.error("Error in getOne:", error);
       throw error;
     }
   }
 
-  async create(id, channelInfo) {
+  async create(id, info) {
     try {
       await this.readFile();
 
       const newData = {
         id,
-        data: channelInfo,
+        data: info,
         timestamp: new Date().getTime(),
       };
 
@@ -91,14 +91,12 @@ class CacheManager {
 
       if (!this.data) return false;
 
-      if (!this.idIndex[id]) return false;
+      const dataFromCache = this.data.find((channel) => channel.id === id);
 
-      const channelData = this.data.find((channel) => channel.id === id);
-
-      if (!channelData) return false;
+      if (!dataFromCache) return false;
 
       const currentTime = new Date().getTime();
-      const lastUpdatedTime = channelData.timestamp;
+      const lastUpdatedTime = dataFromCache.timestamp;
       const fileAge = currentTime - lastUpdatedTime;
 
       const cacheExpiration = 24 * 60 * 60 * 1000;

@@ -1,6 +1,6 @@
 const renderStarredCard = (data, nodo) => {
   const repositoryCard = document.createElement("div");
-  repositoryCard.classList.add("repositoryCard");
+  repositoryCard.classList.add("starredCard");
 
   const dataRepo = document.createElement("div");
   dataRepo.classList.add("dataRepo");
@@ -16,7 +16,7 @@ const renderStarredCard = (data, nodo) => {
   title.textContent = data.name.toUpperCase();
 
   const language = document.createElement("p");
-  language.textContent = data.language;
+  language.textContent = data.owner;
 
   const contentContainer = document.createElement("div");
   contentContainer.classList.add("contentContainer");

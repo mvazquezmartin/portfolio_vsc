@@ -1,4 +1,4 @@
-const { Router } = require("express");
+const { Router, response } = require("express");
 const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
 const { default: axios } = require("axios");
 const CacheService = require("../service/cache.service");
@@ -19,7 +19,7 @@ const router = Router();
 
 router.get("/starred", async (req, res) => {
   try {
-    const isValid = await cacheServiceStarred.isValidCache(76931209);
+    const isValid = await cacheServiceStarred.isValidCache(313330998);
     if (isValid) {
       const response = await cacheServiceStarred.getAll();
       if (response.status !== "error") {
@@ -36,23 +36,23 @@ router.get("/starred", async (req, res) => {
 
     const filteredData = dataResponse.data.map((repo) => ({
       id: repo.id,
+      owner: repo.owner.login,
       name: repo.name,
       description: repo.description,
       html_url: repo.html_url,
     }));
 
-    await Promise.all(
-      filteredData.map(async (repo) => {
-        const data = {
-          id: repo.id,
-          name: repo.name,
-          description: repo.description,
-          html_url: repo.html_url,
-        };
-        await cacheServiceStarred.create(data.id, data);
-        console.log("GITHUB!:", data.id);
-      })
-    );
+    for (const repo of filteredData) {
+      await cacheServiceStarred.create(repo.id, repo);
+      console.log("GITHUB STARRED ⭐", repo.name);
+    }
+
+    // await Promise.all(
+    //   filteredData.map(async (repo) => {
+    //     await cacheServiceStarred.create(repo.id, repo);
+    //     console.log("GITHUB STARRED ⭐", repo.name);
+    //   })
+    // );
 
     res.status(HTTP_STATUS_CODES.OK).json({
       status: "success",
@@ -100,6 +100,36 @@ router.get("/repos", async (req, res) => {
       message: "here is the repository",
       payload: repositoryInfo,
     });
+  } catch (error) {
+    console.log(error);
+    res
+      .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
+      .json({ status: "error", message: "Something went wrong" });
+  }
+});
+
+router.get("/user", async (req, res) => {
+  try {
+    const dataResponse = await axios.get(
+      "https://api.github.com/users/mvazquezmartin"
+    );
+
+    const data = {
+      login: dataResponse.data.login,
+      avatar_url: dataResponse.data.avatar_url,
+      html_url: dataResponse.data.html_url,
+      location: dataResponse.data.location,
+      bio: dataResponse.data.bio,
+      public_repos: dataResponse.data.public_repos,
+    };
+
+    res
+      .status(HTTP_STATUS_CODES.OK)
+      .json({
+        status: "success",
+        message: "User data retrieval successful.",
+        payload: data,
+      });
   } catch (error) {
     console.log(error);
     res

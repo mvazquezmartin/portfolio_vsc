@@ -9,10 +9,19 @@ class CacheService {
   async getAll() {
     const data = await this.cacheManager.getAll();
     if (!data) return { code: HTTP_STATUS_CODES.NOT_FOUND, status: "error" };
+
+    const transformedData = data.map((item) => ({
+      id: item.id,
+      owner: item.data.owner,
+      name: item.data.name,
+      description: item.data.description,
+      html_url: item.data.html_url,
+    }));
+
     return {
       code: HTTP_STATUS_CODES.OK,
       status: "success",
-      payload: data,
+      payload: transformedData,
     };
   }
 

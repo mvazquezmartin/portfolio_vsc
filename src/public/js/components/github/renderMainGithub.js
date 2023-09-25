@@ -13,6 +13,14 @@ const renderMainGithub = async () => {
   const calendar = document.createElement("img");
   calendar.setAttribute("src", imgPath.CALENDAR);
 
+  try {
+    const response = await fetch("/github/user");
+    const dataUser = await response.json();
+    console.log(dataUser.payload);
+  } catch (error) {
+    console.error(error);
+  }
+
   containerGithub.appendChild(calendar);
   mainView.appendChild(containerGithub);
 };

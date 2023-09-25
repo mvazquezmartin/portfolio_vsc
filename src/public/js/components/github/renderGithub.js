@@ -32,7 +32,7 @@ const renderGithub = async () => {
 
     const data = cacheData["github/starred"];
     data.payload.forEach((repo) => {
-      renderStarredCard(repo.data, repositoriesContainer);
+      renderStarredCard(repo, repositoriesContainer);
     });
 
     viewSideBar.appendChild(repositoriesContainer);
