@@ -5,6 +5,5 @@ export const repositories = [
   "DSM_reactjs",
   "inventario_js",
   "WhatWouldYouRather",
-  "chat_51120",
-  "portfolio_vsc",
+  "chat_51120",  
 ];

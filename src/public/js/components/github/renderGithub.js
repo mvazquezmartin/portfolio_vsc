@@ -10,7 +10,7 @@ const renderGithub = async () => {
   titleSideBar.textContent = "GITHUB";
 
   const fileOpen = document.getElementById("fileOpen");
-  fileOpen.textContent = "STARRED";
+  fileOpen.textContent = "STARRED ☆";
 
   const viewSideBar = document.getElementById("viewSideBar");
   viewSideBar.innerHTML = "";

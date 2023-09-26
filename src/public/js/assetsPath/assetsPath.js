@@ -86,6 +86,13 @@ const imgPath = {
   CANIUSE: "./assets/Screenshot_caniuse.png",
   README: "./assets/Screenshot_readme.png",
   API: "./assets/api-svgrepo-com.svg",
+  BROWSER: "./assets/browser-svgrepo-com.svg",
+  CART: "./assets/cart-svgrepo-com.svg",
+  ECOMMERCE: "./assets/ecommerce-svgrepo-com.svg",
+  INVENTARIO: "./assets/inventory-svgrepo-com.svg",
+  RATHER: "./assets/rather-svgrepo-com.svg",
+  CHAT: "./assets/chatbubble-svgrepo-com.svg",
+
 };
 
 const certificadoPath = {

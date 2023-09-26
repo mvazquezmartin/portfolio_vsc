@@ -1575,19 +1575,14 @@ a:hover {
   border-top: 1px solid #6b6e7e;
   border-bottom: 1px solid #6b6e7e;
 }
-@media screen and (max-width: 600px) {
-  .repositoriesContainer {
-    overflow-y: auto;
-  }
-}
 
 .containerMainGithub {
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 100%;
   width: 100%;
   padding: 2rem;
+  overflow-y: auto;
 }
 .containerMainGithub .containerHeaderGithub {
   display: flex;
@@ -1596,8 +1591,8 @@ a:hover {
   justify-content: center;
   background-color: #1d1e24;
   padding: 1.5rem 1rem;
-  margin-bottom: 2rem;
   border-radius: 4px;
+  font-size: 1.5rem;
 }
 .containerMainGithub .containerHeaderGithub .containerAvatar {
   padding: 0 1rem;
@@ -1612,20 +1607,81 @@ a:hover {
   padding: 1rem;
   border-right: 3px solid #bd93f9;
 }
-.containerMainGithub .containerHeaderGithub .containerName h1 {
-  font-size: 1.5rem;
-}
 .containerMainGithub .containerHeaderGithub .containerRepos {
   padding: 0 1rem;
+  text-align: center;
 }
-.containerMainGithub .containerHeaderGithub .containerRepos p {
+@media screen and (max-width: 600px) {
+  .containerMainGithub .containerHeaderGithub {
+    font-size: 1rem;
+  }
+  .containerMainGithub .containerHeaderGithub .containerAvatar {
+    display: none;
+  }
+}
+.containerMainGithub .containerRepositories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.containerMainGithub .containerRepositories .repositoryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #1d1e24;
+  transition: box-shadow 0.3s;
+}
+.containerMainGithub .containerRepositories .repositoryCard:hover {
+  box-shadow: 0 0 11px rgba(202, 38, 235, 0.3);
+}
+.containerMainGithub .containerRepositories .repositoryCard .repositoryImg img {
+  width: 130px;
+}
+.containerMainGithub .containerRepositories .repositoryCard .repositoryContent {
+  text-wrap: balance;
+}
+.containerMainGithub .containerRepositories .repositoryCard .repositoryContent h3 {
+  padding: 0.5rem 0;
   font-size: 1.5rem;
+  border-bottom: 1px solid #888;
+}
+.containerMainGithub .containerRepositories .repositoryCard .repositoryContent h3 a {
+  transition: color 0.3s;
+}
+.containerMainGithub .containerRepositories .repositoryCard .repositoryContent h3 a:hover {
+  color: #bd93f9;
+}
+.containerMainGithub .containerRepositories .repositoryCard .repositoryContent p {
+  padding-top: 0.5rem;
+  color: #bbb;
+}
+@media screen and (max-width: 600px) {
+  .containerMainGithub .containerRepositories .repositoryCard .repositoryContent h3 {
+    font-size: 1rem;
+  }
+  .containerMainGithub .containerRepositories .repositoryCard .repositoryContent p {
+    font-size: 14px;
+  }
 }
 .containerMainGithub .containerChartGithub {
   width: 100%;
 }
 .containerMainGithub .containerChartGithub img {
   width: 50%;
+  height: 150px;
+}
+@media screen and (max-width: 600px) {
+  .containerMainGithub .containerChartGithub {
+    display: none;
+  }
+  .containerMainGithub .containerChartGithub img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .booksmarksContainer {

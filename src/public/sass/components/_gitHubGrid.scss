@@ -52,17 +52,17 @@
     }
   }
 
-  @include mobile {
-    overflow-y: auto;
-  }
+  // @include mobile {
+  //   overflow-y: auto;
+  // }
 }
 .containerMainGithub {
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 100%;
   width: 100%;
   padding: 2rem;
+  overflow-y: auto;
   .containerHeaderGithub {
     display: flex;
     width: 100%;
@@ -70,8 +70,8 @@
     justify-content: center;
     background-color: $color-darkGrey;
     padding: 1.5rem 1rem;
-    margin-bottom: 2rem;
     border-radius: 4px;
+    font-size: 1.5rem;
     .containerAvatar {
       padding: 0 1rem;
       width: 90px;
@@ -84,14 +84,67 @@
     .containerName {
       padding: 1rem;
       border-right: 3px solid #bd93f9;
-      h1 {
-        font-size: 1.5rem;
-      }
     }
     .containerRepos {
       padding: 0 1rem;
-      p {
-        font-size: 1.5rem;
+      text-align: center;
+    }
+    @include mobile {
+      font-size: 1rem;
+      .containerAvatar {
+        display: none;
+      }
+    }
+  }
+  .containerRepositories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-gap: 1.5rem;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+
+    .repositoryCard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 5px;
+      padding: 1rem;
+      background-color: $color-darkGrey;
+      transition: box-shadow 0.3s;
+      &:hover {
+        box-shadow: 0 0 11px rgba(202, 38, 235, 0.3);
+      }
+
+      .repositoryImg {
+        img {
+          width: 130px;
+        }
+      }
+      .repositoryContent {
+        text-wrap: balance;
+        h3 {
+          padding: 0.5rem 0;
+          font-size: 1.5rem;
+          border-bottom: 1px solid #888;
+          a {
+            transition: color 0.3s;
+            &:hover {
+              color: #bd93f9;
+            }
+          }
+        }
+        p {
+          padding-top: 0.5rem;
+          color: #bbb;
+        }
+        @include mobile {
+          h3 {
+            font-size: 1rem;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
       }
     }
   }
@@ -99,6 +152,14 @@
     width: 100%;
     img {
       width: 50%;
+      height: 150px;
+    }
+    @include mobile {
+      display: none;
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
