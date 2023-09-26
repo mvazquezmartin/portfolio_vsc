@@ -1,4 +1,4 @@
-const { Router, response } = require("express");
+const { Router } = require("express");
 const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
 const { default: axios } = require("axios");
 const CacheService = require("../service/cache.service");
@@ -12,8 +12,13 @@ const cachePathRepos = path.join(
   __dirname,
   "../dao/cache/file/cacheGithubRepos.json"
 );
+const cachePathProfile = path.join(
+  __dirname,
+  "../dao/cache/file/cacheGithubProfile.json"
+);
 const cacheServiceStarred = new CacheService(chachePathStarred);
 const cacheServiceRepo = new CacheService(cachePathRepos);
+const cacheServiceProfile = new CacheService(cachePathProfile);
 
 const router = Router();
 
@@ -67,10 +72,9 @@ router.get("/starred", async (req, res) => {
   }
 });
 
-router.get("/repos", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const { repository } = req.query;
-
     const isValid = await cacheServiceRepo.isValidCache(repository);
     if (isValid) {
       const response = await cacheServiceRepo.getOne(repository);
@@ -110,6 +114,16 @@ router.get("/repos", async (req, res) => {
 
 router.get("/user", async (req, res) => {
   try {
+    const isValid = await cacheServiceProfile.isValidCache("mvazquezmartin");
+    if (isValid) {
+      const response = await cacheServiceProfile.getOne("mvazquezmartin");
+      if (response.status !== "error") {
+        return res.status(response.code).json({
+          status: response.status,
+          payload: response.payload,
+        });
+      }
+    }
     const dataResponse = await axios.get(
       "https://api.github.com/users/mvazquezmartin"
     );
@@ -123,13 +137,14 @@ router.get("/user", async (req, res) => {
       public_repos: dataResponse.data.public_repos,
     };
 
-    res
-      .status(HTTP_STATUS_CODES.OK)
-      .json({
-        status: "success",
-        message: "User data retrieval successful.",
-        payload: data,
-      });
+    await cacheServiceProfile.create("mvazquezmartin", data);
+    console.log("HELLO PROFILE!", "mvazquezmartin");
+
+    res.status(HTTP_STATUS_CODES.OK).json({
+      status: "success",
+      message: "User data retrieval successful.",
+      payload: data,
+    });
   } catch (error) {
     console.log(error);
     res

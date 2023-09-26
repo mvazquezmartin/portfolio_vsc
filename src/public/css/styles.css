@@ -1581,6 +1581,53 @@ a:hover {
   }
 }
 
+.containerMainGithub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+}
+.containerMainGithub .containerHeaderGithub {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d1e24;
+  padding: 1.5rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+.containerMainGithub .containerHeaderGithub .containerAvatar {
+  padding: 0 1rem;
+  width: 90px;
+}
+.containerMainGithub .containerHeaderGithub .containerAvatar img {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+.containerMainGithub .containerHeaderGithub .containerName {
+  padding: 1rem;
+  border-right: 3px solid #bd93f9;
+}
+.containerMainGithub .containerHeaderGithub .containerName h1 {
+  font-size: 1.5rem;
+}
+.containerMainGithub .containerHeaderGithub .containerRepos {
+  padding: 0 1rem;
+}
+.containerMainGithub .containerHeaderGithub .containerRepos p {
+  font-size: 1.5rem;
+}
+.containerMainGithub .containerChartGithub {
+  width: 100%;
+}
+.containerMainGithub .containerChartGithub img {
+  width: 50%;
+}
+
 .booksmarksContainer {
   display: flex;
   flex-direction: column;

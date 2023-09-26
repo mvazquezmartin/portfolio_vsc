@@ -85,6 +85,7 @@ const imgPath = {
   CODEPEN: "./assets/Screenshot_codepen.png",
   CANIUSE: "./assets/Screenshot_caniuse.png",
   README: "./assets/Screenshot_readme.png",
+  API: "./assets/api-svgrepo-com.svg",
 };
 
 const certificadoPath = {
@@ -98,9 +99,11 @@ const certificadoPath = {
   REACTJS_LINK:
     "https://www.coderhouse.com/certificados/63f606fcff4216000e5d1ee0",
   BACKEND: "./assets/certificado-Backend.png",
-  BACKEND_LINK: "https://www.coderhouse.com/certificados/64ffc47ec65d476d826412d7?lang=es",
+  BACKEND_LINK:
+    "https://www.coderhouse.com/certificados/64ffc47ec65d476d826412d7?lang=es",
   FULLSTACK: "./assets/certificado-Backend.png",
-  FULLSTACK_LINK: "https://www.coderhouse.com/certificados/64ffc47fc65d476f916412dd?lang=es"
+  FULLSTACK_LINK:
+    "https://www.coderhouse.com/certificados/64ffc47fc65d476f916412dd?lang=es",
 };
 
 export { imgPath, iconPath, certificadoPath };
