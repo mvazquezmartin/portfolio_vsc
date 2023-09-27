@@ -442,60 +442,102 @@ a:hover {
   align-items: center;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
 }
-.containerHeroView .containerIntroAside {
+.containerHeroView .containerIntroLeft {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: auto;
 }
-.containerHeroView .containerIntroAside .titleMain {
+.containerHeroView .containerIntroLeft .titleMain {
   text-align: left;
   width: 100%;
+  padding-bottom: 2rem;
 }
-.containerHeroView .containerIntroAside .titleMain h1 {
+.containerHeroView .containerIntroLeft .titleMain h1 {
+  font-size: 3rem;
+}
+.containerHeroView .containerIntroLeft .titleMain h2 {
   font-size: 2rem;
-}
-.containerHeroView .containerIntroAside .titleMain h2 {
-  font-size: 1.5rem;
   color: #999;
+  padding-top: 0.5rem;
 }
-.containerHeroView .containerIntroAside .descriptionMain {
+.containerHeroView .containerIntroLeft .startAndRecent {
   width: 100%;
+  cursor: default;
+}
+.containerHeroView .containerIntroLeft .startAndRecent .containerStart {
   display: flex;
   flex-direction: column;
+  row-gap: 0.4rem;
+  padding-bottom: 2rem;
 }
-.containerHeroView .containerIntroAside .descriptionMain h6 {
-  margin-top: 1rem;
+.containerHeroView .containerIntroLeft .startAndRecent .containerStart h2 {
+  font-size: 1.5rem;
 }
-.containerHeroView .containerIntroAside .containerLenguage {
+.containerHeroView .containerIntroLeft .startAndRecent .containerStart .iconWithText {
+  color: #3584ff;
+}
+.containerHeroView .containerIntroLeft .startAndRecent .containerStart .iconWithText .bi {
+  font-size: 1.5rem;
+  padding-right: 0.4rem;
+}
+.containerHeroView .containerIntroLeft .startAndRecent .containerRecent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
+  cursor: default;
+}
+.containerHeroView .containerIntroLeft .startAndRecent .containerRecent h2 {
+  font-size: 1.5rem;
+}
+.containerHeroView .containerIntroLeft .startAndRecent .containerRecent .heroRecent {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.containerHeroView .containerIntroLeft .startAndRecent .containerRecent .heroRecent .spanRecent {
+  color: #3584ff;
+}
+.containerHeroView .containerIntroLeft .startAndRecent .containerRecent .heroRecent .spanPath {
+  padding-left: 1rem;
+}
+.containerHeroView .containerIntroRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+.containerHeroView .containerIntroRight .containerLenguage {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
   user-select: none;
 }
-.containerHeroView .containerIntroAside .containerLenguage .iconContainer {
+.containerHeroView .containerIntroRight .containerLenguage .iconContainer {
   display: flex;
   justify-content: space-evenly;
 }
-.containerHeroView .containerIntroAside .containerLenguage .iconContainer .iconsHero {
+.containerHeroView .containerIntroRight .containerLenguage .iconContainer .iconsHero {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.containerHeroView .containerIntroAside .containerLenguage .iconContainer .iconsHero img {
+.containerHeroView .containerIntroRight .containerLenguage .iconContainer .iconsHero img {
   width: 64px;
 }
-.containerHeroView .containerIntroAside .containerLenguage .iconContainer .iconsHero .iconJavascript {
+.containerHeroView .containerIntroRight .containerLenguage .iconContainer .iconsHero .iconJavascript {
   width: 56px;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .rangeContainer {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer {
   width: 300px;
   height: 10px;
   position: relative;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageJavascript {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageJavascript {
   width: 60%;
   height: 100%;
   background-color: #f1e05a;
@@ -503,21 +545,21 @@ a:hover {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageCss {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageCss {
   width: 18.7%;
   height: 100%;
   background-color: #563d7c;
   position: absolute;
   left: 60%;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageSass {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageSass {
   width: 18.2%;
   height: 100%;
   background-color: #c6538c;
   position: absolute;
   left: 78.7%;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageHtml {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageHtml {
   width: 3.1%;
   height: 100%;
   background-color: #e34c26;
@@ -526,47 +568,54 @@ a:hover {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer {
   padding-top: 1rem;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage {
   display: flex;
   column-gap: 0.9rem;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotJs {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotJs {
   color: #f1e05a;
   font-size: 9px;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotCss {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotCss {
   color: #563d7c;
   font-size: 9px;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotSass {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotSass {
   color: #c6538c;
   font-size: 9px;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotHtml {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotHtml {
   color: #e34c26;
   font-size: 9px;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage span {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage span {
   font-size: 12px;
   padding-left: 5px;
   color: #f0f8ff;
 }
-.containerHeroView .containerIntroAside .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .percentage {
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .percentage {
   color: #999;
 }
 @media screen and (max-width: 600px) {
   .containerHeroView {
     flex-direction: column;
+    justify-content: unset;
   }
-  .containerHeroView .containerIntroAside {
+  .containerHeroView .containerIntroLeft {
     padding-left: 0;
     margin: auto;
   }
-  .containerHeroView .containerIntroAside .titleMain {
+  .containerHeroView .containerIntroLeft .titleMain {
     text-align: center;
+  }
+  .containerHeroView .containerIntroLeft .titleMain h1 {
+    font-size: 1.5rem;
+  }
+  .containerHeroView .containerIntroLeft .titleMain h2 {
+    font-size: 1rem;
   }
 }
 .assetsContainer {
@@ -1534,7 +1583,7 @@ a:hover {
 }
 .repositoriesContainer .starredCard {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
   margin: 0.5rem 0;
   padding: 0 0.5rem;
@@ -1646,7 +1695,7 @@ a:hover {
 }
 .containerMainGithub .containerRepositories .repositoryCard .repositoryContent h3 {
   padding: 0.5rem 0;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-bottom: 1px solid #888;
 }
 .containerMainGithub .containerRepositories .repositoryCard .repositoryContent h3 a {
@@ -1677,10 +1726,6 @@ a:hover {
 @media screen and (max-width: 600px) {
   .containerMainGithub .containerChartGithub {
     display: none;
-  }
-  .containerMainGithub .containerChartGithub img {
-    width: 100%;
-    height: auto;
   }
 }
 
