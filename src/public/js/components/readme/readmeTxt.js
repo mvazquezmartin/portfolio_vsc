@@ -46,7 +46,7 @@ const readme = {
   magic8ball: `
   # <center> 🎱 Magic 8 Ball </center>
   
-  Es una sencilla aplicación web interactiva que simula el clásico juguete "Magic 8 Ball" para predecir la fortuna. Este juguete es conocido por proporcionar respuestas aleatorias a preguntas de sí o no planteadas por el usuario. La aplicación está construida utilizando HTML, CSS y JavaScript.
+  Es una sencilla aplicación web interactiva que simula el clásico juguete "Magic 8 Ball" para predecir la fortuna. Este juego es conocido por proporcionar respuestas aleatorias a preguntas de sí o no planteadas por el usuario. La aplicación está construida utilizando HTML, CSS y JavaScript.
   
   
   

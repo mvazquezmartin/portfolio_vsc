@@ -458,9 +458,11 @@ a:hover {
 }
 .containerHeroView .containerIntroLeft .titleMain h1 {
   font-size: 3rem;
+  font-weight: 300;
 }
 .containerHeroView .containerIntroLeft .titleMain h2 {
   font-size: 2rem;
+  font-weight: 300;
   color: #999;
   padding-top: 0.5rem;
 }
@@ -475,13 +477,14 @@ a:hover {
   padding-bottom: 2rem;
 }
 .containerHeroView .containerIntroLeft .startAndRecent .containerStart h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 .containerHeroView .containerIntroLeft .startAndRecent .containerStart .iconWithText {
   color: #3584ff;
 }
 .containerHeroView .containerIntroLeft .startAndRecent .containerStart .iconWithText .bi {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding-right: 0.4rem;
 }
 .containerHeroView .containerIntroLeft .startAndRecent .containerRecent {
@@ -491,7 +494,8 @@ a:hover {
   cursor: default;
 }
 .containerHeroView .containerIntroLeft .startAndRecent .containerRecent h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 .containerHeroView .containerIntroLeft .startAndRecent .containerRecent .heroRecent {
   overflow: hidden;
@@ -507,19 +511,66 @@ a:hover {
 .containerHeroView .containerIntroRight {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: auto;
+  row-gap: 2rem;
+}
+.containerHeroView .containerIntroRight .containerExtension {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
+}
+.containerHeroView .containerIntroRight .containerExtension h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.containerHeroView .containerIntroRight .containerExtension a {
+  transition: box-shadow 0.3s;
+}
+.containerHeroView .containerIntroRight .containerExtension a:hover {
+  color: #f0f8ff;
+  box-shadow: 0 0 11px rgba(202, 38, 235, 0.3);
+}
+.containerHeroView .containerIntroRight .containerExtension a .containerExtensionImgContent {
+  display: flex;
+  width: 400px;
+  background-color: #1d1e24;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+}
+.containerHeroView .containerIntroRight .containerExtension a .containerExtensionImgContent .containerExtensionImg {
+  display: grid;
+  place-content: center;
+}
+.containerHeroView .containerIntroRight .containerExtension a .containerExtensionImgContent .containerExtensionImg img {
+  width: 64px;
+}
+.containerHeroView .containerIntroRight .containerExtension a .containerExtensionImgContent .containerExtensionContent {
+  padding-left: 0.7rem;
+}
+.containerHeroView .containerIntroRight .containerExtension a .containerExtensionImgContent .containerExtensionContent .extensionName {
+  padding-bottom: 0.5rem;
+}
+.containerHeroView .containerIntroRight .containerExtension a .containerExtensionImgContent .containerExtensionContent .extensionDescription {
+  color: #bbb;
 }
 .containerHeroView .containerIntroRight .containerLenguage {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
   user-select: none;
+}
+.containerHeroView .containerIntroRight .containerLenguage h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-bottom: 0.4rem;
 }
 .containerHeroView .containerIntroRight .containerLenguage .iconContainer {
   display: flex;
   justify-content: space-evenly;
+  background-color: #1d1e24;
+  padding: 1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .containerHeroView .containerIntroRight .containerLenguage .iconContainer .iconsHero {
   display: flex;
@@ -532,13 +583,19 @@ a:hover {
 .containerHeroView .containerIntroRight .containerLenguage .iconContainer .iconsHero .iconJavascript {
   width: 56px;
 }
+.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer {
+  background-color: #1d1e24;
+  padding: 0 1rem 1rem 1rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 .containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer {
   width: 300px;
   height: 10px;
   position: relative;
 }
 .containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageJavascript {
-  width: 60%;
+  width: 62%;
   height: 100%;
   background-color: #f1e05a;
   position: absolute;
@@ -550,21 +607,21 @@ a:hover {
   height: 100%;
   background-color: #563d7c;
   position: absolute;
-  left: 60%;
+  left: 62%;
 }
 .containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageSass {
-  width: 18.2%;
+  width: 16.8%;
   height: 100%;
   background-color: #c6538c;
   position: absolute;
-  left: 78.7%;
+  left: 80.7%;
 }
 .containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageHtml {
-  width: 3.1%;
+  width: 2.5%;
   height: 100%;
   background-color: #e34c26;
   position: absolute;
-  left: 96.9%;
+  left: 97.5%;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }

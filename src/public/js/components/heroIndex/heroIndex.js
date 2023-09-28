@@ -1,3 +1,4 @@
+import { renderExtension } from "./recommendedExtension.js";
 import { renderDeveloped } from "./renderDeveloped.js";
 import { createIconWithText, createRecent } from "./renderHeroStar.js";
 
@@ -19,7 +20,7 @@ const renderMainText = () => {
   tituloContainer.classList.add("titleMain");
 
   const tituloHero = document.createElement("h1");
-  tituloHero.textContent = "Matias Vazquez Martin";
+  tituloHero.textContent = "Matías Vazquez Martin";
 
   const subTituloHero = document.createElement("h2");
   subTituloHero.textContent = "FullStack Developer Jr";
@@ -62,8 +63,8 @@ const renderMainText = () => {
   const portfolio = createRecent("VSCodeMvm", "myStuff");
 
   //container Hero aside
-  const heroContainerAside = document.createElement("div");
-  heroContainerAside.classList.add("containerIntroRight");
+  const containerHeroAside = document.createElement("div");
+  containerHeroAside.classList.add("containerIntroRight");
 
   containerMainHero.appendChild(heroContainer);
   heroContainer.appendChild(tituloContainer);
@@ -85,9 +86,12 @@ const renderMainText = () => {
   containerRecent.appendChild(app);
   containerRecent.appendChild(portfolio);
 
-  containerMainHero.appendChild(heroContainerAside);
+  containerMainHero.appendChild(containerHeroAside);
 
-  renderDeveloped(heroContainerAside);
+  const extension = renderExtension();
+  containerHeroAside.appendChild(extension);
+
+  renderDeveloped(containerHeroAside);
 
   mainView.appendChild(containerMainHero);
 };

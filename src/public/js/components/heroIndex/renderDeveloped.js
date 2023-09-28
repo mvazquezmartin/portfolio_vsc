@@ -63,7 +63,7 @@ const renderDeveloped = (nodo) => {
   spanJs.textContent = "JavaScript ";
   const spanJsPercentage = document.createElement("span");
   spanJsPercentage.classList.add("percentage");
-  spanJsPercentage.textContent = "60%";
+  spanJsPercentage.textContent = "62%";
 
   const lenguagePercentageCss = document.createElement("div");
   lenguagePercentageCss.classList.add("lenguage");
@@ -85,7 +85,7 @@ const renderDeveloped = (nodo) => {
   spanSass.textContent = "SASS";
   const spanSassPercentage = document.createElement("span");
   spanSassPercentage.classList.add("percentage");
-  spanSassPercentage.textContent = "18.2%";
+  spanSassPercentage.textContent = "16.8%";
 
   const lenguagePercentageHtml = document.createElement("div");
   lenguagePercentageHtml.classList.add("lenguage");
@@ -95,7 +95,7 @@ const renderDeveloped = (nodo) => {
   spanHtml.textContent = "HTML";
   const spanHtmlPercentage = document.createElement("span");
   spanHtmlPercentage.classList.add("percentage");
-  spanHtmlPercentage.textContent = "3.1%";
+  spanHtmlPercentage.textContent = "2.5%";
 
   percentageLenguageContainer.appendChild(firstLineLenguage);
   firstLineLenguage.appendChild(lenguagePercentageJs);
