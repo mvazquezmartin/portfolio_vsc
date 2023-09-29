@@ -7,6 +7,9 @@ const renderDeveloped = (nodo) => {
   const lenguageH2 = document.createElement("h2");
   lenguageH2.textContent = "Developed with:";
 
+  const containerIconRange = document.createElement("div");
+  containerIconRange.classList.add("containerIconRange");
+
   const iconContainer = document.createElement("div");
   iconContainer.classList.add("iconContainer");
 
@@ -57,7 +60,7 @@ const renderDeveloped = (nodo) => {
   firstLineLenguage.classList.add("rowLenguage");
   const lenguagePercentageJs = document.createElement("div");
   lenguagePercentageJs.classList.add("lenguage");
-  const dotJs = document.createElement("span");
+  const dotJs = document.createElement("i");
   dotJs.classList.add("bi", "bi-circle-fill", "dotJs");
   const spanJs = document.createElement("span");
   spanJs.textContent = "JavaScript ";
@@ -67,7 +70,7 @@ const renderDeveloped = (nodo) => {
 
   const lenguagePercentageCss = document.createElement("div");
   lenguagePercentageCss.classList.add("lenguage");
-  const dotCss = document.createElement("span");
+  const dotCss = document.createElement("i");
   dotCss.classList.add("bi", "bi-circle-fill", "dotCss");
   const spanCss = document.createElement("span");
   spanCss.textContent = "CSS";
@@ -79,7 +82,7 @@ const renderDeveloped = (nodo) => {
   secondLineLenguage.classList.add("rowLenguage");
   const lenguagePercentageSass = document.createElement("div");
   lenguagePercentageSass.classList.add("lenguage");
-  const dotSass = document.createElement("span");
+  const dotSass = document.createElement("i");
   dotSass.classList.add("bi", "bi-circle-fill", "dotSass");
   const spanSass = document.createElement("span");
   spanSass.textContent = "SASS";
@@ -89,7 +92,7 @@ const renderDeveloped = (nodo) => {
 
   const lenguagePercentageHtml = document.createElement("div");
   lenguagePercentageHtml.classList.add("lenguage");
-  const dotHtml = document.createElement("span");
+  const dotHtml = document.createElement("i");
   dotHtml.classList.add("bi", "bi-circle-fill", "dotHtml");
   const spanHtml = document.createElement("span");
   spanHtml.textContent = "HTML";
@@ -117,7 +120,8 @@ const renderDeveloped = (nodo) => {
   lenguagePercentageHtml.appendChild(spanHtmlPercentage);
 
   containerLenguage.appendChild(lenguageH2);
-  containerLenguage.appendChild(iconContainer);
+  containerLenguage.appendChild(containerIconRange);
+  containerIconRange.appendChild(iconContainer);
   iconContainer.appendChild(iconContainerJavascript);
   iconContainerJavascript.appendChild(iconJavascript);
   iconContainer.appendChild(iconContainerCss);
@@ -126,7 +130,7 @@ const renderDeveloped = (nodo) => {
   iconContainerSaas.appendChild(iconSass);
   iconContainer.appendChild(iconContainerHtml);
   iconContainerHtml.appendChild(iconHtml);
-  containerLenguage.appendChild(rangeAndPercentageContainer);
+  containerIconRange.appendChild(rangeAndPercentageContainer);
   rangeAndPercentageContainer.appendChild(rangeContainer);
   rangeContainer.appendChild(percentageJavascript);
   rangeContainer.appendChild(percentageCss);

@@ -564,37 +564,35 @@ a:hover {
   font-weight: 400;
   padding-bottom: 0.4rem;
 }
-.containerHeroView .containerIntroRight .containerLenguage .iconContainer {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
   background-color: #1d1e24;
-  padding: 1rem;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
 }
-.containerHeroView .containerIntroRight .containerLenguage .iconContainer .iconsHero {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .iconContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .iconContainer .iconsHero {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.containerHeroView .containerIntroRight .containerLenguage .iconContainer .iconsHero img {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .iconContainer .iconsHero img {
   width: 64px;
 }
-.containerHeroView .containerIntroRight .containerLenguage .iconContainer .iconsHero .iconJavascript {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .iconContainer .iconsHero .iconJavascript {
   width: 56px;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer {
-  background-color: #1d1e24;
-  padding: 0 1rem 1rem 1rem;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer {
-  width: 300px;
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .rangeContainer {
+  width: 100%;
   height: 10px;
   position: relative;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageJavascript {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .rangeContainer .percentageJavascript {
   width: 62%;
   height: 100%;
   background-color: #f1e05a;
@@ -602,21 +600,21 @@ a:hover {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageCss {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .rangeContainer .percentageCss {
   width: 18.7%;
   height: 100%;
   background-color: #563d7c;
   position: absolute;
   left: 62%;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageSass {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .rangeContainer .percentageSass {
   width: 16.8%;
   height: 100%;
   background-color: #c6538c;
   position: absolute;
   left: 80.7%;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .rangeContainer .percentageHtml {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .rangeContainer .percentageHtml {
   width: 2.5%;
   height: 100%;
   background-color: #e34c26;
@@ -625,35 +623,35 @@ a:hover {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer {
-  padding-top: 1rem;
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .percentageLenguageContainer {
+  padding-top: 0.5rem;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage {
   display: flex;
   column-gap: 0.9rem;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotJs {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotJs {
   color: #f1e05a;
   font-size: 9px;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotCss {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotCss {
   color: #563d7c;
   font-size: 9px;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotSass {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotSass {
   color: #c6538c;
   font-size: 9px;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotHtml {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .dotHtml {
   color: #e34c26;
   font-size: 9px;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage span {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage span {
   font-size: 12px;
   padding-left: 5px;
   color: #f0f8ff;
 }
-.containerHeroView .containerIntroRight .containerLenguage .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .percentage {
+.containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .percentageLenguageContainer .rowLenguage .lenguage .percentage {
   color: #999;
 }
 @media screen and (max-width: 600px) {
@@ -662,8 +660,8 @@ a:hover {
     justify-content: unset;
   }
   .containerHeroView .containerIntroLeft {
-    padding-left: 0;
-    margin: auto;
+    padding: 0 1rem;
+    width: 100%;
   }
   .containerHeroView .containerIntroLeft .titleMain {
     text-align: center;
@@ -672,7 +670,55 @@ a:hover {
     font-size: 1.5rem;
   }
   .containerHeroView .containerIntroLeft .titleMain h2 {
+    font-size: 1.2rem;
+  }
+  .containerHeroView .containerIntroLeft .startAndRecent .containerStart h2 {
+    font-size: 1.2rem;
+  }
+  .containerHeroView .containerIntroLeft .startAndRecent .containerStart .iconWithText .bi {
     font-size: 1rem;
+  }
+  .containerHeroView .containerIntroLeft .startAndRecent .containerStart .iconWithText span {
+    font-size: 0.9rem;
+  }
+  .containerHeroView .containerIntroLeft .startAndRecent .containerRecent h2 {
+    font-size: 1.2rem;
+  }
+  .containerHeroView .containerIntroLeft .startAndRecent .containerRecent .heroRecent {
+    font-size: 0.9rem;
+  }
+  .containerHeroView .containerIntroRight {
+    padding: 2rem 1rem 1rem 1rem;
+    align-items: center;
+    width: 100%;
+  }
+  .containerHeroView .containerIntroRight .containerExtension {
+    width: 100%;
+  }
+  .containerHeroView .containerIntroRight .containerExtension h2 {
+    font-size: 1.2rem;
+  }
+  .containerHeroView .containerIntroRight .containerExtension a .containerExtensionImgContent {
+    width: auto;
+    padding: 1rem;
+  }
+  .containerHeroView .containerIntroRight .containerLenguage {
+    width: 100%;
+  }
+  .containerHeroView .containerIntroRight .containerLenguage h2 {
+    font-size: 1.2rem;
+  }
+  .containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .rangeContainer {
+    width: 100%;
+  }
+  .containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .percentageLenguageContainer {
+    width: 100%;
+    align-self: flex-start;
   }
 }
 .assetsContainer {
@@ -696,12 +742,12 @@ a:hover {
 
 .accordion {
   display: flex;
+  font-size: 0.9rem;
   color: #f0f8ff;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 0.9rem;
   font-family: "Open Sans", sans-serif;
   padding: 3px 0;
   padding-left: 1rem;
@@ -728,13 +774,13 @@ a:hover {
 }
 
 .file {
+  font-size: 0.9rem;
   padding: 2px 0 2px 1rem;
   color: #f0f8ff;
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 0.9rem;
 }
 .file:hover {
   background-color: rgba(190, 190, 190, 0.2);
@@ -1785,6 +1831,11 @@ a:hover {
     display: none;
   }
 }
+@media screen and (max-width: 600px) {
+  .containerMainGithub {
+    padding: 1rem;
+  }
+}
 
 .booksmarksContainer {
   display: flex;
@@ -1866,7 +1917,7 @@ a:hover {
   align-items: center;
   height: 100%;
   overflow-y: auto;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
 }
 .bookmarkMainContainer .infoContent {
   padding: 1rem 0;
@@ -1907,7 +1958,7 @@ a:hover {
 }
 .bookmarkMainContainer .bookmarkImgContainer .bookmarkImg {
   height: auto;
-  max-width: 1300px;
+  max-width: 1100px;
   width: 100%;
   border-radius: 10px;
 }

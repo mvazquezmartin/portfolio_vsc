@@ -103,7 +103,7 @@
             display: grid;
             place-content: center;
             img {
-              width: 64px;              
+              width: 64px;
             }
           }
           .containerExtensionContent {
@@ -128,99 +128,98 @@
         font-weight: 400;
         padding-bottom: 0.4rem;
       }
-      .iconContainer {
+      .containerIconRange {
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 1rem 1.5rem;
         background-color: $color-darkGrey;
-        padding: 1rem;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-
-        .iconsHero {
+        border-radius: 5px;
+        .iconContainer {
           display: flex;
-          justify-content: center;
-          align-items: center;
-          img {
-            width: 64px;
-          }
-          .iconJavascript {
-            width: 56px;
-          }
-        }
-      }
-      .rangeAndPercentageContainer {
-        background-color: $color-darkGrey;
-        padding: 0 1rem 1rem 1rem;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        .rangeContainer {
-          width: 300px;
-          height: 10px;
-          position: relative;
-
-          .percentageJavascript {
-            width: 62%;
-            height: 100%;
-            background-color: #f1e05a;
-            position: absolute;
-            border-top-left-radius: 4px;
-            border-bottom-left-radius: 4px;
-          }
-          .percentageCss {
-            width: 18.7%;
-            height: 100%;
-            background-color: #563d7c;
-            position: absolute;
-            left: 62%;
-          }
-          .percentageSass {
-            width: 16.8%;
-            height: 100%;
-            background-color: #c6538c;
-            position: absolute;
-            left: 80.7%;
-          }
-          .percentageHtml {
-            width: 2.5%;
-            height: 100%;
-            background-color: #e34c26;
-            position: absolute;
-            left: 97.5%;
-            border-top-right-radius: 4px;
-            border-bottom-right-radius: 4px;
-          }
-        }
-
-        .percentageLenguageContainer {
-          padding-top: 1rem;
-          .rowLenguage {
+          justify-content: space-between;
+          padding-bottom: 0.5rem;
+          .iconsHero {
             display: flex;
-            column-gap: 0.9rem;
+            justify-content: center;
+            align-items: center;
+            img {
+              width: 64px;
+            }
+            .iconJavascript {
+              width: 56px;
+            }
+          }
+        }
+        .rangeAndPercentageContainer {          
+          .rangeContainer {
+            width: 100%;
+            height: 10px;
+            position: relative;
 
-            .lenguage {
-              .dotJs {
-                color: #f1e05a;
-                font-size: 9px;
-              }
-              .dotCss {
-                color: #563d7c;
-                font-size: 9px;
-              }
-              .dotSass {
-                color: #c6538c;
-                font-size: 9px;
-              }
-              .dotHtml {
-                color: #e34c26;
-                font-size: 9px;
-              }
-              span {
-                font-size: 12px;
-                padding-left: 5px;
-                color: $color-white;
-              }
-              .percentage {
-                color: #999;
+            .percentageJavascript {
+              width: 62%;
+              height: 100%;
+              background-color: #f1e05a;
+              position: absolute;
+              border-top-left-radius: 4px;
+              border-bottom-left-radius: 4px;
+            }
+            .percentageCss {
+              width: 18.7%;
+              height: 100%;
+              background-color: #563d7c;
+              position: absolute;
+              left: 62%;
+            }
+            .percentageSass {
+              width: 16.8%;
+              height: 100%;
+              background-color: #c6538c;
+              position: absolute;
+              left: 80.7%;
+            }
+            .percentageHtml {
+              width: 2.5%;
+              height: 100%;
+              background-color: #e34c26;
+              position: absolute;
+              left: 97.5%;
+              border-top-right-radius: 4px;
+              border-bottom-right-radius: 4px;
+            }
+          }
+
+          .percentageLenguageContainer {        
+            padding-top: 0.5rem;    
+            .rowLenguage {
+              display: flex;
+              column-gap: 0.9rem;
+
+              .lenguage {
+                .dotJs {
+                  color: #f1e05a;
+                  font-size: 9px;
+                }
+                .dotCss {
+                  color: #563d7c;
+                  font-size: 9px;
+                }
+                .dotSass {
+                  color: #c6538c;
+                  font-size: 9px;
+                }
+                .dotHtml {
+                  color: #e34c26;
+                  font-size: 9px;
+                }
+                span {
+                  font-size: 12px;
+                  padding-left: 5px;
+                  color: $color-white;
+                }
+                .percentage {
+                  color: #999;
+                }
               }
             }
           }
@@ -232,15 +231,75 @@
     flex-direction: column;
     justify-content: unset;
     .containerIntroLeft {
-      padding-left: 0;
-      margin: auto;
+      padding: 0 1rem;
+      width: 100%;
       .titleMain {
         text-align: center;
         h1 {
           font-size: 1.5rem;
         }
         h2 {
-          font-size: 1rem;
+          font-size: 1.2rem;
+        }
+      }
+      .startAndRecent {
+        .containerStart {
+          h2 {
+            font-size: 1.2rem;
+          }
+          .iconWithText {
+            .bi {
+              font-size: 1rem;
+            }
+            span {
+              font-size: 0.9rem;
+            }
+          }
+        }
+        .containerRecent {
+          h2 {
+            font-size: 1.2rem;
+          }
+          .heroRecent {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+    .containerIntroRight {
+      padding: 2rem 1rem 1rem 1rem;
+      align-items: center;
+      width: 100%;
+      .containerExtension {
+        width: 100%;
+        h2 {
+          font-size: 1.2rem;
+        }
+        a {
+          .containerExtensionImgContent {
+            width: auto;
+            padding: 1rem;
+          }
+        }
+      }
+      .containerLenguage {
+        width: 100%;
+        h2 {
+          font-size: 1.2rem;
+        }
+        .containerIconRange {
+          .rangeAndPercentageContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .rangeContainer {
+              width: 100%;
+            }
+            .percentageLenguageContainer {
+              width: 100%;
+              align-self: flex-start;
+            }
+          }
         }
       }
     }
