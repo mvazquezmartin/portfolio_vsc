@@ -1,14 +1,13 @@
 .accordion {
   display: flex;
-  font-size: 0.9rem;
   color: $color-white;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-family: $font-OpenSans;
   padding: 3px 0;
   padding-left: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
 
   .iconFolder {
@@ -35,7 +34,7 @@
   }
 }
 .file {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   padding: 2px 0 2px 1rem;
   color: $color-white;
   cursor: pointer;

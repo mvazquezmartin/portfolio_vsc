@@ -55,7 +55,7 @@ const iconPath = {
 const imgPath = {
   JUDO: "./assets/judo.jpg",
   SETUP: "./assets/setup.jpg",
-  CHESS_MEME: "./assets/meme01.jpg",
+  DOCUMENTATION_MEME: "./assets/iamdDocumentation.jfif",
   DEPENDE_MEME: "./assets/meme02.jpg",
   PRO_GOOGLING: "./assets/programming-or-googling.jpg",
   M8B_CODE: "./assets/codeMagic8Ball.png",

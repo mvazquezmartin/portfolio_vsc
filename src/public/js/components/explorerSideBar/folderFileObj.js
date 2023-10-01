@@ -19,12 +19,12 @@ const assetsFolder = {
   folderName: "Assets",
   files: [
     {
-      name: "chess_meme.jpg",
+      name: "documentation.jpg",
       icon: iconPath.JPG,
       function: () =>
         tabManager.create(
-          "chess_meme.jpg",
-          () => ilyudo(imgPath.CHESS_MEME, "chess_meme"),
+          "documentation.jpg",
+          () => ilyudo(imgPath.DOCUMENTATION_MEME, "chess_meme"),
           iconPath.JPG
         ),
     },

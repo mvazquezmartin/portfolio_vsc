@@ -742,15 +742,14 @@ a:hover {
 
 .accordion {
   display: flex;
-  font-size: 0.9rem;
   color: #f0f8ff;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-family: "Open Sans", sans-serif;
   padding: 3px 0;
   padding-left: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 .accordion .iconFolder {
@@ -774,7 +773,7 @@ a:hover {
 }
 
 .file {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   padding: 2px 0 2px 1rem;
   color: #f0f8ff;
   cursor: pointer;
@@ -1810,6 +1809,7 @@ a:hover {
 .containerMainGithub .containerRepositories .repositoryCard .repositoryContent p {
   padding-top: 0.5rem;
   color: #bbb;
+  font-size: 0.9rem;
 }
 @media screen and (max-width: 600px) {
   .containerMainGithub .containerRepositories .repositoryCard .repositoryContent h3 {
@@ -1859,8 +1859,7 @@ a:hover {
   width: 20px;
 }
 .booksmarksContainer .bookmark span {
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .channelsContainer {
