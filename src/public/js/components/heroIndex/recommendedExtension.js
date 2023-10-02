@@ -83,7 +83,7 @@ const renderExtension = () => {
   html_url.target = "_blank";
 
   const titleRecommended = document.createElement("h2");
-  titleRecommended.textContent = "Recommended Extension:";
+  titleRecommended.textContent = "Recommended Extension";
 
   const containerImgContent = document.createElement("div");
   containerImgContent.classList.add("containerExtensionImgContent");

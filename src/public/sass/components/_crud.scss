@@ -31,17 +31,6 @@
 
         .btnCrud:last-child {
           margin-top: 2rem;
-          // box-shadow: inset 0px 1px 0px 0px #f29c93;
-          // background: linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
-          // background-color: #fe1a00;
-          // &:hover {
-          //   background: linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
-          //   background-color: #ce0100;
-          // }
-          // &:active {
-          //   position: relative;
-          //   top: 1px;
-          // }
         }
       }
       .containerRenderBtns {
@@ -66,16 +55,28 @@
       }
     }
     .containerItems {
-      display: flex;
-      flex-wrap: wrap;
-      height: 100%;
-      width: 80%;
-      border-left: 1px solid #bd93f9;
-      padding-left: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-gap: 1rem;
+      margin: 1rem 0;
+      width: 100%;
 
       .itemCard {
-        flex: 0 1 calc(25% - 10px);
-        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        padding: 1rem;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+    @include mobile {
+      flex-direction: column;
+      .containerCRUDBtns {
+        width: 100%;
       }
     }
   }

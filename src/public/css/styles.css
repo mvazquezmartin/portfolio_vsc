@@ -2385,16 +2385,30 @@ a:hover {
   visibility: hidden;
 }
 .containerCRUDMain .containerCRUD .containerItems {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  width: 80%;
-  border-left: 1px solid #bd93f9;
-  padding-left: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 1rem;
+  margin: 1rem 0;
+  width: 100%;
 }
 .containerCRUDMain .containerCRUD .containerItems .itemCard {
-  flex: 0 1 calc(25% - 10px);
-  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.containerCRUDMain .containerCRUD .containerItems .itemCard img {
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 600px) {
+  .containerCRUDMain .containerCRUD {
+    flex-direction: column;
+  }
+  .containerCRUDMain .containerCRUD .containerCRUDBtns {
+    width: 100%;
+  }
 }
 .containerCRUDMain input {
   height: 45px;
