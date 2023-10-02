@@ -2458,6 +2458,10 @@ a:hover {
 .containerHl .language-ini {
   font-size: 1rem;
 }
+.containerHl .language-javascript {
+  padding: 1rem;
+  font-size: 0.8rem;
+}
 @media screen and (max-width: 600px) {
   .containerHl .language-json,
   .containerHl .language-ini {

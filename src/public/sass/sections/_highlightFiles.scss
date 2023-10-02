@@ -1,10 +1,14 @@
 .containerHl {
-  .hljs{
+  .hljs {
     padding: 0;
   }
   .language-json,
   .language-ini {
     font-size: 1rem;
+  }
+  .language-javascript {
+    padding: 1rem;
+    font-size: 0.8rem;
   }
 
   @include mobile {

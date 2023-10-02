@@ -1,4 +1,5 @@
 import { iconPath } from "../../assetsPath/assetsPath.js";
+import { renderNoTabs } from "./noTabs.js";
 
 class TabManager {
   constructor() {
@@ -66,9 +67,8 @@ class TabManager {
     const tabsContainer = document.getElementById("tabs");
     tabsContainer.innerHTML = "";
 
-    
     this.tabs.forEach((tab, index) => {
-      if(tab.title !== "Welcome"){
+      if (tab.title !== "Welcome") {
         const rootPath = document.getElementById("rootPath");
         rootPath.style.visibility = "visible";
       }
@@ -171,19 +171,13 @@ class TabManager {
   }
 
   noTabs() {
-    const mainView = document.getElementById("mainView");
-
     const rootPath = document.getElementById("rootPath");
-    rootPath.style.visibility = "hidden";
+    rootPath.style.visibility = "visible";
 
     const heroMain = document.createElement("div");
     heroMain.classList.add("heroMain");
 
-    const txt = document.createElement("p");
-    txt.textContent = "HOLA MUNDO!";
-
-    heroMain.appendChild(txt);
-    mainView.appendChild(heroMain);
+    renderNoTabs();
   }
 
   doubleClickDetected() {
