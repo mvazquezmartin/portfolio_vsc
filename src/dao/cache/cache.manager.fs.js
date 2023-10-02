@@ -91,9 +91,11 @@ class CacheManager {
 
       if (!this.data) return false;
 
-      const dataFromCache = this.data.find((channel) => channel.id === id);
+      // if (!dataFromCache) return false;
 
-      if (!dataFromCache) return false;
+      if (!this.idIndex[id]) return false;
+
+      const dataFromCache = this.data.find((channel) => channel.id === id);
 
       const currentTime = new Date().getTime();
       const lastUpdatedTime = dataFromCache.timestamp;
