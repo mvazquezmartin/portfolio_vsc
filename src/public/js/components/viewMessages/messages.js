@@ -29,7 +29,14 @@ const authorization = async () => {
       if (!response.ok) throw new Error("Error al enviar APIKEY");
 
       const data = await response.json();
-      data.payload.forEach((message) => {
+
+      const sortedMessages = data.payload.sort((a, b) => {
+        const fechaA = new Date(a.date);
+        const fechaB = new Date(b.date);
+        return fechaB - fechaA;
+      });
+
+      sortedMessages.forEach((message) => {
         const messageCard = `
             <div class="card mt-3">
                 <div class="card-body bg-dark bg-gradient text-white">
