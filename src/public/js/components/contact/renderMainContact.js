@@ -5,7 +5,7 @@ import { post } from "./fetch.post.js";
 
 const renderMainContact = () => {
   const path = document.getElementById("rootPath");
-  path.textContent = "MVazquezMartin > Contact";
+  path.textContent = "Contact > Contact Method";
 
   const mainContactContainer = document.createElement("div");
   mainContactContainer.classList.add("mainContactContainer");

@@ -9,6 +9,7 @@ import { renderGithub } from "./js/components/github/renderGithub.js";
 import { renderBookmarks } from "./js/components/bookmarks/renderBookmarks.js";
 import { renderMainContact } from "./js/components/contact/renderMainContact.js";
 import { readmeMain } from "./js/components/readme/mainReadme.js";
+import { renderAccount } from "./js/components/account/renderMainAccout.js";
 
 // QUERY DE ELEMENTOS
 const explorer = document.getElementById("files");
@@ -18,6 +19,7 @@ const bookmarks = document.getElementById("bookmarks");
 const readme = document.getElementById("readme");
 const github = document.getElementById("github");
 const contact = document.getElementById("contact");
+const account = document.getElementById("account");
 const btnNavBarAside = document.querySelectorAll(".iconNavBarAside");
 
 // FUNCIONES
@@ -27,6 +29,9 @@ explorer.addEventListener("click", renderExplorer);
 stack.addEventListener("click", renderStack);
 bookmarks.addEventListener("click", renderBookmarks);
 github.addEventListener("click", renderGithub);
+account.addEventListener("click", () =>
+  tabManager.create("Account", renderAccount, iconPath.ACCOUNT)
+);
 contact.addEventListener("click", () =>
   tabManager.create("Contact", renderMainContact, iconPath.CONTACT)
 );

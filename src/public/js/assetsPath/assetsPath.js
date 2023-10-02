@@ -1,4 +1,5 @@
 const iconPath = {
+  ACCOUNT: "./assets/account-svgrepo-com.svg",
   CODE: "./assets/code-file-svgrepo-com.svg",
   HTML: "./assets/html-5-svgrepo-com.svg",
   CSS: "./assets/css-3-svgrepo-com.svg",
@@ -92,7 +93,6 @@ const imgPath = {
   INVENTARIO: "./assets/inventory-svgrepo-com.svg",
   RATHER: "./assets/rather-svgrepo-com.svg",
   CHAT: "./assets/chatbubble-svgrepo-com.svg",
-
 };
 
 const certificadoPath = {
