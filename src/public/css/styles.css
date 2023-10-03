@@ -2441,6 +2441,10 @@ a:hover {
   text-decoration: none;
   text-shadow: 0px 1px 0px #19213b;
   user-select: none;
+  width: 100%;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .containerCRUDMain .btnCrud:hover {
   background: linear-gradient(to bottom, #745c99 5%, #ca26eb 100%);

@@ -2,7 +2,7 @@ const multer = require("multer");
 const path = require("path");
 const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
 
-const destination = path.join(__dirname, "../public/uploads/");
+const destination = path.join(__dirname, "../public/uploads");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {

@@ -55,11 +55,8 @@ export class RenderCreateModify {
     labelImg.textContent = "Upload Image";
 
     inputImg.addEventListener("change", () => {
-      if (inputImg.files.length > 0) {
+      if (inputImg.files.length > 0)
         labelImg.textContent = inputImg.files[0].name;
-      } else {
-        labelImg.textContent = "Upload Image";
-      }
     });
 
     const iconoBi = document.createElement("i");
@@ -90,6 +87,7 @@ export class RenderCreateModify {
 
     formCrud.addEventListener("submit", async (e) => {
       e.preventDefault();
+      labelImg.textContent = "Upload Image";
 
       const itemId = inputId.value;
 
@@ -118,6 +116,7 @@ export class RenderCreateModify {
             const responseCreate = await request.create(obj);
             if (responseCreate.status === "success") {
               formCrud.reset();
+              console.log(inputImg.files);
               Swal.fire({
                 text: responseCreate.message,
                 color: "#fff",
