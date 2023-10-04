@@ -77,8 +77,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", upload.single("image"), async (req, res, next) => {
   try {
     const { persistence } = req.query;
-    const item = req.body;
-    // console.log(item);
+    const item = req.body;    
     if (req.file) {
       console.log("se cargo la img");
     }

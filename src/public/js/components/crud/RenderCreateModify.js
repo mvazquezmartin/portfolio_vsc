@@ -45,12 +45,12 @@ export class RenderCreateModify {
     const inputImg = document.createElement("input");
     inputImg.type = "file";
     inputImg.name = "image";
-    inputImg.id = "inputImage";
+    inputImg.id = "image";
     inputImg.classList.add("customFile");
     inputImg.style.display = "none";
 
     const labelImg = document.createElement("label");
-    labelImg.setAttribute("for", "inputImage");
+    labelImg.setAttribute("for", "image");
     labelImg.classList.add("btnCrud");
     labelImg.textContent = "Upload Image";
 
@@ -101,6 +101,8 @@ export class RenderCreateModify {
           obj[key] = value;
         }
       });
+
+      console.log(data.get("image"))
 
       switch (context) {
         case "Modify":
