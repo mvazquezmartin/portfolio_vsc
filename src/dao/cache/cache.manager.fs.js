@@ -8,37 +8,6 @@ class CacheManager {
     this.initializeCache(); // Lee el archivo una vez al crear la instancia
   }
 
-  async initializeCache() {
-    try {
-      const parsedData = await this.processData();
-      this.data = parsedData;
-      this.updateIndex();
-    } catch (error) {
-      console.error("Error in initializeCache:", error);
-      throw error;
-    }
-  }
-
-  async processData() {
-    try {
-      const data = await fs.promises.readFile(this.filePath, "utf-8");
-      if (data) {
-        return JSON.parse(data);
-      }
-      return [];
-    } catch (error) {
-      console.error("Error in processData:", error);
-      throw error;
-    }
-  }
-
-  updateIndex() {
-    this.idIndex = {};
-    this.data.forEach((item) => {
-      this.idIndex[item.id] = true;
-    });
-  }
-
   async create(id, info) {
     const newData = {
       id,
@@ -78,6 +47,36 @@ class CacheManager {
     }
   }
 
+  async initializeCache() {
+    try {
+      const parsedData = await this.processData();
+      this.data = parsedData;
+      this.updateIndex();
+    } catch (error) {
+      console.error("Error in initializeCache:", error);
+      throw error;
+    }
+  }
+
+  async processData() {
+    try {
+      const data = await fs.promises.readFile(this.filePath, "utf-8");
+      if (data) {
+        return JSON.parse(data);
+      }
+      return [];
+    } catch (error) {
+      console.error("Error in processData:", error);
+      throw error;
+    }
+  }
+
+  updateIndex() {
+    this.idIndex = {};
+    this.data.forEach((item) => {
+      this.idIndex[item.id] = true;
+    });
+  }
   async saveFile() {
     try {
       const jsonData = JSON.stringify(this.data);
@@ -98,7 +97,7 @@ class CacheManager {
     const fileAge = currentTime - lastUpdatedTime;
 
     const cacheExpiration = 24 * 60 * 60 * 1000;
-    // const cacheExpiration = 5 * 60 * 1000; 
+    // const cacheExpiration = 5 * 60 * 1000;
 
     return fileAge <= cacheExpiration;
   }
