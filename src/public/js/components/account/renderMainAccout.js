@@ -30,7 +30,6 @@ const renderAccount = () => {
   titleCareer.textContent = "Carrera Full Stack"
   const yearCareer = document.createElement
 
-
   containerAccount.appendChild(containerAboutMeAndEducation);
   containerAboutMeAndEducation.appendChild(containerAboutMe);
   containerAboutMe.appendChild(titleAboutMe);
