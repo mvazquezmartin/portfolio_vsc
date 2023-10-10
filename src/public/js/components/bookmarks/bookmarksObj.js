@@ -190,6 +190,7 @@ const youtubeId = {
   ManzDev: "UCgZoKiTvvpEnr1zI6Kv_i7A",
   ProgramadorX: "UCjXAQ-cayM4mIZmUZKMFW_w",
   Midudev: "UC8LeXCWOalN8SxlrPcG-PaQ",
+  Gonzy: "UCCvaRcYdZCZBrBQVnsUBg5Q",
   Fazt: "UCX9NJ471o7Wie1DQe94RVIg",
   FaztCode: "UCMn28O1sQGochG94HdlthbA",
   FireShip: "UCsBjURrPoezykLs9EqgamOA",
@@ -214,6 +215,8 @@ const channelNotes = {
     "Xavier con su vasto currículum en grandes empresas, comparte su experiencia de como llego hasta ahí y el camino que siguió. Además creo su academia para formar nuevos programadores. Muy motivador para que uno pueda llegar a las metas deseadas.",
   midudev:
     "Fue unos de los primeros canales en español que conocí cuando empecé a investigar que era ser un desarrollador full stack. Tuve la suerte de toparme con Midu, me despejo mis principales dudas y me motivo a emprender en este viaje de ser programador. Actualmente, lo consumo en modo postcast cuando transmite en twitch.",
+  Goncy:
+    "Buscando práctica para mejorar mi lógica de programación, me encontré con este gran canal que me encanto como explica y resuelve los desafíos técnicos. Actualmente, lo consumo en modo postcast cuando transmite en twitch.",
   Fazt: "Con Fazt me mantengo informado de las últimas noticias de informática, además muestra el uso de las nuevas tecnologías o cambios en los lenguajes. Está más enfocado en el contenido backend, por lo que me ayudo mucho a llegar donde estoy ahora.",
   Fazt_Code:
     "FaztCode es el canal secundario de Fazt donde comparte y publica videos extensos creando proyectos académicos con un stack definido. Siempre es bueno ver código de otra persona, y además, con buenas prácticas.",
