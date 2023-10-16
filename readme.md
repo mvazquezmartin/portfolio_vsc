@@ -1,6 +1,8 @@
 
 # VSCode Portfolio
 Un sitio web con temática de Visual Studio Code construido con un solo HTML, SASS y JavaScript. Más que un clásico README, voy a contar los desafíos y progresos que atravesé replicando la estética y algunas funcionalidades de VSCode.
+
+![screenshot](./Screenshot_140.png)
 ## 📚 Tech Stack 👨‍💻
 
 **Cliente:**  
