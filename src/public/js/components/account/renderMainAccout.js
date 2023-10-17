@@ -18,7 +18,7 @@ const renderAccount = () => {
   estudiando constantemente y trabajando en proyectos personales para mejorar mis habilidades en el desarrollo web y la
   programación.`;
   const aboutMeP3 = document.createElement("p");
-  aboutMeP3.textContent = `Mi objetivo nal es poder desarrollar una aplicación completa que resuelva problemas del mundo real y sea útil para la comunidad.
+  aboutMeP3.textContent = `Mi objetivo final es poder desarrollar una aplicación completa que resuelva problemas del mundo real y sea útil para la comunidad.
   Creo que el software es una herramienta poderosa para ayudar a resolver problemas cotidianos.`;
 
   const containerEducation = document.createElement("div");
