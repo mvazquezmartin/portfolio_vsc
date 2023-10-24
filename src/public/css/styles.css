@@ -464,7 +464,31 @@ a:hover {
   font-size: 2rem;
   font-weight: 300;
   color: #999;
-  padding-top: 0.5rem;
+}
+.containerHeroView .containerIntroLeft .titleMain .btnDownload {
+  box-shadow: inset 0px -3px 7px 0px #a064fa;
+  background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
+  background-color: #ca26eb;
+  border-radius: 5px;
+  border: 1px solid #44315e;
+  display: inline-block;
+  cursor: pointer;
+  color: #f0f8ff;
+  font-family: Arial;
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin-top: 0.8rem;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #19213b;
+  user-select: none;
+}
+.containerHeroView .containerIntroLeft .titleMain .btnDownload:hover {
+  background: linear-gradient(to bottom, #745c99 5%, #ca26eb 100%);
+  background-color: #745c99;
+}
+.containerHeroView .containerIntroLeft .titleMain .btnDownload:active {
+  position: relative;
+  top: 1px;
 }
 .containerHeroView .containerIntroLeft .startAndRecent {
   width: 100%;

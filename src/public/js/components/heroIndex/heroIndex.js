@@ -1,3 +1,4 @@
+import { pdfPath } from "../../assetsPath/assetsPath.js";
 import { renderExtension } from "./recommendedExtension.js";
 import { renderDeveloped } from "./renderDeveloped.js";
 import { createIconWithText, createRecent } from "./renderHeroStar.js";
@@ -24,6 +25,12 @@ const renderMainText = () => {
 
   const subTituloHero = document.createElement("h2");
   subTituloHero.textContent = "FullStack Developer Jr";
+
+  const btnDownload = document.createElement("a");
+  btnDownload.href = pdfPath.CV_ESP;
+  btnDownload.download = "cv_mvazquezmartin.pdf";
+  btnDownload.textContent = "Download CV";
+  btnDownload.classList.add("btnDownload")
 
   //informacion de navagacion y ultimos trabajos
   const containerStartAndRecent = document.createElement("div");
@@ -70,6 +77,7 @@ const renderMainText = () => {
   heroContainer.appendChild(tituloContainer);
   tituloContainer.appendChild(tituloHero);
   tituloContainer.appendChild(subTituloHero);
+  tituloContainer.appendChild(btnDownload);
   heroContainer.appendChild(containerStartAndRecent);
   containerStartAndRecent.appendChild(containerStart);
   containerStart.appendChild(tituloDescription);
