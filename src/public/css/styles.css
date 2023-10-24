@@ -780,6 +780,7 @@ a:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: flex;
 }
 .file:hover {
   background-color: rgba(190, 190, 190, 0.2);

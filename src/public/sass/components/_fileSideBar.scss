@@ -41,6 +41,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: flex;
 
   &:hover {
     background-color: #bebebe33;

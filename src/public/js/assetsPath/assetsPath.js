@@ -113,4 +113,8 @@ const certificadoPath = {
     "https://www.coderhouse.com/certificados/64ffc47fc65d476f916412dd?lang=es",
 };
 
-export { imgPath, iconPath, certificadoPath };
+const pdfPath = {
+  CV_ESP: "./assets/cv_mvazquezmartin.pdf",
+};
+
+export { imgPath, iconPath, certificadoPath, pdfPath };

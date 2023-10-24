@@ -1,9 +1,16 @@
+import { pdfPath } from "../../assetsPath/assetsPath.js";
+
 const renderAccount = () => {
   const path = document.getElementById("rootPath");
   path.textContent = "Account > Main Account";
 
   const containerAccount = document.createElement("div");
   containerAccount.classList.add("containerAccount");
+
+  const btnDonwload = document.createElement("a")
+  btnDonwload.href = pdfPath.CV_ESP
+  btnDonwload.download = "cv_mvazquezmartin.pdf"
+  btnDonwload.textContent = "Download"
 
   const containerAboutMeAndEducation = document.createElement("div");
 
@@ -30,6 +37,7 @@ const renderAccount = () => {
   titleCareer.textContent = "Carrera Full Stack"
   const yearCareer = document.createElement
 
+  containerAccount.appendChild(btnDonwload)
   containerAccount.appendChild(containerAboutMeAndEducation);
   containerAboutMeAndEducation.appendChild(containerAboutMe);
   containerAboutMe.appendChild(titleAboutMe);
