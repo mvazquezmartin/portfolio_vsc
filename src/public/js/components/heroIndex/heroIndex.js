@@ -29,8 +29,11 @@ const renderMainText = () => {
   const btnDownload = document.createElement("a");
   btnDownload.href = pdfPath.CV_ESP;
   btnDownload.download = "cv_mvazquezmartin.pdf";
+  btnDownload.classList.add("btnDownload");
   btnDownload.textContent = "Download CV";
-  btnDownload.classList.add("btnDownload")
+  
+  // const iconPdf = document.createElement("i");
+  // iconPdf.classList.add("bi", "bi-0-circle");
 
   //informacion de navagacion y ultimos trabajos
   const containerStartAndRecent = document.createElement("div");
@@ -78,6 +81,7 @@ const renderMainText = () => {
   tituloContainer.appendChild(tituloHero);
   tituloContainer.appendChild(subTituloHero);
   tituloContainer.appendChild(btnDownload);
+  // btnDownload.appendChild(iconPdf)
   heroContainer.appendChild(containerStartAndRecent);
   containerStartAndRecent.appendChild(containerStart);
   containerStart.appendChild(tituloDescription);
