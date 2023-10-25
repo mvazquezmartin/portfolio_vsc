@@ -1353,6 +1353,7 @@ a:hover {
   color: #888;
   max-width: 700px;
   text-align: center;
+  text-wrap: balance;
 }
 .stackViewTabs .stackCertificado {
   max-width: 700px;
