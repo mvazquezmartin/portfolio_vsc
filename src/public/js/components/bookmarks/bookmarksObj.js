@@ -182,6 +182,16 @@ const bookmarks = [
     id: "codepen",
     applied: " - ",
   },
+  {
+    icon: iconPath.GIT,
+    title: "Git Command Explorer",
+    description:
+      "Es un explorador de comandos de Git que te ayuda a encontrar los comandos adecuados que necesitas sin tener que buscar en la web. Puedes seleccionar lo que quieres hacer con Git y la página te mostrará los comandos correspondientes.",
+    img: imgPath.GITEXPLORER,
+    link: "https://gitexplorer.com/",
+    id: "gitexplorer",
+    applied: " - ",
+  },
 ];
 
 const youtubeId = {

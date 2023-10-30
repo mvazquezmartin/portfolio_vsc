@@ -86,6 +86,7 @@ const imgPath = {
   CODEPEN: "./assets/Screenshot_codepen.png",
   CANIUSE: "./assets/Screenshot_caniuse.png",
   README: "./assets/Screenshot_readme.png",
+  GITEXPLORER: "./assets/Screenshot_gitExplorer.png",
   API: "./assets/api-svgrepo-com.svg",
   BROWSER: "./assets/browser-svgrepo-com.svg",
   CART: "./assets/cart-svgrepo-com.svg",
@@ -114,7 +115,7 @@ const certificadoPath = {
 };
 
 const pdfPath = {
-  CV_ESP: "./assets/cv_mvazquezmartin.pdf",
+  CV_ESP: "./assets/cv_ES_MVM.pdf",
 };
 
 export { imgPath, iconPath, certificadoPath, pdfPath };
