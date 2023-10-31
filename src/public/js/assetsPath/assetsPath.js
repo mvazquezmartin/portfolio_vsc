@@ -116,6 +116,7 @@ const certificadoPath = {
 
 const pdfPath = {
   CV_ESP: "./assets/cv_ES_MVM.pdf",
+  CV_ENG: "./assets/cv_EN_MVM.pdf",
 };
 
 export { imgPath, iconPath, certificadoPath, pdfPath };

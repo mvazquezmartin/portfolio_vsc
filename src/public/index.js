@@ -45,7 +45,7 @@ inicio.addEventListener("click", () =>
 // EJECUCION DE FUNCIONES
 setUpResponsiveEvents(); // MOBILE FUNCTION
 btnFocus(btnNavBarAside, "active");
-tabManager.create("Welcome", renderMainText, iconPath.VSC);
+tabManager.create("Welcome", renderMainText, iconPath.VSC, true);
 renderExplorer();
 
 // function handleClick(event) {

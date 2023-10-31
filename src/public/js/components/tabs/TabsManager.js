@@ -9,12 +9,12 @@ class TabManager {
     this.lastClickTime = 0;
   }
 
-  create(title, content, icon) {
+  create(title, content, icon, isOpen = false) {
     const tab = {
       title: title,
       content: content,
       icon: icon,
-      isOpen: false,
+      isOpen: isOpen,
     };
 
     if (this.doubleClickDetected()) {
