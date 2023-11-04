@@ -212,29 +212,6 @@ const folder1 = {
       ],
       subfolders: [],
     },
-    {
-      folderName: "Inventario v0.2",
-      files: [
-        {
-          name: "Archivo3.txt",
-          icon: "./assets/code-file-svgrepo-com.svg",
-          function: () => console.log("archivo3"),
-        },
-      ],
-      subfolders: [
-        {
-          folderName: "Subcarpeta1",
-          files: [
-            {
-              name: "Archivo4.txt",
-              icon: "./assets/code-file-svgrepo-com.svg",
-              function: () => console.log("archivo4"),
-            },
-          ],
-          subfolders: [],
-        },
-      ],
-    },
   ],
 };
 
