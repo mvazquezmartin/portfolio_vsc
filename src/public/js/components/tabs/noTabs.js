@@ -1,6 +1,10 @@
 import { highlight } from "../../utils/highlight.js";
 
-const txt = `const live = (alive) => {
+const txt = `// "No one knows everything,
+// we all know something,
+// and together we know a whole lot."
+
+const live = (alive) => {
   while (alive) {
     eat(4);
     sleep(8);
