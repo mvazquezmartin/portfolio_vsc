@@ -1,5 +1,9 @@
 import { pdfPath } from "../../assetsPath/assetsPath.js";
 
+const cardContainer = () =>{
+  
+}
+
 const renderAccount = () => {
   const path = document.getElementById("rootPath");
   path.textContent = "Account > Main Account";
