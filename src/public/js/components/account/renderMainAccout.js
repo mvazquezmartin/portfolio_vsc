@@ -62,40 +62,51 @@ const renderAccount = () => {
   btnDonwload.href = pdfPath.CV_ESP;
   btnDonwload.download = "cv_mvazquezmartin.pdf";
   btnDonwload.textContent = "Download";
-
-  const containerAboutMeAndEducation = document.createElement("div");
+  btnDonwload.classList.add("btnDownload CV");
 
   const containerAboutMe = document.createElement("div");
+  containerAboutMe.classList.add("containerAboutMe");
   const titleAboutMe = document.createElement("h1");
   titleAboutMe.textContent = "Sobre Mi";
   const aboutMeP1 = document.createElement("p");
   aboutMeP1.textContent = `Soy un apasionado de la tecnología desde chico. Comencé mi camino en el mundo de la computación a partir de la época de Windows
   3.1,y desde entonces he estado aprendiendo y solucionando problemas relacionados con la informática.`;
   const aboutMeP2 = document.createElement("p");
-  aboutMeP2.textContent = `Mi objetivo final es poder desarrollar una aplicación completa que resuelva problemas del mundo real y sea útil para la comunidad.
-  Creo que el software es una herramienta poderosa para ayudar a resolver problemas cotidianos.`;
+  aboutMeP2.textContent = `Mi objetivo es desarrollar una aplicación completa que tenga un impacto real al resolver problemas comunes y beneficiar a la comunidad. Estoy convencido de que el software es una herramienta poderosa para abordar desafíos del día a día.`;
 
-  const containerEducation = document.createElement("div");
-  const titleEducation = document.createElement("h2");
-  titleEducation.textContent = "Experiencia:";
+  const containerExperienceAndStudies = document.createElement("div");
+  containerExperienceAndStudies.classList.add("experienceAndStudies");
 
-  containerEducation.appendChild(titleEducation);
+  const containerExperience = document.createElement("div");
+  containerExperience.classList.add("containerExperience");
+  const titleExperience = document.createElement("h2");
+  titleExperience.textContent = "Experiencia:";
+
+  containerExperience.appendChild(titleExperience);
 
   experience.forEach((job) => {
-    containerEducation.appendChild(cardExperienceContainer(job));
+    containerExperience.appendChild(cardExperienceContainer(job));
   });
 
+  const containerStudies = document.createElement("div");
+  containerStudies.classList.add("containerStudies");
+  const titleStudies = document.createElement("h2");
+  titleStudies.textContent = "Estudios:";
+
+  containerStudies.appendChild(titleStudies);
+
   studies.forEach((studies) => {
-    containerEducation.appendChild(cardStudiesContainer(studies));
+    containerStudies.appendChild(cardStudiesContainer(studies));
   });
 
   containerAccount.appendChild(btnDonwload);
-  containerAccount.appendChild(containerAboutMeAndEducation);
-  containerAboutMeAndEducation.appendChild(containerAboutMe);
+  containerAccount.appendChild(containerAboutMe);
   containerAboutMe.appendChild(titleAboutMe);
   containerAboutMe.appendChild(aboutMeP1);
   containerAboutMe.appendChild(aboutMeP2);
-  containerAboutMeAndEducation.appendChild(containerEducation);
+  containerAccount.appendChild(containerExperienceAndStudies);
+  containerExperienceAndStudies.appendChild(containerExperience);
+  containerExperienceAndStudies.appendChild(containerStudies);
   mainView.appendChild(containerAccount);
 };
 

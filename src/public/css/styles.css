@@ -2481,6 +2481,53 @@ a:hover {
   top: 1px;
 }
 
+.containerAccount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.containerAccount .btnDownload {
+  align-self: baseline;
+  box-shadow: inset 0px -3px 7px 0px #a064fa;
+  background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
+  background-color: #ca26eb;
+  border-radius: 5px;
+  border: 1px solid #44315e;
+  display: inline-block;
+  cursor: pointer;
+  color: #f0f8ff;
+  font-family: Arial;
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin-top: 0.8rem;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #19213b;
+  user-select: none;
+}
+.containerAccount .btnDownload:hover {
+  background: linear-gradient(to bottom, #745c99 5%, #ca26eb 100%);
+  background-color: #745c99;
+}
+.containerAccount .btnDownload:active {
+  position: relative;
+  top: 1px;
+}
+.containerAccount .containerAboutMe {
+  padding: 0.7rem 0;
+  text-wrap: balance;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.containerAccount .experienceAndStudies {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 .containerHl .hljs {
   padding: 0;
 }
