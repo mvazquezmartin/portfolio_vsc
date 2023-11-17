@@ -1,5 +1,5 @@
 import { pdfPath } from "../../assetsPath/assetsPath.js";
-import { experience } from "./dataCv.js";
+import { experience, studies } from "./dataCv.js";
 
 const cardExperienceContainer = (jobData) => {
   const cardContainer = document.createElement("div");
@@ -14,8 +14,14 @@ const cardExperienceContainer = (jobData) => {
   const timeWorking = document.createElement("p");
   timeWorking.textContent = jobData.date;
 
-  const responsibilityJob = document.createElement("p");
-  responsibilityJob.textContent = jobData.responsibility;
+  const responsibilityJob = document.createElement("div");
+
+  const responsibilities = jobData.responsibility.split("\n");
+  responsibilities.forEach((responsibility) => {
+    const responsibilityParagraph = document.createElement("p");
+    responsibilityParagraph.textContent = responsibility;
+    responsibilityJob.appendChild(responsibilityParagraph);
+  });
 
   cardContainer.appendChild(cardTitle);
   cardContainer.appendChild(job);
@@ -71,10 +77,16 @@ const renderAccount = () => {
 
   const containerEducation = document.createElement("div");
   const titleEducation = document.createElement("h2");
-  titleEducation.textContent = "Formación";
+  titleEducation.textContent = "Experiencia:";
+
+  containerEducation.appendChild(titleEducation);
 
   experience.forEach((job) => {
     containerEducation.appendChild(cardExperienceContainer(job));
+  });
+
+  studies.forEach((studies) => {
+    containerEducation.appendChild(cardStudiesContainer(studies));
   });
 
   containerAccount.appendChild(btnDonwload);
@@ -84,7 +96,6 @@ const renderAccount = () => {
   containerAboutMe.appendChild(aboutMeP1);
   containerAboutMe.appendChild(aboutMeP2);
   containerAboutMeAndEducation.appendChild(containerEducation);
-  containerEducation.appendChild(titleEducation);
   mainView.appendChild(containerAccount);
 };
 
