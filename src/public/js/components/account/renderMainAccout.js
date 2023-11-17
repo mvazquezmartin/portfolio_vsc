@@ -1,8 +1,49 @@
 import { pdfPath } from "../../assetsPath/assetsPath.js";
+import { experience } from "./dataCv.js";
 
-const cardContainer = () =>{
-  
-}
+const cardExperienceContainer = (jobData) => {
+  const cardContainer = document.createElement("div");
+  cardContainer.classList.add("cardContainerExperience");
+
+  const cardTitle = document.createElement("p");
+  cardTitle.textContent = jobData.company;
+
+  const job = document.createElement("p");
+  job.textContent = jobData.name;
+
+  const timeWorking = document.createElement("p");
+  timeWorking.textContent = jobData.date;
+
+  const responsibilityJob = document.createElement("p");
+  responsibilityJob.textContent = jobData.responsibility;
+
+  cardContainer.appendChild(cardTitle);
+  cardContainer.appendChild(job);
+  cardContainer.appendChild(timeWorking);
+  cardContainer.appendChild(responsibilityJob);
+
+  return cardContainer;
+};
+
+const cardStudiesContainer = (studiesData) => {
+  const cardContainer = document.createElement("div");
+  cardContainer.classList.add("cardContainerStudies");
+
+  const title = document.createElement("p");
+  title.textContent = studiesData.title;
+
+  const institution = document.createElement("p");
+  institution.textContent = studiesData.institution;
+
+  const date = document.createElement("p");
+  date.textContent = studiesData.date;
+
+  cardContainer.appendChild(title);
+  cardContainer.appendChild(institution);
+  cardContainer.appendChild(date);
+
+  return cardContainer;
+};
 
 const renderAccount = () => {
   const path = document.getElementById("rootPath");
@@ -32,10 +73,9 @@ const renderAccount = () => {
   const titleEducation = document.createElement("h2");
   titleEducation.textContent = "Formación";
 
-  const containerEducationCard = document.createElement("div");
-  const titleCareer = document.createElement("p");
-  titleCareer.textContent = "Carrera Full Stack";
-  const yearCareer = document.createElement;
+  experience.forEach((job) => {
+    containerEducation.appendChild(cardExperienceContainer(job));
+  });
 
   containerAccount.appendChild(btnDonwload);
   containerAccount.appendChild(containerAboutMeAndEducation);
