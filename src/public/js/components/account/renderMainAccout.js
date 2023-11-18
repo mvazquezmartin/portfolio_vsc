@@ -99,7 +99,6 @@ const renderAccount = () => {
     containerStudies.appendChild(cardStudiesContainer(studies));
   });
 
-  containerAccount.appendChild(btnDonwload);
   containerAccount.appendChild(containerAboutMe);
   containerAboutMe.appendChild(titleAboutMe);
   containerAboutMe.appendChild(aboutMeP1);
@@ -107,6 +106,7 @@ const renderAccount = () => {
   containerAccount.appendChild(containerExperienceAndStudies);
   containerExperienceAndStudies.appendChild(containerExperience);
   containerExperienceAndStudies.appendChild(containerStudies);
+  containerAccount.appendChild(btnDonwload);
   mainView.appendChild(containerAccount);
 };
 

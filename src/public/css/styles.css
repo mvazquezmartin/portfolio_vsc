@@ -2491,9 +2491,10 @@ a:hover {
   padding: 1rem;
   border: 1px solid #bd93f9;
   border-radius: 12px;
+  background-color: #191a21;
 }
 .containerAccount .btnDownload {
-  align-self: baseline;
+  align-self: end;
   box-shadow: inset 0px -3px 7px 0px #a064fa;
   background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
   background-color: #ca26eb;
@@ -2554,7 +2555,8 @@ a:hover {
 }
 .containerAccount .experienceAndStudies .containerExperience .cardContainerExperience > p:nth-child(2) {
   font-size: 0.9rem;
-  color: #aaa;
+  font-style: italic;
+  color: #bbb;
 }
 .containerAccount .experienceAndStudies .containerExperience .cardContainerExperience > p:nth-child(3) {
   font-size: 0.8rem;
@@ -2581,7 +2583,7 @@ a:hover {
 .containerAccount .experienceAndStudies .containerStudies .cardContainerStudies p:nth-child(2) {
   font-size: 0.9rem;
   font-style: italic;
-  color: #aaa;
+  color: #bbb;
 }
 .containerAccount .experienceAndStudies .containerStudies .cardContainerStudies p:nth-child(3) {
   font-size: 0.8rem;

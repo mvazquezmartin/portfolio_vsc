@@ -8,9 +8,10 @@
   padding: 1rem;
   border: 1px solid #bd93f9;
   border-radius: 12px;
+  background-color: #191a21;
 
   .btnDownload {
-    align-self: baseline;
+    align-self: end;
     box-shadow: inset 0px -3px 7px 0px #a064fa;
     background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
     background-color: #ca26eb;
@@ -72,7 +73,8 @@
 
         > p:nth-child(2) {
           font-size: 0.9rem;
-          color: #aaa;
+          font-style: italic;
+          color: #bbb;
         }
 
         > p:nth-child(3) {
@@ -104,7 +106,7 @@
           &:nth-child(2) {
             font-size: 0.9rem;
             font-style: italic;
-            color: #aaa;
+            color: #bbb;
           }
 
           &:nth-child(3) {
