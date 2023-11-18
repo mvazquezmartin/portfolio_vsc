@@ -3,12 +3,12 @@ const experience = [
     company: "Indigo Mining",
     name: "Departamento mineria cryptocurrency",
     date: `03/2022 – 12/2022`,
-    responsibility: `Organización y planificación nuevas granjas de minados
+    responsibility: `Organización y planificación nuevas granjas de minados.
     Administración de equipos.
     Armado de rigs.
     Soporte técnico.
     Soporte cliente remoto.
-    Soluciones informáticas  
+    Soluciones informáticas.
     `,
   },
   {
@@ -19,7 +19,7 @@ const experience = [
     Backup.
     Instalación de sistemas operativos.
     Instalación de software.
-    Optimización general de los equipos
+    Optimización general de los equipos.
     `,
   },
 ];

@@ -61,8 +61,8 @@ const renderAccount = () => {
   const btnDonwload = document.createElement("a");
   btnDonwload.href = pdfPath.CV_ESP;
   btnDonwload.download = "cv_mvazquezmartin.pdf";
-  btnDonwload.textContent = "Download";
-  btnDonwload.classList.add("btnDownload CV");
+  btnDonwload.textContent = "Download CV";
+  btnDonwload.classList.add("btnDownload");
 
   const containerAboutMe = document.createElement("div");
   containerAboutMe.classList.add("containerAboutMe");
@@ -80,7 +80,7 @@ const renderAccount = () => {
   const containerExperience = document.createElement("div");
   containerExperience.classList.add("containerExperience");
   const titleExperience = document.createElement("h2");
-  titleExperience.textContent = "Experiencia:";
+  titleExperience.textContent = "Experiencia";
 
   containerExperience.appendChild(titleExperience);
 
@@ -91,7 +91,7 @@ const renderAccount = () => {
   const containerStudies = document.createElement("div");
   containerStudies.classList.add("containerStudies");
   const titleStudies = document.createElement("h2");
-  titleStudies.textContent = "Estudios:";
+  titleStudies.textContent = "Estudios";
 
   containerStudies.appendChild(titleStudies);
 

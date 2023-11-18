@@ -2523,11 +2523,61 @@ a:hover {
   flex-direction: column;
   row-gap: 0.5rem;
 }
+.containerAccount .containerAboutMe h1 {
+  font-size: 1.3rem;
+}
 .containerAccount .experienceAndStudies {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  padding-top: 1rem;
 }
+.containerAccount .experienceAndStudies .containerExperience h2 {
+  font-size: 1.3rem;
+}
+.containerAccount .experienceAndStudies .containerExperience .cardContainerExperience {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+.containerAccount .experienceAndStudies .containerExperience .cardContainerExperience > p:nth-child(1) {
+  font-weight: bold;
+}
+.containerAccount .experienceAndStudies .containerExperience .cardContainerExperience > p:nth-child(2) {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+.containerAccount .experienceAndStudies .containerExperience .cardContainerExperience > p:nth-child(3) {
+  font-size: 0.8rem;
+  color: #96b9ce;
+}
+.containerAccount .experienceAndStudies .containerExperience .cardContainerExperience div {
+  padding-top: 0.4rem;
+}
+.containerAccount .experienceAndStudies .containerExperience .cardContainerExperience div p {
+  font-size: 0.9rem;
+}
+.containerAccount .experienceAndStudies .containerStudies h2 {
+  font-size: 1.3rem;
+}
+.containerAccount .experienceAndStudies .containerStudies .cardContainerStudies {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+.containerAccount .experienceAndStudies .containerStudies .cardContainerStudies p:nth-child(1) {
+  font-weight: bold;
+}
+.containerAccount .experienceAndStudies .containerStudies .cardContainerStudies p:nth-child(2) {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #aaa;
+}
+.containerAccount .experienceAndStudies .containerStudies .cardContainerStudies p:nth-child(3) {
+  font-size: 0.8rem;
+  color: #96b9ce;
+}
+
 .containerHl .hljs {
   padding: 0;
 }
