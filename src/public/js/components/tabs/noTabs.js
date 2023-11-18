@@ -11,7 +11,7 @@ const live = (alive) => {
     code(12);
   }
 };`;
-const path = "// Do not change, it's working very well";
+const path = "// Don't change anything; it's working very well.";
 const renderNoTabs = () => {
   highlight(path, txt, "javascript");
   hljs.highlightAll();

@@ -6,20 +6,25 @@ const experience = [
     responsibility: `Organización y planificación nuevas granjas de minados.
     Administración de equipos.
     Armado de rigs.
+    Optimización de rendimiento.
     Soporte técnico.
     Soporte cliente remoto.
     Soluciones informáticas.
+    Investigación y evaluación de nuevas criptomonedas.
     `,
   },
   {
     company: "Autónomo ",
     name: "Soporte técnico en informática",
     date: `04/2020 – 02/2021`,
-    responsibility: `Reemplazo de componentes.
-    Backup.
-    Instalación de sistemas operativos.
+    responsibility: `Diagnóstico de problemas.    
+    Reemplazo de componentes.
     Instalación de software.
+    Configuracion de redes.
+    Instalación de sistemas operativos.
     Optimización general de los equipos.
+    Respaldo de datos.
+    Recuperacion de datos.
     `,
   },
 ];
