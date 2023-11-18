@@ -67,7 +67,7 @@ const renderAccount = () => {
   const containerAboutMe = document.createElement("div");
   containerAboutMe.classList.add("containerAboutMe");
   const titleAboutMe = document.createElement("h1");
-  titleAboutMe.textContent = "Sobre Mi";
+  titleAboutMe.textContent = "Sobre mi";
   const aboutMeP1 = document.createElement("p");
   aboutMeP1.textContent = `Soy un apasionado de la tecnología desde chico. Comencé mi camino en el mundo de la computación a partir de la época de Windows
   3.1,y desde entonces he estado aprendiendo y solucionando problemas relacionados con la informática.`;

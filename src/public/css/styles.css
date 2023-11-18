@@ -2486,9 +2486,11 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 700px;
-  margin: 0 auto;
-  padding: 1rem 0;
+  width: 630px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #bd93f9;
+  border-radius: 12px;
 }
 .containerAccount .btnDownload {
   align-self: baseline;
@@ -2525,15 +2527,22 @@ a:hover {
 }
 .containerAccount .containerAboutMe h1 {
   font-size: 1.3rem;
+  color: #bd93f9;
 }
 .containerAccount .experienceAndStudies {
   display: flex;
   width: 100%;
   justify-content: space-between;
   padding-top: 1rem;
+  border-top: 1px solid #bd93f9;
+}
+.containerAccount .experienceAndStudies .containerExperience {
+  width: 50%;
+  border-right: 1px solid #bd93f9;
 }
 .containerAccount .experienceAndStudies .containerExperience h2 {
   font-size: 1.3rem;
+  color: #bd93f9;
 }
 .containerAccount .experienceAndStudies .containerExperience .cardContainerExperience {
   display: flex;
@@ -2559,6 +2568,7 @@ a:hover {
 }
 .containerAccount .experienceAndStudies .containerStudies h2 {
   font-size: 1.3rem;
+  color: #bd93f9;
 }
 .containerAccount .experienceAndStudies .containerStudies .cardContainerStudies {
   display: flex;

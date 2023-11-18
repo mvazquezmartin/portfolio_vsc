@@ -3,9 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 700px;
-  margin: 0 auto;
-  padding: 1rem 0;
+  width: 630px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #bd93f9;
+  border-radius: 12px;
 
   .btnDownload {
     align-self: baseline;
@@ -43,6 +45,7 @@
     row-gap: 0.5rem;
     h1 {
       font-size: 1.3rem;
+      color: #bd93f9;
     }
   }
   .experienceAndStudies {
@@ -50,9 +53,13 @@
     width: 100%;
     justify-content: space-between;
     padding-top: 1rem;
+    border-top: 1px solid #bd93f9;
     .containerExperience {
+      width: 50%;
+      border-right: 1px solid #bd93f9;
       h2 {
         font-size: 1.3rem;
+        color: #bd93f9;
       }
       .cardContainerExperience {
         display: flex;
@@ -83,6 +90,7 @@
     .containerStudies {
       h2 {
         font-size: 1.3rem;
+        color: #bd93f9;
       }
       .cardContainerStudies {
         display: flex;
