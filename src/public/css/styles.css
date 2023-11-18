@@ -2589,6 +2589,26 @@ a:hover {
   font-size: 0.8rem;
   color: #96b9ce;
 }
+@media screen and (max-width: 600px) {
+  .containerAccount {
+    width: 350px;
+  }
+  .containerAccount .btnDownload {
+    align-self: center;
+  }
+  .containerAccount .experienceAndStudies {
+    flex-direction: column-reverse;
+  }
+  .containerAccount .experienceAndStudies .containerExperience {
+    width: 100%;
+    border-top: 1px solid #bd93f9;
+    border-right: 0px;
+    padding-top: 1rem;
+  }
+  .containerAccount .experienceAndStudies .containerStudies {
+    padding-bottom: 1rem;
+  }
+}
 
 .containerHl .hljs {
   padding: 0;

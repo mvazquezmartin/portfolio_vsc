@@ -117,4 +117,22 @@
       }
     }
   }
+  @include mobile {
+    width: 350px;
+    .btnDownload {
+      align-self: center;
+    }
+    .experienceAndStudies {
+      flex-direction: column-reverse;
+      .containerExperience {
+        width: 100%;
+        border-top: 1px solid #bd93f9;
+        border-right: 0px;
+        padding-top: 1rem;
+      }
+      .containerStudies{
+        padding-bottom: 1rem;
+      }
+    }
+  }
 }
