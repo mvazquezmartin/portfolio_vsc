@@ -1019,6 +1019,7 @@ a:hover {
   outline: none;
   border-top: 1px solid #ff79c6;
   box-shadow: 10px -5px 10px -3px #bd93f9;
+  background-color: #191a21;
 }
 .playGroundGrid .cssStyle {
   grid-area: 1/2/4/3;
@@ -1056,6 +1057,7 @@ a:hover {
   outline: none;
   border-top: 1px solid #ff79c6;
   box-shadow: 10px -5px 10px -3px #bd93f9;
+  background-color: #191a21;
 }
 .playGroundGrid .javaScriptStyle {
   grid-area: 1/3/4/4;
@@ -1090,6 +1092,7 @@ a:hover {
   outline: none;
   border-top: 1px solid #ff79c6;
   box-shadow: 10px -5px 10px -3px #bd93f9;
+  background-color: #191a21;
 }
 .playGroundGrid .outPutArea {
   grid-area: 4/1/4/4;
