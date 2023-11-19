@@ -7,6 +7,8 @@ class TabManager {
     this.tabs = [];
     this.activeTabIndex = 0;
     this.lastClickTime = 0;
+    this.maxTabsMobile = 3;
+    this.maxTabsDesktop = 10;
   }
 
   create(title, content, icon, isOpen = false) {
@@ -26,7 +28,11 @@ class TabManager {
         if (this.tabs[existingTabIndex].isOpen) {
           this.setActive(existingTabIndex);
         } else {
-          this.tabs[existingTabIndex].isOpen = true;
+          const maxTabs =
+            window.innerWidth <= 768 ? this.maxTabsMobile : this.maxTabsDesktop;
+          this.tabs.length === maxTabs
+            ? (this.tabs[existingTabIndex].isOpen = false)
+            : (this.tabs[existingTabIndex].isOpen = true);
           this.setActive(existingTabIndex);
         }
       } else {
@@ -51,7 +57,7 @@ class TabManager {
         this.tabs[isNotOpen].title = title;
         this.tabs[isNotOpen].content = content;
         this.tabs[isNotOpen].icon = icon;
-        this.tabs[isNotOpen].isOpen = false;
+        this.tabs[isNotOpen].isOpen = isOpen;
         this.setActive(isNotOpen);
       } else {
         this.tabs.push(tab);

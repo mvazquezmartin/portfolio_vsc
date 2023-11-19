@@ -39,7 +39,7 @@ readme.addEventListener("click", () =>
   tabManager.create("README.md", readmeMain, iconPath.MARKDOWN)
 );
 inicio.addEventListener("click", () =>
-  tabManager.create("Welcome", renderMainText, iconPath.VSC)
+  tabManager.create("Welcome", renderMainText, iconPath.VSC, true)
 );
 
 // EJECUCION DE FUNCIONES
