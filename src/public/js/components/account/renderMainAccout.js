@@ -91,13 +91,21 @@ const renderAccount = () => {
   const containerStudies = document.createElement("div");
   containerStudies.classList.add("containerStudies");
   const titleStudies = document.createElement("h2");
-  titleStudies.textContent = "Estudios";
+  titleStudies.textContent = "Educación";
 
   containerStudies.appendChild(titleStudies);
 
   studies.forEach((studies) => {
     containerStudies.appendChild(cardStudiesContainer(studies));
   });
+
+  const containerIdioma = document.createElement("div")
+  containerIdioma.classList.add("idioma")
+  const titleIdioma = document.createElement("h2")
+  titleIdioma.textContent = "Idioma"
+
+  const lenguaje = document.createElement("p")
+  lenguaje.textContent = "Inglés - Avanzado"
 
   containerAccount.appendChild(containerAboutMe);
   containerAboutMe.appendChild(titleAboutMe);
@@ -106,6 +114,9 @@ const renderAccount = () => {
   containerAccount.appendChild(containerExperienceAndStudies);
   containerExperienceAndStudies.appendChild(containerExperience);
   containerExperienceAndStudies.appendChild(containerStudies);
+  containerStudies.appendChild(containerIdioma)
+  containerIdioma.appendChild(titleIdioma)
+  containerIdioma.append(lenguaje)
   containerAccount.appendChild(btnDonwload);
   mainView.appendChild(containerAccount);
 };

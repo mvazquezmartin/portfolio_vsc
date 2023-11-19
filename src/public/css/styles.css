@@ -2575,6 +2575,12 @@ a:hover {
   font-size: 1.3rem;
   color: #bd93f9;
 }
+.containerAccount .experienceAndStudies .containerStudies .idioma {
+  padding-top: 1rem;
+}
+.containerAccount .experienceAndStudies .containerStudies .idioma p {
+  padding-top: 0.5rem;
+}
 .containerAccount .experienceAndStudies .containerStudies .cardContainerStudies {
   display: flex;
   flex-direction: column;
