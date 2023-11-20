@@ -255,7 +255,8 @@ const readme = {
   Lo interesante de esta sección, es que consumo la api YouTube Data V3 para la información de los canales. Debido a la cantidad de datos que solicito, cumplía la cuota de peticiones diaria en un lapso corto, por ende cree un archivo JSON que funciona como una memoria cache donde se almacena una copia de las respuestas. Este archivo se actualiza cada 24 horas, ya que la información no va a variar demasiado en ese tiempo.
   ## 📞 Contact
   A pesar de su aparente simplicidad como una presentación de mis redes de contacto, su creación resultó más desafiante de lo esperado. Estoy satisfecho con el resultado final, que se asemeja a la estructura de un archivo JSON.
-  ## 🐱 Github`,
+  ## 🐱 Github
+  En esta sección, del lado del backend, cree una capa servicio que se encarga de administrar el caché. Es la que se responsabiliza de realizar una copia de las peticiones a la API pública de Github y almacenar en un archivo JSON. Esta capa también se utiliza en Bookmarks para las consultas a la API de YouTube.`,
 };
 
 export { readme };
