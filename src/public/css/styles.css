@@ -992,6 +992,7 @@ a:hover {
   align-items: center;
   height: 30px;
   border-right: 0.5px solid #44475a;
+  background-color: #191a21;
 }
 .playGroundGrid .htmlStyle .htmlTitle img {
   margin-left: 10px;
@@ -1029,6 +1030,7 @@ a:hover {
   align-items: center;
   height: 30px;
   border-right: 0.5px solid #44475a;
+  background-color: #191a21;
 }
 .playGroundGrid .cssStyle .cssTitle img {
   margin-left: 10px;
@@ -1066,6 +1068,7 @@ a:hover {
   display: flex;
   align-items: center;
   height: 30px;
+  background-color: #191a21;
 }
 .playGroundGrid .javaScriptStyle .javaScriptTitle img {
   margin-left: 10px;
