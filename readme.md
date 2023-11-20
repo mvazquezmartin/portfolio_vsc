@@ -57,3 +57,6 @@ Lo interesante de esta sección, es que consumo la api YouTube Data V3 para la i
 A pesar de su aparente simplicidad como una presentación de mis redes de contacto, su creación resultó más desafiante de lo esperado. Estoy satisfecho con el resultado final, que se asemeja a la estructura de un archivo JSON.
 ## 🐱 Github
 En esta sección, del lado del backend, cree una capa servicio que se encarga de administrar el caché. Es la que se responsabiliza de realizar una copia de las peticiones a la API pública de Github y almacenar en un archivo JSON. Esta capa también se utiliza en Bookmarks para las consultas a la API de YouTube.
+## 🏆 Logros
+En este proyecto, enfrenté numerosos desafíos y experimenté momentos de frustración. Sin embargo, me siento orgulloso de los logros que alcancé, especialmente en el ámbito del frontend, donde tuve la oportunidad de diseñar completamente el sistema de pestañas desde cero. Muy contento con el resultado obtenido. 
+Y mi otro gran logro en el lado del Backend, fue implementar el patrón strategy que se encarga de intercambiar la persistencia de los datos en tiempo de ejecución en CRUD.
