@@ -140,7 +140,7 @@ const bookmarks = [
     link: "https://refactoring.guru/es",
     id: "refactoringGuru",
     applied:
-      "Patron Strategy para intercambiar la persistencia en tiempo de ejecución en inventario.",
+      "Patron Strategy para intercambiar la persistencia en tiempo de ejecución en CRUD.",
   },
   {
     icon: iconPath.MOCKAROO,
