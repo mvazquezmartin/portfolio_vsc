@@ -2583,6 +2583,7 @@ a:hover {
 }
 .containerAccount .experienceAndStudies .containerStudies .idioma p {
   padding-top: 0.5rem;
+  font-size: 0.9rem;
 }
 .containerAccount .experienceAndStudies .containerStudies .cardContainerStudies {
   display: flex;
