@@ -258,8 +258,11 @@ const readme = {
   ## 🐱 Github
   En esta sección, del lado del backend, cree una capa servicio que se encarga de administrar el caché. Es la que se responsabiliza de realizar una copia de las peticiones a la API pública de Github y almacenar en un archivo JSON. Esta capa también se utiliza en Bookmarks para las consultas a la API de YouTube.
   ## 🏆 Logros
-  En este proyecto, enfrenté numerosos desafíos y experimenté momentos de frustración. Sin embargo, me siento orgulloso de los logros que alcancé, especialmente en el ámbito del frontend, donde tuve la oportunidad de diseñar completamente el sistema de pestañas desde cero. Muy contento con el resultado obtenido.
-  Y mi otro gran logro en el lado del Backend, fue implementar el patrón strategy que se encarga de intercambiar la persistencia de los datos en tiempo de ejecución en CRUD.`,
+  En este proyecto, me enfrenté a numerosos desafíos y experimenté momentos de frustración. Sin embargo, me enorgullece destacar los logros alcanzados, especialmente en el ámbito del frontend. Aunque no sea mi dominio principal, tuve la oportunidad de diseñar completamente el sistema de pestañas desde cero, y estoy muy satisfecho con el resultado obtenido. Otra sección que destaco es la barra lateral 'Explorer', donde simulé el directorio de carpetas y utilicé recursividad para renderizar las subcarpetas.  
+  En el lado del Backend, logré implementar el patrón strategy, el cual se encarga de intercambiar la persistencia de los datos en tiempo de ejecución en operaciones CRUD. Además, la capa de servicio de caché fue otro gran logro, ya que resolví las limitaciones de respuestas diarias de las APIs externas, permitiendo la reutilización para realizar otras consultas.
+    
+    
+  Estoy realmente satisfecho con estos logros y el aprendizaje significativo que obtuve durante el desarrollo del proyecto.`,
 };
 
 export { readme };
