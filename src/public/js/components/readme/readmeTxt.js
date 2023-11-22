@@ -204,20 +204,20 @@ const readme = {
   `,
   CRUD: `
   # API de Administración CRUD con Almacenamiento Dinámico 
-  
+    
   Esta API facilita las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre datos, ofreciendo la flexibilidad de elegir entre el uso de una base de datos MongoDB o un archivo JSON para el almacenamiento. La implementación incorpora el patrón de diseño Strategy, permitiendo cambiar el método de persistencia en tiempo de ejecución.  
-  
+    
   ![STRATEGY](${imgPath.STRATEGY})  
-  
+    
   ## API Reference
   *respuestas MongoDb
-  
-  #### Get all items
-  
+    
+  #### Get all items    
   \`\`\`http
     GET /api/cruds?persistence=mongodb
   \`\`\`
-  
+  <br>
+
   \`\`\`json
   Response:
   {
@@ -239,12 +239,14 @@ const readme = {
       ]
   }
   \`\`\`
-  
-  #### Get one item by id
-  
+  <br>
+    
+  #### Get one item by id    
   \`\`\`http
     GET /api/cruds/:id?persistence=mongodb
   \`\`\`
+  <br>
+    
   \`\`\`json
   Response:
   {
@@ -263,12 +265,14 @@ const readme = {
       }
   }
   \`\`\`
-  
-  #### Create new item
-  
+  <br>
+    
+  #### Create new item    
   \`\`\`http
     POST /api/cruds?persistence=mongodb
   \`\`\`
+  <br>
+    
   \`\`\`http
   Request body:
   {
@@ -280,6 +284,8 @@ const readme = {
       "stock": 99
   }
   \`\`\`
+  <br>
+
   \`\`\`json
   Response:
   {
@@ -298,17 +304,22 @@ const readme = {
       }
   }
   \`\`\`
-  
+  <br>
+
   #### Modify existing item
   \`\`\`http
     PATCH /api/cruds/:id?persistence=mongodb
-    \`\`\`
-    \`\`\`http
+  \`\`\`
+  <br>
+
+  \`\`\`http
   Request body:
   {
       "title": "PRUEBA MODIFICACION"
   }
   \`\`\`
+  <br>
+
   \`\`\`json
   {
       "status": "success",
@@ -325,12 +336,15 @@ const readme = {
       }
   }
   \`\`\`
+  <br>
   
   #### Delete by id
   \`\`\`http
     DELETE /api/cruds/:id?persistence=mongodb
-    \`\`\`
-    \`\`\`json
+  \`\`\`
+  <br>
+
+  \`\`\`json
   Response:
   {    
       "status": "success",
@@ -348,12 +362,15 @@ const readme = {
       }
   }
   \`\`\`
+  <br>
   
   #### Restart data
   \`\`\`http
     GET /api//cruds/restart?persistence=mongodb
-    \`\`\`
-    \`\`\`json
+  \`\`\`
+  <br>
+  
+  \`\`\`json
   {
       "status": "success",
       "message": "Items restart to orinal file",
