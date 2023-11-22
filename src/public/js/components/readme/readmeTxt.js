@@ -440,7 +440,13 @@ const readme = {
   En el lado del Backend, logré implementar el patrón strategy, el cual se encarga de intercambiar la persistencia de los datos en tiempo de ejecución en operaciones CRUD. Además, la capa de servicio de caché fue otro gran logro, ya que resolví las limitaciones de respuestas diarias de las APIs externas, permitiendo la reutilización para realizar otras consultas.
     
     
-  Estoy realmente satisfecho con estos logros y el aprendizaje significativo que obtuve durante el desarrollo del proyecto.`,
+  Estoy realmente satisfecho con estos logros y el aprendizaje significativo que obtuve durante el desarrollo del proyecto.
+  ## Strategy Pattern
+  ![STRATEGY](${imgPath.STRATEGY})
+
+  ## Cache Manager
+  ![CACHE](${imgPath.CACHE})
+  `,
 };
 
 export { readme };
