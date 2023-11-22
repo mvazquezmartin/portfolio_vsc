@@ -94,6 +94,7 @@ const imgPath = {
   INVENTARIO: "./assets/inventory-svgrepo-com.svg",
   RATHER: "./assets/rather-svgrepo-com.svg",
   CHAT: "./assets/chatbubble-svgrepo-com.svg",
+  STRATEGY: "./assets/API_CRUD.drawio.png"
 };
 
 const certificadoPath = {

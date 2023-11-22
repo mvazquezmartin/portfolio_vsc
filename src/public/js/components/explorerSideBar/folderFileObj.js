@@ -14,6 +14,7 @@ import {
 } from "./fileExplorerRender.js";
 import { readmeMain } from "../readme/mainReadme.js";
 import { renderMainCrud } from "../crud/renderMainCrud.js";
+import { readmeRenderCRUD } from "../crud/readmeCRUD.js";
 
 const assetsFolder = {
   folderName: "Assets",
@@ -174,7 +175,12 @@ const folder1 = {
     {
       name: "readme_crud.md",
       icon: iconPath.MARKDOWN,
-      function: () => console.log("README!"),
+      function: () =>
+        tabManager.create(
+          "readme_crud.md",
+          readmeRenderCRUD,
+          iconPath.MARKDOWN
+        ),
     },
   ],
   subfolders: [

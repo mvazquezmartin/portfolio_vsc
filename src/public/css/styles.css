@@ -1171,13 +1171,13 @@ a:hover {
 .readme .readmeStyle code, .readmeContainerM8b .readmeStyle code {
   font-family: "Courier New", monospace;
   padding: 2px 4px;
-  border: 1px solid #ddd;
   border-radius: 3px;
   background-color: transparent;
   font-size: 12px;
 }
 .readme .readmeStyle .language-javascript, .readmeContainerM8b .readmeStyle .language-javascript {
   font-size: 0.85rem;
+  border: 1px solid #ddd;
 }
 .readme .readmeStyle a, .readmeContainerM8b .readmeStyle a {
   color: #007bff;
