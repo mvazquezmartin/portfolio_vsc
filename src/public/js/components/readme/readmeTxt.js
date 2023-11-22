@@ -369,7 +369,7 @@ const readme = {
     GET /api//cruds/restart?persistence=mongodb
   \`\`\`
   <br>
-  
+    
   \`\`\`json
   {
       "status": "success",
