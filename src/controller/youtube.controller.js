@@ -14,8 +14,8 @@ router.get("/", async (req, res) => {
   try {
     const { channelId } = req.query;
 
-    const isValid = await cacheService.isValidCache(channelId);
-    if (isValid) {
+    const isValidCache = await cacheService.isValidCache(channelId);
+    if (isValidCache) {
       const response = await cacheService.getOne(channelId);
       if (response.payload !== null) {
         return res.status(response.code).json({
