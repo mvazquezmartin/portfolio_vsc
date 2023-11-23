@@ -61,9 +61,9 @@ class CacheManager {
   async processData() {
     try {
       const data = await fs.promises.readFile(this.filePath, "utf-8");
-      if (data) {
-        return JSON.parse(data);
-      }
+      
+      if (data) return JSON.parse(data);
+
       return [];
     } catch (error) {
       console.error("Error in processData:", error);
@@ -77,6 +77,7 @@ class CacheManager {
       this.idIndex[item.id] = true;
     });
   }
+  
   async saveFile() {
     try {
       const jsonData = JSON.stringify(this.data);

@@ -1199,9 +1199,6 @@ a:hover {
   line-height: 1.5;
   margin-left: 1rem;
 }
-.readme .readmeStyle img, .readmeContainerM8b .readmeStyle img {
-  max-width: 60%;
-}
 @media screen and (max-width: 600px) {
   .readme, .readmeContainerM8b {
     padding: 1rem 0;
