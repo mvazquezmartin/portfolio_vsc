@@ -19,3 +19,5 @@ const httpServer = app.listen(PORT, () => {
 
 mongoConnect();
 setSocket(httpServer);
+
+module.exports = app;

@@ -6,28 +6,6 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
-    {
-      "src": "/public/css/(.*)",
-      "dest": "src/public/css/$1"
-    },
-    {
-      "src": "/public/js/(.*)",
-      "dest": "src/public/js/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "src/index.js"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/css/(.*)",
-      "destination": "src/public/css/$1"
-    },
-    {
-      "source": "/js/(.*)",
-      "destination": "src/public/js/$1"
-    }
-  ]
+
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }
