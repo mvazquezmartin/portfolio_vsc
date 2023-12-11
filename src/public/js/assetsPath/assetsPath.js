@@ -51,6 +51,7 @@ const iconPath = {
   CODEPEN: "./assets/codepen-svgrepo-com.svg",
   CANIUSE: "./assets/caniuse-svgrepo-com.svg",
   README: "./assets/readme-svgrepo-com.svg",
+  DRAWIO: "./assets/drawio-svgrepo-com.svg",
 };
 
 const imgPath = {
@@ -87,6 +88,7 @@ const imgPath = {
   CANIUSE: "./assets/Screenshot_caniuse.png",
   README: "./assets/Screenshot_readme.png",
   GITEXPLORER: "./assets/Screenshot_gitExplorer.png",
+  DRAWIO: "./assets/Screenshot_drawio.png",
   API: "./assets/api-svgrepo-com.svg",
   BROWSER: "./assets/browser-svgrepo-com.svg",
   CART: "./assets/cart-svgrepo-com.svg",
@@ -95,7 +97,7 @@ const imgPath = {
   RATHER: "./assets/rather-svgrepo-com.svg",
   CHAT: "./assets/chatbubble-svgrepo-com.svg",
   STRATEGY: "./assets/API_CRUD.drawio.png",
-  CACHE: "./assets/CACHE.drawio.png"
+  CACHE: "./assets/CACHE.drawio.png",
 };
 
 const certificadoPath = {

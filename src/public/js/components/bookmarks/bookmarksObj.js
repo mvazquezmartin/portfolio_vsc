@@ -192,6 +192,16 @@ const bookmarks = [
     id: "gitexplorer",
     applied: " - ",
   },
+  {
+    icon: iconPath.DRAWIO,
+    title: "Draw.io",
+    description:
+      "Plataforma en línea para la creación de diagramas y gráficos. Ofrece una interfaz intuitiva y herramientas versátiles para diseñar diversos tipos de diagramas, como organigramas, diagramas de flujo, mapas mentales y más. Es una herramienta colaborativa que permite trabajar en tiempo real y compartir fácilmente los proyectos.",
+    img: imgPath.DRAWIO,
+    link: "https://app.diagrams.net/",
+    id: "drawio",
+    applied: "Flujo de datos en Strategy Pattern y Cache.",
+  },
 ];
 
 const youtubeId = {
