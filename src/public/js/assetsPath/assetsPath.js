@@ -52,6 +52,7 @@ const iconPath = {
   CANIUSE: "./assets/caniuse-svgrepo-com.svg",
   README: "./assets/readme-svgrepo-com.svg",
   DRAWIO: "./assets/drawio-svgrepo-com.svg",
+  REGEX: "./assets/regexcrossword-svgrepo-com.svg",
 };
 
 const imgPath = {
@@ -89,6 +90,7 @@ const imgPath = {
   README: "./assets/Screenshot_readme.png",
   GITEXPLORER: "./assets/Screenshot_gitExplorer.png",
   DRAWIO: "./assets/Screenshot_drawio.png",
+  REGEX: "./assets/Screenshot_regex.png",
   API: "./assets/api-svgrepo-com.svg",
   BROWSER: "./assets/browser-svgrepo-com.svg",
   CART: "./assets/cart-svgrepo-com.svg",

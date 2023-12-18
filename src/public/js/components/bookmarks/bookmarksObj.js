@@ -202,6 +202,16 @@ const bookmarks = [
     id: "drawio",
     applied: "Flujo de datos en Strategy Pattern y Cache.",
   },
+  {
+    icon: iconPath.REGEX,
+    title: "Regex Vis",
+    description:
+      "Es una herramienta en línea que te permite visualizar y experimentar con expresiones regulares. Puedes definir patrones, seleccionar nodos, distinguir diferentes tipos de caracteres, establecer rangos, agrupar partes del patrón y verificar afirmaciones. En resumen, es una plataforma útil para comprender y probar expresiones regulares.",
+    img: imgPath.REGEX,
+    link: "https://regex-vis.com/",
+    id: "regex",
+    applied: "-",
+  },
 ];
 
 const youtubeId = {
