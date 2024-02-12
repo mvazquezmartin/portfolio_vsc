@@ -1,4 +1,4 @@
-require("dotenv").config({path:'../.env'});
+require("dotenv").config();
 
 module.exports = {
   DB_ADMIN: process.env.DB_ADMIN,
