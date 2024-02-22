@@ -38,12 +38,12 @@ export const pongWarsRender = () => {
   const numSquaresX = Math.floor(canvas.width / SQUARE_SIZE);
   const numSquaresY = Math.floor(canvas.height / SQUARE_SIZE);
 
-  let dayScore = 0;
-  let nightScore = 0;
   let dayPercentage = 0;
   let nightPercentage = 0;
 
   const squares = [];
+  let ballTrail = [];
+  let particles = [];
 
   // Populate the fields, one half day, one half night
   for (let i = 0; i < numSquaresX; i++) {
@@ -83,8 +83,8 @@ export const pongWarsRender = () => {
   }
 
   function drawSquares() {
-    dayScore = 0;
-    nightScore = 0;
+    let dayScore = 0;
+    let nightScore = 0;
 
     for (let i = 0; i < numSquaresX; i++) {
       for (let j = 0; j < numSquaresY; j++) {
@@ -107,6 +107,69 @@ export const pongWarsRender = () => {
     }
   }
 
+  class Particle {
+    constructor(x, y, color) {
+      this.x = x;
+      this.y = y;
+      this.color = color;
+      this.radius = 1.5;
+      this.speed = {
+        x: Math.random() * 2 - 1,
+        y: Math.random() * 2 - 1,
+      };
+      this.opacity = 1;
+      this.fadeOut = 0.02;
+      this.shouldRemove = false;
+    }
+
+    update() {
+      this.x += this.speed.x;
+      this.y += this.speed.y;
+      this.opacity -= this.fadeOut;
+
+      if (this.opacity <= 0) {
+        this.shouldRemove = true;
+      }
+    }
+
+    draw(ctx) {
+      const rgbValues = hexToRgb(this.color)
+      // const rgbValues = rgbColor.match(/\d+/g);
+      // const r = parseInt(rgbValues[0]);
+      // const g = parseInt(rgbValues[1]);
+      // const b = parseInt(rgbValues[2]);
+
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+      ctx.fillStyle = `rgba(${rgbValues.r}, ${rgbValues.g}, ${rgbValues.b}, ${this.opacity})`;
+      ctx.fill();
+      ctx.closePath();
+    }
+  }
+
+  function generateParticles(ball) {
+    const particleColor =
+      ball.ballColor === colorPalette.NocturnalExpedition
+        ? colorPalette.NocturnalExpedition
+        : colorPalette.MysticMint;
+    for (let i = 0; i < 20; i++) {
+      const particle = new Particle(ball.x, ball.y, particleColor);
+      particles.push(particle);
+    }
+  }
+
+  function drawParticles() {
+    particles.forEach((particle, index) => {
+      particle.update();
+      particle.draw(ctx);
+
+      // Eliminar la partícula si debe ser removida
+      if (particle.shouldRemove) {
+        particles.splice(index, 1);
+      }
+    });
+  }
+
   function checkSquareCollision(ball) {
     // Check multiple points around the ball's circumference
     for (let angle = 0; angle < Math.PI * 2; angle += Math.PI / 4) {
@@ -127,6 +190,7 @@ export const pongWarsRender = () => {
           } else {
             ball.dy = -ball.dy;
           }
+          generateParticles(ball);
         }
       }
     }
@@ -162,25 +226,69 @@ export const pongWarsRender = () => {
       ball.dy = ball.dy > 0 ? MIN_SPEED : -MIN_SPEED;
   }
 
+  function hexToRgb(hex) {
+    // Eliminar el símbolo '#', si está presente
+    hex = hex.replace(/^#/, '');
+
+    // Convertir a un valor numérico y dividirlo en componentes r, g, b
+    let bigint = parseInt(hex, 16);
+    let r = (bigint >> 16) & 255;
+    let g = (bigint >> 8) & 255;
+    let b = bigint & 255;
+
+    // Devolver un objeto con las componentes RGB
+    return { r: r, g: g, b: b };
+  }
+
+  function drawBallTrail(ball) {
+    for (let i = 0; i < ballTrail.length; i++) {
+      let alpha = i / ballTrail.length;
+      ctx.beginPath();
+      ctx.arc(
+        ballTrail[i].x,
+        ballTrail[i].y,
+        SQUARE_SIZE / 2,
+        0,
+        Math.PI * 2,
+        false
+      );
+      let color = hexToRgb(ball.ballColor);
+      ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${
+        0.2 * alpha
+      })`;
+      ctx.fill();
+      ctx.closePath();
+    }
+  }
+
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawSquares();
+
+    // ballTrail limit
+    const maxTrailLength = 20;
+    if (ballTrail.length > maxTrailLength) {
+      ballTrail = ballTrail.slice(-maxTrailLength);
+    }
 
     scoreElement.textContent = `day ${dayPercentage.toFixed(
       2
     )}% | night ${nightPercentage.toFixed(2)}%`;
 
     balls.forEach((ball) => {
+      ballTrail.push({ x: ball.x, y: ball.y });
       drawBall(ball);
+      drawBallTrail(ball);
       checkSquareCollision(ball);
       checkBoundaryCollision(ball);
       ball.x += ball.dx;
       ball.y += ball.dy;
-
       addRandomness(ball);
     });
 
-    iteration++;    
+    drawParticles();
+
+    iteration++;
 
     requestAnimationFrame(draw);
   }
