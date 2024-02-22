@@ -1,71 +1,72 @@
-import { tabManager } from "../tabs/TabsManager.js";
-import { iconPath, imgPath } from "../../assetsPath/assetsPath.js";
-import { ilyudo } from "../assets/1Lyud0.js";
-import { chatRender } from "../chat/chatRender.js";
-import { readmeRenderChat } from "../chat/readmeChat.js";
-import { magic8BallRender } from "../magic8ball/magic8ball.js";
-import { readmeRender8Ball } from "../magic8ball/readme.js";
-import { playGroundRender } from "../playground/playGround.js";
-import { readmeRender } from "../playground/readme.js";
+import { tabManager } from '../tabs/TabsManager.js';
+import { iconPath, imgPath } from '../../assetsPath/assetsPath.js';
+import { ilyudo } from '../assets/1Lyud0.js';
+import { chatRender } from '../chat/chatRender.js';
+import { readmeRenderChat } from '../chat/readmeChat.js';
+import { magic8BallRender } from '../magic8ball/magic8ball.js';
+import { readmeRender8Ball } from '../magic8ball/readme.js';
+import { playGroundRender } from '../playground/playGround.js';
+import { readmeRender } from '../playground/readme.js';
 import {
   renderDotenv,
   renderGitignore,
   renderJson,
-} from "./fileExplorerRender.js";
-import { readmeMain } from "../readme/mainReadme.js";
-import { renderMainCrud } from "../crud/renderMainCrud.js";
-import { readmeRenderCRUD } from "../crud/readmeCRUD.js";
+} from './fileExplorerRender.js';
+import { readmeMain } from '../readme/mainReadme.js';
+import { renderMainCrud } from '../crud/renderMainCrud.js';
+import { readmeRenderCRUD } from '../crud/readmeCRUD.js';
+import { pongWarsRender } from '../pongWars/pongWars.js';
 
 const assetsFolder = {
-  folderName: "Assets",
+  folderName: 'Assets',
   files: [
     {
-      name: "documentation.jpg",
+      name: 'documentation.jpg',
       icon: iconPath.JPG,
       function: () =>
         tabManager.create(
-          "documentation.jpg",
-          () => ilyudo(imgPath.DOCUMENTATION_MEME, "chess_meme"),
+          'documentation.jpg',
+          () => ilyudo(imgPath.DOCUMENTATION_MEME, 'chess_meme'),
           iconPath.JPG
         ),
     },
     {
-      name: "loroArquitecto.jpg",
+      name: 'loroArquitecto.jpg',
       icon: iconPath.JPG,
       function: () =>
         tabManager.create(
-          "loroArquitecto.jpg",
-          () => ilyudo(imgPath.DEPENDE_MEME, "loroArquitecto"),
+          'loroArquitecto.jpg',
+          () => ilyudo(imgPath.DEPENDE_MEME, 'loroArquitecto'),
           iconPath.JPG
         ),
     },
     {
-      name: "pro_googling.jpg",
+      name: 'pro_googling.jpg',
       icon: iconPath.JPG,
       function: () =>
         tabManager.create(
-          "pro_googling.jpg",
-          () => ilyudo(imgPath.PRO_GOOGLING, "pro googling"),
+          'pro_googling.jpg',
+          () => ilyudo(imgPath.PRO_GOOGLING, 'pro googling'),
           iconPath.JPG
         ),
     },
     {
-      name: "judo.jpg",
+      name: 'judo.jpg',
       icon: iconPath.JPG,
       function: () =>
         tabManager.create(
-          "judo.jpg",
-          () => ilyudo(imgPath.JUDO, "judo"),
+          'judo.jpg',
+          () => ilyudo(imgPath.JUDO, 'judo'),
           iconPath.JPG
         ),
     },
     {
-      name: "setUp.jpg",
+      name: 'setUp.jpg',
       icon: iconPath.JPG,
       function: () =>
         tabManager.create(
-          "setUp.jpg",
-          () => ilyudo(imgPath.SETUP, "setUp"),
+          'setUp.jpg',
+          () => ilyudo(imgPath.SETUP, 'setUp'),
           iconPath.JPG
         ),
     },
@@ -74,43 +75,56 @@ const assetsFolder = {
 };
 
 const playGroundFolder = {
-  folderName: "PlayGround",
+  folderName: 'PlayGround',
   files: [
     {
-      name: "playGround.js",
+      name: 'playGround.js',
       icon: iconPath.JAVASCRIPT,
       function: () =>
         tabManager.create(
-          "playGround.js",
+          'playGround.js',
           playGroundRender,
           iconPath.PLAYGROUND
         ),
     },
     {
-      name: "readme_pg.md",
+      name: 'readme_pg.md',
       icon: iconPath.MARKDOWN,
       function: () =>
-        tabManager.create("readme_pg.md", readmeRender, iconPath.MARKDOWN),
+        tabManager.create('readme_pg.md', readmeRender, iconPath.MARKDOWN),
+    },
+  ],
+  subfolders: [],
+};
+
+const pongWarsFolder = {
+  folderName: 'PongWars',
+  files: [
+    {
+      name: 'pongWars.js',
+      icon: iconPath.JAVASCRIPT,
+      function: () =>
+        tabManager.create('pongWars.js', pongWarsRender, iconPath.PONGWARS),
     },
   ],
   subfolders: [],
 };
 
 const magic8Ball = {
-  folderName: "Magic8Ball",
+  folderName: 'Magic8Ball',
   files: [
     {
-      name: "magic8Ball.js",
+      name: 'magic8Ball.js',
       icon: iconPath.JAVASCRIPT,
       function: () =>
-        tabManager.create("magic8Ball.js", magic8BallRender, iconPath.M8B),
+        tabManager.create('magic8Ball.js', magic8BallRender, iconPath.M8B),
     },
     {
-      name: "readme_m8b.md",
+      name: 'readme_m8b.md',
       icon: iconPath.MARKDOWN,
       function: () =>
         tabManager.create(
-          "readme_m8b.md",
+          'readme_m8b.md',
           readmeRender8Ball,
           iconPath.MARKDOWN
         ),
@@ -120,20 +134,20 @@ const magic8Ball = {
 };
 
 const chat = {
-  folderName: "SocketChat",
+  folderName: 'SocketChat',
   files: [
     {
-      name: "socketChat-1.0v.js",
+      name: 'socketChat-1.0v.js',
       icon: iconPath.JAVASCRIPT,
       function: () =>
-        tabManager.create("SocketChat.js", chatRender, iconPath.CHAT),
+        tabManager.create('SocketChat.js', chatRender, iconPath.CHAT),
     },
     {
-      name: "readme_chat.md",
+      name: 'readme_chat.md',
       icon: iconPath.MARKDOWN,
       function: () =>
         tabManager.create(
-          "readme_chat.md",
+          'readme_chat.md',
           readmeRenderChat,
           iconPath.MARKDOWN
         ),
@@ -143,41 +157,41 @@ const chat = {
 };
 
 const readme = {
-  name: "README.md",
+  name: 'README.md',
   icon: iconPath.MARKDOWN,
-  function: () => tabManager.create("README.md", readmeMain, iconPath.MARKDOWN),
+  function: () => tabManager.create('README.md', readmeMain, iconPath.MARKDOWN),
 };
 
 const dotenv = {
-  name: ".env",
+  name: '.env',
   icon: iconPath.DOTENV,
-  function: () => tabManager.create(".env", renderDotenv, iconPath.DOTENV),
-  className: "gitignore",
+  function: () => tabManager.create('.env', renderDotenv, iconPath.DOTENV),
+  className: 'gitignore',
 };
 
 const packageJson = {
-  name: "package.json",
+  name: 'package.json',
   icon: iconPath.NODEJS,
   function: () =>
-    tabManager.create("package.json", renderJson, iconPath.NODEJS),
+    tabManager.create('package.json', renderJson, iconPath.NODEJS),
 };
 
 const gitIgnore = {
-  name: ".gitignore",
+  name: '.gitignore',
   icon: iconPath.GIT,
   function: () =>
-    tabManager.create(".gitignore", renderGitignore, iconPath.GIT),
+    tabManager.create('.gitignore', renderGitignore, iconPath.GIT),
 };
 
 const folder1 = {
-  folderName: "CRUD",
+  folderName: 'CRUD',
   files: [
     {
-      name: "readme_crud.md",
+      name: 'readme_crud.md',
       icon: iconPath.MARKDOWN,
       function: () =>
         tabManager.create(
-          "readme_crud.md",
+          'readme_crud.md',
           readmeRenderCRUD,
           iconPath.MARKDOWN
         ),
@@ -185,15 +199,15 @@ const folder1 = {
   ],
   subfolders: [
     {
-      folderName: "CRUD v1.0",
+      folderName: 'CRUD v1.0',
       files: [
         {
-          name: "CRUD MongoDB.js",
+          name: 'CRUD MongoDB.js',
           icon: iconPath.CODE,
           function: () => {
             tabManager.create(
-              "CRUD MongoDB",
-              () => renderMainCrud("mongodb"),
+              'CRUD MongoDB',
+              () => renderMainCrud('mongodb'),
               iconPath.CODE
             );
           },
@@ -202,15 +216,15 @@ const folder1 = {
       subfolders: [],
     },
     {
-      folderName: "CRUD v0.6",
+      folderName: 'CRUD v0.6',
       files: [
         {
-          name: "CRUD Filesystem.js",
+          name: 'CRUD Filesystem.js',
           icon: iconPath.CODE,
           function: () => {
             tabManager.create(
-              "CRUD Filesystem",
-              () => renderMainCrud("filesystem"),
+              'CRUD Filesystem',
+              () => renderMainCrud('filesystem'),
               iconPath.CODE
             );
           },
@@ -224,6 +238,7 @@ const folder1 = {
 export {
   assetsFolder,
   playGroundFolder,
+  pongWarsFolder,
   folder1,
   magic8Ball,
   chat,

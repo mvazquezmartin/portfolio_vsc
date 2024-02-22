@@ -7,19 +7,20 @@ import {
   magic8Ball,
   packageJson,
   playGroundFolder,
+  pongWarsFolder,
   readme,
-} from "./folderFileObj.js";
-import { folderFileSideBar } from "./folderFileRender.js";
+} from './folderFileObj.js';
+import { folderFileSideBar } from './folderFileRender.js';
 
 const renderExplorer = () => {
-  const titleSideBar = document.getElementById("titleSideBar");
-  titleSideBar.textContent = "EXPLORER";
+  const titleSideBar = document.getElementById('titleSideBar');
+  titleSideBar.textContent = 'EXPLORER';
 
-  const viewSideBar = document.getElementById("viewSideBar");
-  viewSideBar.innerHTML = "";
+  const viewSideBar = document.getElementById('viewSideBar');
+  viewSideBar.innerHTML = '';
 
-  const fileOpen = document.getElementById("fileOpen");
-  fileOpen.textContent = "PORTFOLIO";
+  const fileOpen = document.getElementById('fileOpen');
+  fileOpen.textContent = 'PORTFOLIO';
 
   //Carpetas en Explorer
   const assets = folderFileSideBar(assetsFolder);
@@ -30,6 +31,9 @@ const renderExplorer = () => {
 
   const playGround = folderFileSideBar(playGroundFolder);
   viewSideBar.appendChild(playGround);
+
+  const pongWars = folderFileSideBar(pongWarsFolder);
+  viewSideBar.appendChild(pongWars);
 
   const chatSocket = folderFileSideBar(chat);
   viewSideBar.appendChild(chatSocket);
@@ -49,9 +53,9 @@ const renderExplorer = () => {
   const readmeMain = folderFileSideBar(readme);
   viewSideBar.appendChild(readmeMain);
 
-  const collapseFolder = document.createElement("i");
-  collapseFolder.classList.add("bi", "bi-chevron-bar-contract");
-  collapseFolder.addEventListener("click", renderExplorer);
+  const collapseFolder = document.createElement('i');
+  collapseFolder.classList.add('bi', 'bi-chevron-bar-contract');
+  collapseFolder.addEventListener('click', renderExplorer);
 
   fileOpen.appendChild(collapseFolder);
 };

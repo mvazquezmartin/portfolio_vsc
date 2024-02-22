@@ -1,0 +1,28 @@
+#pongContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;  
+  height: 100%;
+
+  canvas {
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  #score {
+    font-family: monospace;
+    margin-top: 17px;
+    font-size: 16px;
+    padding-left: 20px;
+    color: #fff;
+  }
+
+  @include mobile{
+    height: auto;
+  }
+}

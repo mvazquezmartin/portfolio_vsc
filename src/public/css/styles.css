@@ -1130,6 +1130,34 @@ a:hover {
   }
 }
 
+#pongContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  height: 100%;
+}
+#pongContainer canvas {
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+#pongContainer #score {
+  font-family: monospace;
+  margin-top: 17px;
+  font-size: 16px;
+  padding-left: 20px;
+  color: #fff;
+}
+@media screen and (max-width: 600px) {
+  #pongContainer {
+    height: auto;
+  }
+}
+
 .readme, .readmeContainerM8b {
   display: flex;
   flex-direction: row;

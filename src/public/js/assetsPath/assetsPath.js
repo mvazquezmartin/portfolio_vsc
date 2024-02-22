@@ -53,6 +53,7 @@ const iconPath = {
   README: "./assets/readme-svgrepo-com.svg",
   DRAWIO: "./assets/drawio-svgrepo-com.svg",
   REGEX: "./assets/regexcrossword-svgrepo-com.svg",
+  PONGWARS: "./assets/table-tennis-racket-and-ball-svgrepo-com.svg"
 };
 
 const imgPath = {
