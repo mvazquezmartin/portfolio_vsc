@@ -16,7 +16,7 @@ export const pongWarsRender = () => {
   mainView.appendChild(miNodoContainer);
 
   const colorPalette = {
-    MysticMint: '#E7F2F6',
+    MysticMint: "#D9E8E3",//'#E7F2F6',
     NocturnalExpedition: '#151D28',
   };
 
