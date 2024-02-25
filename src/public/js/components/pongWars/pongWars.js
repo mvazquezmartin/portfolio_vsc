@@ -1,4 +1,18 @@
-import { drawBall } from "./drawBall.js";
+import { drawBall, drawBallTrail } from './drawBall.js';
+
+export function hexToRgb(hex) {
+  // Eliminar el símbolo '#', si está presente
+  hex = hex.replace(/^#/, '');
+
+  // Convertir a un valor numérico y dividirlo en componentes r, g, b
+  let bigint = parseInt(hex, 16);
+  let r = (bigint >> 16) & 255;
+  let g = (bigint >> 8) & 255;
+  let b = bigint & 255;
+
+  // Devolver un objeto con las componentes RGB
+  return { r: r, g: g, b: b };
+}
 
 export const pongWarsRender = () => {
   const path = document.getElementById('rootPath');
@@ -18,7 +32,7 @@ export const pongWarsRender = () => {
   mainView.appendChild(miNodoContainer);
 
   const colorPalette = {
-    MysticMint: "#D9E8E3",//'#E7F2F6',
+    MysticMint: '#D9E8E3', //'#E7F2F6',
     NocturnalExpedition: '#151D28',
   };
 
@@ -84,6 +98,7 @@ export const pongWarsRender = () => {
   //   ctx.closePath();
   // }
 
+  
   function drawSquares() {
     let dayScore = 0;
     let nightScore = 0;
@@ -135,7 +150,7 @@ export const pongWarsRender = () => {
     }
 
     draw(ctx) {
-      const rgbValues = hexToRgb(this.color)
+      const rgbValues = hexToRgb(this.color);
       // const rgbValues = rgbColor.match(/\d+/g);
       // const r = parseInt(rgbValues[0]);
       // const g = parseInt(rgbValues[1]);
@@ -226,42 +241,28 @@ export const pongWarsRender = () => {
       ball.dx = ball.dx > 0 ? MIN_SPEED : -MIN_SPEED;
     if (Math.abs(ball.dy) < MIN_SPEED)
       ball.dy = ball.dy > 0 ? MIN_SPEED : -MIN_SPEED;
-  }
+  }  
 
-  function hexToRgb(hex) {
-    // Eliminar el símbolo '#', si está presente
-    hex = hex.replace(/^#/, '');
-
-    // Convertir a un valor numérico y dividirlo en componentes r, g, b
-    let bigint = parseInt(hex, 16);
-    let r = (bigint >> 16) & 255;
-    let g = (bigint >> 8) & 255;
-    let b = bigint & 255;
-
-    // Devolver un objeto con las componentes RGB
-    return { r: r, g: g, b: b };
-  }
-
-  function drawBallTrail(ball) {
-    for (let i = 0; i < ballTrail.length; i++) {
-      let alpha = i / ballTrail.length;
-      ctx.beginPath();
-      ctx.arc(
-        ballTrail[i].x,
-        ballTrail[i].y,
-        SQUARE_SIZE / 2,
-        0,
-        Math.PI * 2,
-        false
-      );
-      let color = hexToRgb(ball.ballColor);
-      ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${
-        0.2 * alpha
-      })`;
-      ctx.fill();
-      ctx.closePath();
-    }
-  }
+  // function drawBallTrail(ball) {
+  //   for (let i = 0; i < ballTrail.length; i++) {
+  //     let alpha = i / ballTrail.length;
+  //     ctx.beginPath();
+  //     ctx.arc(
+  //       ballTrail[i].x,
+  //       ballTrail[i].y,
+  //       SQUARE_SIZE / 2,
+  //       0,
+  //       Math.PI * 2,
+  //       false
+  //     );
+  //     let color = hexToRgb(ball.ballColor);
+  //     ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${
+  //       0.2 * alpha
+  //     })`;
+  //     ctx.fill();
+  //     ctx.closePath();
+  //   }
+  // }
 
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -279,8 +280,8 @@ export const pongWarsRender = () => {
 
     balls.forEach((ball) => {
       ballTrail.push({ x: ball.x, y: ball.y });
-      drawBall(ball, ctx);
-      drawBallTrail(ball);
+      drawBall(ball, ctx, SQUARE_SIZE);
+      drawBallTrail(ball, ballTrail, SQUARE_SIZE, ctx);
       checkSquareCollision(ball);
       checkBoundaryCollision(ball);
       ball.x += ball.dx;
