@@ -1,3 +1,5 @@
+import { drawBall } from "./drawBall.js";
+
 export const pongWarsRender = () => {
   const path = document.getElementById('rootPath');
   path.textContent = 'Portfolio > PongWars > pongWars.js';
@@ -74,13 +76,13 @@ export const pongWarsRender = () => {
 
   let iteration = 0;
 
-  function drawBall(ball) {
-    ctx.beginPath();
-    ctx.arc(ball.x, ball.y, SQUARE_SIZE / 2, 0, Math.PI * 2, false);
-    ctx.fillStyle = ball.ballColor;
-    ctx.fill();
-    ctx.closePath();
-  }
+  // function drawBall(ball) {
+  //   ctx.beginPath();
+  //   ctx.arc(ball.x, ball.y, SQUARE_SIZE / 2, 0, Math.PI * 2, false);
+  //   ctx.fillStyle = ball.ballColor;
+  //   ctx.fill();
+  //   ctx.closePath();
+  // }
 
   function drawSquares() {
     let dayScore = 0;
@@ -277,7 +279,7 @@ export const pongWarsRender = () => {
 
     balls.forEach((ball) => {
       ballTrail.push({ x: ball.x, y: ball.y });
-      drawBall(ball);
+      drawBall(ball, ctx);
       drawBallTrail(ball);
       checkSquareCollision(ball);
       checkBoundaryCollision(ball);
