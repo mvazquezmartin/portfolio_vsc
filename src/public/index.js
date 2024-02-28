@@ -54,5 +54,4 @@ renderExplorer();
 //   // Coloca aquí tu código de depuración específico
 // }
 
-// // Agregar un oyente de eventos de clic al documento
 // document.addEventListener('click', handleClick);
