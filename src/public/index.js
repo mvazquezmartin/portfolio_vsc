@@ -53,5 +53,5 @@ renderExplorer();
 //   console.log('Clic realizado en:', event.target);
 //   // Coloca aquí tu código de depuración específico
 // }
-
+//
 // document.addEventListener('click', handleClick);
