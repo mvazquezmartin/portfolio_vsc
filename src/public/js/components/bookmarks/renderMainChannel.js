@@ -115,8 +115,7 @@ const renderMainChannel = (channel) => {
   channelCardContainer.appendChild(channelBannerContainer);
   channelCardContainer.appendChild(channelImgTitleContainer);
   channelImgTitleContainer.appendChild(thumbnailsContainer);
-  thumbnailsContainer.appendChild(channelThumbnails);
-  // channelInfoContainer.appendChild(thumbnailsContainer);
+  thumbnailsContainer.appendChild(channelThumbnails);  
   channelImgTitleContainer.appendChild(channelTitlteLinkContainer);
   channelTitlteLinkContainer.appendChild(channelTitle);
   channelCustomUrl.appendChild(channelLink);
