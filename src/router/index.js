@@ -11,7 +11,7 @@ const router = (app) => {
   app.use("/cruds", crudController);
   app.use("/getinfochannels", youtubeController);
   app.use("/messages", contactController);
-  app.use("/github", githubController);
+  app.use("/github", githubController);  
 };
 
 export default router;
