@@ -16,8 +16,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/public'));
 
-// router(app);
-app.use(router)
+router(app);
+// app.use(router)
 
 const httpServer = app.listen(PORT, () => {
   console.log('Server started on PORT:'.green, PORT.cyan);
