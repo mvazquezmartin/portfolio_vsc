@@ -1,20 +1,22 @@
-const { Router } = require("express");
-const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
-const { default: axios } = require("axios");
-const CacheService = require("../service/cache.service");
-const path = require("path");
+import { Router } from "express";
+import HTTP_STATUS_CODES from "../constants/htpp-status-code.constants.js";
+// import { default: axios } from ("axios");
+import axios from "axios";
+import CacheService from "../service/cache.service.js";
+import path from "path";
+import __dirname from "../utils/dirname.util.js";
 
 const chachePathStarred = path.join(
   __dirname,
-  "../dao/cache/file/cacheGithubStarred.json"
+  "/dao/cache/file/cacheGithubStarred.json"
 );
 const cachePathRepos = path.join(
   __dirname,
-  "../dao/cache/file/cacheGithubRepos.json"
+  "/dao/cache/file/cacheGithubRepos.json"
 );
 const cachePathProfile = path.join(
   __dirname,
-  "../dao/cache/file/cacheGithubProfile.json"
+  "/dao/cache/file/cacheGithubProfile.json"
 );
 const cacheServiceStarred = new CacheService(chachePathStarred);
 const cacheServiceRepo = new CacheService(cachePathRepos);
@@ -153,4 +155,4 @@ router.get("/user", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

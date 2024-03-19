@@ -1,8 +1,9 @@
-const multer = require("multer");
-const path = require("path");
-const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
+import multer from 'multer';
+import path from 'path';
+import HTTP_STATUS_CODES from '../constants/htpp-status-code.constants.js';
+import __dirname from '../utils/dirname.util.js';
 
-const destination = path.join(__dirname, "../public/uploads");
+const destination = path.join(__dirname, '/public/uploads');
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -18,10 +19,10 @@ const storage = multer.diskStorage({
 const upload = multer({
   storage,
   fileFilter: (req, file, cb) => {
-    if (file.mimetype.startsWith("image/")) {
+    if (file.mimetype.startsWith('image/')) {
       cb(null, true);
     } else {
-      cb(new Error("Only images are allowed"), false);
+      cb(new Error('Only images are allowed'), false);
     }
   },
 });
@@ -29,17 +30,17 @@ const upload = multer({
 upload.any = (err, req, res, next) => {
   if (err instanceof multer.MulterError) {
     return res.status(HTTP_STATUS_CODES.BAD_REQUEST).json({
-      status: "error",
-      message: "Error uploading file",
+      status: 'error',
+      message: 'Error uploading file',
       details: err.message,
     });
   } else if (err) {
     return res.status(HTTP_STATUS_CODES.BAD_REQUEST).json({
-      status: "error",
+      status: 'error',
       message: err.message,
     });
   }
   next();
 };
 
-module.exports = upload;
+export default upload;

@@ -1,4 +1,4 @@
-const fs = require("fs");
+import fs from"fs";
 
 class CacheManager {
   constructor(path) {
@@ -104,7 +104,7 @@ class CacheManager {
   }
 }
 
-module.exports = CacheManager;
+export default CacheManager;
 
 // const fs = require("fs");
 

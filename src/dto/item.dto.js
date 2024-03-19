@@ -9,4 +9,4 @@ class ItemDTO {
   }
 }
 
-module.exports = ItemDTO;
+export default ItemDTO;

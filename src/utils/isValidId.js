@@ -1,4 +1,4 @@
-const { isValidObjectId } = require("mongoose");
+import { isValidObjectId } from 'mongoose';
 
 const validId = (pid) => {
   return isValidObjectId(pid);
@@ -9,4 +9,4 @@ const validIdFs = (pid) => {
   return check.test(pid);
 };
 
-module.exports = { validId, validIdFs };
+export { validId, validIdFs };

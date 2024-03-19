@@ -1,5 +1,5 @@
-const CacheManager = require("../dao/cache/cache.manager.fs");
-const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
+import CacheManager from "../dao/cache/cache.manager.fs.js";
+import HTTP_STATUS_CODES from "../constants/htpp-status-code.constants.js";
 
 class CacheService {
   constructor(cacheFilePath) {
@@ -55,4 +55,4 @@ class CacheService {
 
 // const cacheService = new CacheService(cachePath);
 
-module.exports = CacheService;
+export default CacheService;

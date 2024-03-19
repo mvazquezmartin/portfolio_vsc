@@ -32,4 +32,4 @@ class CRUDStrategy {
   }
 }
 
-module.exports = CRUDStrategy;
+export default CRUDStrategy;

@@ -1,16 +1,19 @@
-const { Router } = require("express");
-const path = require("path");
-const { default: axios } = require("axios");
-const { API_KEY } = require("../config/app.config");
-const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
-const CacheService = require("../service/cache.service");
+import { Router } from 'express';
+import path from 'path';
+// const { default: axios } = require("axios");
+import axios from 'axios';
+import appConfig from '../config/app.config.js';
+import HTTP_STATUS_CODES from '../constants/htpp-status-code.constants.js';
+import CacheService from '../service/cache.service.js';
+import __dirname from '../utils/dirname.util.js';
 
-const cachePath = path.join(__dirname, "../dao/cache/file/cacheYoutube.json");
+const { API_KEY } = appConfig;
+const cachePath = path.join(__dirname, '/dao/cache/file/cacheYoutube.json');
 const cacheService = new CacheService(cachePath);
 
 const router = Router();
 
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const { channelId } = req.query;
 
@@ -56,7 +59,7 @@ router.get("/", async (req, res) => {
     //await cacheService.delete(channelId);
     await cacheService.create(channelId, channelInfo);
 
-    console.log("HELLO WORLD!:", channelData.brandingSettings.channel.title);
+    console.log('HELLO WORLD!:', channelData.brandingSettings.channel.title);
 
     res.status(dataResponse.status).json({
       status: dataResponse.statusText,
@@ -65,14 +68,14 @@ router.get("/", async (req, res) => {
   } catch (error) {
     if (error.response && error.response.data && error.response.data.error) {
       const errorMessage = error.response.data.error.message;
-      console.error("Error from YouTube API:", errorMessage);
+      console.error('Error from YouTube API:', errorMessage);
     } else {
-      console.error("Unknown error:", error.message);
+      console.error('Unknown error:', error.message);
     }
     res
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
-      .json({ status: "error", message: "Something went wrong" });
+      .json({ status: 'error', message: 'Something went wrong' });
   }
 });
 
-module.exports = router;
+export default router;

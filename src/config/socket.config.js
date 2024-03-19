@@ -1,5 +1,5 @@
-const { Server } = require("socket.io");
-const colors = require("colors");
+import { Server } from 'socket.io';
+import 'colors';
 
 const messages = [];
 const users = [];
@@ -7,42 +7,36 @@ const users = [];
 const setSocket = (app) => {
   const io = new Server(app);
 
-  io.on("connection", (socket) => {
-    console.log(
-      colors.green("Client connected with ID:"),
-      colors.cyan(socket.id)
-    );
+  io.on('connection', (socket) => {
+    console.log('Client connected with ID:'.green, socket.id.cyan);
 
-    socket.on("newUser", (user) => {
+    socket.on('newUser', (user) => {
       socket.user = user;
       users.push(user);
-      io.emit("userConnected", user, users);
-      socket.broadcast.emit("updateUserList", users);
-      socket.emit("messageLogs", messages);
+      io.emit('userConnected', user, users);
+      socket.broadcast.emit('updateUserList', users);
+      socket.emit('messageLogs', messages);
     });
 
-    socket.on("disconnect", () => {
+    socket.on('disconnect', () => {
       const userIndex = users.indexOf(socket.user);
-      console.log(
-        colors.yellow("Client disconnected with ID:"),
-        colors.red(socket.id)
-      );
+      console.log('Client disconnected with ID:'.yellow, socket.id.red);
       if (userIndex !== -1) {
         const disconnectUser = users.splice(userIndex, 1)[0];
-        io.emit("userDisconnected", disconnectUser, users);
+        io.emit('userDisconnected', disconnectUser, users);
       }
       if (users.length === 0) {
         messages.splice(0, messages.length);
       }
     });
 
-    socket.on("message", (data) => {
+    socket.on('message', (data) => {
       messages.push(data);
-      io.emit("messageLogs", messages);
+      io.emit('messageLogs', messages);
     });
 
-    socket.emit("hello", "world");
+    socket.emit('hello', 'world');
   });
 };
 
-module.exports = { setSocket, users, messages };
+export { setSocket, users, messages };

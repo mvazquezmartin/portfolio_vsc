@@ -1,4 +1,4 @@
-const Messages = require("./model/message.model");
+import Messages from"./model/message.model.js";
 
 class MessageManager {
   async create(message) {
@@ -28,4 +28,4 @@ class MessageManager {
   }
 }
 
-module.exports = MessageManager;
+export default MessageManager;

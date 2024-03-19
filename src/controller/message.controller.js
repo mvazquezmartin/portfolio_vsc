@@ -1,8 +1,9 @@
-const { Router } = require("express");
-const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
-const MessageService = require("../service/message.service");
-const authenticateAPIKEY = require("../middlewares/authenticateAPI.middleware");
-const path = require("path");
+import { Router } from "express";
+import HTTP_STATUS_CODES from "../constants/htpp-status-code.constants.js";
+import MessageService from "../service/message.service.js";
+import authenticateAPIKEY from "../middlewares/authenticateAPI.middleware.js";
+import path from "path";
+import __dirname from "../utils/dirname.util.js";
 
 const router = Router();
 const viewUrl = path.join(__dirname, "../public/pages/messages.html");
@@ -56,4 +57,4 @@ router.post("/", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router

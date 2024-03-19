@@ -1,9 +1,10 @@
-const path = require("path");
-const CRUDStrategy = require("./crud.stratagy");
-const FileSystemStrategy = require("./fileSystem/items.manager.fs");
-const MongoDBStrategy = require("./mongodb/item.manager.mongo");
+import path from 'path';
+import CRUDStrategy from './crud.stratagy.js';
+import FileSystemStrategy from './fileSystem/items.manager.fs.js';
+import MongoDBStrategy from './mongodb/item.manager.mongo.js';
+import __dirname from '../utils/dirname.util.js';
 
-const fileItems = path.join(__dirname, "./fileSystem/file/item.storage.json");
+const fileItems = path.join(__dirname, './fileSystem/file/item.storage.json');
 
 class CRUDContext {
   constructor() {
@@ -13,13 +14,13 @@ class CRUDContext {
   strategyChange(strategyType) {
     if (!this.strategies[strategyType]) {
       switch (strategyType) {
-        case "mongodb":
+        case 'mongodb':
           this.strategies[strategyType] = new CRUDStrategy(
             new MongoDBStrategy()
           );
           break;
 
-        case "filesystem":
+        case 'filesystem':
           this.strategies[strategyType] = new CRUDStrategy(
             new FileSystemStrategy(fileItems)
           );
@@ -32,7 +33,7 @@ class CRUDContext {
         //   break;
 
         default:
-          throw new Error("Strategy not supported");
+          throw new Error('Strategy not supported');
       }
     }
     return this.strategies[strategyType];
@@ -41,4 +42,4 @@ class CRUDContext {
 
 const PersistenceContext = new CRUDContext();
 
-module.exports = PersistenceContext;
+export default PersistenceContext;

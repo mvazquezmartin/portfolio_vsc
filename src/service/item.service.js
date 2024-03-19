@@ -1,6 +1,6 @@
-const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
-const CRUDContext = require("../dao/crud.context");
-const { validId, validIdFs } = require("../utils/isValidId");
+import HTTP_STATUS_CODES from "../constants/htpp-status-code.constants.js";
+import CRUDContext from "../dao/crud.context.js";
+import { validId, validIdFs } from "../utils/isValidId.js";
 
 class ItemService {
   constructor() {
@@ -197,7 +197,7 @@ class ItemService {
   }
 }
 
-module.exports = new ItemService();
+export default new ItemService();
 
 // failed attempt with factory pattern to change persistence at runtime
 //

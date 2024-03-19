@@ -1,7 +1,9 @@
-require("dotenv").config();
+import * as dotenv from 'dotenv';
 
-module.exports = {
+dotenv.config();
+
+export default {
   PORT: process.env.PORT,
   API_KEY: process.env.API_KEY,
-  MY_API_KEY: process.env.MY_API_KEY
+  MY_API_KEY: process.env.MY_API_KEY,
 };

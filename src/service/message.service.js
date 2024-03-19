@@ -1,5 +1,5 @@
-const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
-const MessageManager = require("../dao/contact/message.manager");
+import HTTP_STATUS_CODES from '../constants/htpp-status-code.constants.js';
+import MessageManager from '../dao/contact/message.manager.js';
 
 class MessageService {
   constructor() {
@@ -12,15 +12,15 @@ class MessageService {
       if (data.length === 0) {
         return {
           code: HTTP_STATUS_CODES.NOT_FOUND,
-          status: "error",
-          message: "There is not messages",
+          status: 'error',
+          message: 'There is not messages',
           payload: [],
         };
       }
       return {
         code: HTTP_STATUS_CODES.OK,
-        status: "success",
-        message: "All messages found",
+        status: 'success',
+        message: 'All messages found',
         payload: data,
       };
     } catch (error) {
@@ -33,8 +33,8 @@ class MessageService {
       const data = await this.messageManager.create(message);
       return {
         code: HTTP_STATUS_CODES.CREATED,
-        status: "success",
-        message: "Message created successfully",
+        status: 'success',
+        message: 'Message created successfully',
         payload: data,
       };
     } catch (error) {
@@ -47,8 +47,8 @@ class MessageService {
       await this.messageManager.deleteAll();
       return {
         code: HTTP_STATUS_CODES.OK,
-        status: "success",
-        messages: "All messages ware deleted",
+        status: 'success',
+        messages: 'All messages ware deleted',
         payload: [],
       };
     } catch (error) {
@@ -57,4 +57,4 @@ class MessageService {
   }
 }
 
-module.exports = new MessageService();
+export default new MessageService();

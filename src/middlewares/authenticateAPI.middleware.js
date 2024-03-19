@@ -1,7 +1,7 @@
-const { MY_API_KEY } = require("../config/app.config");
-const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
+import appConfig from "../config/app.config.js";
+import HTTP_STATUS_CODES from "../constants/htpp-status-code.constants.js";
 
-require("dotenv").config();
+const { MY_API_KEY } = appConfig
 
 const authenticateAPIKEY = (req, res, next) => {
   const apiKey = req.headers["api-key"];
@@ -16,4 +16,4 @@ const authenticateAPIKEY = (req, res, next) => {
   next();
 };
 
-module.exports = authenticateAPIKEY;
+export default authenticateAPIKEY;

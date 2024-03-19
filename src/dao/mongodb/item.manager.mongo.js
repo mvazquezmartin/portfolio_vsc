@@ -1,16 +1,17 @@
-const fs = require("fs");
-const path = require("path");
-const Items = require("./model/item.model");
-const ItemDTO = require("../../dto/item.dto");
+import fs from 'fs';
+import path from 'path';
+import Items from './model/item.model.js';
+import ItemDTO from '../../dto/item.dto.js';
+import __dirname from '../../utils/dirname.util.js';
 
-const restartFile = path.join(__dirname, "../restart/restartStorage.json");
+const restartFile = path.join(__dirname, '/restart/restartStorage.json');
 
 class ItemManager {
   async getAll() {
     try {
       const data = await Items.find();
       if (data.length === 0) return null;
-      
+
       return data;
     } catch (error) {
       throw error;
@@ -65,7 +66,7 @@ class ItemManager {
     try {
       await Items.deleteMany();
 
-      const items = await fs.promises.readFile(restartFile, "utf-8");
+      const items = await fs.promises.readFile(restartFile, 'utf-8');
       const itemsArray = JSON.parse(items);
 
       const transformedItems = itemsArray.map((item) => new ItemDTO(item));
@@ -77,4 +78,4 @@ class ItemManager {
   }
 }
 
-module.exports = ItemManager;
+export default ItemManager;

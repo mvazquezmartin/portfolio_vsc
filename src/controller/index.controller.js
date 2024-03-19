@@ -1,5 +1,5 @@
-const { Router } = require("express");
-const path = require("path");
+import { Router } from "express";
+import path from "path";
 
 const router = Router();
 
@@ -8,4 +8,4 @@ router.get("/", (req, res) => {
   res.sendFile(indexRender);
 });
 
-module.exports = router;
+export default router;

@@ -1,13 +1,13 @@
-const { Router } = require("express");
-const { messages, users } = require("../config/socket.config");
-const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
+import { Router } from 'express';
+import { messages, users } from '../config/socket.config.js';
+import HTTP_STATUS_CODES from '../constants/htpp-status-code.constants.js';
 
 const router = Router();
 
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
   try {
     res.json({
-      status: "success",
+      status: 'success',
       messages: messages,
       users: users,
     });
@@ -15,8 +15,8 @@ router.get("/", (req, res) => {
     console.log(error);
     res
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
-      .json({ status: "error", message: "Something gone wrong" });
+      .json({ status: 'error', message: 'Something gone wrong' });
   }
 });
 
-module.exports = router;
+export default router;

@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
-const itemsCollection = "items";
+const itemsCollection = 'items';
 
 const itemsSchema = new mongoose.Schema({
   title: String,
@@ -14,4 +14,4 @@ const itemsSchema = new mongoose.Schema({
 
 const Items = mongoose.model(itemsCollection, itemsSchema);
 
-module.exports = Items;
+export default Items;

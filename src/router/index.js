@@ -1,9 +1,9 @@
-const chatController = require("../controller/chat.controller");
-const crudController = require("../controller/crud.controller");
-const youtubeController = require("../controller/youtube.controller");
-const contactController = require("../controller/message.controller");
-const githubController = require("../controller/github.controller");
-const indexController = require("../controller/index.controller");
+import chatController from "../controller/chat.controller.js";
+import crudController from "../controller/crud.controller.js";
+import youtubeController from "../controller/youtube.controller.js";
+import contactController from "../controller/message.controller.js";
+import githubController from "../controller/github.controller.js";
+import indexController from "../controller/index.controller.js";
 
 const router = (app) => {
   app.use("/", indexController);
@@ -14,4 +14,4 @@ const router = (app) => {
   app.use("/github", githubController);
 };
 
-module.exports = router;
+export default router;

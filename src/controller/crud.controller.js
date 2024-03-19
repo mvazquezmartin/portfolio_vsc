@@ -1,8 +1,8 @@
-const { Router } = require("express");
-const HTTP_STATUS_CODES = require("../constants/htpp-status-code.constants");
-const ItemService = require("../service/item.service");
-const ItemDTO = require("../dto/item.dto");
-const upload = require("../middlewares/upload.middleware");
+import { Router } from "express";
+import HTTP_STATUS_CODES from "../constants/htpp-status-code.constants.js";
+import ItemService from "../service/item.service.js";
+import ItemDTO from "../dto/item.dto.js";
+import upload from "../middlewares/upload.middleware.js";
 
 const router = Router();
 
@@ -176,4 +176,4 @@ router.delete("/", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
