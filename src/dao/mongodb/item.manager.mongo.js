@@ -4,7 +4,7 @@ import Items from './model/item.model.js';
 import ItemDTO from '../../dto/item.dto.js';
 import __dirname from '../../utils/dirname.util.js';
 
-const restartFile = path.join(__dirname, '/restart/restartStorage.json');
+const restartFile = path.join(__dirname, '/dao/restart/restartStorage.json');
 
 class ItemManager {
   async getAll() {

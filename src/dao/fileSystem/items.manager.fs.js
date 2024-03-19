@@ -3,7 +3,7 @@ import path from "path";
 import { v4 as uuidv4 } from "uuid";
 import __dirname from "../../utils/dirname.util.js";
 
-const restartFile = path.join(__dirname, "../restart/restartStorage.json");
+const restartFile = path.join(__dirname, "dao/restart/restartStorage.json");
 
 class ItemManager {
   constructor(path) {
