@@ -1,1 +1,1 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/src/router" }] }
+{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/src/public/index-mail.js" }] }
