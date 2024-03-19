@@ -13,7 +13,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
-router(app);
+// router(app);
+app.use(router)
 
 const httpServer = app.listen(PORT, () => {
   console.log('Server started on PORT:'.green, PORT.cyan);
