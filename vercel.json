@@ -2,6 +2,26 @@
   "version": 2,
   "routes": [
     {
+      "src": "/chatlogs/(.*)",
+      "dest": "src/index.js"
+    },
+    {
+      "src": "/cruds/(.*)",
+      "dest": "src/index.js"
+    },
+    {
+      "src": "/getinfochannels/(.*)",
+      "dest": "src/index.js"
+    },
+    {
+      "src": "/messages/(.*)",
+      "dest": "src/index.js"
+    },
+    {
+      "src": "/github/(.*)",
+      "dest": "src/index.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "src/index.js"
     }
