@@ -8,7 +8,7 @@ import CacheService from '../service/cache.service.js';
 import __dirname from '../utils/dirname.util.js';
 
 const { API_KEY } = appConfig;
-const cachePath = path.join(__dirname, '/dao/cache/file/cacheYoutube.json');
+const cachePath = path.resolve(__dirname, 'dao', 'cache', 'file', 'cacheYoutube.json');
 const cacheService = new CacheService(cachePath);
 
 const router = Router();

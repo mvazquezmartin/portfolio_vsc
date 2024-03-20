@@ -1,11 +1,11 @@
 import 'colors';
 import express from 'express';
+import bodyParser from 'body-parser';
 import appConfig from './config/app.config.js';
 import { setSocket } from './config/socket.config.js';
 import router from './router/index.js';
 import mongoConnect from '../database/index.js';
 import __dirname from './utils/dirname.util.js';
-import bodyParser from 'body-parser';
 
 const { PORT } = appConfig
 const app = express();
