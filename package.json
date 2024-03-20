@@ -2,7 +2,7 @@
   "name": "vscode_portfolio",
   "version": "1.0.0",
   "description": "Portoflio con tematica VSCode, theme Dracula. Desarrolado en Html, Sass y JavaScript.",
-  "main": "./src/index.js",
+  "main": "/src/index.js",
   "type": "module",
   "engines": {
     "node": "18.x"
