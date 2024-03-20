@@ -2,9 +2,8 @@ import path from 'path';
 import CRUDStrategy from './crud.stratagy.js';
 import FileSystemStrategy from './fileSystem/items.manager.fs.js';
 import MongoDBStrategy from './mongodb/item.manager.mongo.js';
-import __dirname from '../utils/dirname.util.js';
 
-const fileItems = path.join(__dirname, '/dao/fileSystem/file/item.storage.json');
+const fileItems = path.join(process.cwd(), 'src/dao/fileSystem/file/item.storage.json');
 
 class CRUDContext {
   constructor() {
