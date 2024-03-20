@@ -5,7 +5,6 @@ import appConfig from './config/app.config.js';
 import { setSocket } from './config/socket.config.js';
 import router from './router/index.js';
 import mongoConnect from '../database/index.js';
-import __dirname from './utils/dirname.util.js';
 
 const { PORT } = appConfig
 const app = express();
@@ -14,7 +13,7 @@ const app = express();
 // app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(process.cwd() + '/src/public'));
 
 router(app);
 // app.use(router)

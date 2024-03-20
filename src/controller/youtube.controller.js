@@ -1,12 +1,10 @@
 import { Router } from 'express';
 import path from 'path';
-// const { default: axios } = require("axios");
 import axios from 'axios';
 import appConfig from '../config/app.config.js';
 import HTTP_STATUS_CODES from '../constants/htpp-status-code.constants.js';
 import CacheService from '../service/cache.service.js';
-import __dirname from '../utils/dirname.util.js';
-import process from 'process';
+// import __dirname from '../utils/dirname.util.js';
 
 const { API_KEY } = appConfig;
 const cachePath = path.join(process.cwd(), 'src/dao/cache/file/cacheYoutube.json');

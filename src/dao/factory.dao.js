@@ -1,6 +1,6 @@
 import path from 'path';
 
-const fsStorage = path.join(__dirname, '/fileSystem/file/item.storage.json');
+const fsStorage = path.join(process.cwd(), '/fileSystem/file/item.storage.json');
 
 const persistence = (persistenceOption) => {
   switch (persistenceOption) {

@@ -4,19 +4,19 @@ import HTTP_STATUS_CODES from "../constants/htpp-status-code.constants.js";
 import axios from "axios";
 import CacheService from "../service/cache.service.js";
 import path from "path";
-import __dirname from "../utils/dirname.util.js";
+
 
 const chachePathStarred = path.join(
-  __dirname,
-  "/dao/cache/file/cacheGithubStarred.json"
+  process.cwd(),
+  "src/dao/cache/file/cacheGithubStarred.json"
 );
 const cachePathRepos = path.join(
-  __dirname,
-  "/dao/cache/file/cacheGithubRepos.json"
+  process.cwd(),
+  "src/dao/cache/file/cacheGithubRepos.json"
 );
 const cachePathProfile = path.join(
-  __dirname,
-  "/dao/cache/file/cacheGithubProfile.json"
+  process.cwd(),
+  "src/dao/cache/file/cacheGithubProfile.json"
 );
 const cacheServiceStarred = new CacheService(chachePathStarred);
 const cacheServiceRepo = new CacheService(cachePathRepos);

@@ -3,10 +3,9 @@ import HTTP_STATUS_CODES from "../constants/htpp-status-code.constants.js";
 import MessageService from "../service/message.service.js";
 import authenticateAPIKEY from "../middlewares/authenticateAPI.middleware.js";
 import path from "path";
-import __dirname from "../utils/dirname.util.js";
 
 const router = Router();
-const viewUrl = path.join(__dirname, "../public/pages/messages.html");
+const viewUrl = path.join(process.cwd(), "src/public/pages/messages.html");
 
 router.get("/view", async (req, res) => {
   try {

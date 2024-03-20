@@ -1,9 +1,9 @@
 import multer from 'multer';
 import path from 'path';
 import HTTP_STATUS_CODES from '../constants/htpp-status-code.constants.js';
-import __dirname from '../utils/dirname.util.js';
 
-const destination = path.join(__dirname, '/public/uploads');
+
+const destination = path.join(process.cwd(), 'src/public/uploads');
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
