@@ -10,7 +10,7 @@
     { "handle": "filesystem" },
     {
       "src": "/css/(.*)",
-      "dest": "/src/public/css/$1"
+      "dest": "/public/css/$1"
     },
     {
       "src": "/js/(.*)",
