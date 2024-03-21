@@ -4,21 +4,21 @@
     {
       "src": "src/index.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "public/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
+    { "handle": "filesystem" },
     {
-      "src": "/((?!.*\\.\\w+$).*)",
-      "dest": "src/index.js"
+      "src": "/css/(.*)",
+      "dest": "/src/public/css/$1"
     },
     {
-      "src": "/(.+\\.[a-z]+)$",
-      "dest": "src/public/$1"
+      "src": "/js/(.*)",
+      "dest": "/src/public/js/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/src/index.js"
     }
   ]
-  
 }
