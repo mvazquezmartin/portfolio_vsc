@@ -13,7 +13,7 @@ const app = express();
 // app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
-app.use(express.static(process.cwd() + '/public/'));
+app.use(express.static(process.cwd() + '/src/public/'));
 
 router(app);
 // app.use(router)
