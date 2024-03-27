@@ -1,12 +1,13 @@
 import { generateParticles } from './particles.js';
-import { colorPalette, particles } from './pongWars.js';
+import { colorPalette } from './pongWars.js';
 
 function checkSquareCollision(
   ball,
   SQUARE_SIZE,
   numSquaresX,
   numSquaresY,
-  squares
+  squares,
+  particles
 ) {
   // Check multiple points around the ball's circumference
   for (let angle = 0; angle < Math.PI * 2; angle += Math.PI / 4) {

@@ -6,7 +6,6 @@ export const colorPalette = {
   MysticMint: '#D9E8E3', //'#E7F2F6',
   NocturnalExpedition: '#151D28',
 };
-export let particles = [];
 
 export function hexToRgb(hex) {
   // Eliminar el símbolo '#', si está presente
@@ -62,6 +61,7 @@ export const pongWarsRender = () => {
 
   const squares = [];
   let ballTrail = [];
+  let particles = []  
 
   // Populate the fields, one half day, one half night
   for (let i = 0; i < numSquaresX; i++) {
@@ -117,7 +117,7 @@ export const pongWarsRender = () => {
       }
     }
   }
-
+  
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawSquares();
@@ -136,7 +136,7 @@ export const pongWarsRender = () => {
       ballTrail.push({ x: ball.x, y: ball.y });
       drawBall(ball, ctx, SQUARE_SIZE);
       drawBallTrail(ball, ballTrail, SQUARE_SIZE, ctx);
-      checkSquareCollision(ball, SQUARE_SIZE, numSquaresX, numSquaresY, squares)      
+      checkSquareCollision(ball, SQUARE_SIZE, numSquaresX, numSquaresY, squares, particles)      
       checkBoundaryCollision(ball, canvas, SQUARE_SIZE)
       ball.x += ball.dx;
       ball.y += ball.dy;      
