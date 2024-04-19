@@ -16,6 +16,7 @@ import { readmeMain } from '../readme/mainReadme.js';
 import { renderMainCrud } from '../crud/renderMainCrud.js';
 import { readmeRenderCRUD } from '../crud/readmeCRUD.js';
 import { pongWarsRender } from '../pongWars/pongWars.js';
+import { guessTheColorRender } from '../guessTheColor/guessTheColorRender.js';
 
 const assetsFolder = {
   folderName: 'Assets',
@@ -110,6 +111,23 @@ const pongWarsFolder = {
   subfolders: [],
 };
 
+const guessTheColor = {
+  folderName: 'GuessTheColor',
+  files: [
+    {
+      name: 'guessTheColor.js',
+      icon: iconPath.JAVASCRIPT,
+      function: () =>
+        tabManager.create(
+          'guessTheColor.js',
+          guessTheColorRender,
+          iconPath.GUESSTHECOLOR
+        ),
+    },
+  ],
+  subfolders: [],
+};
+
 const magic8Ball = {
   folderName: 'Magic8Ball',
   files: [
@@ -183,7 +201,7 @@ const gitIgnore = {
     tabManager.create('.gitignore', renderGitignore, iconPath.GIT),
 };
 
-const folder1 = {
+const crud = {
   folderName: 'CRUD',
   files: [
     {
@@ -239,11 +257,12 @@ export {
   assetsFolder,
   playGroundFolder,
   pongWarsFolder,
-  folder1,
+  crud,
   magic8Ball,
   chat,
   readme,
   packageJson,
   gitIgnore,
   dotenv,
+  guessTheColor,
 };

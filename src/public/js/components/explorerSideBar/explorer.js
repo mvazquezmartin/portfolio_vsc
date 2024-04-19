@@ -2,13 +2,14 @@ import {
   assetsFolder,
   chat,
   dotenv,
-  folder1,
+  crud,
   gitIgnore,
   magic8Ball,
   packageJson,
   playGroundFolder,
   pongWarsFolder,
   readme,
+  guessTheColor,
 } from './folderFileObj.js';
 import { folderFileSideBar } from './folderFileRender.js';
 
@@ -35,11 +36,14 @@ const renderExplorer = () => {
   const pongWars = folderFileSideBar(pongWarsFolder);
   viewSideBar.appendChild(pongWars);
 
+  const guessTheColorGame = folderFileSideBar(guessTheColor);
+  viewSideBar.appendChild(guessTheColorGame);
+
   const chatSocket = folderFileSideBar(chat);
   viewSideBar.appendChild(chatSocket);
 
-  const carpetaPrueba = folderFileSideBar(folder1);
-  viewSideBar.appendChild(carpetaPrueba);
+  const crudFolder = folderFileSideBar(crud);
+  viewSideBar.appendChild(crudFolder);
 
   const env = folderFileSideBar(dotenv);
   viewSideBar.appendChild(env);

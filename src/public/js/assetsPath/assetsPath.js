@@ -31,6 +31,7 @@ const iconPath = {
   M8B: './assets/pool-8-ball-svgrepo-com.svg',
   CHAT: './assets/chat-svgrepo-com.svg',
   PLAYGROUND: './assets/pencil-svgrepo-com.svg',
+  GUESSTHECOLOR: './assets/guesscolors-svgrepo-com.svg',
   OPEN_FOLDER: './assets/folder-open.svg',
   CLOSE_FOLDER: './assets/folder-close.svg',
   CLOSE_X: './assets/close-sm-svgrepo-com.svg',
