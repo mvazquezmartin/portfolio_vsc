@@ -1,42 +1,45 @@
-import { iconPath } from "../../assetsPath/assetsPath.js";
-import { tabManager } from "../tabs/TabsManager.js";
-import { renderMainGithub } from "./renderMainGithub.js";
-import { renderStarredCard } from "./renderStarredCard.js";
+import { iconPath } from '../../assetsPath/assetsPath.js';
+import { tabManager } from '../tabs/TabsManager.js';
+import { renderMainGithub } from './renderMainGithub.js';
+import { renderStarredCard } from './renderStarredCard.js';
 
 const cacheData = {};
 
 const renderGithub = async () => {
-  const titleSideBar = document.getElementById("titleSideBar");
-  titleSideBar.textContent = "GITHUB";
+  const titleSideBar = document.getElementById('titleSideBar');
+  titleSideBar.textContent = 'GITHUB';
 
-  const fileOpen = document.getElementById("fileOpen");
-  fileOpen.textContent = "STARRED ☆";
+  const fileOpen = document.getElementById('fileOpen');
+  fileOpen.textContent = 'STARRED ☆';
 
-  const viewSideBar = document.getElementById("viewSideBar");
-  viewSideBar.innerHTML = "";
+  const viewSideBar = document.getElementById('viewSideBar');
+  viewSideBar.innerHTML = '';
 
-  const repositoriesContainer = document.createElement("div");
-  repositoriesContainer.classList.add("repositoriesContainer");
+  const repositoriesContainer = document.createElement('div');
+  repositoriesContainer.classList.add('repositoriesContainer');
 
   try {
     if (Object.keys(cacheData).length === 0) {
-      const response = await fetch("/github/starred");
+      const response = await fetch('/github/starred');
 
       if (!response.ok) {
-        throw new Error("No se pudo obtener la respuesta de la API");
+        throw new Error('No se pudo obtener la respuesta de la API');
       }
 
       const data = await response.json();
-      cacheData["github/starred"] = data;
+      cacheData['github/starred'] = data;
     }
 
-    const data = cacheData["github/starred"];
-    data.payload.forEach((repo) => {
+    const data = cacheData['github/starred'];
+    const dataToArray = data.payload;
+    const dataLastTen = dataToArray.reverse().slice(0, 10);
+
+    dataLastTen.forEach((repo) => {
       renderStarredCard(repo, repositoriesContainer);
     });
 
     viewSideBar.appendChild(repositoriesContainer);
-    tabManager.create("Github", renderMainGithub, iconPath.GITHUB);
+    tabManager.create('Github', renderMainGithub, iconPath.GITHUB);
   } catch (error) {
     console.error(error);
   }
