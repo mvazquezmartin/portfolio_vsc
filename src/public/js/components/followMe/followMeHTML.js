@@ -37,6 +37,7 @@ export const createHtmlFollowMe = () => {
   const $title = document.createElement('h1');
   $title.textContent = 'Follow Me!';
   const $level = document.createElement('span');
+  $level.textContent = 'Level 1';
   $level.classList.add('level');
   $titleContainer.appendChild($title);
   $titleContainer.appendChild($level);

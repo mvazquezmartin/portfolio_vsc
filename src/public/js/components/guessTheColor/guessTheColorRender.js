@@ -5,8 +5,12 @@ const guessTheColorRender = () => {
   const path = document.getElementById('rootPath');
   path.textContent = 'Portfolio > GuessTheColor > guessTheColor.js';
 
+  const $container = document.createElement('section');
+  $container.classList.add('container-games');
+
   const renderHtml = createHtmlGuessTheColor();
-  mainView.appendChild(renderHtml);
+  $container.appendChild(renderHtml);
+  mainView.appendChild($container);
 
   const $red = document.querySelector('.color-r');
   const $green = document.querySelector('.color-g');

@@ -4,8 +4,12 @@ const followMeRender = () => {
   const path = document.getElementById('rootPath');
   path.textContent = 'Portfolio > FollowMe > followMe.js';
 
+  const $container = document.createElement('section');
+  $container.classList.add('container-games');
+
   const renderHtml = createHtmlFollowMe();
-  mainView.appendChild(renderHtml);
+  $container.appendChild(renderHtml);
+  mainView.appendChild($container);
 
   const $squares = document.querySelectorAll('.square');
   const $btnAction = document.querySelector('#btn-action');

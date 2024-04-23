@@ -28,6 +28,12 @@ const renderExplorer = () => {
   const assets = folderFileSideBar(assetsFolder);
   viewSideBar.appendChild(assets);
 
+  const followMeGame = folderFileSideBar(followMe);
+  viewSideBar.appendChild(followMeGame);
+
+  const guessTheColorGame = folderFileSideBar(guessTheColor);
+  viewSideBar.appendChild(guessTheColorGame);
+
   const magic8ball = folderFileSideBar(magic8Ball);
   viewSideBar.appendChild(magic8ball);
 
@@ -36,12 +42,6 @@ const renderExplorer = () => {
 
   const pongWars = folderFileSideBar(pongWarsFolder);
   viewSideBar.appendChild(pongWars);
-
-  const guessTheColorGame = folderFileSideBar(guessTheColor);
-  viewSideBar.appendChild(guessTheColorGame);
-
-  const followMeGame = folderFileSideBar(followMe);
-  viewSideBar.appendChild(followMeGame);
 
   const chatSocket = folderFileSideBar(chat);
   viewSideBar.appendChild(chatSocket);
