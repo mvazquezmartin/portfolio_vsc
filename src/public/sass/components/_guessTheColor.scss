@@ -1,4 +1,10 @@
 @import '../abstracts/fonts';
+:root {
+  --red: 0;
+  --green: 0;
+  --blue: 0;
+  --guess-color: 0;
+}
 
 .container-gtc {
   background-color: #444;
