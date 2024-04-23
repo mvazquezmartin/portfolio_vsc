@@ -106,6 +106,8 @@ const imgPath = {
   CHAT: './assets/chatbubble-svgrepo-com.svg',
   STRATEGY: './assets/API_CRUD.drawio.png',
   CACHE: './assets/CACHE.drawio.png',
+  FOLLOWME: './assets/Screenshot_followMe.png',
+  GUESSTHECOLOR: './assets/Screenshot_guessthecolor.png'
 };
 
 const certificadoPath = {

@@ -18,6 +18,8 @@ import { readmeRenderCRUD } from '../crud/readmeCRUD.js';
 import { pongWarsRender } from '../pongWars/pongWars.js';
 import { guessTheColorRender } from '../guessTheColor/guessTheColorRender.js';
 import { followMeRender } from '../followMe/followMeRender.js';
+import { readmeRenderFM } from '../followMe/readmeRender.js';
+import { readmeRenderGTC } from '../guessTheColor/readme.js';
 
 const assetsFolder = {
   folderName: 'Assets',
@@ -125,6 +127,12 @@ const guessTheColor = {
           iconPath.GUESSTHECOLOR
         ),
     },
+    {
+      name: 'readme_gtc.md',
+      icon: iconPath.MARKDOWN,
+      function: () =>
+        tabManager.create('readme_gtc.md', readmeRenderGTC, iconPath.MARKDOWN),
+    },
   ],
   subfolders: [],
 };
@@ -137,6 +145,12 @@ const followMe = {
       icon: iconPath.JAVASCRIPT,
       function: () =>
         tabManager.create('followMe.js', followMeRender, iconPath.FOLLOWME),
+    },
+    {
+      name: 'readme_fm.md',
+      icon: iconPath.MARKDOWN,
+      function: () =>
+        tabManager.create('readme_fm.md', readmeRenderFM, iconPath.MARKDOWN),
     },
   ],
   subfolders: [],

@@ -1,6 +1,92 @@
-import { imgPath } from "../../assetsPath/assetsPath.js";
+import { imgPath } from '../../assetsPath/assetsPath.js';
 
 const readme = {
+  followMe: `
+  # Follow Me!
+
+  ![Follow Me!](${imgPath.FOLLOWME} "Follow Me!")
+  
+  This JavaScript code implements a memory game where players need to repeat a sequence of lights and sounds. The game starts by illuminating a sequence of squares in a specific order, and the player must replicate the sequence correctly to proceed to the next level. Each level increases the length of the sequence, challenging the player's memory skills.
+  
+  
+  ## Dependencies
+  
+  [![My Skills](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev)
+  ## Features
+  
+  - The game generates a random sequence of squares to illuminate.
+  - Players must click on the squares in the same order as the generated sequence.
+  - If the player clicks the correct sequence, the game proceeds to the next level.
+  - If the player makes a mistake, the game ends, and the best level achieved is displayed.
+  - The player can click the "Start" button to restart the game.
+  
+  ## Installation
+  
+  1. Clone the repository:
+
+  <pre>
+  <code class="hljs language-bash">
+    git clone https://github.com/mvazquezmartin/follow-me.git
+  </code>
+  </pre>
+  2. Open index.html in your web browser.    
+  
+  ## Contributing
+  
+  Contributions are welcome! If you want to contribute to this project, feel free to fork the repository and submit a pull request.
+  
+  
+  ## License
+  
+  This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/)
+  
+  ## Author
+  - [@mvazquezmartin](https://github.com/mvazquezmartin)
+  `,
+  guessTheColor: `
+  
+# Guess The Color
+![Guess The Color Responsives](${imgPath.GUESSTHECOLOR} "Guess The Color")
+
+This is a simple web application where users can guess an RGB color value by adjusting the red, green, and blue components using sliders. The user's guess is compared to a randomly generated color, and feedback is provided on how close the guess is to the correct color.
+
+
+## Features
+
+- Adjustable sliders for red, green, and blue color components.
+- Buttons to increment or decrement each color component individually.
+- Feedback on the closeness of the user's guess to the correct color.
+- Visual representation of the user's remaining attempts.
+
+
+## Usage
+
+1. **Adjust Color Components:** Use the sliders or increment/decrement buttons to adjust the red, green, and blue color components individually.
+
+2. **Guess the Color:** Once you are satisfied with your color guess, click the "GUESS" button to see how close your guess is to the correct color.
+
+3. **Feedback:** After guessing, you will receive feedback on how close your guess is to the correct color. The feedback will indicate the percentage of closeness to the correct color and update the visual representation of remaining attempts.
+
+4. **Reset:** Click the "RESET" button at any time to start a new game. This will reset the color components, attempts, and provide a new randomly generated color for guessing.
+
+
+## Installation
+
+1. Clone the repository:
+
+<pre>
+<code class="hljs language-bash">
+  git clone https://github.com/mvazquezmartin/guess-the-color.git
+</code>
+</pre>
+2. Open index.html in your web browser.    
+## License
+
+This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/)
+
+## Author
+- [@mvazquezmartin](https://github.com/mvazquezmartin)
+  `,
   playground: `
   # <center> 📝 PlayGround by EazyTutorial (GreatStack ) </center>
   Se define una función que genera una interfaz basada en la web que
