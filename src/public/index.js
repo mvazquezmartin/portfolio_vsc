@@ -23,7 +23,6 @@ const account = document.getElementById("account");
 const btnNavBarAside = document.querySelectorAll(".iconNavBarAside");
 
 // FUNCIONES
-//
 
 // EVENTLISTENERS
 explorer.addEventListener("click", renderExplorer);
