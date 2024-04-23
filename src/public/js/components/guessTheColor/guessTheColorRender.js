@@ -6,7 +6,7 @@ const guessTheColorRender = () => {
   path.textContent = 'Portfolio > GuessTheColor > guessTheColor.js';
 
   const $container = document.createElement('section');
-  $container.classList.add('container-games');
+  $container.classList.add('container-game');
 
   const renderHtml = createHtmlGuessTheColor();
   $container.appendChild(renderHtml);

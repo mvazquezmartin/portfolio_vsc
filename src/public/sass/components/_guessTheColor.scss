@@ -6,16 +6,18 @@
   --guess-color: 0;
 }
 
-.container-games {
+.container-game {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0.9rem 0;
   @media only screen and (max-width: 480px) {
     & {
-      padding: 0 0.5rem;
+      padding: 0.9rem 0.5rem;
+      height: auto;
     }
   }
 
@@ -27,7 +29,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem;
     row-gap: 1rem;
     height: 100%;
     max-width: 450px;
@@ -39,6 +41,7 @@
     @media only screen and (max-width: 480px) {
       & {
         width: 100%;
+        padding: 1rem 0;
       }
     }
 
@@ -52,7 +55,6 @@
       @media only screen and (max-width: 480px) {
         & {
           font-size: 2rem;
-          margin: 0;
           padding: 0.5rem 0;
         }
       }
