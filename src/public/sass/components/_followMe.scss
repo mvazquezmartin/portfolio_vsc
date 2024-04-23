@@ -1,0 +1,213 @@
+.container-fm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+  font-family: 'Press Start 2P';
+  color: #fff;
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+  border-top: 10px outset #ccc;
+  border-right: 5px outset #eee;
+  border-bottom: 10px inset #ccc;
+  border-left: 5px inset #eee;
+  background-color: #444;
+
+  @media only screen and (max-width: 480px) {
+    & {
+      width: 100%;
+      padding: 2rem 1rem;
+    }
+  }
+
+  .title-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin: 0;
+      color: #fff;
+      background: #fff -webkit-linear-gradient(right, #fff 0%, #aaa 50%, #fff
+            100%);
+      background-repeat: no-repeat;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation-name: shimmer;
+      animation-duration: 6.9s;
+      animation-iteration-count: infinite;
+      background-size: 3.125rem 100%; /*50px*/
+      transform: translate3d(0, 0, 0);
+
+      @media only screen and (max-width: 480px) {
+        & {
+          font-size: 1.7rem;
+        }
+      }
+    }
+    .level {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .square-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+
+    .square-row {
+      display: flex;
+      gap: 1rem;
+
+      .flip-square {
+        perspective: 1000px;
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+
+        &.rotate-square .flip-square-inner {
+          transform: rotateY(-180deg);
+        }
+
+        .flip-square-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          // &.rotate-square {
+          //   transform: rotateY(-180deg);
+          // }
+
+          .flip-square-front,
+          .square {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 7px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          }
+
+          .flip-square-front {
+            background-color: #222;
+            transition: background-color 0.3s ease;
+          }
+
+          .front-active {
+            background-color: #666;
+          }
+
+          .square {
+            background-color: #888;
+            transform: rotateY(-180deg);
+            transition: background-color 0.3s ease;
+          }
+
+          .active-sequence {
+            background-color: #f0f8ff;
+          }
+
+          .wrong-sequence {
+            background-color: #ff5555;
+          }
+        }
+      }
+    }
+  }
+  .btn-container {
+    display: flex;
+    width: 332px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.5rem;
+
+    #btn-action {
+      font-family: 'Press Start 2P';
+      text-align: center;
+      display: inline-block;
+      margin: 5px;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #d3d3d3;
+      text-shadow: -1px -1px black, 1px 1px white;
+      color: #aaa;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -o-border-radius: 7px;
+      border-radius: 7px;
+      box-shadow: 0 0.3em #808080;
+      cursor: pointer;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: #444;
+      letter-spacing: 2px;
+
+      &:hover {
+        background-color: #bbb;
+        box-shadow: 0 0.3em #d2d2d2;
+      }
+
+      &:active {
+        box-shadow: none;
+        position: relative;
+        top: 0.2em;
+      }
+    }
+
+    .try,
+    .best {
+      font-size: 0.7rem;
+      width: 30%;
+      text-align: start;
+    }
+    .best {
+      text-align: center;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: start;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  width: 100%;
+  @media only screen and (max-width: 480px) {
+    & {
+      justify-content: center;
+      padding-top: 1.2rem;
+    }
+  }
+
+  svg {
+    transition: fill 0.3s ease;
+    &:hover {
+      fill: #fff;
+    }
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -3.125rem top;
+  }
+
+  50% {
+    background-position: 12.5rem top;
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    background-position: 22.5rem top;
+  }
+}

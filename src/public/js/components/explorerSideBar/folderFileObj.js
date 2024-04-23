@@ -17,6 +17,7 @@ import { renderMainCrud } from '../crud/renderMainCrud.js';
 import { readmeRenderCRUD } from '../crud/readmeCRUD.js';
 import { pongWarsRender } from '../pongWars/pongWars.js';
 import { guessTheColorRender } from '../guessTheColor/guessTheColorRender.js';
+import { followMeRender } from '../followMe/followMeRender.js';
 
 const assetsFolder = {
   folderName: 'Assets',
@@ -123,6 +124,19 @@ const guessTheColor = {
           guessTheColorRender,
           iconPath.GUESSTHECOLOR
         ),
+    },
+  ],
+  subfolders: [],
+};
+
+const followMe = {
+  folderName: 'FollowMe',
+  files: [
+    {
+      name: 'followMe.js',
+      icon: iconPath.JAVASCRIPT,
+      function: () =>
+        tabManager.create('followMe.js', followMeRender, iconPath.FOLLOWME),
     },
   ],
   subfolders: [],
@@ -265,4 +279,5 @@ export {
   gitIgnore,
   dotenv,
   guessTheColor,
+  followMe,
 };

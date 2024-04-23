@@ -10,6 +10,7 @@ import {
   pongWarsFolder,
   readme,
   guessTheColor,
+  followMe,
 } from './folderFileObj.js';
 import { folderFileSideBar } from './folderFileRender.js';
 
@@ -38,6 +39,9 @@ const renderExplorer = () => {
 
   const guessTheColorGame = folderFileSideBar(guessTheColor);
   viewSideBar.appendChild(guessTheColorGame);
+
+  const followMeGame = folderFileSideBar(followMe);
+  viewSideBar.appendChild(followMeGame);
 
   const chatSocket = folderFileSideBar(chat);
   viewSideBar.appendChild(chatSocket);
