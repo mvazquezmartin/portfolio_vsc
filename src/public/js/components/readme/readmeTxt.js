@@ -43,6 +43,8 @@ const readme = {
   
   ## Autor
   - [@mvazquezmartin](https://github.com/mvazquezmartin)
+  - [LINK](https://mvazquezmartin.github.io/follow-me/)
+  - [Repositorio](https://github.com/mvazquezmartin/follow-me)
   `,
   guessTheColor: `
   
@@ -89,6 +91,8 @@ Este proyecto está bajo la licencia [MIT](https://choosealicense.com/licenses/m
 
 ## Autor
 - [@mvazquezmartin](https://github.com/mvazquezmartin)
+- [LINK](https://mvazquezmartin.github.io/guess-the-color/)
+- [Repositorio](https://github.com/mvazquezmartin/guess-the-color)
   `,
   guessTheNumber: `
    # <center> Guess The Number Game </center>
@@ -153,6 +157,8 @@ This project is licensed under the [MIT](https://choosealicense.com/licenses/mit
 
 ## Autor
 - [@mvazquezmartin](https://github.com/mvazquezmartin)
+- [LINK](https://mvazquezmartin.github.io/guess-the-number-v2/)
+- [Repositorio](https://github.com/mvazquezmartin/guess-the-number-v2)
   `,
   playground: `
   # <center> 📝 PlayGround by EazyTutorial (GreatStack ) </center>
