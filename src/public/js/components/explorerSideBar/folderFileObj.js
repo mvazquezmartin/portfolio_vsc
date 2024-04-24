@@ -20,6 +20,7 @@ import { guessTheColorRender } from '../guessTheColor/guessTheColorRender.js';
 import { followMeRender } from '../followMe/followMeRender.js';
 import { readmeRenderFM } from '../followMe/readmeRender.js';
 import { readmeRenderGTC } from '../guessTheColor/readme.js';
+import { guessTheNumberRender } from '../guessTheNumber/guessTheNumberRender.js';
 
 const assetsFolder = {
   folderName: 'Assets',
@@ -132,6 +133,29 @@ const guessTheColor = {
       icon: iconPath.MARKDOWN,
       function: () =>
         tabManager.create('readme_gtc.md', readmeRenderGTC, iconPath.MARKDOWN),
+    },
+  ],
+  subfolders: [],
+};
+
+const guessTheNumber = {
+  folderName: 'GuessTheNumber',
+  files: [
+    {
+      name: 'guessTheNumber.js',
+      icon: iconPath.JAVASCRIPT,
+      function: () =>
+        tabManager.create(
+          'guessTheNumber.js',
+          guessTheNumberRender,
+          iconPath.GUESSTHENUMBER
+        ),
+    },
+    {
+      name: 'readme_gtn.md',
+      icon: iconPath.MARKDOWN,
+      function: () =>
+        tabManager.create('readme_gtn.md', readmeRenderGTC, iconPath.MARKDOWN),
     },
   ],
   subfolders: [],
@@ -294,4 +318,5 @@ export {
   dotenv,
   guessTheColor,
   followMe,
+  guessTheNumber,
 };

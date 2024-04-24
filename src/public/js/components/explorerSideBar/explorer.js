@@ -11,6 +11,7 @@ import {
   readme,
   guessTheColor,
   followMe,
+  guessTheNumber,
 } from './folderFileObj.js';
 import { folderFileSideBar } from './folderFileRender.js';
 
@@ -33,6 +34,9 @@ const renderExplorer = () => {
 
   const guessTheColorGame = folderFileSideBar(guessTheColor);
   viewSideBar.appendChild(guessTheColorGame);
+
+  const guessTheNumberGame = folderFileSideBar(guessTheNumber);
+  viewSideBar.appendChild(guessTheNumberGame);
 
   const magic8ball = folderFileSideBar(magic8Ball);
   viewSideBar.appendChild(magic8ball);

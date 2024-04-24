@@ -24,7 +24,7 @@ const renderMainText = () => {
   tituloHero.textContent = "Matías Vazquez Martin";
 
   const subTituloHero = document.createElement("h2");
-  subTituloHero.textContent = "FullStack Developer Jr";
+  subTituloHero.textContent = "FullStack Developer";
 
   const btnDownload = document.createElement("a");
   btnDownload.href = pdfPath.CV_ESP;
