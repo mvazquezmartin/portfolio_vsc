@@ -2,7 +2,7 @@ import { imgPath } from '../../assetsPath/assetsPath.js';
 
 const readme = {
   followMe: `
-  # Follow Me!
+  # <center> Follow Me! </center>
 
   ![Follow Me!](${imgPath.FOLLOWME} "Follow Me!")
   
@@ -45,7 +45,7 @@ const readme = {
   `,
   guessTheColor: `
   
-# Guess The Color
+# <center>Guess The Color</center>
 ![Guess The Color Responsives](${imgPath.GUESSTHECOLOR} "Guess The Color")
 
 This is a simple web application where users can guess an RGB color value by adjusting the red, green, and blue components using sliders. The user's guess is compared to a randomly generated color, and feedback is provided on how close the guess is to the correct color.
