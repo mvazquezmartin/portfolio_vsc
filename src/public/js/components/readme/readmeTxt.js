@@ -41,10 +41,11 @@ const readme = {
   
   Este proyecto está bajo la licencia [MIT](https://choosealicense.com/licenses/mit/)
   
-  ## Autor
-  - [@mvazquezmartin](https://github.com/mvazquezmartin)
+  ## Link & Repositorio
   - [LINK](https://mvazquezmartin.github.io/follow-me/)
   - [Repositorio](https://github.com/mvazquezmartin/follow-me)
+  ## Autor
+  - [@mvazquezmartin](https://github.com/mvazquezmartin)
   `,
   guessTheColor: `
   
@@ -89,10 +90,11 @@ Esta es una aplicación web donde los usuarios pueden adivinar un valor de color
 
 Este proyecto está bajo la licencia [MIT](https://choosealicense.com/licenses/mit/)
 
-## Autor
-- [@mvazquezmartin](https://github.com/mvazquezmartin)
+## Link & Repositorio
 - [LINK](https://mvazquezmartin.github.io/guess-the-color/)
 - [Repositorio](https://github.com/mvazquezmartin/guess-the-color)
+## Autor
+- [@mvazquezmartin](https://github.com/mvazquezmartin)
   `,
   guessTheNumber: `
    # <center> Guess The Number Game </center>
@@ -155,10 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/)
 
-## Autor
-- [@mvazquezmartin](https://github.com/mvazquezmartin)
+## Link & Repositorio
 - [LINK](https://mvazquezmartin.github.io/guess-the-number-v2/)
 - [Repositorio](https://github.com/mvazquezmartin/guess-the-number-v2)
+## Autor
+- [@mvazquezmartin](https://github.com/mvazquezmartin)
   `,
   playground: `
   # <center> 📝 PlayGround by EazyTutorial (GreatStack ) </center>
