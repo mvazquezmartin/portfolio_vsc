@@ -62,6 +62,7 @@ export const createHtmlGuessTheNumber = () => {
   $inputContainer.classList.add('input-container');
   const $inputNumber = document.createElement('span');
   $inputNumber.id = 'input-number';
+  $inputNumber.textContent = '00'
   $inputContainer.appendChild($inputNumber);
 
   const $keyboard = document.createElement('section'); //append container
