@@ -6,41 +6,42 @@ const readme = {
 
   ![Follow Me!](${imgPath.FOLLOWME} "Follow Me!")
   
-  This JavaScript code implements a memory game where players need to repeat a sequence of lights and sounds. The game starts by illuminating a sequence of squares in a specific order, and the player must replicate the sequence correctly to proceed to the next level. Each level increases the length of the sequence, challenging the player's memory skills.
+  Este código JavaScript implementa un juego de memoria en el que los jugadores necesitan repetir una secuencia de luces y sonidos. El juego comienza iluminando una secuencia de cuadrados en un orden específico, y el jugador debe replicar la secuencia correctamente para avanzar al siguiente nivel. Cada nivel aumenta la longitud de la secuencia, desafiando las habilidades de memoria del jugador.  
   
-  
-  ## Dependencies
+  ## Dependencias
   
   [![My Skills](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev)
-  ## Features
+
+  ## Características
   
-  - The game generates a random sequence of squares to illuminate.
-  - Players must click on the squares in the same order as the generated sequence.
-  - If the player clicks the correct sequence, the game proceeds to the next level.
-  - If the player makes a mistake, the game ends, and the best level achieved is displayed.
-  - The player can click the "Start" button to restart the game.
+  - El juego genera una secuencia aleatoria de cuadrados para iluminar.
+  - Los jugadores deben hacer clic en los cuadrados en el mismo orden que la secuencia generada.
+  - Si el jugador hace clic en la secuencia correcta, el juego avanza al siguiente nivel.
+  - Si el jugador comete un error, el juego termina y se muestra el mejor nivel alcanzado.
+  - El jugador puede hacer clic en el botón "Inicio" para reiniciar el juego.
   
-  ## Installation
+  ## Instalación
   
-  1. Clone the repository:
+  1. Clona el repositorio:
 
   <pre>
   <code class="hljs language-bash">
     git clone https://github.com/mvazquezmartin/follow-me.git
   </code>
   </pre>
-  2. Open index.html in your web browser.    
+  2. Abrir index.html en tu navegador.    
   
-  ## Contributing
-  
-  Contributions are welcome! If you want to contribute to this project, feel free to fork the repository and submit a pull request.
+  ## Contribuciones
   
   
-  ## License
+  ¡Las contribuciones son bienvenidas! Si deseas contribuir a este proyecto, siéntete libre de bifurcar el repositorio y enviar una solicitud de extracción.
   
-  This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/)
   
-  ## Author
+  ## Licencia  
+  
+  Este proyecto está bajo la licencia [MIT](https://choosealicense.com/licenses/mit/)
+  
+  ## Autor
   - [@mvazquezmartin](https://github.com/mvazquezmartin)
   `,
   guessTheColor: `
@@ -48,43 +49,109 @@ const readme = {
 # <center>Guess The Color</center>
 ![Guess The Color Responsives](${imgPath.GUESSTHECOLOR} "Guess The Color")
 
-This is a simple web application where users can guess an RGB color value by adjusting the red, green, and blue components using sliders. The user's guess is compared to a randomly generated color, and feedback is provided on how close the guess is to the correct color.
+Esta es una aplicación web donde los usuarios pueden adivinar un valor de color RGB ajustando los componentes rojo, verde y azul utilizando controles deslizantes. La suposición del usuario se compara con un color generado aleatoriamente, y se proporciona retroalimentación sobre qué tan cerca está la suposición del color correcto.
 
+## Dependencias
+[![My Skills](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev)
 
-## Features
+## Características
 
-- Adjustable sliders for red, green, and blue color components.
-- Buttons to increment or decrement each color component individually.
-- Feedback on the closeness of the user's guess to the correct color.
+- Controles deslizantes ajustables para los componentes de color rojo, verde y azul.
+- Botones para incrementar o decrementar cada componente de color individualmente.
+- Retroalimentación sobre la cercanía de la suposición del usuario al color correcto.
 - Visual representation of the user's remaining attempts.
 
 
-## Usage
+## Uso
 
-1. **Adjust Color Components:** Use the sliders or increment/decrement buttons to adjust the red, green, and blue color components individually.
+1. **Ajustar Componentes de Color:** Utiliza los controles deslizantes o los botones de incremento/decremento para ajustar los componentes de color rojo, verde y azul individualmente.
 
-2. **Guess the Color:** Once you are satisfied with your color guess, click the "GUESS" button to see how close your guess is to the correct color.
+2. **Adivinar el Color:** Una vez que estés satisfecho con tu suposición de color, haz clic en el botón "GUESS" para ver qué tan cerca está tu suposición del color correcto.
 
-3. **Feedback:** After guessing, you will receive feedback on how close your guess is to the correct color. The feedback will indicate the percentage of closeness to the correct color and update the visual representation of remaining attempts.
+3. **Retroalimentación:** Después de adivinar, recibirás retroalimentación sobre qué tan cerca está tu suposición del color correcto. La retroalimentación indicará el porcentaje de cercanía al color correcto y actualizará la representación visual de los intentos restantes.
 
-4. **Reset:** Click the "RESET" button at any time to start a new game. This will reset the color components, attempts, and provide a new randomly generated color for guessing.
+4. **Reiniciar:** Haz clic en el botón "RESET" en cualquier momento para comenzar un nuevo juego. Esto restablecerá los componentes de color, los intentos y proporcionará un nuevo color generado aleatoriamente para adivinar.
 
 
-## Installation
+## Instalación
 
-1. Clone the repository:
+1. Conar el repositorio
 
 <pre>
 <code class="hljs language-bash">
   git clone https://github.com/mvazquezmartin/guess-the-color.git
 </code>
 </pre>
-2. Open index.html in your web browser.    
-## License
+2. Abrir index.html en tu navegador.    
+## Licencia
+
+Este proyecto está bajo la licencia [MIT](https://choosealicense.com/licenses/mit/)
+
+## Autor
+- [@mvazquezmartin](https://github.com/mvazquezmartin)
+  `,
+  guessTheNumber: `
+   # <center> Guess The Number Game </center>
+![Guess The Number responsives](${imgPath.GUESSTHENUMBER} "Guess The Number")
+
+Este es un ejemplo de una clase en JavaScript llamada **GuessTheNumberGame** que implementa un juego simple de adivinanza de números. Los jugadores intentan adivinar un número secreto dentro de un rango específico. El juego proporciona retroalimentación sobre cada intento y lleva un registro del número de intentos realizados.
+
+## Dependencias
+[![My Skills](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev)
+- Archivos de audio para clics en botones: **click-numbers.wav**, **click-btn-guess.wav**, **click-btn-reset.wav**.
+- Alertas con **SeewtAlert2**
+
+## Características
+
+- **Inicialización del Juego:** Al inicializarse, el juego configura los elementos necesarios e inicializa el GameManager.
+- **Entrada de Números:** Los usuarios pueden introducir números a través de una interfaz de teclado numérico.
+- **Manejo de Suposiciones:** Maneja las suposiciones de los usuarios, proporcionando retroalimentación y actualizando la interfaz de usuario del juego en consecuencia.
+- **Reinicio del Juego:** Permite a los usuarios reiniciar el juego, eliminando intentos anteriores y restableciendo el número secreto.
+- **Retroalimentación de Audio:** Proporciona retroalimentación de audio para interacciones como la selección de números, adivinanzas y reinicio del juego.
+
+## Uso
+
+1. **Inicialización:** Crea una instancia de la clase GuessTheNumberGame para iniciar el juego.
+
+2. **Entrada de Números:** Utiliza la interfaz del teclado numérico para introducir tus suposiciones.
+
+3. **Adivinar:** Haz clic en el botón "Adivinar" para enviar tu suposición.
+
+4. **Reinicio:** Haz clic en el botón "Reiniciar" para reiniciar el juego.
+
+
+## Ejemplo
+
+<pre>
+<code class="hljs language-javascript">
+// Initialize the game
+const guessTheNumberInit = new GuessTheNumberGame();
+
+// Ensure the DOM is loaded before initializing the game
+document.addEventListener('DOMContentLoaded', () => {
+  guessTheNumberInit;
+});
+
+</code>
+</pre>
+
+## Instalación
+
+1. Clonar el repositorio:
+
+<pre>
+<code>
+  git clone https://github.com/mvazquezmartin/guess-the-number-v2.git
+</code>
+</pre>
+
+2. Abrir index.html en tu navegador.    
+
+## Licencia
 
 This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/)
 
-## Author
+## Autor
 - [@mvazquezmartin](https://github.com/mvazquezmartin)
   `,
   playground: `

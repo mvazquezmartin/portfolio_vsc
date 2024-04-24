@@ -21,6 +21,7 @@ import { followMeRender } from '../followMe/followMeRender.js';
 import { readmeRenderFM } from '../followMe/readmeRender.js';
 import { readmeRenderGTC } from '../guessTheColor/readme.js';
 import { guessTheNumberRender } from '../guessTheNumber/guessTheNumberRender.js';
+import { readmeRenderGTN } from '../guessTheNumber/readme.js';
 
 const assetsFolder = {
   folderName: 'Assets',
@@ -155,7 +156,7 @@ const guessTheNumber = {
       name: 'readme_gtn.md',
       icon: iconPath.MARKDOWN,
       function: () =>
-        tabManager.create('readme_gtn.md', readmeRenderGTC, iconPath.MARKDOWN),
+        tabManager.create('readme_gtn.md', readmeRenderGTN, iconPath.MARKDOWN),
     },
   ],
   subfolders: [],

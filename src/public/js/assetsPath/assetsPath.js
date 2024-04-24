@@ -108,7 +108,8 @@ const imgPath = {
   STRATEGY: './assets/API_CRUD.drawio.png',
   CACHE: './assets/CACHE.drawio.png',
   FOLLOWME: './assets/Screenshot_followMe.png',
-  GUESSTHECOLOR: './assets/Screenshot_guessthecolor.png'
+  GUESSTHECOLOR: './assets/Screenshot_guessthecolor.png',
+  GUESSTHENUMBER: './assets/Screenshot_guessTheNumber.png',
 };
 
 const certificadoPath = {
