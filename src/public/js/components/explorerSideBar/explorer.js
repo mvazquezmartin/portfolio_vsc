@@ -67,7 +67,11 @@ const renderExplorer = () => {
 
   const collapseFolder = document.createElement('i');
   collapseFolder.classList.add('bi', 'bi-chevron-bar-contract');
-  collapseFolder.addEventListener('click', renderExplorer);
+  
+  const $allFolder = document.querySelectorAll('.panel');
+  collapseFolder.addEventListener('click', () => {
+    $allFolder.forEach((folder) => (folder.style.maxHeight = null));
+  });
 
   fileOpen.appendChild(collapseFolder);
 };
