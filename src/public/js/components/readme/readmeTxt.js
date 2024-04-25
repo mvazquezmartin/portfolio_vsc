@@ -41,7 +41,8 @@ const readme = {
   
   Este proyecto está bajo la licencia [MIT](https://choosealicense.com/licenses/mit/)
   
-  ## Link & Repositorio
+  ## Link & Repositorio  
+  
   - [LINK](https://mvazquezmartin.github.io/follow-me/)
   - [Repositorio](https://github.com/mvazquezmartin/follow-me)
   ## Autor
@@ -317,6 +318,7 @@ This project is licensed under the [MIT](https://choosealicense.com/licenses/mit
   # <center> 📡 Socket.io Chat 1.0v </center>
   
   Este chat es una aplicación que permite a los usuarios conectarse y chatear en tiempo real. Está basado en tecnologías como Node.js para el backend y Socket.IO para la comunicación en tiempo real entre el servidor y los clientes.
+  **PARA VER EL FUNCIONAMIENTO DEL CHAT, ABRIR EL SITIO EN OTRA PESTAÑA Y DARLE "CONNECT" EN LAS DOS**
   ## 📚 Tech Stack
   [![My Skills](https://skillicons.dev/icons?i=nodejs,html,css,js)](https://skillicons.dev)
   - **Dependencias:** Socket.io, SweetAlert2.
