@@ -1,5 +1,5 @@
-@import "../abstracts/colors";
-@import "../abstracts/media";
+@import '../abstracts/colors';
+@import '../abstracts/media';
 
 .activeFile {
   background-color: rgba(190, 190, 190, 0.2);
@@ -28,9 +28,12 @@
       display: flex;
       padding-left: 10px;
 
-      img {
-        margin-right: 10px;
-        cursor: pointer;
+      button {
+        position: relative;
+        img {
+          margin-right: 10px;
+          cursor: pointer;
+        }
       }
 
       .menuNavBarTop {
@@ -262,10 +265,10 @@
     grid-template-columns: 0.45fr 3fr;
     grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
     grid-template-areas:
-      "menuIcon navBarTop"
-      "menuIcon tabs"
-      "mainArea mainArea"
-      "footer footer";
+      'menuIcon navBarTop'
+      'menuIcon tabs'
+      'mainArea mainArea'
+      'footer footer';
 
     a#menu-icon {
       grid-area: menuIcon;
@@ -365,9 +368,9 @@
       grid-template-columns: 1fr;
       grid-template-rows: 0.15fr 0.1fr 4fr;
       grid-template-areas:
-        "titleSideBar"
-        "fileOpen"
-        "viewSideBar";
+        'titleSideBar'
+        'fileOpen'
+        'viewSideBar';
       transition: all 0.5s ease;
 
       .fileOpen {
@@ -384,9 +387,9 @@
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 0.1fr 0.1fr 2.8fr;
       grid-template-areas:
-        "rootPath rootPath rootPath"
-        "mainView mainView mainView"
-        "mainView mainView mainView";
+        'rootPath rootPath rootPath'
+        'mainView mainView mainView'
+        'mainView mainView mainView';
     }
   }
 
@@ -395,26 +398,26 @@
     grid-template-columns: 0.1fr 170px minmax(0, 3fr);
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas:
-      "navBarTop navBarTop navBarTop"
-      "navBarAside sideBar tabs"
-      "navBarAside sideBar mainArea"
-      "navBarAside footer footer";
+      'navBarTop navBarTop navBarTop'
+      'navBarAside sideBar tabs'
+      'navBarAside sideBar mainArea'
+      'navBarAside footer footer';
 
     .sideBar {
       grid-template-columns: 1fr;
       grid-template-rows: 0.15fr 0.1fr 4fr;
       grid-template-areas:
-        "titleSideBar"
-        "fileOpen"
-        "viewSideBar";
+        'titleSideBar'
+        'fileOpen'
+        'viewSideBar';
     }
 
     .mainArea {
       grid-template-columns: 1fr;
       grid-template-rows: 0.1fr 4fr;
       grid-template-areas:
-        "rootPath"
-        "mainView";
+        'rootPath'
+        'mainView';
     }
   }
 
@@ -423,26 +426,26 @@
     grid-template-columns: 0.1fr 340px minmax(0, 3fr);
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas:
-      "navBarTop navBarTop navBarTop"
-      "navBarAside sideBar tabs"
-      "navBarAside sideBar mainArea"
-      "navBarAside footer footer";
+      'navBarTop navBarTop navBarTop'
+      'navBarAside sideBar tabs'
+      'navBarAside sideBar mainArea'
+      'navBarAside footer footer';
 
     .sideBar {
       grid-template-columns: 1fr;
       grid-template-rows: 0.15fr 0.1fr 4fr;
       grid-template-areas:
-        "titleSideBar"
-        "fileOpen"
-        "viewSideBar";
+        'titleSideBar'
+        'fileOpen'
+        'viewSideBar';
     }
 
     .mainArea {
       grid-template-columns: 1fr;
       grid-template-rows: 0.1fr 4fr;
       grid-template-areas:
-        "rootPath"
-        "mainView";
+        'rootPath'
+        'mainView';
     }
   }
 }

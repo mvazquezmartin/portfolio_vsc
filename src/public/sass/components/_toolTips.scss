@@ -1,3 +1,4 @@
+.navBarTop,
 .iconNavBarAside {
   .toolTipText {
     visibility: hidden;
@@ -13,9 +14,9 @@
     top: 10px;
     left: 110%;
     z-index: 3;
-    
+
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       right: 100%;
@@ -25,8 +26,17 @@
       border-color: transparent $color-rootPath transparent transparent;
     }
   }
-  
-  &:hover .toolTipText {    
+
+  &:hover .toolTipText {
     visibility: visible;
+  }
+}
+
+.navBarTop {
+  .toolTipText {
+    top: 0px;
+    &::after {
+      top: 50%;
+    }
   }
 }

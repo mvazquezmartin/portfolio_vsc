@@ -112,7 +112,10 @@ a:hover {
   display: flex;
   padding-left: 10px;
 }
-.containerGrid .navBarTop .iconoMenu img {
+.containerGrid .navBarTop .iconoMenu button {
+  position: relative;
+}
+.containerGrid .navBarTop .iconoMenu button img {
   margin-right: 10px;
   cursor: pointer;
 }
@@ -2299,6 +2302,7 @@ footer svg:hover {
   color: #f0f8ff;
 }
 
+.navBarTop .toolTipText,
 .iconNavBarAside .toolTipText {
   visibility: hidden;
   width: 70px;
@@ -2314,6 +2318,7 @@ footer svg:hover {
   left: 110%;
   z-index: 3;
 }
+.navBarTop .toolTipText::after,
 .iconNavBarAside .toolTipText::after {
   content: "";
   position: absolute;
@@ -2324,8 +2329,16 @@ footer svg:hover {
   border-style: solid;
   border-color: transparent #6272a4 transparent transparent;
 }
+.navBarTop:hover .toolTipText,
 .iconNavBarAside:hover .toolTipText {
   visibility: visible;
+}
+
+.navBarTop .toolTipText {
+  top: 0px;
+}
+.navBarTop .toolTipText::after {
+  top: 50%;
 }
 
 .chatContainerGrid {
