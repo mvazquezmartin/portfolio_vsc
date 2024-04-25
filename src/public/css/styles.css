@@ -2302,7 +2302,7 @@ footer svg:hover {
   color: #f0f8ff;
 }
 
-.navBarTop .toolTipText,
+.welcome .toolTipText,
 .iconNavBarAside .toolTipText {
   visibility: hidden;
   width: 70px;
@@ -2318,7 +2318,7 @@ footer svg:hover {
   left: 110%;
   z-index: 3;
 }
-.navBarTop .toolTipText::after,
+.welcome .toolTipText::after,
 .iconNavBarAside .toolTipText::after {
   content: "";
   position: absolute;
@@ -2329,15 +2329,15 @@ footer svg:hover {
   border-style: solid;
   border-color: transparent #6272a4 transparent transparent;
 }
-.navBarTop:hover .toolTipText,
+.welcome:hover .toolTipText,
 .iconNavBarAside:hover .toolTipText {
   visibility: visible;
 }
 
-.navBarTop .toolTipText {
+.welcome .toolTipText {
   top: 0px;
 }
-.navBarTop .toolTipText::after {
+.welcome .toolTipText::after {
   top: 50%;
 }
 

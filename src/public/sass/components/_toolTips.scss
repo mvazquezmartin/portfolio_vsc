@@ -1,4 +1,4 @@
-.navBarTop,
+.welcome,
 .iconNavBarAside {
   .toolTipText {
     visibility: hidden;
@@ -32,7 +32,7 @@
   }
 }
 
-.navBarTop {
+.welcome {
   .toolTipText {
     top: 0px;
     &::after {
