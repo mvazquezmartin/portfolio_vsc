@@ -382,9 +382,6 @@ a:hover {
   .containerGrid .navBarAside.navBarAsideRes * {
     opacity: 1;
   }
-  .containerGrid .navBarAside .toolTipText {
-    display: none;
-  }
   .containerGrid .sideBar {
     visibility: hidden;
     grid-area: initial;
@@ -2328,6 +2325,12 @@ footer svg:hover {
   border-width: 5px;
   border-style: solid;
   border-color: transparent #6272a4 transparent transparent;
+}
+@media screen and (max-width: 600px) {
+  .welcome .toolTipText,
+  .iconNavBarAside .toolTipText {
+    display: none;
+  }
 }
 .welcome:hover .toolTipText,
 .iconNavBarAside:hover .toolTipText {

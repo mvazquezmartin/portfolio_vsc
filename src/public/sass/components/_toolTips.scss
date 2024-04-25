@@ -25,6 +25,9 @@
       border-style: solid;
       border-color: transparent $color-rootPath transparent transparent;
     }
+    @include mobile {
+      display: none;
+    }
   }
 
   &:hover .toolTipText {
