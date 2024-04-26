@@ -5,7 +5,7 @@
   background-color: rgba(190, 190, 190, 0.2);
 }
 
-.containerGrid {
+.container-grid {
   display: grid;
   color: $color-white;
   height: 100dvh;
@@ -16,7 +16,7 @@
     display: none;
   }
 
-  .navBarTop {
+  .navbar-top {
     grid-area: navBarTop;
     display: flex;
     align-items: center;
@@ -24,11 +24,11 @@
     font-size: 0.9rem;
     background-color: $color-darkBlue;
 
-    .iconoMenu {
+    .menu-icon {
       display: flex;
       padding-left: 10px;
 
-      button {
+      .welcome-icon {
         position: relative;
         img {
           margin-right: 10px;
@@ -36,7 +36,7 @@
         }
       }
 
-      .menuNavBarTop {
+      .menu-top {
         display: flex;
         padding-left: 5px;
         font-size: 0.8rem;
@@ -46,33 +46,32 @@
           padding: 3px 8px;
           transition: 0.3s;
           cursor: default;
-        }
-
-        span:hover {
-          background-color: #333649;
-          border-radius: 5px;
+          &:hover {
+            background-color: #333649;
+            border-radius: 5px;
+          }
         }
       }
     }
-    .titleVSC {
+    .title-vsc {
       width: 100%;
       text-align: center;
       cursor: default;
     }
   }
 
-  .navBarAside {
+  .navbar-aside {
     grid-area: navBarAside;
     background-color: $color-littleLightGrey;
 
-    .iconNavBar {
+    .navbar-icon-aside {
       display: flex;
       height: 100%;
       flex-direction: column;
       justify-content: space-between;
       font-size: 2rem;
 
-      .iconFlex {
+      .icon-container-aside {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -84,7 +83,7 @@
           background-color: rgba(190, 190, 190, 0.2);
         }
 
-        .iconNavBarAside {
+        .icon-navbar {
           display: inline-flex;
           position: relative;
           justify-content: center;
@@ -101,7 +100,7 @@
           }
         }
 
-        .iconUserFlex {
+        .icon-end-aside {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -120,7 +119,7 @@
     }
   }
 
-  .sideBar {
+  .sidebar {
     display: grid;
     grid-area: sideBar;
     background-color: $color-darkGrey;
@@ -129,7 +128,7 @@
     border-right: $style-border-grid;
     z-index: 2;
 
-    .titleSideBar {
+    .title-sidebar {
       grid-area: titleSideBar;
       display: flex;
       align-items: center;
@@ -140,7 +139,7 @@
       user-select: none;
     }
 
-    .fileOpen {
+    .file-open {
       grid-area: fileOpen;
       background-color: $color-lightGrey;
       display: flex;
@@ -167,7 +166,7 @@
       }
     }
 
-    .viewSideBar {
+    .view-sidebar {
       grid-area: viewSideBar;
       display: flex;
       flex-direction: column;
@@ -186,7 +185,7 @@
     overflow: hidden;
   }
 
-  .mainArea {
+  .main-area {
     display: grid;
     grid-area: mainArea;
     background-color: $color-lightGrey;
@@ -194,7 +193,7 @@
     grid-auto-flow: row;
     overflow: hidden;
 
-    .rootPath {
+    .root-path {
       grid-area: rootPath;
       display: flex;
       align-items: center;
@@ -204,7 +203,7 @@
       border-bottom: $style-border-grid;
     }
 
-    .mainView {
+    .main-view {
       grid-area: mainView;
       overflow-y: auto;
     }
@@ -220,7 +219,7 @@
     font-size: 0.8rem;
     color: $color-white;
 
-    .iconsFooterL {
+    .icons-footer-start{
       display: flex;
       width: 125px;
       justify-content: space-around;
@@ -242,7 +241,7 @@
       }
     }
 
-    .iconsFooterR {
+    .icons-footer-end {
       display: flex;
       width: 100px;
       justify-content: space-around;
@@ -313,19 +312,19 @@
       }
     }
 
-    .navBarTop {
+    .navbar-top {
       flex-direction: row-reverse;
       span {
         padding-left: 1px;
       }
-      .iconoMenu {
-        .menuNavBarTop {
+      .menu-icon {
+        .menu-top {
           display: none;
         }
       }
     }
 
-    .navBarAside {
+    .navbar-aside {
       grid-area: initial;
       visibility: hidden;
       position: absolute;
@@ -351,7 +350,7 @@
       }
     }
 
-    .sideBar {
+    .sidebar {
       visibility: hidden;
       grid-area: initial;
       position: absolute;
@@ -369,7 +368,7 @@
         'viewSideBar';
       transition: all 0.5s ease;
 
-      .fileOpen {
+      .file-open {
         background-color: $color-littleLightGrey;
       }
 
@@ -379,7 +378,7 @@
       }
     }
 
-    .mainArea {
+    .main-area {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 0.1fr 0.1fr 2.8fr;
       grid-template-areas:
@@ -399,7 +398,7 @@
       'navBarAside sideBar mainArea'
       'navBarAside footer footer';
 
-    .sideBar {
+    .sidebar {
       grid-template-columns: 1fr;
       grid-template-rows: 0.15fr 0.1fr 4fr;
       grid-template-areas:
@@ -408,7 +407,7 @@
         'viewSideBar';
     }
 
-    .mainArea {
+    .main-area {
       grid-template-columns: 1fr;
       grid-template-rows: 0.1fr 4fr;
       grid-template-areas:
@@ -427,7 +426,7 @@
       'navBarAside sideBar mainArea'
       'navBarAside footer footer';
 
-    .sideBar {
+    .sidebar {
       grid-template-columns: 1fr;
       grid-template-rows: 0.15fr 0.1fr 4fr;
       grid-template-areas:
@@ -436,7 +435,7 @@
         'viewSideBar';
     }
 
-    .mainArea {
+    .main-area {
       grid-template-columns: 1fr;
       grid-template-rows: 0.1fr 4fr;
       grid-template-areas:
