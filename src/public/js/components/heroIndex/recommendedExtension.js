@@ -63,6 +63,12 @@ const extensions = [
     img: "https://mhutchie.gallerycdn.vsassets.io/extensions/mhutchie/git-graph/1.30.0/1617594001998/Microsoft.VisualStudio.Services.Icons.Default",
     content: "View a Git Graph of your repository, and perform Git actions from the graph.",
     html_url: "https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph"
+  },
+  {
+    extension: "Power Mode",
+    img: "https://hoovercj.gallerycdn.vsassets.io/extensions/hoovercj/vscode-power-mode/3.0.2/1647278286182/Microsoft.VisualStudio.Services.Icons.Default",
+    content: "💥 Your code is powerful, unleash it!",
+    html_url: "https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-power-mode"
   }
 ];
 

@@ -1951,25 +1951,6 @@ a:hover {
   text-align: center;
 }
 
-footer {
-  display: flex;
-  justify-content: start;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  width: 100%;
-}
-@media only screen and (max-width: 480px) {
-  footer {
-    justify-content: center;
-    padding-top: 1.2rem;
-  }
-}
-footer svg {
-  transition: fill 0.3s ease;
-}
-footer svg:hover {
-  fill: #fff;
-}
-
 @keyframes shimmer {
   0% {
     background-position: -3.125rem top;

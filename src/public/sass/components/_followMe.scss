@@ -6,7 +6,7 @@
   align-items: center;
   flex-direction: column;
   @media only screen and (max-width: 480px) {
-    & {      
+    & {
       padding: 0 0.5rem;
     }
   }
@@ -19,7 +19,7 @@
     max-width: 450px;
     font-family: 'Press Start 2P';
     color: #fff;
-    padding: 2rem 1.5rem;    
+    padding: 2rem 1.5rem;
     border-top: 10px outset #ccc;
     border-right: 5px outset #eee;
     border-bottom: 10px inset #ccc;
@@ -28,7 +28,7 @@
 
     @media only screen and (max-width: 480px) {
       & {
-        width: 100%;        
+        width: 100%;
         padding: 2rem 1rem;
       }
     }
@@ -186,26 +186,6 @@
       .best {
         text-align: center;
       }
-    }
-  }
-}
-
-footer {
-  display: flex;
-  justify-content: start;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  width: 100%;
-  @media only screen and (max-width: 480px) {
-    & {
-      justify-content: center;
-      padding-top: 1.2rem;
-    }
-  }
-
-  svg {
-    transition: fill 0.3s ease;
-    &:hover {
-      fill: #fff;
     }
   }
 }
