@@ -153,7 +153,9 @@
   }
 
   @include mobile {
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+    padding-top: 1rem;
     .stackTitleView {
       height: auto;
 
