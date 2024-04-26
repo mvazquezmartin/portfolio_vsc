@@ -29,7 +29,7 @@ class TabManager {
           this.setActive(existingTabIndex);
         } else {
           const maxTabs =
-            window.innerWidth <= 768 ? this.maxTabsMobile : this.maxTabsDesktop;
+            window.innerWidth <= 768 ? this.maxTabsMobile : this.maxTabsDesktop;            
           this.tabs.length === maxTabs
             ? (this.tabs[existingTabIndex].isOpen = false)
             : (this.tabs[existingTabIndex].isOpen = true);

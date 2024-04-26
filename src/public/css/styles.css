@@ -90,17 +90,17 @@ a:hover {
   background-color: rgba(190, 190, 190, 0.2);
 }
 
-.containerGrid {
+.container-grid {
   display: grid;
   color: #f0f8ff;
   height: 100dvh;
   gap: 0px 0px;
   grid-auto-flow: row;
 }
-.containerGrid a#menu-icon {
+.container-grid a#menu-icon {
   display: none;
 }
-.containerGrid .navBarTop {
+.container-grid .navbar-top {
   grid-area: navBarTop;
   display: flex;
   align-items: center;
@@ -108,60 +108,59 @@ a:hover {
   font-size: 0.9rem;
   background-color: #191a21;
 }
-.containerGrid .navBarTop .iconoMenu {
+.container-grid .navbar-top .menu-icon {
   display: flex;
-  padding-left: 10px;
+  padding-left: 5px;
 }
-.containerGrid .navBarTop .iconoMenu button {
+.container-grid .navbar-top .menu-icon .welcome-icon {
   position: relative;
 }
-.containerGrid .navBarTop .iconoMenu button img {
-  margin-right: 10px;
+.container-grid .navbar-top .menu-icon .welcome-icon img {
   cursor: pointer;
 }
-.containerGrid .navBarTop .iconoMenu .menuNavBarTop {
+.container-grid .navbar-top .menu-icon .menu-top {
   display: flex;
   padding-left: 5px;
   font-size: 0.8rem;
   cursor: default;
 }
-.containerGrid .navBarTop .iconoMenu .menuNavBarTop span {
+.container-grid .navbar-top .menu-icon .menu-top span {
   padding: 3px 8px;
   transition: 0.3s;
   cursor: default;
 }
-.containerGrid .navBarTop .iconoMenu .menuNavBarTop span:hover {
+.container-grid .navbar-top .menu-icon .menu-top span:hover {
   background-color: #333649;
   border-radius: 5px;
 }
-.containerGrid .navBarTop .titleVSC {
+.container-grid .navbar-top .title-vsc {
   width: 100%;
   text-align: center;
   cursor: default;
 }
-.containerGrid .navBarAside {
+.container-grid .navbar-aside {
   grid-area: navBarAside;
   background-color: #343746;
 }
-.containerGrid .navBarAside .iconNavBar {
+.container-grid .navbar-aside .navbar-icon-aside {
   display: flex;
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
   font-size: 2rem;
 }
-.containerGrid .navBarAside .iconNavBar .iconFlex {
+.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
-.containerGrid .navBarAside .iconNavBar .iconFlex button.active {
+.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside button.active {
   box-shadow: inset 1.5px 0 #ff79c6;
   color: #f0f8ff;
   background-color: rgba(190, 190, 190, 0.2);
 }
-.containerGrid .navBarAside .iconNavBar .iconFlex .iconNavBarAside {
+.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside .icon-navbar {
   display: inline-flex;
   position: relative;
   justify-content: center;
@@ -173,23 +172,23 @@ a:hover {
   cursor: pointer;
   transition: color 0.1s;
 }
-.containerGrid .navBarAside .iconNavBar .iconFlex .iconNavBarAside:hover {
+.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside .icon-navbar:hover {
   color: #f0f8ff;
 }
-.containerGrid .navBarAside .iconNavBar .iconFlex .iconUserFlex {
+.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside .icon-end-aside {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.containerGrid .navBarAside .iconNavBar .iconFlex .iconUserFlex .bi {
+.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside .icon-end-aside .bi {
   transition: color 0.3s;
 }
-.containerGrid .navBarAside .iconNavBar .iconFlex .iconUserFlex .bi:hover {
+.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside .icon-end-aside .bi:hover {
   color: #f0f8ff;
 }
-.containerGrid .sideBar {
+.container-grid .sidebar {
   display: grid;
   grid-area: sideBar;
   background-color: #1d1e24;
@@ -198,7 +197,7 @@ a:hover {
   border-right: 0.5px solid #44475a;
   z-index: 2;
 }
-.containerGrid .sideBar .titleSideBar {
+.container-grid .sidebar .title-sidebar {
   grid-area: titleSideBar;
   display: flex;
   align-items: center;
@@ -208,7 +207,7 @@ a:hover {
   border-bottom: 0.5px solid #44475a;
   user-select: none;
 }
-.containerGrid .sideBar .fileOpen {
+.container-grid .sidebar .file-open {
   grid-area: fileOpen;
   background-color: #282a36;
   display: flex;
@@ -220,27 +219,27 @@ a:hover {
   border-bottom: 0.5px solid #44475a;
   user-select: none;
 }
-.containerGrid .sideBar .fileOpen .bi {
+.container-grid .sidebar .file-open .bi {
   margin-right: 3px;
   padding: 2px;
   color: #888;
   cursor: pointer;
 }
-.containerGrid .sideBar .fileOpen .bi:hover {
+.container-grid .sidebar .file-open .bi:hover {
   background-color: rgba(190, 190, 190, 0.2);
   border-radius: 3px;
 }
-.containerGrid .sideBar .fileOpen .bi:active {
+.container-grid .sidebar .file-open .bi:active {
   color: #fff;
 }
-.containerGrid .sideBar .viewSideBar {
+.container-grid .sidebar .view-sidebar {
   grid-area: viewSideBar;
   display: flex;
   flex-direction: column;
   user-select: none;
   overflow: hidden;
 }
-.containerGrid .tabs {
+.container-grid .tabs {
   grid-area: tabs;
   display: flex;
   flex-wrap: nowrap;
@@ -249,7 +248,7 @@ a:hover {
   user-select: none;
   overflow: hidden;
 }
-.containerGrid .mainArea {
+.container-grid .main-area {
   display: grid;
   grid-area: mainArea;
   background-color: #282a36;
@@ -257,7 +256,7 @@ a:hover {
   grid-auto-flow: row;
   overflow: hidden;
 }
-.containerGrid .mainArea .rootPath {
+.container-grid .main-area .root-path {
   grid-area: rootPath;
   display: flex;
   align-items: center;
@@ -266,11 +265,11 @@ a:hover {
   padding-left: 1rem;
   border-bottom: 0.5px solid #44475a;
 }
-.containerGrid .mainArea .mainView {
+.container-grid .main-area .main-view {
   grid-area: mainView;
   overflow-y: auto;
 }
-.containerGrid .footer {
+.container-grid .footer {
   grid-area: footer;
   background-color: #191a21;
   border-top: 0.5px solid #44475a;
@@ -280,7 +279,7 @@ a:hover {
   font-size: 0.8rem;
   color: #f0f8ff;
 }
-.containerGrid .footer .iconsFooterL {
+.container-grid .footer .icons-footer-start {
   display: flex;
   width: 125px;
   justify-content: space-around;
@@ -288,38 +287,38 @@ a:hover {
   padding-left: 10px;
   font-size: 12px;
 }
-.containerGrid .footer .iconsFooterL a {
+.container-grid .footer .icons-footer-start a {
   display: flex;
   align-items: center;
   transition: 0.5s;
 }
-.containerGrid .footer .iconsFooterL a:hover {
+.container-grid .footer .icons-footer-start a:hover {
   color: #bd93f9;
 }
-.containerGrid .footer .iconsFooterL .bi {
+.container-grid .footer .icons-footer-start .bi {
   align-self: center;
 }
-.containerGrid .footer .iconsFooterR {
+.container-grid .footer .icons-footer-end {
   display: flex;
   width: 100px;
   justify-content: space-around;
   cursor: default;
   font-size: 12px;
 }
-.containerGrid .footer .iconsFooterR .bi {
+.container-grid .footer .icons-footer-end .bi {
   align-self: center;
 }
-.containerGrid .footer .margin {
+.container-grid .footer .margin {
   margin-left: 5px;
 }
 @media screen and (max-width: 600px) {
-  .containerGrid {
+  .container-grid {
     position: relative;
     grid-template-columns: 0.45fr 3fr;
     grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
     grid-template-areas: "menuIcon navBarTop" "menuIcon tabs" "mainArea mainArea" "footer footer";
   }
-  .containerGrid a#menu-icon {
+  .container-grid a#menu-icon {
     grid-area: menuIcon;
     display: flex;
     justify-content: center;
@@ -328,7 +327,7 @@ a:hover {
     background-color: #1d1e24;
     border-bottom: 0.5px solid #44475a;
   }
-  .containerGrid a#menu-icon .bar {
+  .container-grid a#menu-icon .bar {
     margin: 3px;
     width: 25px;
     height: 3px;
@@ -339,29 +338,29 @@ a:hover {
     -o-transition: margin 0.7s, transform 0.7s;
     transition: margin 0.7s, transform 0.7s, -webkit-transform 0.7s;
   }
-  .containerGrid a#menu-icon.close .bar:first-child {
+  .container-grid a#menu-icon.close .bar:first-child {
     -webkit-transform: translateY(9px) rotate(45deg);
     -ms-transform: translateY(9px) rotate(45deg);
     transform: translateY(9px) rotate(45deg);
   }
-  .containerGrid a#menu-icon.close .bar:nth-child(2) {
+  .container-grid a#menu-icon.close .bar:nth-child(2) {
     opacity: 0;
   }
-  .containerGrid a#menu-icon.close .bar:last-child {
+  .container-grid a#menu-icon.close .bar:last-child {
     -webkit-transform: translateY(-9px) rotate(-45deg);
     -ms-transform: translateY(-9px) rotate(-45deg);
     transform: translateY(-9px) rotate(-45deg);
   }
-  .containerGrid .navBarTop {
+  .container-grid .navbar-top {
     flex-direction: row-reverse;
   }
-  .containerGrid .navBarTop span {
+  .container-grid .navbar-top span {
     padding-left: 1px;
   }
-  .containerGrid .navBarTop .iconoMenu .menuNavBarTop {
+  .container-grid .navbar-top .menu-icon .menu-top {
     display: none;
   }
-  .containerGrid .navBarAside {
+  .container-grid .navbar-aside {
     grid-area: initial;
     visibility: hidden;
     position: absolute;
@@ -371,18 +370,18 @@ a:hover {
     z-index: 4;
     transition: all 0.8s ease;
   }
-  .containerGrid .navBarAside * {
+  .container-grid .navbar-aside * {
     opacity: 0;
     transition: opacity 1s ease !important;
   }
-  .containerGrid .navBarAside.navBarAsideRes {
+  .container-grid .navbar-aside.navBarAsideRes {
     visibility: visible;
     height: 90.4%;
   }
-  .containerGrid .navBarAside.navBarAsideRes * {
+  .container-grid .navbar-aside.navBarAsideRes * {
     opacity: 1;
   }
-  .containerGrid .sideBar {
+  .container-grid .sidebar {
     visibility: hidden;
     grid-area: initial;
     position: absolute;
@@ -397,48 +396,48 @@ a:hover {
     grid-template-areas: "titleSideBar" "fileOpen" "viewSideBar";
     transition: all 0.5s ease;
   }
-  .containerGrid .sideBar .fileOpen {
+  .container-grid .sidebar .file-open {
     background-color: #343746;
   }
-  .containerGrid .sideBar.sideBarRes {
+  .container-grid .sidebar.sideBarRes {
     visibility: visible;
     width: 56%;
   }
-  .containerGrid .mainArea {
+  .container-grid .main-area {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.1fr 0.1fr 2.8fr;
     grid-template-areas: "rootPath rootPath rootPath" "mainView mainView mainView" "mainView mainView mainView";
   }
 }
 @media screen and (min-width: 601px) and (max-width: 1023px) {
-  .containerGrid {
+  .container-grid {
     grid-template-columns: 0.1fr 170px minmax(0, 3fr);
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar tabs" "navBarAside sideBar mainArea" "navBarAside footer footer";
   }
-  .containerGrid .sideBar {
+  .container-grid .sidebar {
     grid-template-columns: 1fr;
     grid-template-rows: 0.15fr 0.1fr 4fr;
     grid-template-areas: "titleSideBar" "fileOpen" "viewSideBar";
   }
-  .containerGrid .mainArea {
+  .container-grid .main-area {
     grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 4fr;
     grid-template-areas: "rootPath" "mainView";
   }
 }
 @media screen and (min-width: 1024px) {
-  .containerGrid {
+  .container-grid {
     grid-template-columns: 0.1fr 340px minmax(0, 3fr);
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar tabs" "navBarAside sideBar mainArea" "navBarAside footer footer";
   }
-  .containerGrid .sideBar {
+  .container-grid .sidebar {
     grid-template-columns: 1fr;
     grid-template-rows: 0.15fr 0.1fr 4fr;
     grid-template-areas: "titleSideBar" "fileOpen" "viewSideBar";
   }
-  .containerGrid .mainArea {
+  .container-grid .main-area {
     grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 4fr;
     grid-template-areas: "rootPath" "mainView";
@@ -2299,8 +2298,8 @@ footer svg:hover {
   color: #f0f8ff;
 }
 
-.welcome .toolTipText,
-.iconNavBarAside .toolTipText {
+.welcome-icon .tooltip-text,
+.icon-navbar .tooltip-text {
   visibility: hidden;
   width: 70px;
   font-size: 0.8rem;
@@ -2315,8 +2314,8 @@ footer svg:hover {
   left: 110%;
   z-index: 3;
 }
-.welcome .toolTipText::after,
-.iconNavBarAside .toolTipText::after {
+.welcome-icon .tooltip-text::after,
+.icon-navbar .tooltip-text::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -2327,20 +2326,20 @@ footer svg:hover {
   border-color: transparent #6272a4 transparent transparent;
 }
 @media screen and (max-width: 600px) {
-  .welcome .toolTipText,
-  .iconNavBarAside .toolTipText {
+  .welcome-icon .tooltip-text,
+  .icon-navbar .tooltip-text {
     display: none;
   }
 }
-.welcome:hover .toolTipText,
-.iconNavBarAside:hover .toolTipText {
+.welcome-icon:hover .tooltip-text,
+.icon-navbar:hover .tooltip-text {
   visibility: visible;
 }
 
-.welcome .toolTipText {
+.welcome-icon .tooltip-text {
   top: 0px;
 }
-.welcome .toolTipText::after {
+.welcome-icon .tooltip-text::after {
   top: 50%;
 }
 

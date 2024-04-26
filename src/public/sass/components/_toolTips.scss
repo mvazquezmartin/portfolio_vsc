@@ -1,6 +1,6 @@
-.welcome,
-.iconNavBarAside {
-  .toolTipText {
+.welcome-icon,
+.icon-navbar {
+  .tooltip-text {
     visibility: hidden;
     width: 70px;
     font-size: 0.8rem;
@@ -30,13 +30,13 @@
     }
   }
 
-  &:hover .toolTipText {
+  &:hover .tooltip-text {
     visibility: visible;
   }
 }
 
-.welcome {
-  .toolTipText {
+.welcome-icon {
+  .tooltip-text {
     top: 0px;
     &::after {
       top: 50%;

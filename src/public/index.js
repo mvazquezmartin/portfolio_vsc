@@ -20,7 +20,7 @@ const readme = document.getElementById("readme");
 const github = document.getElementById("github");
 const contact = document.getElementById("contact");
 const account = document.getElementById("account");
-const btnNavBarAside = document.querySelectorAll(".iconNavBarAside");
+const btnNavBarAside = document.querySelectorAll(".icon-navbar");
 
 // FUNCIONES
 
