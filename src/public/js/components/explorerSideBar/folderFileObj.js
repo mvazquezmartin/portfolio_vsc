@@ -32,17 +32,17 @@ const assetsFolder = {
       function: () =>
         tabManager.create(
           'documentation.jpg',
-          () => ilyudo(imgPath.DOCUMENTATION_MEME, 'chess_meme'),
+          () => ilyudo(imgPath.DOCUMENTATION_MEME, 'documentation'),
           iconPath.JPG
         ),
     },
     {
-      name: 'loroArquitecto.jpg',
+      name: 'loro_arquitecto.jpg',
       icon: iconPath.JPG,
       function: () =>
         tabManager.create(
-          'loroArquitecto.jpg',
-          () => ilyudo(imgPath.DEPENDE_MEME, 'loroArquitecto'),
+          'loro_arquitecto.jpg',
+          () => ilyudo(imgPath.DEPENDE_MEME, 'loro_arquitecto'),
           iconPath.JPG
         ),
     },
@@ -52,7 +52,7 @@ const assetsFolder = {
       function: () =>
         tabManager.create(
           'pro_googling.jpg',
-          () => ilyudo(imgPath.PRO_GOOGLING, 'pro googling'),
+          () => ilyudo(imgPath.PRO_GOOGLING, 'pro_googling'),
           iconPath.JPG
         ),
     },
@@ -67,12 +67,12 @@ const assetsFolder = {
         ),
     },
     {
-      name: 'setUp.jpg',
+      name: 'setup.jpg',
       icon: iconPath.JPG,
       function: () =>
         tabManager.create(
-          'setUp.jpg',
-          () => ilyudo(imgPath.SETUP, 'setUp'),
+          'setup.jpg',
+          () => ilyudo(imgPath.SETUP, 'setup'),
           iconPath.JPG
         ),
     },

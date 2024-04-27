@@ -1,7 +1,7 @@
 const ilyudo = (img, name) => {
   const rootPath = document.getElementById("rootPath");
   rootPath.style.display = "flex";
-  rootPath.innerHTML = `Assets > ${name}.jpg`;
+  rootPath.innerHTML = `Portfolio > Assets > ${name}.jpg`;
 
   const miNodo = document.createElement("div");
   miNodo.classList.add("assetsContainer")
