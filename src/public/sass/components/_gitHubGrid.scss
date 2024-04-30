@@ -10,6 +10,11 @@
     margin: 0.5rem 0;
     padding: 0 0.5rem;
     background-color: #21222c;
+    text-wrap: wrap;    
+    @include mobile {
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+    }
 
     &:hover {
       background-color: #bebebe33;

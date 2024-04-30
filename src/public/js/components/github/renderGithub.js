@@ -31,7 +31,7 @@ const renderGithub = async () => {
     }
 
     const data = cacheData['github/starred'];
-    const dataToArray = data.payload;
+    const dataToArray = [...data.payload];
     const dataLastTen = dataToArray.reverse().slice(0, 10);
 
     dataLastTen.forEach((repo) => {

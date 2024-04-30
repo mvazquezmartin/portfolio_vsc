@@ -26,6 +26,10 @@
       font-size: 0.8rem;
     }
   }
+
+  @include mobile{
+    overflow-x: hidden;
+  }
 }
 
 .channelsContainer {

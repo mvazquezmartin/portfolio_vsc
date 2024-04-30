@@ -401,6 +401,7 @@ a:hover {
   }
   .container-grid .sidebar .file-open {
     background-color: #343746;
+    text-wrap: nowrap;
   }
   .container-grid .sidebar.sideBarRes {
     visibility: visible;
@@ -2129,7 +2130,7 @@ a:hover {
 }
 @media screen and (max-width: 600px) {
   .stackRender, .recommendedContainer .nextToLearnContainer {
-    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
@@ -2576,6 +2577,13 @@ a:hover {
   margin: 0.5rem 0;
   padding: 0 0.5rem;
   background-color: #21222c;
+  text-wrap: wrap;
+}
+@media screen and (max-width: 600px) {
+  .repositoriesContainer .starredCard {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
 }
 .repositoriesContainer .starredCard:hover {
   background-color: rgba(190, 190, 190, 0.2);
@@ -2753,6 +2761,11 @@ a:hover {
 }
 .booksmarksContainer .bookmark span {
   font-size: 0.8rem;
+}
+@media screen and (max-width: 600px) {
+  .booksmarksContainer {
+    overflow-x: hidden;
+  }
 }
 
 .channelsContainer {
