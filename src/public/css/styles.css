@@ -238,6 +238,7 @@ a:hover {
   flex-direction: column;
   user-select: none;
   overflow: hidden;
+  overflow-y: auto;
 }
 .container-grid .tabs {
   grid-area: tabs;
