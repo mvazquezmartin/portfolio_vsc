@@ -2569,9 +2569,10 @@ a:hover {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  min-height: 110px;
+  height: auto;
   margin: 0.5rem 0;
   padding: 0 0.5rem;
-  height: 110px;
   background-color: #21222c;
 }
 .repositoriesContainer .starredCard:hover {
@@ -2607,6 +2608,7 @@ a:hover {
   border-bottom-left-radius: 3px;
   border-top: 1px solid #6b6e7e;
   border-bottom: 1px solid #6b6e7e;
+  text-wrap: balance;
 }
 
 .containerMainGithub {
