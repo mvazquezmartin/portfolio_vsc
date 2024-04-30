@@ -49,7 +49,8 @@ const renderMainGithub = async () => {
 
   containerMain.appendChild(containerRepositories);
   containerGithub.appendChild(calendar);
-  containerMain.appendChild(containerGithub);
+  containerRepositories.appendChild(containerGithub)
+  // containerMain.appendChild(containerGithub);
   mainView.appendChild(containerMain);
 };
 

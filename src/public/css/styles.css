@@ -2700,15 +2700,22 @@ a:hover {
     font-size: 14px;
   }
 }
-.containerMainGithub .containerChartGithub {
-  width: 100%;
+.containerMainGithub .containerRepositories .containerChartGithub {
+  grid-column: span 3;
+  display: grid;
+  place-content: center;
 }
-.containerMainGithub .containerChartGithub img {
-  width: 50%;
-  height: 150px;
+.containerMainGithub .containerRepositories .containerChartGithub img {
+  width: 100%;
+  height: 180px;
+}
+@media (max-width: 1520px) {
+  .containerMainGithub .containerRepositories .containerChartGithub {
+    grid-column: span 2;
+  }
 }
 @media screen and (max-width: 600px) {
-  .containerMainGithub .containerChartGithub {
+  .containerMainGithub .containerRepositories .containerChartGithub {
     display: none;
   }
 }
