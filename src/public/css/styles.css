@@ -237,8 +237,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   user-select: none;
-  overflow: hidden;
+  overflow-x: hidden;
   overflow-y: auto;
+  text-wrap: nowrap;
 }
 .container-grid .tabs {
   grid-area: tabs;
@@ -392,6 +393,7 @@ a:hover {
     left: 13%;
     border-top: 0.5px solid #44475a;
     overflow-y: auto;
+    overflow-x: hidden;
     grid-template-columns: 1fr;
     grid-template-rows: 0.15fr 0.1fr 4fr;
     grid-template-areas: "titleSideBar" "fileOpen" "viewSideBar";
@@ -402,7 +404,7 @@ a:hover {
   }
   .container-grid .sidebar.sideBarRes {
     visibility: visible;
-    width: 56%;
+    width: 57%;
   }
   .container-grid .main-area {
     grid-template-columns: 1fr 1fr 1fr;

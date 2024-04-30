@@ -171,8 +171,9 @@
       display: flex;
       flex-direction: column;
       user-select: none;
-      overflow: hidden;
+      overflow-x: hidden;
       overflow-y: auto;
+      text-wrap: nowrap;
     }
   }
 
@@ -361,6 +362,7 @@
       left: 13%;
       border-top: $style-border-grid;
       overflow-y: auto;
+      overflow-x: hidden;
       grid-template-columns: 1fr;
       grid-template-rows: 0.15fr 0.1fr 4fr;
       grid-template-areas:
@@ -375,7 +377,7 @@
 
       &.sideBarRes {
         visibility: visible;
-        width: 56%;
+        width: 57%;
       }
     }
 
