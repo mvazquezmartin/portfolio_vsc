@@ -40,10 +40,20 @@ const mobileResponsive = () => {
   menu.addEventListener('click', (e) => {
     e.preventDefault();
     menu.classList.toggle('close');
-    sideBar.classList.remove('sideBarRes');
-    navBarAside.classList.toggle('navBarAsideRes');
-    for (const icon of sideBarIcon) {
-      icon.classList.remove('active');
+
+    if (sideBar.classList.contains('sideBarRes')) {
+      sideBar.classList.remove('sideBarRes');
+      setTimeout(() => {
+        navBarAside.classList.remove('navBarAsideRes');
+        for (const icon of sideBarIcon) {
+          icon.classList.remove('active');
+        }
+      }, 500);
+    } else {
+      navBarAside.classList.toggle('navBarAsideRes');
+      for (const icon of sideBarIcon) {
+        icon.classList.remove('active');
+      }
     }
   });
 
