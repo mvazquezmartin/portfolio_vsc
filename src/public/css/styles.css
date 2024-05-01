@@ -2583,6 +2583,7 @@ a:hover {
   .repositoriesContainer .starredCard {
     overflow-x: hidden;
     text-overflow: ellipsis;
+    width: 194px;
   }
 }
 .repositoriesContainer .starredCard:hover {
@@ -2619,6 +2620,12 @@ a:hover {
   border-top: 1px solid #6b6e7e;
   border-bottom: 1px solid #6b6e7e;
   text-wrap: balance;
+}
+@media screen and (max-width: 600px) {
+  .repositoriesContainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 }
 
 .containerMainGithub {
