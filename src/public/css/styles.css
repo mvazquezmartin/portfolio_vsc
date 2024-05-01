@@ -2583,7 +2583,8 @@ a:hover {
   .repositoriesContainer .starredCard {
     overflow-x: hidden;
     text-overflow: ellipsis;
-    min-width: 250px;
+    min-width: 220px;
+    width: 100%;
   }
 }
 .repositoriesContainer .starredCard:hover {
