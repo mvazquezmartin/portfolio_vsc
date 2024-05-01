@@ -14,7 +14,7 @@
     @include mobile {
       overflow-x: hidden;
       text-overflow: ellipsis;
-      width: 194px;
+      min-width: 250px;
     }
 
     &:hover {
