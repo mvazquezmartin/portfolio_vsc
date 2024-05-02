@@ -43,7 +43,7 @@ inicio.addEventListener("click", () =>
 );
 
 // EJECUCION DE FUNCIONES
-setUpResponsiveEvents(); // MOBILE FUNCTION
+setUpResponsiveEvents(); 
 btnFocus(btnNavBarAside, "active");
 tabManager.create("Welcome", renderMainText, iconPath.VSC, true);
 renderExplorer();
