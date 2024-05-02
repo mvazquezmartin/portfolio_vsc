@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/mvazquezmartin/portfolio_vsc#readme",
   "dependencies": {
+    "@sweetalert2/theme-dark": "^5.0.16",
     "axios": "^1.5.0",
     "body-parser": "^1.20.2",
     "dotenv": "^16.3.1",
@@ -33,6 +34,7 @@
     "multer": "^1.4.5-lts.1",
     "path": "^0.12.7",
     "socket.io": "^4.7.1",
+    "sweetalert2": "^11.10.8",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
