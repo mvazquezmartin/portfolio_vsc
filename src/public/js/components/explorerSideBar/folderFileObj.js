@@ -22,6 +22,7 @@ import { readmeRenderFM } from '../followMe/readmeRender.js';
 import { readmeRenderGTC } from '../guessTheColor/readme.js';
 import { guessTheNumberRender } from '../guessTheNumber/guessTheNumberRender.js';
 import { readmeRenderGTN } from '../guessTheNumber/readme.js';
+import { readmeRenderPW } from '../pongWars/readme.js';
 
 const assetsFolder = {
   folderName: 'Assets',
@@ -111,6 +112,13 @@ const pongWarsFolder = {
       icon: iconPath.JAVASCRIPT,
       function: () =>
         tabManager.create('pongWars.js', pongWarsRender, iconPath.PONGWARS),
+    },
+    {
+      name: 'readme_pw.md',
+      icon: iconPath.MARKDOWN,
+      function: () => {
+        tabManager.create('readme_pw', readmeRenderPW, iconPath.MARKDOWN);
+      },
     },
   ],
   subfolders: [],
