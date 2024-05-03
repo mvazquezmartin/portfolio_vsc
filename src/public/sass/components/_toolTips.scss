@@ -14,6 +14,8 @@
     top: 10px;
     left: 110%;
     z-index: 3;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 
     &::after {
       content: '';
@@ -32,6 +34,7 @@
 
   &:hover .tooltip-text {
     visibility: visible;
+    opacity: 1;
   }
 }
 

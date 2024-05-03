@@ -2296,6 +2296,8 @@ a:hover {
   top: 10px;
   left: 110%;
   z-index: 3;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 .welcome-icon .tooltip-text::after,
 .icon-navbar .tooltip-text::after {
@@ -2317,6 +2319,7 @@ a:hover {
 .welcome-icon:hover .tooltip-text,
 .icon-navbar:hover .tooltip-text {
   visibility: visible;
+  opacity: 1;
 }
 
 .welcome-icon .tooltip-text {
