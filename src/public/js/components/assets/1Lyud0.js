@@ -1,15 +1,19 @@
 const ilyudo = (img, name) => {
-  const rootPath = document.getElementById("rootPath");
-  rootPath.style.display = "flex";
+  const rootPath = document.getElementById('rootPath');
+  rootPath.style.display = 'flex';
   rootPath.innerHTML = `Portfolio > Assets > ${name}.jpg`;
 
-  const miNodo = document.createElement("div");
-  miNodo.classList.add("assetsContainer")
-  const miNodoImg = document.createElement("img");
-  miNodoImg.classList.add("assets");
-  miNodoImg.setAttribute("src", img);
-  miNodo.appendChild(miNodoImg);
-  mainView.appendChild(miNodo);  
+  const $imgContainer = document.createElement('div');
+  $imgContainer.classList.add('assetsContainer');
+
+  const $imageAsset = document.createElement('img');
+  $imageAsset.classList.add('assets');
+  $imageAsset.setAttribute('src', img);
+  $imageAsset.alt = name;
+  $imageAsset.id = name;
+
+  $imgContainer.appendChild($imageAsset);
+  mainView.appendChild($imgContainer);
 };
 
 export { ilyudo };

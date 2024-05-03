@@ -757,11 +757,14 @@ a:hover {
   height: 100%;
 }
 .assetsContainer .assets {
-  max-width: 600px;
+  max-width: 900px;
   width: 100%;
   height: auto;
   margin: 1rem;
   border-radius: 10px;
+}
+.assetsContainer #judo {
+  max-width: 500px;
 }
 @media screen and (max-width: 600px) {
   .assetsContainer {
