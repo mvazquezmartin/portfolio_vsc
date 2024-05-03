@@ -31,7 +31,7 @@
       .welcome-icon {
         position: relative;
 
-        img {          
+        img {
           cursor: pointer;
         }
       }
@@ -63,57 +63,47 @@
   .navbar-aside {
     grid-area: navBarAside;
     background-color: $color-littleLightGrey;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 2rem;
 
-    .navbar-icon-aside {
+    button.active {
+      box-shadow: inset 1.5px 0 $color-pink;
+      color: $color-white;
+      background-color: rgba(190, 190, 190, 0.2);
+    }
+
+    .icon-navbar {
+      display: inline-flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 100%;
+      color: #5c6a98;
+      font-size: 1.7rem;
+      cursor: pointer;
+      transition: color 0.1s;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+
+    .icon-end-aside {
       display: flex;
-      height: 100%;
       flex-direction: column;
-      justify-content: space-between;
-      font-size: 2rem;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
 
-      .icon-container-aside {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
+      .bi {
+        transition: color 0.3s;
 
-        button.active {
-          box-shadow: inset 1.5px 0 $color-pink;
+        &:hover {
           color: $color-white;
-          background-color: rgba(190, 190, 190, 0.2);
-        }
-
-        .icon-navbar {
-          display: inline-flex;
-          position: relative;
-          justify-content: center;
-          align-items: center;
-          height: 50px;
-          width: 100%;
-          color: #5c6a98;
-          font-size: 1.7rem;
-          cursor: pointer;
-          transition: color 0.1s;
-
-          &:hover {
-            color: $color-white;
-          }
-        }
-
-        .icon-end-aside {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-
-          .bi {
-            transition: color 0.3s;
-
-            &:hover {
-              color: $color-white;
-            }
-          }
         }
       }
     }
@@ -221,7 +211,7 @@
     font-size: 0.8rem;
     color: $color-white;
 
-    .icons-footer-start{
+    .icons-footer-start {
       display: flex;
       width: 125px;
       justify-content: space-around;

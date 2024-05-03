@@ -141,26 +141,18 @@ a:hover {
 .container-grid .navbar-aside {
   grid-area: navBarAside;
   background-color: #343746;
-}
-.container-grid .navbar-aside .navbar-icon-aside {
   display: flex;
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
   font-size: 2rem;
 }
-.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside button.active {
+.container-grid .navbar-aside button.active {
   box-shadow: inset 1.5px 0 #ff79c6;
   color: #f0f8ff;
   background-color: rgba(190, 190, 190, 0.2);
 }
-.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside .icon-navbar {
+.container-grid .navbar-aside .icon-navbar {
   display: inline-flex;
   position: relative;
   justify-content: center;
@@ -172,20 +164,20 @@ a:hover {
   cursor: pointer;
   transition: color 0.1s;
 }
-.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside .icon-navbar:hover {
+.container-grid .navbar-aside .icon-navbar:hover {
   color: #f0f8ff;
 }
-.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside .icon-end-aside {
+.container-grid .navbar-aside .icon-end-aside {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside .icon-end-aside .bi {
+.container-grid .navbar-aside .icon-end-aside .bi {
   transition: color 0.3s;
 }
-.container-grid .navbar-aside .navbar-icon-aside .icon-container-aside .icon-end-aside .bi:hover {
+.container-grid .navbar-aside .icon-end-aside .bi:hover {
   color: #f0f8ff;
 }
 .container-grid .sidebar {
