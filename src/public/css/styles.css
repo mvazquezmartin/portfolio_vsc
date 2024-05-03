@@ -3121,6 +3121,11 @@ a:hover {
 .mainContactContainer .contactSocialContainer .contactContainer .contactMethodContainer .methodLineContainer .linkContainer a:hover {
   color: #a87df1;
 }
+@media screen and (max-width: 600px) {
+  .mainContactContainer .contactSocialContainer .contactContainer .contactMethodContainer .methodLineContainer .linkContainer {
+    display: inline-block;
+  }
+}
 .mainContactContainer .formContactContainer {
   width: 45%;
   border-left: 1px solid #bd93f9;

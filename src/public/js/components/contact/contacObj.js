@@ -11,7 +11,7 @@ const contactMethod = [
   },
   {
     method: "github",
-    data: "mvazquezmartin",
+    data: "@mvazquezmartin",
     link: "https://github.com/mvazquezmartin",
   },
 ];

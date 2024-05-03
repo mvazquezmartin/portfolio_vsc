@@ -62,6 +62,9 @@
                 color: #a87df1;
               }
             }
+            @include mobile{
+              display: inline-block;
+            }
           }
         }
       }
