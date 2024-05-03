@@ -47,11 +47,11 @@ const assetsFolder = {
         ),
     },
     {
-      name: 'pro_googling.jpg',
+      name: 'googling.jpg',
       icon: iconPath.JPG,
       function: () =>
         tabManager.create(
-          'pro_googling.jpg',
+          'googling.jpg',
           () => ilyudo(imgPath.PRO_GOOGLING, 'pro_googling'),
           iconPath.JPG
         ),

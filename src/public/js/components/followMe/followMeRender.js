@@ -55,7 +55,7 @@ const followMeRender = () => {
     o.frequency.value = frequency;
     g.connect(context.destination);
     o.start(0);
-    g.gain.value = 0.5;
+    g.gain.value = 0.9;
     g.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + 1.5);
     return o;
   }
