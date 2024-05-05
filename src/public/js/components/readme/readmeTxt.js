@@ -220,7 +220,12 @@ Después de investigar un poco sobre como portear un proyecto web descubrí que 
 [![My Skills](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev)
 ## Features
 
-Decidí realizar algunas modificaciones para mejorar la experiencia. Ajusté el canvas para que ocupara toda la pantalla y añadí algunos detalles para hacerlo más dinámico. Cree una clase que genera partículas de colisión y una función que renderiza una estela para resaltar el movimiento de las bolas. Además, implementé límites de velocidad para evitar situaciones en las que una de las dos bolas se moviera demasiado rápido. Y por último, le cambie el score por porcentaje, me pareció una forma mejor de ver quien va ganando.
+Decidí realizar algunas modificaciones para mejorar la experiencia. 
+- Ajusté el canvas para que ocupara toda la pantalla y añadí algunos detalles para hacerlo más dinámico. 
+- Cree una clase que genera partículas de colisión
+- Función que renderiza una estela para resaltar el movimiento de las bolas. 
+- Implementé límites de velocidad para evitar situaciones en las que una de las dos bolas se moviera demasiado rápido.
+- Cambié el score por porcentaje, me pareció una forma mejor de ver quien va ganando.
 
 ## Links
 - [Version Web](https://mvazquezmartin.github.io/pongwars/)
