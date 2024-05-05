@@ -26,7 +26,7 @@ router.get('/starred', async (req, res) => {
   try {
     const isValid = await cacheServiceStarred.isValidCache(313330998);
     if (isValid) {
-      const response = await cacheServiceStarred.getAll();
+      const response = await cacheServiceStarred.getAll();      
       if (response.status !== 'error') {
         const transformedData = response.payload.map((item) => ({
           id: item.id,
