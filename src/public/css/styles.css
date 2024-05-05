@@ -774,6 +774,7 @@ a:hover {
 
 .accordion {
   display: flex;
+  align-items: flex-end;
   color: #f0f8ff;
   width: 100%;
   border: none;
@@ -781,7 +782,6 @@ a:hover {
   outline: none;
   padding: 3px 0;
   padding-left: 1rem;
-  font-size: 0.8rem;
   cursor: pointer;
 }
 .accordion .iconFolder {
