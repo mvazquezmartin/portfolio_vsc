@@ -44,6 +44,4 @@ class CacheService {
   }
 }
 
-// const cacheService = new CacheService(cachePath);
-
 export default CacheService;
