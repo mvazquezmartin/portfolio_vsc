@@ -1,5 +1,5 @@
-import CacheManager from "../dao/cache/cache.manager.fs.js";
-import HTTP_STATUS_CODES from "../constants/htpp-status-code.constants.js";
+import CacheManager from '../dao/cache/cache.manager.fs.js';
+import HTTP_STATUS_CODES from '../constants/htpp-status-code.constants.js';
 
 class CacheService {
   constructor(cacheFilePath) {
@@ -8,11 +8,10 @@ class CacheService {
 
   async getAll() {
     const data = await this.cacheManager.getAll();
-    if (!data) return { code: HTTP_STATUS_CODES.NOT_FOUND, status: "error" };    
-
+    if (!data) return { code: HTTP_STATUS_CODES.NOT_FOUND, status: 'error' };
     return {
       code: HTTP_STATUS_CODES.OK,
-      status: "success",
+      status: 'success',
       payload: data,
     };
   }
@@ -22,7 +21,7 @@ class CacheService {
     if (!data) return { payload: null };
     return {
       code: HTTP_STATUS_CODES.OK,
-      status: "success",
+      status: 'success',
       payload: data.data,
     };
   }
@@ -39,7 +38,7 @@ class CacheService {
     try {
       return await this.cacheManager.isValidCache(id);
     } catch (error) {
-      console.log("Error in validCache:", error);
+      console.log('Error in validCache:', error);
       throw error;
     }
   }

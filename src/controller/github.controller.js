@@ -1,6 +1,5 @@
 import { Router } from 'express';
 import HTTP_STATUS_CODES from '../constants/htpp-status-code.constants.js';
-// import { default: axios } from ("axios");
 import axios from 'axios';
 import CacheService from '../service/cache.service.js';
 import path from 'path';
