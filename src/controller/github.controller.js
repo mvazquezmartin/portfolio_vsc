@@ -1,22 +1,21 @@
-import { Router } from "express";
-import HTTP_STATUS_CODES from "../constants/htpp-status-code.constants.js";
+import { Router } from 'express';
+import HTTP_STATUS_CODES from '../constants/htpp-status-code.constants.js';
 // import { default: axios } from ("axios");
-import axios from "axios";
-import CacheService from "../service/cache.service.js";
-import path from "path";
-
+import axios from 'axios';
+import CacheService from '../service/cache.service.js';
+import path from 'path';
 
 const chachePathStarred = path.join(
   process.cwd(),
-  "src/dao/cache/file/cacheGithubStarred.json"
+  'src/dao/cache/file/cacheGithubStarred.json'
 );
 const cachePathRepos = path.join(
   process.cwd(),
-  "src/dao/cache/file/cacheGithubRepos.json"
+  'src/dao/cache/file/cacheGithubRepos.json'
 );
 const cachePathProfile = path.join(
   process.cwd(),
-  "src/dao/cache/file/cacheGithubProfile.json"
+  'src/dao/cache/file/cacheGithubProfile.json'
 );
 const cacheServiceStarred = new CacheService(chachePathStarred);
 const cacheServiceRepo = new CacheService(cachePathRepos);
@@ -24,21 +23,29 @@ const cacheServiceProfile = new CacheService(cachePathProfile);
 
 const router = Router();
 
-router.get("/starred", async (req, res) => {
+router.get('/starred', async (req, res) => {
   try {
     const isValid = await cacheServiceStarred.isValidCache(313330998);
     if (isValid) {
       const response = await cacheServiceStarred.getAll();
-      if (response.status !== "error") {
+      if (response.status !== 'error') {
+        const transformedData = response.payload.map((item) => ({
+          id: item.id,
+          owner: item.data.owner,
+          name: item.data.name,
+          description: item.data.description,
+          html_url: item.data.html_url,
+        }));
+
         return res.status(response.code).json({
           status: response.status,
-          payload: response.payload,
+          payload: transformedData,
         });
       }
     }
 
     const dataResponse = await axios.get(
-      "https://api.github.com/users/mvazquezmartin/starred"
+      'https://api.github.com/users/mvazquezmartin/starred'
     );
 
     const filteredData = dataResponse.data.map((repo) => ({
@@ -51,30 +58,23 @@ router.get("/starred", async (req, res) => {
 
     for (const repo of filteredData) {
       await cacheServiceStarred.create(repo.id, repo);
-      console.log("GITHUB STARRED ⭐", repo.name);
+      console.log('GITHUB STARRED ⭐', repo.name);
     }
 
-    // await Promise.all(
-    //   filteredData.map(async (repo) => {
-    //     await cacheServiceStarred.create(repo.id, repo);
-    //     console.log("GITHUB STARRED ⭐", repo.name);
-    //   })
-    // );
-
     res.status(HTTP_STATUS_CODES.OK).json({
-      status: "success",
-      message: "message",
+      status: 'success',
+      message: 'message',
       payload: filteredData,
     });
   } catch (error) {
     console.log(error);
     res
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
-      .json({ status: "error", message: "Something went wrong" });
+      .json({ status: 'error', message: 'Something went wrong' });
   }
 });
 
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const { repository } = req.query;
     const isValid = await cacheServiceRepo.isValidCache(repository);
@@ -100,26 +100,26 @@ router.get("/", async (req, res) => {
     };
 
     await cacheServiceRepo.create(repository, repositoryInfo);
-    console.log("HELLO REPOSITORY!:", repository);
+    console.log('HELLO REPOSITORY!:', repository);
     res.status(HTTP_STATUS_CODES.OK).json({
-      status: "success",
-      message: "here is the repository",
+      status: 'success',
+      message: 'here is the repository',
       payload: repositoryInfo,
     });
   } catch (error) {
     console.log(error);
     res
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
-      .json({ status: "error", message: "Something went wrong" });
+      .json({ status: 'error', message: 'Something went wrong' });
   }
 });
 
-router.get("/user", async (req, res) => {
+router.get('/user', async (req, res) => {
   try {
-    const isValid = await cacheServiceProfile.isValidCache("mvazquezmartin");
+    const isValid = await cacheServiceProfile.isValidCache('mvazquezmartin');
     if (isValid) {
-      const response = await cacheServiceProfile.getOne("mvazquezmartin");
-      if (response.status !== "error") {
+      const response = await cacheServiceProfile.getOne('mvazquezmartin');
+      if (response.status !== 'error') {
         return res.status(response.code).json({
           status: response.status,
           payload: response.payload,
@@ -127,7 +127,7 @@ router.get("/user", async (req, res) => {
       }
     }
     const dataResponse = await axios.get(
-      "https://api.github.com/users/mvazquezmartin"
+      'https://api.github.com/users/mvazquezmartin'
     );
 
     const data = {
@@ -139,19 +139,19 @@ router.get("/user", async (req, res) => {
       public_repos: dataResponse.data.public_repos,
     };
 
-    await cacheServiceProfile.create("mvazquezmartin", data);
-    console.log("HELLO PROFILE!", "mvazquezmartin");
+    await cacheServiceProfile.create('mvazquezmartin', data);
+    console.log('HELLO PROFILE!', 'mvazquezmartin');
 
     res.status(HTTP_STATUS_CODES.OK).json({
-      status: "success",
-      message: "User data retrieval successful.",
+      status: 'success',
+      message: 'User data retrieval successful.',
       payload: data,
     });
   } catch (error) {
     console.log(error);
     res
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
-      .json({ status: "error", message: "Something went wrong" });
+      .json({ status: 'error', message: 'Something went wrong' });
   }
 });
 

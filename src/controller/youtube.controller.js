@@ -54,8 +54,7 @@ router.get('/', async (req, res) => {
       thumbnails: channelData.snippet.thumbnails.default.url,
       latestVideo: videoInfo,
     };
-
-    //await cacheService.delete(channelId);
+    
     await cacheService.create(channelId, channelInfo);
 
     console.log('HELLO WORLD!:', channelData.brandingSettings.channel.title);
