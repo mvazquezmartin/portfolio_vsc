@@ -35,7 +35,7 @@ const guessTheColorRender = () => {
 
   const clickAudio = new Audio('../../../assets/audio/click-1.wav');
   const ATTEMPS = 7;
-  let attempt = ATTEMPS;
+  let attempt = ATTEMPS;  
 
   function eventListenerColor(
     color,
