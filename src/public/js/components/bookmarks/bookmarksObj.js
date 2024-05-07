@@ -276,7 +276,7 @@ const channelNotes = {
   Joe_Grand:
     'Es un ingeniero electrónico, inventor y hacker de hardware estadounidense, conocido en la comunidad hacker como Kingpin. Aunque no es muy activo en Youtube, los videos que tiene son impresionante como indaga y llega a lo más profundo para corromper el sistema de seguridad de un dispositivo.',
   Joaquin_Leal:
-    'Cuando estuve trabajando en una empresa que contruía rig de minería de ETH, había un problema con una marca de placa de video que rendía muchos menos de lo esperado. Investigando como solucionarlo, llegue al canal de Joaquin que resolvía la problemática. Desde entonces, me enamoré de su proyecto y sigo día a día sus avances.',
+    'Cuando estuve trabajando en una empresa que construía rig de minería de ETH, había un problema con una marca de placa de video que rendía muchos menos de lo esperado. Investigando como solucionarlo, llegue al canal de Joaquin que resolvía la problemática. Desde entonces, me enamoré de su proyecto y sigo día a día sus avances.',
 };
 
 export { bookmarks, youtubeId, channelNotes };

@@ -2324,6 +2324,7 @@ a:hover {
 
 .welcome-icon .tooltip-text {
   top: 0px;
+  left: 130%;
 }
 .welcome-icon .tooltip-text::after {
   top: 50%;
