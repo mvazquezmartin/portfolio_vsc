@@ -1592,6 +1592,12 @@ a:hover {
     }
   } */
 }
+@media screen and (max-width: 600px) {
+  .container-gtn .attemps-container .attemps-counts-container .attemps-counts {
+    width: 60px;
+    height: 60px;
+  }
+}
 .container-gtn .input-container {
   display: flex;
   width: 300px;
