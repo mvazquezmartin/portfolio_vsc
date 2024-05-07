@@ -1,35 +1,5 @@
-import {
-  assetsFolder,
-  chat,
-  dotenv,
-  crud,
-  gitIgnore,
-  magic8Ball,
-  packageJson,
-  playGroundFolder,
-  pongWarsFolder,
-  readme,
-  guessTheColor,
-  followMe,
-  guessTheNumber,
-} from './folderFileObj.js';
+import { folders } from './folderFileObj.js';
 import { folderFileSideBar } from './folderFileRender.js';
-
-const folderArray = [
-  assetsFolder,
-  followMe,
-  guessTheColor,
-  guessTheNumber,
-  magic8Ball,
-  pongWarsFolder,
-  playGroundFolder,
-  chat,
-  crud,
-  dotenv,
-  gitIgnore,
-  packageJson,
-  readme,
-];
 
 const renderExplorer = () => {
   const $titleSideBar = document.getElementById('titleSideBar');
@@ -42,7 +12,7 @@ const renderExplorer = () => {
   fileOpen.textContent = 'PORTFOLIO';
 
   //Carpetas en Explorer
-  folderArray.forEach((folder) => {
+  folders.forEach((folder) => {
     const newFolder = folderFileSideBar(folder);
     $viewSideBar.appendChild(newFolder);
   });

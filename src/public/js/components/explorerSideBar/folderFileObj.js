@@ -314,18 +314,18 @@ const crud = {
   ],
 };
 
-export {
+export const folders = [
   assetsFolder,
-  playGroundFolder,
-  pongWarsFolder,
-  crud,
-  magic8Ball,
-  chat,
-  readme,
-  packageJson,
-  gitIgnore,
-  dotenv,
-  guessTheColor,
   followMe,
+  guessTheColor,
   guessTheNumber,
-};
+  magic8Ball,
+  pongWarsFolder,
+  playGroundFolder,
+  chat,
+  crud,
+  dotenv,
+  gitIgnore,
+  packageJson,
+  readme,
+];
