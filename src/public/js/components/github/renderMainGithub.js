@@ -23,10 +23,10 @@ const renderMainGithub = async () => {
   calendar.setAttribute('src', imgPath.CALENDAR);
 
   try {
-    if(!cacheUser.data){
-    const response = await fetch('/github/user');
-    const dataUser = await response.json();
-    cacheUser.data = dataUser.payload
+    if (!cacheUser.data) {
+      const response = await fetch('/github/user');
+      const dataUser = await response.json();
+      cacheUser.data = dataUser.payload;
     }
     renderProfile(cacheUser.data, containerMain);
   } catch (error) {

@@ -2658,6 +2658,12 @@ a:hover {
   padding: 1rem;
   border-right: 3px solid #bd93f9;
 }
+.containerMainGithub .containerHeaderGithub .containerName a {
+  transition: color 0.3s ease;
+}
+.containerMainGithub .containerHeaderGithub .containerName a:hover {
+  color: #bd93f9;
+}
 .containerMainGithub .containerHeaderGithub .containerRepos {
   padding: 0 1rem;
   text-align: center;

@@ -81,7 +81,7 @@
     background-color: $color-darkGrey;
     padding: 1.5rem 1rem;
     border-radius: 4px;
-    font-size: 1.5rem;
+    font-size: 1.5rem;    
     .containerAvatar {
       padding: 0 1rem;
       width: 90px;
@@ -94,6 +94,12 @@
     .containerName {
       padding: 1rem;
       border-right: 3px solid #bd93f9;
+      a{
+        transition: color 0.3s ease;
+        &:hover{
+          color: #bd93f9;
+        }
+      }
     }
     .containerRepos {
       padding: 0 1rem;
