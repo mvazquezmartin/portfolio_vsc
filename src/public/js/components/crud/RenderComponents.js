@@ -22,13 +22,13 @@ class RenderComponentsCrud {
       const containerContent = document.createElement("div");
 
       const id = document.createElement("p");
-      id.textContent = item._id;
+      id.textContent = `ID: ${item._id}`;
 
       const title = document.createElement("p");
-      title.textContent = item.title;
+      title.textContent = item.title.toUpperCase();
 
       const category = document.createElement("p");
-      category.textContent = "Category: " + item.category;
+      category.textContent = `Category: ${item.category}`;
 
       const description = document.createElement("p");
       description.textContent = item.description;

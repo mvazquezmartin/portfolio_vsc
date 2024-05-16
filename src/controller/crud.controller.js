@@ -1,13 +1,13 @@
-import { Router } from "express";
-import HTTP_STATUS_CODES from "../constants/htpp-status-code.constants.js";
-import ItemService from "../service/item.service.js";
-import ItemDTO from "../dto/item.dto.js";
-import upload from "../middlewares/upload.middleware.js";
+import { Router } from 'express';
+import HTTP_STATUS_CODES from '../constants/htpp-status-code.constants.js';
+import ItemService from '../service/item.service.js';
+import ItemDTO from '../dto/item.dto.js';
+import upload from '../middlewares/upload.middleware.js';
 
 const router = Router();
 
 // RESTART STORAGE
-router.get("/restart", async (req, res) => {
+router.get('/restart', async (req, res) => {
   try {
     const { persistence } = req.query;
 
@@ -24,12 +24,12 @@ router.get("/restart", async (req, res) => {
     console.log(error);
     res
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
-      .json({ status: "error", message: "Something gone wrong" });
+      .json({ status: 'error', message: 'Something gone wrong' });
   }
 });
 
 // GET ALL ITEM
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const { persistence } = req.query;
 
@@ -46,12 +46,12 @@ router.get("/", async (req, res) => {
     console.log(error);
     res
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
-      .json({ status: "error", message: "Something gone wrong" });
+      .json({ status: 'error', message: 'Something gone wrong' });
   }
 });
 
 // GET ONE BY ID
-router.get("/:id", async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const { persistence } = req.query;
     const { id } = req.params;
@@ -69,22 +69,22 @@ router.get("/:id", async (req, res) => {
     console.log(error);
     res
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
-      .json({ status: "error", message: "Something gone wrong" });
+      .json({ status: 'error', message: 'Something gone wrong' });
   }
 });
 
 // CREATE NEW ITEM
-router.post("/", upload.single("image"), async (req, res, next) => {
+router.post('/', upload.single('mage'), async (req, res, next) => {
   try {
     const { persistence } = req.query;
-    const item = req.body;    
+    const item = req.body;
     if (req.file) {
-      console.log("se cargo la img");
+      console.log('se cargo la img');
     }
     if (req.file && req.file.length !== 0) {
     }
 
-    // if (!item.image) item.image = "https://dummyimage.com/300x200/000/fff";
+    if (!item.image) item.image = 'https://dummyimage.com/300x200/000/fff';
 
     ItemService.setPersistence(persistence);
 
@@ -100,12 +100,12 @@ router.post("/", upload.single("image"), async (req, res, next) => {
     console.log(error);
     res
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
-      .json({ status: "error", message: "Something gone wrong" });
+      .json({ status: 'error', message: 'Something gone wrong' });
   }
 });
 
 // MODIFY EXISTING ITEM
-router.patch("/:id", async (req, res) => {
+router.patch('/:id', async (req, res) => {
   try {
     const { persistence } = req.query;
     const { id } = req.params;
@@ -126,12 +126,12 @@ router.patch("/:id", async (req, res) => {
     console.log(error);
     res
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
-      .json({ status: "error", message: "Something gone wrong" });
+      .json({ status: 'error', message: 'Something gone wrong' });
   }
 });
 
 // DELETE ITEM
-router.delete("/:id", async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const { persistence } = req.query;
     const { id } = req.params;
@@ -150,12 +150,12 @@ router.delete("/:id", async (req, res) => {
     console.log(error);
     res
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
-      .json({ status: "error", message: "Something gone wrong" });
+      .json({ status: 'error', message: 'Something gone wrong' });
   }
 });
 
 // DELETE ALL
-router.delete("/", async (req, res) => {
+router.delete('/', async (req, res) => {
   try {
     const { persistence } = req.query;
 
@@ -172,7 +172,7 @@ router.delete("/", async (req, res) => {
     console.log(error);
     res
       .status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR)
-      .json({ status: "error", message: "Something gone wrong" });
+      .json({ status: 'error', message: 'Something gone wrong' });
   }
 });
 
