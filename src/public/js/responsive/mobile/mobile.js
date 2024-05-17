@@ -1,7 +1,7 @@
 // Función para cambiar el texto del elemento 'titleVSC' según el breakpoint
 const mobileResponsive = () => {
   const titleElement = document.querySelector('.title-vsc');
-  const menu = document.getElementById('menu-icon');
+  const menu = document.getElementById('menu-btn');
   const navBarAside = document.getElementById('navBarAside');
   const sideBar = document.getElementById('sideBar');
   const sideBarIcon = document.getElementsByClassName('icon-navbar');
@@ -85,7 +85,7 @@ const mobileResponsive = () => {
   document.addEventListener('click', (event) => {
     const targetElement = event.target;
     if (
-      !targetElement.closest('#menu-icon') &&
+      !targetElement.closest('#menu-btn') &&
       !targetElement.closest('#navBarAside') &&
       !targetElement.closest('#sideBar')
     ) {

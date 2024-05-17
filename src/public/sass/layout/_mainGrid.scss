@@ -12,7 +12,7 @@
   gap: 0px 0px;
   grid-auto-flow: row;
 
-  a#menu-icon {
+  #menu-btn {
     display: none;
   }
 
@@ -261,7 +261,7 @@
       'mainArea mainArea'
       'footer footer';
 
-    a#menu-icon {
+    #menu-btn {
       grid-area: menuIcon;
       display: flex;
       justify-content: center;

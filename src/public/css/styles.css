@@ -97,7 +97,7 @@ a:hover {
   gap: 0px 0px;
   grid-auto-flow: row;
 }
-.container-grid a#menu-icon {
+.container-grid #menu-btn {
   display: none;
 }
 .container-grid .navbar-top {
@@ -312,7 +312,7 @@ a:hover {
     grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
     grid-template-areas: "menuIcon navBarTop" "menuIcon tabs" "mainArea mainArea" "footer footer";
   }
-  .container-grid a#menu-icon {
+  .container-grid #menu-btn {
     grid-area: menuIcon;
     display: flex;
     justify-content: center;
@@ -321,7 +321,7 @@ a:hover {
     background-color: #1d1e24;
     border-bottom: 0.5px solid #44475a;
   }
-  .container-grid a#menu-icon .bar {
+  .container-grid #menu-btn .bar {
     margin: 3px;
     width: 25px;
     height: 3px;
@@ -332,15 +332,15 @@ a:hover {
     -o-transition: margin 0.7s, transform 0.7s;
     transition: margin 0.7s, transform 0.7s, -webkit-transform 0.7s;
   }
-  .container-grid a#menu-icon.close .bar:first-child {
+  .container-grid #menu-btn.close .bar:first-child {
     -webkit-transform: translateY(9px) rotate(45deg);
     -ms-transform: translateY(9px) rotate(45deg);
     transform: translateY(9px) rotate(45deg);
   }
-  .container-grid a#menu-icon.close .bar:nth-child(2) {
+  .container-grid #menu-btn.close .bar:nth-child(2) {
     opacity: 0;
   }
-  .container-grid a#menu-icon.close .bar:last-child {
+  .container-grid #menu-btn.close .bar:last-child {
     -webkit-transform: translateY(-9px) rotate(-45deg);
     -ms-transform: translateY(-9px) rotate(-45deg);
     transform: translateY(-9px) rotate(-45deg);
