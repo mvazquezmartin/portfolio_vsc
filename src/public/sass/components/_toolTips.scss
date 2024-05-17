@@ -2,16 +2,15 @@
 .icon-navbar {
   .tooltip-text {
     visibility: hidden;
-    width: 70px;
+    position: absolute;
     font-size: 0.8rem;
     font-weight: 500;
     background-color: $color-lightGrey;
     border: 0.5px solid $color-rootPath;
+    border-radius: 3px;
     color: $color-white;
     text-align: center;
-    padding: 2px 0;
-    position: absolute;
-    top: 10px;
+    padding: 4px 8px;
     left: 110%;
     z-index: 3;
     opacity: 0;
@@ -19,8 +18,8 @@
 
     &::after {
       content: '';
-      position: absolute;
       top: 50%;
+      position: absolute;
       right: 100%;
       margin-top: -5px;
       border-width: 5px;
