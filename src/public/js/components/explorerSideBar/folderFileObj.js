@@ -23,6 +23,7 @@ import { readmeRenderGTC } from '../guessTheColor/readme.js';
 import { guessTheNumberRender } from '../guessTheNumber/guessTheNumberRender.js';
 import { readmeRenderGTN } from '../guessTheNumber/readme.js';
 import { readmeRenderPW } from '../pongWars/readme.js';
+import { qrGeneratorRender } from '../qrGenerator/qrGeneratorRender.js';
 
 const assetsFolder = {
   folderName: 'Assets',
@@ -189,6 +190,23 @@ const followMe = {
   subfolders: [],
 };
 
+const qrGenerator = {
+  folderName: 'QRgenerator',
+  files: [
+    {
+      name: 'qrGenerator.js',
+      icon: iconPath.JAVASCRIPT,
+      function: () =>
+        tabManager.create(
+          'qrGenerator.js',
+          qrGeneratorRender,
+          iconPath.JAVASCRIPT
+        ),
+    },
+  ],
+  subfolders: [],
+};
+
 const magic8Ball = {
   folderName: 'Magic8Ball',
   files: [
@@ -322,6 +340,7 @@ export const folders = [
   magic8Ball,
   pongWarsFolder,
   playGroundFolder,
+  qrGenerator,
   chat,
   crud,
   dotenv,
