@@ -367,6 +367,11 @@ Decidí realizar algunas modificaciones para mejorar la experiencia.
 
 [GOQR](https://goqr.me/api/)
 
+## Link & Repositorio
+
+- [LINK](https://mvazquezmartin.github.io/qrgenerator/)
+- [REPOSITORIO](https://github.com/mvazquezmartin/qrgenerator)
+
 ## Contributing
 
 Contributions are welcome! If you want to contribute to this project, feel free to fork the repository and submit a pull request.

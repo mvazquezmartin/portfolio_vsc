@@ -195,11 +195,11 @@ const qrGenerator = {
   folderName: 'QRgenerator',
   files: [
     {
-      name: 'qrGenerator.js',
+      name: 'QRgenerator.js',
       icon: iconPath.JAVASCRIPT,
       function: () =>
         tabManager.create(
-          'qrGenerator.js',
+          'QRgenerator.js',
           qrGeneratorRender,
           iconPath.QRGENERATOR
         ),
