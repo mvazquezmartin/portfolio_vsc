@@ -200,7 +200,7 @@ const qrGenerator = {
         tabManager.create(
           'qrGenerator.js',
           qrGeneratorRender,
-          iconPath.JAVASCRIPT
+          iconPath.QRGENERATOR
         ),
     },
   ],

@@ -59,6 +59,7 @@ const iconPath = {
   REGEX: './assets/regexcrossword-svgrepo-com.svg',
   PONGWARS: './assets/table-tennis-racket-and-ball-svgrepo-com.svg',
   WHATUNIT: './assets/whatUnit-svgrepo-com.svg',
+  QRGENERATOR: './assets/qr-code-svgrepo-com.svg',
 };
 
 const imgPath = {
