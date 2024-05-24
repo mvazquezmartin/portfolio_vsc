@@ -1,6 +1,4 @@
-.container-body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.container-body {  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,12 +7,16 @@
   padding: 0;
 
   .container-qr {
-    max-width: 400px;
+    width: 400px;
     padding: 25px 35px;
     background: #fff;
     border-radius: 10px;
     color: #111;
     box-shadow: 10px 10px 39px 0px rgba(0, 0, 0, 0.95);
+
+    @include mobile{
+      width: 340px;
+    }
 
     h1 {
       font-size: 2rem;

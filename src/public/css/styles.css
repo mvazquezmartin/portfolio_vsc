@@ -1167,7 +1167,6 @@ a:hover {
 }
 
 .container-body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1176,12 +1175,17 @@ a:hover {
   padding: 0;
 }
 .container-body .container-qr {
-  max-width: 400px;
+  width: 400px;
   padding: 25px 35px;
   background: #fff;
   border-radius: 10px;
   color: #111;
   box-shadow: 10px 10px 39px 0px rgba(0, 0, 0, 0.95);
+}
+@media screen and (max-width: 600px) {
+  .container-body .container-qr {
+    width: 340px;
+  }
 }
 .container-body .container-qr h1 {
   font-size: 2rem;
