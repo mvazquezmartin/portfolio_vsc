@@ -111,6 +111,7 @@ const imgPath = {
   FOLLOWME: './assets/Screenshot_followMe.png',
   GUESSTHECOLOR: './assets/Screenshot_guessthecolor.png',
   GUESSTHENUMBER: './assets/Screenshot_guessTheNumber.png',
+  QRGENERATOR: './assets/Screenshot_qrgenerator.png',
 };
 
 const certificadoPath = {

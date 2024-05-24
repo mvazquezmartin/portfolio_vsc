@@ -342,6 +342,44 @@ Decidí realizar algunas modificaciones para mejorar la experiencia.
   
   
   `,
+  qrGenerator: `
+  # QR Generetor power by qrserver
+
+![QRGenerator](${imgPath.QRGENERATOR} 'QR Generator')
+
+## Dependencies
+
+[![My Skills](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev)
+
+## Installation
+
+1. Clone the repository:
+
+<pre>
+<code class="hljs language-bash">
+  git clone https://github.com/mvazquezmartin/qrgenerator.git
+</code>
+</pre>
+
+2. Open **index.html** in your web browser.
+
+## API
+
+[GOQR](https://goqr.me/api/)
+
+## Contributing
+
+Contributions are welcome! If you want to contribute to this project, feel free to fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/)
+
+## Author
+
+- [@mvazquezmartin](https://github.com/mvazquezmartin)
+
+  `,
   socketIo: `
   # <center> 📡 Socket.io Chat 1.0v </center>
   

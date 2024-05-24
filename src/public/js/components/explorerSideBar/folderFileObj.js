@@ -24,6 +24,7 @@ import { guessTheNumberRender } from '../guessTheNumber/guessTheNumberRender.js'
 import { readmeRenderGTN } from '../guessTheNumber/readme.js';
 import { readmeRenderPW } from '../pongWars/readme.js';
 import { qrGeneratorRender } from '../qrGenerator/qrGeneratorRender.js';
+import { readmeRenderQRG } from '../qrGenerator/readme.js';
 
 const assetsFolder = {
   folderName: 'Assets',
@@ -202,6 +203,12 @@ const qrGenerator = {
           qrGeneratorRender,
           iconPath.QRGENERATOR
         ),
+    },
+    {
+      name: 'readme_qrg.md',
+      icon: iconPath.MARKDOWN,
+      function: () =>
+        tabManager.create('readme_qrg.md', readmeRenderQRG, iconPath.MARKDOWN),
     },
   ],
   subfolders: [],
