@@ -60,6 +60,7 @@ const iconPath = {
   PONGWARS: './assets/table-tennis-racket-and-ball-svgrepo-com.svg',
   WHATUNIT: './assets/whatUnit-svgrepo-com.svg',
   QRGENERATOR: './assets/qr-code-svgrepo-com.svg',
+  SHOTSSO: './assets/shots-logo.png',
 };
 
 const imgPath = {
@@ -112,6 +113,7 @@ const imgPath = {
   GUESSTHECOLOR: './assets/Screenshot_guessthecolor.png',
   GUESSTHENUMBER: './assets/Screenshot_guessTheNumber.png',
   QRGENERATOR: './assets/Screenshot_qrgenerator.png',
+  SHOTOS: './assets/Screenshot_shotsso.png',
 };
 
 const certificadoPath = {

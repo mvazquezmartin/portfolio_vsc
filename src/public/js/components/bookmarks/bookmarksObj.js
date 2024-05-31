@@ -218,7 +218,18 @@ const bookmarks = [
     description:
       'Este sitio web podría ser útil para aquellos que estén aprendiendo CSS o que necesiten una guía rápida para tomar decisiones sobre las unidades de medida en sus proyectos de desarrollo web.',
     img: imgPath.WHATUNIT,
+    link: 'https://whatunit.com/',
     id: 'whatunit',
+    applied: '-',
+  },
+  {
+    icon: iconPath.SHOTSSO,
+    title: 'Shots.so',
+    description:
+      'Shots.so es una herramienta web diseñada para crear maquetas de alta calidad para redes sociales, sitios web y más. Ofrece una interfaz fácil de usar con una sencilla funcionalidad de arrastrar y soltar, fondos personalizables y diseños prediseñados. Los usuarios pueden generar rápidamente presentaciones pulidas y exportar imágenes con píxeles perfectos adaptadas a varias plataformas de redes sociales.',
+    img: imgPath.SHOTOS,
+    link: 'https://shots.so/',
+    id: 'shots',
     applied: '-',
   },
 ];
