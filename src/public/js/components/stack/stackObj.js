@@ -82,7 +82,7 @@ export const stacks = [
     id: 'nodeJs',
   },
   {
-    title: 'EXPRES JS',
+    title: 'EXPRESS JS',
     image: iconPath.EXPRESS,
     shortDescription:
       'Framework de NodeJs minimalista y flexible para construir aplicaciones web. Proporciona una capa de abstracción sobre el manejo de rutas, solicitudes y respuestas, facilitando la creación de API RESTful y sitios web. Con una sintaxis sencilla y una amplia gama de complementos disponibles, Express.js permite desarrollar de manera eficiente aplicaciones web rápidas y escalables, brindando control total sobre el ciclo de vida de las solicitudes.',
