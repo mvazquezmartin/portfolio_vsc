@@ -114,6 +114,7 @@ const imgPath = {
   GUESSTHENUMBER: './assets/Screenshot_guessTheNumber.png',
   QRGENERATOR: './assets/Screenshot_qrgenerator.png',
   SHOTOS: './assets/Screenshot_shotsso.png',
+  CVGENERATOR: './assets/Screenshot_cvgenerator.png',
 };
 
 const certificadoPath = {

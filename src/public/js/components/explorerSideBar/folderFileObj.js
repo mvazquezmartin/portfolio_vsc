@@ -25,6 +25,7 @@ import { readmeRenderGTN } from '../guessTheNumber/readme.js';
 import { readmeRenderPW } from '../pongWars/readme.js';
 import { qrGeneratorRender } from '../qrGenerator/qrGeneratorRender.js';
 import { readmeRenderQRG } from '../qrGenerator/readme.js';
+import { cvGeneratorRender } from '../cvGenerator/cvGenerator.js';
 
 const assetsFolder = {
   folderName: 'Assets',
@@ -214,6 +215,23 @@ const qrGenerator = {
   subfolders: [],
 };
 
+const cvGenerator = {
+  folderName: 'CVGenerator',
+  files: [
+    {
+      name: 'CVGenerator.jsx',
+      icon: iconPath.REACTJS,
+      function: () =>
+        tabManager.create(
+          'CVGenerator.jsx',
+          cvGeneratorRender,
+          iconPath.REACTJS
+        ),
+    },
+  ],
+  subfolders: [],
+};
+
 const magic8Ball = {
   folderName: 'Magic8Ball',
   files: [
@@ -341,6 +359,7 @@ const crud = {
 
 export const folders = [
   assetsFolder,
+  cvGenerator,
   followMe,
   guessTheColor,
   guessTheNumber,
