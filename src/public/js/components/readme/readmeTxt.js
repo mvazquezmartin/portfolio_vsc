@@ -1,6 +1,74 @@
 import { imgPath } from '../../assetsPath/assetsPath.js';
 
 const readme = {
+  cvGenerator: `
+  # CV Generator
+
+Este proyecto es una aplicación web que permite a los usuarios crear su CV de manera interactiva, con opciones de personalización y la capacidad de descargar el CV en formato PDF. La aplicación soporta múltiples idiomas (español e inglés) y permite una edición fácil y dinámica de los campos.
+
+## Características
+
+- **Creación y Edición Dinámica**: Los usuarios pueden agregar y modificar datos en campos editables directamente en la interfaz.
+- **Arrastrar y Soltar**: Funcionalidad para reorganizar secciones y elementos mediante drag-and-drop.
+- **Soporte Multi-idioma**: La aplicación soporta español e inglés usando \`react-i18next\`.
+- **Descarga en PDF**: Los usuarios pueden descargar su CV en formato PDF utilizando \`react-pdf/renderer\`.
+- **Previsualización de PDF**: Vista previa del CV en una nueva ruta (/pdfpreview).
+- **Plantilla Base de Harvard College**: Basado en la plantilla de Harvard College Bullet Point Resume.
+
+## Tecnologías Utilizadas
+
+- **Frontend**: React.js
+- **Estado y Gestión**: Context API
+- **Estilo y Diseño**: CSS, Flexbox, Grid
+- **Generación de PDF**: \`react-pdf/renderer\`
+- **Soporte Multi-idioma**: \`react-i18next\`
+- **Otros**: \`react-beautiful-dnd\` para drag-and-drop, \`react-router-dom\` para enrutamiento
+
+## Instalación y Configuración
+
+1. Clonar el repositorio:
+    \`\`\`bash
+    git clone https://github.com/mvazquezmartin/cv_generator.git
+    cd cv_generator
+    \`\`\`
+
+2. Instalar dependencias:
+    \`\`\`bash
+    npm install
+    \`\`\`
+
+3. Iniciar la aplicación:
+    \`\`\`bash
+    npm start
+    \`\`\`
+
+4. Abrir en el navegador:
+    \`\`\`
+    http://localhost:3000
+    \`\`\`
+
+## Uso
+
+1. Ingresar los datos en los campos proporcionados.
+2. Utilizar las funciones de arrastrar y soltar para reorganizar secciones.
+3. Cambiar el idioma usando el selector de idioma en la interfaz.
+4. Previsualizar el CV en la ruta \`pdfpreview\`.
+5. Descargar el CV en formato PDF.
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, sigue estos pasos para contribuir:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (\`git checkout -b feature/nueva-feature\`).
+3. Realiza los cambios necesarios y commitea (\`git commit -m 'Agrega nueva feature'\`).
+4. Sube tus cambios (\`git push origin feature/nueva-feature\`).
+5. Abre un Pull Request.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+  `,
   followMe: `
   # <center> Follow Me! </center>
 

@@ -26,6 +26,7 @@ import { readmeRenderPW } from '../pongWars/readme.js';
 import { qrGeneratorRender } from '../qrGenerator/qrGeneratorRender.js';
 import { readmeRenderQRG } from '../qrGenerator/readme.js';
 import { cvGeneratorRender } from '../cvGenerator/cvGenerator.js';
+import { readmeRenderCVG } from '../cvGenerator/cvReadme.js';
 
 const assetsFolder = {
   folderName: 'Assets',
@@ -227,6 +228,12 @@ const cvGenerator = {
           cvGeneratorRender,
           iconPath.REACTJS
         ),
+    },
+    {
+      name: 'readme_cvg.md',
+      icon: iconPath.MARKDOWN,
+      function: () =>
+        tabManager.create('readme.cvg.md', readmeRenderCVG, iconPath.MARKDOWN),
     },
   ],
   subfolders: [],
