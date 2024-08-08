@@ -311,6 +311,8 @@ a:hover {
 @media screen and (max-width: 600px) {
   .container-grid {
     position: relative;
+    max-width: 1920px;
+    width: 100%;
     grid-template-columns: 0.45fr 3fr;
     grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
     grid-template-areas: "menuIcon navBarTop" "menuIcon tabs" "mainArea mainArea" "footer footer";
@@ -1319,8 +1321,8 @@ a:hover {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  row-gap: 1rem;
-  height: 100%;
+  row-gap: 10px;
+  height: auto;
   max-width: 450px;
   border-top: 10px outset #ccc;
   border-right: 5px outset #eee;

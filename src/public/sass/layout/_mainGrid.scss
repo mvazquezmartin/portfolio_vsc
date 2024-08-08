@@ -253,6 +253,8 @@
 
   @include mobile {
     position: relative;
+    max-width: 1920px;
+    width: 100%;
     grid-template-columns: 0.45fr 3fr;
     grid-template-rows: 0.15fr 0.17fr 4.15fr 0.12fr;
     grid-template-areas:
