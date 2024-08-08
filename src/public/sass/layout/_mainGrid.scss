@@ -411,7 +411,8 @@
   }
 
   @include desktop {
-    // grid-template-columns: 0.1fr 0.5fr 3fr;
+    max-width: 1920px;
+    width: 100%;
     grid-template-columns: 0.1fr 340px minmax(0, 3fr);
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas:

@@ -35,6 +35,9 @@ footer, header, hgroup, menu, nav, section {
 body {
   min-height: 100%;
   font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  background: #262a2f;
 }
 
 blockquote, q {
@@ -424,6 +427,8 @@ a:hover {
 }
 @media screen and (min-width: 1024px) {
   .container-grid {
+    max-width: 1920px;
+    width: 100%;
     grid-template-columns: 0.1fr 340px minmax(0, 3fr);
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar tabs" "navBarAside sideBar mainArea" "navBarAside footer footer";

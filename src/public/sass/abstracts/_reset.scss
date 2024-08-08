@@ -24,6 +24,10 @@ footer, header, hgroup, menu, nav, section {
 body {	
   min-height: 100%;
   font-family: $font-Roboto;
+	display: flex;
+	justify-content: center;
+	background: #262a2f;
+
 }
 // ol, ul {
 // 	list-style: none;
