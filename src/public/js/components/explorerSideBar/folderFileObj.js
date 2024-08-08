@@ -226,7 +226,7 @@ const cvGenerator = {
         tabManager.create(
           'CVGenerator.jsx',
           cvGeneratorRender,
-          iconPath.REACTJS
+          iconPath.CVGENERATOR
         ),
     },
     {

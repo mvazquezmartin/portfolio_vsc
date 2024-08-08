@@ -61,6 +61,7 @@ const iconPath = {
   WHATUNIT: './assets/whatUnit-svgrepo-com.svg',
   QRGENERATOR: './assets/qr-code-svgrepo-com.svg',
   SHOTSSO: './assets/shots-logo.png',
+  CVGENERATOR: './assets/logo_cvgenerator.svg',
 };
 
 const imgPath = {
