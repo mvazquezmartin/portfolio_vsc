@@ -1,0 +1,32 @@
+.cv-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  row-gap: 1rem;
+
+  .cv-link {
+    font-size: 2rem;
+    color: #bd93f9;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    &:hover {
+      color: #aa26eb;
+    }
+    .bi {
+      font-size: 1.5rem;
+      color: #7a3cb5;
+    }
+  }
+
+  .cv-screenshot-container {
+    height: auto;
+    max-width: 960px;
+    width: 100%;
+    padding: 10px;
+    .cv-screenshot {
+      border-radius: 10px;
+    }
+  }
+}

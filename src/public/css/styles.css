@@ -50,6 +50,13 @@ q:before, q:after {
   content: none;
 }
 
+img,
+video,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -764,10 +771,6 @@ a:hover {
   height: 100%;
 }
 .assetsContainer .assets {
-  max-width: 900px;
-  width: 100%;
-  height: auto;
-  margin: 1rem;
   border-radius: 10px;
 }
 .assetsContainer #judo {
@@ -777,6 +780,37 @@ a:hover {
   .assetsContainer {
     margin: 0 1rem;
   }
+}
+
+.cv-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  row-gap: 1rem;
+}
+.cv-container .cv-link {
+  font-size: 2rem;
+  color: #bd93f9;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.cv-container .cv-link:hover {
+  color: #aa26eb;
+}
+.cv-container .cv-link .bi {
+  font-size: 1.5rem;
+  color: #7a3cb5;
+}
+.cv-container .cv-screenshot-container {
+  height: auto;
+  max-width: 960px;
+  width: 100%;
+  padding: 10px;
+}
+.cv-container .cv-screenshot-container .cv-screenshot {
+  border-radius: 10px;
 }
 
 .accordion {
@@ -2220,6 +2254,11 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 20%;
+}
+.stackRender .stackFlex .stackDivImg img, .recommendedContainer .nextToLearnContainer .stackFlex .stackDivImg img {
+  width: 50px;
+  height: 50px;
 }
 .stackRender .stackFlex .stackDescriptionTitle, .recommendedContainer .nextToLearnContainer .stackFlex .stackDescriptionTitle {
   display: flex;
@@ -2228,6 +2267,7 @@ a:hover {
   justify-content: center;
   user-select: none;
   padding-left: 5px;
+  width: 80%;
 }
 .stackRender .stackFlex .stackDescriptionTitle .stackTitle, .recommendedContainer .nextToLearnContainer .stackFlex .stackDescriptionTitle .stackTitle {
   margin: 0;

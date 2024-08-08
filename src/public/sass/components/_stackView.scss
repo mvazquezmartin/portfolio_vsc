@@ -22,6 +22,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 20%;
+      img {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     .stackDescriptionTitle {
@@ -31,6 +36,7 @@
       justify-content: center;
       user-select: none;
       padding-left: 5px;
+      width: 80%;
 
       .stackTitle {
         margin: 0;
