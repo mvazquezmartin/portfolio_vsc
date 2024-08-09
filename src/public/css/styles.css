@@ -127,6 +127,7 @@ a:hover {
 }
 .container-grid .navbar-top .menu-icon .welcome-icon img {
   cursor: pointer;
+  max-width: 35px;
 }
 .container-grid .navbar-top .menu-icon .menu-top {
   display: flex;
@@ -583,6 +584,7 @@ a:hover {
 .containerHeroView .containerIntroRight .containerExtension a .containerExtensionImgContent .containerExtensionImg {
   display: grid;
   place-content: center;
+  width: 25%;
 }
 .containerHeroView .containerIntroRight .containerExtension a .containerExtensionImgContent .containerExtensionImg img {
   width: 64px;
