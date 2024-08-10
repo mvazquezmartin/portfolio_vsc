@@ -102,6 +102,11 @@ a:hover {
 
 .container-grid {
   display: grid;
+  max-width: 1920px;
+  width: 100%;
+  grid-template-columns: 0.1fr 340px minmax(0, 3fr);
+  grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
+  grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar tabs" "navBarAside sideBar mainArea" "navBarAside footer footer";
   color: #f0f8ff;
   height: 100dvh;
   gap: 0px 0px;
@@ -194,6 +199,9 @@ a:hover {
 .container-grid .sidebar {
   display: grid;
   grid-area: sideBar;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.15fr 0.1fr 4fr;
+  grid-template-areas: "titleSideBar" "fileOpen" "viewSideBar";
   background-color: #1d1e24;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -256,6 +264,9 @@ a:hover {
 .container-grid .main-area {
   display: grid;
   grid-area: mainArea;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 4fr;
+  grid-template-areas: "rootPath" "mainView";
   background-color: #282a36;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -421,25 +432,6 @@ a:hover {
 @media screen and (min-width: 601px) and (max-width: 1023px) {
   .container-grid {
     grid-template-columns: 0.1fr 170px minmax(0, 3fr);
-    grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
-    grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar tabs" "navBarAside sideBar mainArea" "navBarAside footer footer";
-  }
-  .container-grid .sidebar {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.15fr 0.1fr 4fr;
-    grid-template-areas: "titleSideBar" "fileOpen" "viewSideBar";
-  }
-  .container-grid .main-area {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 4fr;
-    grid-template-areas: "rootPath" "mainView";
-  }
-}
-@media screen and (min-width: 1024px) {
-  .container-grid {
-    max-width: 1920px;
-    width: 100%;
-    grid-template-columns: 0.1fr 340px minmax(0, 3fr);
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas: "navBarTop navBarTop navBarTop" "navBarAside sideBar tabs" "navBarAside sideBar mainArea" "navBarAside footer footer";
   }
@@ -764,6 +756,25 @@ a:hover {
   .containerHeroView .containerIntroRight .containerLenguage .containerIconRange .rangeAndPercentageContainer .percentageLenguageContainer {
     width: 100%;
     align-self: flex-start;
+  }
+}
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #8455bb;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
   }
 }
 .assetsContainer {
@@ -1249,8 +1260,8 @@ a:hover {
 }
 .container-body .container-qr #imgBox {
   width: 200px;
+  height: 200px;
   border-radius: 5px;
-  max-height: 300px;
   margin: 17px auto;
   border: 1px solid #d1d1d1;
   overflow: hidden;
