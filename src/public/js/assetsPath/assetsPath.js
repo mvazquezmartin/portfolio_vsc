@@ -144,4 +144,3 @@ const pdfPath = {
 };
 
 export { imgPath, iconPath, certificadoPath, pdfPath };
-
