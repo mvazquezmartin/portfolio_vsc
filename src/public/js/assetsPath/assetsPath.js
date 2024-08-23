@@ -140,7 +140,7 @@ const certificadoPath = {
 
 const pdfPath = {
   CV_ESP: './assets/CV_ESP_Matias_E_Vazquez_Martin.pdf',
-  CV_ENG: './assets/cv_EN_MVM.pdf',
+  CV_ENG: './assets/CV_ENG_Matias_E_Vazquez_Martin.pdf',
 };
 
 export { imgPath, iconPath, certificadoPath, pdfPath };

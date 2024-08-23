@@ -7,6 +7,15 @@
 
 .container-grid {
   display: grid;
+  max-width: 1920px;
+  width: 100%;
+  grid-template-columns: 0.1fr 340px minmax(0, 3fr);
+  grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
+  grid-template-areas:
+    'navBarTop navBarTop navBarTop'
+    'navBarAside sideBar tabs'
+    'navBarAside sideBar mainArea'
+    'navBarAside footer footer';
   color: $color-white;
   height: 100dvh;
   gap: 0px 0px;
@@ -113,6 +122,12 @@
   .sidebar {
     display: grid;
     grid-area: sideBar;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.15fr 0.1fr 4fr;
+    grid-template-areas:
+      'titleSideBar'
+      'fileOpen'
+      'viewSideBar';
     background-color: $color-darkGrey;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -181,6 +196,11 @@
   .main-area {
     display: grid;
     grid-area: mainArea;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 4fr;
+    grid-template-areas:
+      'rootPath'
+      'mainView';
     background-color: $color-lightGrey;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -250,7 +270,7 @@
       margin-left: 5px;
     }
   }
-  // MOBILE - TABLET - DESKTOP RESPONSIVE
+  // MOBILE - TABLET
 
   @include mobile {
     position: relative;
@@ -388,35 +408,6 @@
   @include tablet {
     // grid-template-columns: 0.1fr 0.5fr 3fr;
     grid-template-columns: 0.1fr 170px minmax(0, 3fr);
-    grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
-    grid-template-areas:
-      'navBarTop navBarTop navBarTop'
-      'navBarAside sideBar tabs'
-      'navBarAside sideBar mainArea'
-      'navBarAside footer footer';
-
-    .sidebar {
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.15fr 0.1fr 4fr;
-      grid-template-areas:
-        'titleSideBar'
-        'fileOpen'
-        'viewSideBar';
-    }
-
-    .main-area {
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.1fr 4fr;
-      grid-template-areas:
-        'rootPath'
-        'mainView';
-    }
-  }
-
-  @include desktop {
-    max-width: 1920px;
-    width: 100%;
-    grid-template-columns: 0.1fr 340px minmax(0, 3fr);
     grid-template-rows: 0.15fr 0.15fr 4.15fr 0.12fr;
     grid-template-areas:
       'navBarTop navBarTop navBarTop'

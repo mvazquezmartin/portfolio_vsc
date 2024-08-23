@@ -19,8 +19,26 @@ const renderMainGithub = async () => {
   const containerRepositories = document.createElement('div');
   containerRepositories.classList.add('containerRepositories');
 
+  // const calendar = document.createElement('img');
+  // calendar.setAttribute('src', imgPath.CALENDAR);
+
+  const loader = document.createElement('div');
+  loader.classList.add('loader');
+
+  containerGithub.appendChild(loader);
+
   const calendar = document.createElement('img');
   calendar.setAttribute('src', imgPath.CALENDAR);
+  calendar.style.display = 'none';
+
+  calendar.addEventListener('load', () => {
+    loader.style.display = 'none';
+    calendar.style.display = 'block';
+  });
+
+  calendar.addEventListener('error', () => {
+    loader.textContent = 'Error al cargar la imagen';
+  });
 
   try {
     if (!cacheUser.data) {
@@ -54,7 +72,6 @@ const renderMainGithub = async () => {
   containerMain.appendChild(containerRepositories);
   containerGithub.appendChild(calendar);
   containerRepositories.appendChild(containerGithub);
-  // containerMain.appendChild(containerGithub);
   mainView.appendChild(containerMain);
 };
 
