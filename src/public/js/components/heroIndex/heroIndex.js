@@ -26,11 +26,19 @@ const renderMainText = () => {
   const subTituloHero = document.createElement('h2');
   subTituloHero.textContent = 'FullStack Developer';
 
+  const btnContainer = document.createElement('div');
+  btnContainer.classList.add('btnContainer');
+
   const btnDownload = document.createElement('a');
   btnDownload.href = pdfPath.CV_ESP;
   btnDownload.download = 'cv_mvazquezmartin.pdf';
   btnDownload.classList.add('btnDownload');
   btnDownload.textContent = 'Download CV';
+
+  const btnSimplified = document.createElement('a');
+  btnSimplified.href = '/simplified';
+  btnSimplified.classList.add('btnSimplified');
+  btnSimplified.textContent = 'Version Simplicada';
 
   // const iconPdf = document.createElement("i");
   // iconPdf.classList.add("bi", "bi-0-circle");
@@ -80,7 +88,9 @@ const renderMainText = () => {
   heroContainer.appendChild(tituloContainer);
   tituloContainer.appendChild(tituloHero);
   tituloContainer.appendChild(subTituloHero);
-  tituloContainer.appendChild(btnDownload);
+  tituloContainer.appendChild(btnContainer);
+  btnContainer.appendChild(btnDownload);
+  btnContainer.appendChild(btnSimplified);
   // btnDownload.appendChild(iconPdf)
   heroContainer.appendChild(containerStartAndRecent);
   containerStartAndRecent.appendChild(containerStart);
