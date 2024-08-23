@@ -38,7 +38,7 @@ const renderMainText = () => {
   const btnSimplified = document.createElement('a');
   btnSimplified.href = '/simplified';
   btnSimplified.classList.add('btnSimplified');
-  btnSimplified.textContent = 'Version Simplicada';
+  btnSimplified.textContent = 'Versión Simplicada';
 
   // const iconPdf = document.createElement("i");
   // iconPdf.classList.add("bi", "bi-0-circle");

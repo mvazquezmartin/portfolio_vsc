@@ -1,0 +1,97 @@
+.simplified-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+  min-height: 100dvh;
+  .title-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    h1.under-construction {
+      font-family: 'Arial', sans-serif; /* Tipografía sans-serif */
+      font-size: 3rem; /* Tamaño de fuente grande */
+      font-weight: bold; /* Negrita */
+      color: #fff; /* Color del texto blanco */
+      text-align: center; /* Centrado del texto */
+      padding: 20px 0; /* Espaciado interno */
+      margin: 0; /* Sin margen */
+      background-color: #ffcc00; /* Fondo amarillo para advertencia */
+      border: 4px solid #000; /* Borde negro grueso */
+      border-radius: 10px; /* Bordes redondeados */
+      position: relative; /* Posicionamiento relativo para el efecto de cintas */
+      overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra del cuadro */
+
+      &::before {
+        content: ''; /* Texto de la cinta */
+        position: absolute; /* Posicionamiento absoluto */
+        top: 0; /* Posición en la parte superior */
+        left: 0; /* Posición en la parte izquierda */
+        width: 100%; /* Ancho completo del h1 */
+        height: 100%; /* Altura completa del h1 */
+        background: linear-gradient(
+          135deg,
+          #ff0000 25%,
+          transparent 25%,
+          transparent 50%,
+          #ff0000 50%,
+          #ff0000 75%,
+          transparent 75%,
+          transparent
+        ); /* Cinta de advertencia diagonal */
+        background-size: 40px 40px; /* Tamaño del patrón de cinta */
+        color: #000; /* Color del texto negro */
+        font-size: 1.5rem; /* Tamaño de fuente de la cinta */
+        font-weight: bold; /* Negrita */
+        text-align: center; /* Texto centrado en la cinta */
+        line-height: 100%; /* Alineación vertical del texto */
+        text-transform: uppercase; /* Texto en mayúsculas */
+        z-index: 1; /* Asegura que la cinta esté por encima del h1 */
+        pointer-events: none; /* Permite que el clic pase a través del texto */
+      }
+
+      & span {
+        position: relative; /* Posicionamiento relativo */
+        z-index: 2; /* Asegura que el texto esté por encima de la cinta */
+        color: #000;
+        font-weight: 800;
+        background: #ffcc00;
+        width: 100%;
+        padding: 0 20px;
+      }
+    }
+    .toVSC {
+      box-shadow: inset 0px -3px 7px 0px #a064fa;
+      background: linear-gradient(to bottom, #ca26eb 5%, #745c99 100%);
+      background-color: #ca26eb;
+      border-radius: 5px;
+      border: 1px solid #44315e;
+      display: inline-block;
+      cursor: pointer;
+      color: $color-white;
+      font-family: $font-Arial;
+      font-size: 1rem;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px #19213b;
+      user-select: none;
+
+      &:hover {
+        background: linear-gradient(to bottom, #745c99 5%, #ca26eb 100%);
+        background-color: #745c99;
+      }
+
+      &:active {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+
+  .thisIsFine {
+  }
+}
