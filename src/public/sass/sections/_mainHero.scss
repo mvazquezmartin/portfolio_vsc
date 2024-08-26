@@ -95,17 +95,33 @@
       .containerStart {
         display: flex;
         flex-direction: column;
-        row-gap: 0.4rem;
+        row-gap: 0.5rem;
         padding-bottom: 2rem;
         h2 {
           font-size: 1.3rem;
           font-weight: 400;
         }
         .iconWithText {
+          width: fit-content;
+          a {
+            color: #3584ff;
+            transition: color 0.3s ease;
+            .bi {
+              font-size: 1.3rem;
+              padding-right: 0.4rem;
+            }
+            &:hover {
+              color: #fff;
+            }
+          }
           color: #3584ff;
+          transition: color 0.3s ease;
           .bi {
             font-size: 1.3rem;
             padding-right: 0.4rem;
+          }
+          &:hover {
+            color: #fff;
           }
         }
       }

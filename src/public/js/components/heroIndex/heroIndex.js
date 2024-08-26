@@ -29,11 +29,11 @@ const renderMainText = () => {
   const btnContainer = document.createElement('div');
   btnContainer.classList.add('btnContainer');
 
-  const btnDownload = document.createElement('a');
-  btnDownload.href = pdfPath.CV_ESP;
-  btnDownload.download = 'cv_mvazquezmartin.pdf';
-  btnDownload.classList.add('btnDownload');
-  btnDownload.textContent = 'Download CV';
+  // const btnDownload = document.createElement('a');
+  // btnDownload.href = pdfPath.CV_ESP;
+  // btnDownload.download = 'cv_mvazquezmartin.pdf';
+  // btnDownload.classList.add('btnDownload');
+  // btnDownload.textContent = 'Download CV';
 
   const btnSimplified = document.createElement('a');
   btnSimplified.href = '/simplified';
@@ -53,19 +53,25 @@ const renderMainText = () => {
   const tituloDescription = document.createElement('h2');
   tituloDescription.textContent = 'Start';
 
-  const newFile = createIconWithText('bi bi-file-earmark-plus', 'New File...');
-  const openFile = createIconWithText(
-    'bi bi-file-earmark-arrow-up',
-    'Open File...'
+  const linkedin = createIconWithText(
+    'bi bi-linkedin',
+    'https://www.linkedin.com/in/matiasvazquezmartin/',
+    '@matiasvazquezmartin'
   );
-  const openFolder = createIconWithText('bi bi-folder2-open', 'Open Folder...');
-  const cloneRepo = createIconWithText(
-    'bi bi-diagram-2',
-    'Clone Git Repository...'
+  const github = createIconWithText(
+    'bi bi-github',
+    'https://github.com/mvazquezmartin',
+    '@mvazquezmartin'
   );
-  const connectTo = createIconWithText(
-    'bi bi-arrow-left-right',
-    'Connect to...'
+  const email = createIconWithText(
+    'bi bi-envelope-at',
+    '#',
+    'matias.vazquezmartin@gmail.com'
+  );
+  const downloadcv = createIconWithText(
+    'bi bi-download',
+    pdfPath.CV_ESP,
+    'Download CV'
   );
 
   const containerRecent = document.createElement('div');
@@ -89,17 +95,17 @@ const renderMainText = () => {
   tituloContainer.appendChild(tituloHero);
   tituloContainer.appendChild(subTituloHero);
   tituloContainer.appendChild(btnContainer);
-  btnContainer.appendChild(btnDownload);
+  // btnContainer.appendChild(btnDownload);
   btnContainer.appendChild(btnSimplified);
   // btnDownload.appendChild(iconPdf)
   heroContainer.appendChild(containerStartAndRecent);
   containerStartAndRecent.appendChild(containerStart);
   containerStart.appendChild(tituloDescription);
-  containerStart.appendChild(newFile);
-  containerStart.appendChild(openFile);
-  containerStart.appendChild(openFolder);
-  containerStart.appendChild(cloneRepo);
-  containerStart.appendChild(connectTo);
+  containerStart.appendChild(linkedin);
+  containerStart.appendChild(github);
+  containerStart.appendChild(email);
+  containerStart.appendChild(downloadcv);
+
   containerStartAndRecent.appendChild(containerRecent);
   containerRecent.appendChild(tituloRecientesDescription);
   containerRecent.appendChild(ecommerce);
