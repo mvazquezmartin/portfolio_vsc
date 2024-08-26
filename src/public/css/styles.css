@@ -2430,7 +2430,7 @@ a:hover {
   justify-content: center;
   user-select: none;
   padding-left: 5px;
-  width: 70%;
+  width: 80%;
 }
 .stackRender .stackFlex .stackDescriptionTitle .stackTitle, .recommendedContainer .nextToLearnContainer .stackFlex .stackDescriptionTitle .stackTitle {
   margin: 0;
