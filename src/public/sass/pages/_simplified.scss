@@ -75,10 +75,12 @@
       color: $color-white;
       font-family: $font-Arial;
       font-size: 1rem;
-      padding: 10px 20px;
+      padding: 15px 20px;
       text-decoration: none;
       text-shadow: 0px 1px 0px #19213b;
       user-select: none;
+      text-transform: uppercase;
+      font-weight: 600;
 
       &:hover {
         background: linear-gradient(to bottom, #745c99 5%, #ca26eb 100%);
@@ -93,5 +95,19 @@
   }
 
   .thisIsFine {
+    height: auto;
+    width: 1000px;
+  }
+  @include mobile{
+    padding: 0 1rem;
+    .title-container{
+      h1.under-construction{
+        font-size: 1.5rem;
+      }
+    }
+    .thisIsFine{
+      width: 90dvw;
+    }  
   }
 }
+

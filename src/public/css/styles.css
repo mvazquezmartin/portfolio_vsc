@@ -516,10 +516,12 @@ a:hover {
   color: #f0f8ff;
   font-family: Arial;
   font-size: 1rem;
-  padding: 10px 20px;
+  padding: 15px 20px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #19213b;
   user-select: none;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 .simplified-container .title-container .toVSC:hover {
   background: linear-gradient(to bottom, #745c99 5%, #ca26eb 100%);
@@ -529,6 +531,22 @@ a:hover {
   position: relative;
   top: 1px;
 }
+.simplified-container .thisIsFine {
+  height: auto;
+  width: 1000px;
+}
+@media screen and (max-width: 600px) {
+  .simplified-container {
+    padding: 0 1rem;
+  }
+  .simplified-container .title-container h1.under-construction {
+    font-size: 1.5rem;
+  }
+  .simplified-container .thisIsFine {
+    width: 90dvw;
+  }
+}
+
 .containerHeroView {
   display: flex;
   justify-content: space-evenly;
@@ -821,6 +839,9 @@ a:hover {
   }
   .containerHeroView .containerIntroLeft .titleMain h2 {
     font-size: 1.5rem;
+  }
+  .containerHeroView .containerIntroLeft .titleMain .btnContainer {
+    justify-content: center;
   }
   .containerHeroView .containerIntroLeft .startAndRecent .containerStart h2 {
     font-size: 1.2rem;
